@@ -1,4 +1,4 @@
-Bienvenue dans la documentation des guides d'implémentation de l'ANS, elle concerne principalement les volets du CI-SIS qui concernent le format FHIR mais ne se limitent pas à ceux-ci. Celui-ci contient toutes les informations à propos de la modélisation, des outils FSH et IG publisher, ainsi que des tips dans le contexte français.
+Bienvenue dans la documentation des guides d'implémentation de l'ANS, elle concerne principalement les volets du CI-SIS au format FHIR mais ne se limite pas à ceux-ci. Cette documentation contient l'ensemble des informations à propos de la modélisation, des outils FSH et IG publisher, ainsi que des tips dans le contexte français.
 
 Ces travaux se placent dans une démarche d'élaboration continue. L'objectif étant de profiter de l'intelligence collective pour faire évoluer les spécifications versionnées. 
 
@@ -8,12 +8,12 @@ Selon la documentation FHIR, un Implementation Guide contient un ensemble cohér
 
 Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR. Il contient également de manière systématique un package, versionné, contenant l'ensemble des ressources de conformité.
 
-
 La meilleure pratique consiste à créer un Implementation Guide par projet bien spécifique, cela permet:
 - De versionner séparément, on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées
 - Chacune des specs gère ses dépendances indépendamment des autres (aux ressources du ci-sis, aux profils interopsanté), chacune de ces dépendances peuvent être mises à jour séparément
 - Les urls sont claires, on sait directement de quelle spec est issue chaque profil, et on peut directement accéder à l'IG facilement
-- Ca permet aux éditeurs de surspécifier pour réutiliser certains profils pour un autre cas d'usage, en héritant de tout ou partie
+- Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d'usage, en héritant de tout ou partie, ou pour décrire une implémentation précise.
+- L'IG doit obligatoirement hériter des ressources françaises définies par InteropSanté et/ou par les profils définis par l'ANS
 
 Documentation : 
 - https://www.hl7.org/fhir/implementationguide.html
@@ -40,15 +40,14 @@ Un lien est également disponible sous chaque guide d'implémentation pour accé
 
 L'issue doit contenir un titre, et une description très détaillée avec une proposition de changement.
 
-### Par où commencer ?
+### Modeler : par où commencer ?
 
-1/ Installer les dépendances grâce à la page "Installer les dépendances [Windows/mac]" de ce wiki
+1/ Installer les dépendances grâce à la page "Installer les dépendances [Windows/mac]"
 
 2/ Développer un Implementation Guide :
 * Si vous souhaitez créer un Implementation Guide pour publication : suivre la procédure Développement d'un nouvel IG
-* Si vous souhaitez modifier un Implementation Guide existant : cloner le GitHub repository désiré
-* Si vous souhaitez tester FSH et les Implementation Guide : cloner le GitHub repository FIG_ans-ig-sample ou téléchargez-le au format zip
-
+* Si vous souhaitez modifier un Implementation Guide existant : cloner le GitHub repository désiré en local
+* Si vous souhaitez tester FSH et la génération d'Implementation Guide : cloner le GitHub repository IG-modele ou téléchargez-le au format zip
 
 ### Outils et vocabulaire 
 

@@ -22,10 +22,10 @@ pages:
     doc_modeler.md:
         bonnes_pratiques.md:
             title: Bonnes pratiques
-        dev_nouvel_ig.md:
-            title: Développement d'un nouvel IG
         install_dependencies.md:
             title: Installer les dépendances
+        dev_nouvel_ig.md:
+            title: Développement d'un nouvel IG
         niveau_maturite.md:
             title: Les niveaux de maturité des IG
         erreurs.md:
@@ -48,8 +48,8 @@ menu:
     Accueil: index.html
     Documentation des FHIR modelers:
         Bonnes pratiques: bonnes_pratiques.html
-        Développement d'un nouvel IG: dev_nouvel_ig.html
         Installer les dépendances: install_dependencies.html
+        Développement d'un nouvel IG: dev_nouvel_ig.html
         Les niveaux de maturité des IG: niveau_maturite.html
         Les erreurs courantes: erreurs.html
         Usage de GitHub: github.html

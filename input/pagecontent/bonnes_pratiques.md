@@ -1,23 +1,15 @@
 ### Règles de nommage des ressources de conformité
 
-* id : utiliser le format kebab-case, ex : fr-patient. (/!\ sur Forge, l'id n'est pas obligatoire, c'est important de le rajouter!)
-* title : similaire au nom, avec espaces. Ex : Fr Patient
-* name : utiliser le format PascalCase sans espace. Ex : FrPatient
-* url : [base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition).
-* SearchParameter.code : toujours en minuscule! Mots séparés par des tirets "-" si besoin
+Ces règles de nommages ont été établies en s'inspirant des ressources us-core
 
-Lors de la création d'un IG pour un projet en particulier, il est possible de préfixer l'ensemble des ressources de conformité par le trigramme du projet (ex : "ror-...")
-
-
-Ces règles ont été définies en s'inspirant de l'IG us-core, exemple du profil Us Core Patient :
-* id : us-core-patient
-* title : US Core Patient Profile
-* name : USCorePatientProfile
-* url : http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-
-
-L'id de package ne doit pas avoir de majuscule.
-
+| **Attribut** | **Description** | **Exemple us-core** |
+| ----- | ----- | ----- |
+| id | utiliser le format kebab-case, ex : fr-patient. (/!\ sur Forge, l'id n'est pas obligatoire, c'est important de le rajouter!). Lors de la création d'un IG pour un projet en particulier, il est possible de préfixer l'ensemble des ressources de conformité par le trigramme du projet (ex : "ror-...") | us-core-patient |
+| title | similaire au nom, avec espaces. Ex : Fr Patient | US Core Patient Profile |
+| name | Utiliser le format PascalCase sans espace. Ex : FrPatient | USCorePatientProfile |
+| url | [base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition). | ttp://hl7.org/fhir/us/core/StructureDefinition/us-core-patient |
+| SearchParameter.code | toujours en minuscule, mots séparés par des tirets "-" si besoin | - |
+{: .grid }
 
 Nom des slices:
 - Prendre l'id de l'extension s'il s'agit d'une extension
@@ -25,6 +17,12 @@ Nom des slices:
 
 La documentation officielle se trouve sur le [confluence d'HL7](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines)
 
+
+### Les packages et les dépendances
+
+L'id de package ne doit pas avoir de majuscule. 
+
+Le package doit toujours dépendre de fr-core et/ou les projets de l'ANS pour assurer une cohérence globale à l'échelle française. Ces packages sont publiés sur le FHIR Package Registry et doivent être indiqués dans le fichier `sushi-config.yaml`. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l'intérêt du versioning.
 
 ### Les URL canoniques
 
@@ -37,7 +35,7 @@ L'URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet
 L'URL canonique de l'IG permet d'accéder à sa page web, c'est à dire la spécification narrative et technique (ex : https://www.hl7.org/fhir/us/core).
 Dans le cas des IG de l'ANS, l'url canonique est https://interop.esante.gouv.fr/ig/fhir/[code]
 
-#### L'URL canonique des ressources de conformance
+#### L'URL canonique des ressources de conformité
 
 A partir de ce lien, il y a une API Rest FHIR, qui permet d'accéder aux ressources de conformité conformément à la FHIR search (https://www.hl7.org/fhir/search.html). On obtient ainsi les url canoniques de chaque profil (ex : http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient).
 L'URL canonique des profils est construite au format : [base]/[ResourceType]/[id] pour qu'elle corresponde à une requête FHIR Search
@@ -51,10 +49,6 @@ A noter le ResourceType doit respecter la même casse et le même nom que les Re
 Documentation :
 - https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-CanonicalURL
 - https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs
-
-
-La gestion des dépendances:
-- Il faut toujours utiliser des packages issus du FHIR Package Registry lorsque l'on définit des dépendances. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l'intérêt du versioning
 
 
 ### FSH / SUSHI

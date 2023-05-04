@@ -11,6 +11,7 @@ https://code.visualstudio.com/
 - [Optionnel] "Markdown Preview Enhanced"
 - [Optionnel] "Kodjin FHIR Profiler"
 
+
 1. Lancer vs code
 2. Aller dans le menu extension (les 4 carrés dont un qui se décolle à gauche), chercher et installer "FHIR Shorthand"
 
@@ -41,7 +42,6 @@ Puis:
 
 Attention! Il ne peut pas y avoir d'espace dans le path du dossier, ce qui peut engendrer des erreurs, notamment avec onedrive.
 
-
 - lancer _genonce (lancer _genonce.bat dans le bon dossier sur l'invite de commande)
 
 Si tout s'est bien passé, le dossier output est apparu, il suffit de lancer index.html pour démarrer l'IG généré
@@ -53,7 +53,6 @@ Vous pouvez maintenant commencer à développer votre implementation guide ! :)
 
 
 ### MAC / Linux
-
 
 #### Prérequis : sushi, java, ruby et jekyll
 
