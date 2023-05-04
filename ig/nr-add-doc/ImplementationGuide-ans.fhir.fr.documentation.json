@@ -10,7 +10,7 @@
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2023-05-04T10:24:04+00:00",
+  "date" : "2023-05-04T12:01:17+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -732,19 +732,19 @@
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "dev_nouvel_ig.html"
+            "valueUrl" : "install_dependencies.html"
           }],
-          "nameUrl" : "dev_nouvel_ig.html",
-          "title" : "Développement d'un nouvel IG",
+          "nameUrl" : "install_dependencies.html",
+          "title" : "Installer les dépendances",
           "generation" : "markdown"
         },
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "install_dependencies.html"
+            "valueUrl" : "dev_nouvel_ig.html"
           }],
-          "nameUrl" : "install_dependencies.html",
-          "title" : "Installer les dépendances",
+          "nameUrl" : "dev_nouvel_ig.html",
+          "title" : "Développement d'un nouvel IG",
           "generation" : "markdown"
         },
         {

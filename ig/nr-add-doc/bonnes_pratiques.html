@@ -96,10 +96,10 @@
         <a href="bonnes_pratiques.html">Bonnes pratiques</a>
       </li>
       <li>
-        <a href="dev_nouvel_ig.html">Développement d&apos;un nouvel IG</a>
+        <a href="install_dependencies.html">Installer les dépendances</a>
       </li>
       <li>
-        <a href="install_dependencies.html">Installer les dépendances</a>
+        <a href="dev_nouvel_ig.html">Développement d&apos;un nouvel IG</a>
       </li>
       <li>
         <a href="niveau_maturite.html">Les niveaux de maturité des IG</a>
@@ -164,7 +164,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="dev_nouvel_ig.html">next&gt;</a>
+          | <a href="install_dependencies.html">next&gt;</a>
 
           </span>
 
@@ -205,6 +205,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#règles-de-nommage-des-ressources-de-conformité" id="markdown-toc-règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</a></li>
+  <li><a href="#les-packages-et-les-dépendances" id="markdown-toc-les-packages-et-les-dépendances">Les packages et les dépendances</a></li>
   <li><a href="#les-url-canoniques" id="markdown-toc-les-url-canoniques">Les URL canoniques</a></li>
   <li><a href="#fsh--sushi" id="markdown-toc-fsh--sushi">FSH / SUSHI</a></li>
 </ul>
@@ -212,25 +213,44 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</h3>
 
-<ul>
-  <li>id : utiliser le format kebab-case, ex : fr-patient. (/!\ sur Forge, l’id n’est pas obligatoire, c’est important de le rajouter!)</li>
-  <li>title : similaire au nom, avec espaces. Ex : Fr Patient</li>
-  <li>name : utiliser le format PascalCase sans espace. Ex : FrPatient</li>
-  <li>url : [base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition).</li>
-  <li>SearchParameter.code : toujours en minuscule! Mots séparés par des tirets “-“ si besoin</li>
-</ul>
+<p>Ces règles de nommages ont été établies en s’inspirant des ressources us-core</p>
 
-<p>Lors de la création d’un IG pour un projet en particulier, il est possible de préfixer l’ensemble des ressources de conformité par le trigramme du projet (ex : “ror-…”)</p>
-
-<p>Ces règles ont été définies en s’inspirant de l’IG us-core, exemple du profil Us Core Patient :</p>
-<ul>
-  <li>id : us-core-patient</li>
-  <li>title : US Core Patient Profile</li>
-  <li>name : USCorePatientProfile</li>
-  <li>url : http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</li>
-</ul>
-
-<p>L’id de package ne doit pas avoir de majuscule.</p>
+<table class="grid">
+  <thead>
+    <tr>
+      <th><strong>Attribut</strong></th>
+      <th><strong>Description</strong></th>
+      <th><strong>Exemple us-core</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>utiliser le format kebab-case, ex : fr-patient. (/!\ sur Forge, l’id n’est pas obligatoire, c’est important de le rajouter!). Lors de la création d’un IG pour un projet en particulier, il est possible de préfixer l’ensemble des ressources de conformité par le trigramme du projet (ex : “ror-…”)</td>
+      <td>us-core-patient</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>similaire au nom, avec espaces. Ex : Fr Patient</td>
+      <td>US Core Patient Profile</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>Utiliser le format PascalCase sans espace. Ex : FrPatient</td>
+      <td>USCorePatientProfile</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>[base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition).</td>
+      <td>ttp://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</td>
+    </tr>
+    <tr>
+      <td>SearchParameter.code</td>
+      <td>toujours en minuscule, mots séparés par des tirets “-“ si besoin</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Nom des slices:</p>
 <ul>
@@ -239,6 +259,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <p>La documentation officielle se trouve sur le <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&amp;Guidelines">confluence d’HL7</a></p>
+
+<h3 id="les-packages-et-les-dépendances">Les packages et les dépendances</h3>
+
+<p>L’id de package ne doit pas avoir de majuscule.</p>
+
+<p>Le package doit toujours dépendre de fr-core et/ou les projets de l’ANS pour assurer une cohérence globale à l’échelle française. Ces packages sont publiés sur le FHIR Package Registry et doivent être indiqués dans le fichier <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l’intérêt du versioning.</p>
 
 <h3 id="les-url-canoniques">Les URL canoniques</h3>
 
@@ -253,7 +279,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>L’URL canonique de l’IG permet d’accéder à sa page web, c’est à dire la spécification narrative et technique (ex : https://www.hl7.org/fhir/us/core).
 Dans le cas des IG de l’ANS, l’url canonique est https://interop.esante.gouv.fr/ig/fhir/[code]</p>
 
-<h4 id="lurl-canonique-des-ressources-de-conformance">L’URL canonique des ressources de conformance</h4>
+<h4 id="lurl-canonique-des-ressources-de-conformité">L’URL canonique des ressources de conformité</h4>
 
 <p>A partir de ce lien, il y a une API Rest FHIR, qui permet d’accéder aux ressources de conformité conformément à la FHIR search (https://www.hl7.org/fhir/search.html). On obtient ainsi les url canoniques de chaque profil (ex : http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient).
 L’URL canonique des profils est construite au format : [base]/[ResourceType]/[id] pour qu’elle corresponde à une requête FHIR Search</p>
@@ -268,11 +294,6 @@ L’URL canonique des profils est construite au format : [base]/[ResourceType]/[
 <ul>
   <li>https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-CanonicalURL</li>
   <li>https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs</li>
-</ul>
-
-<p>La gestion des dépendances:</p>
-<ul>
-  <li>Il faut toujours utiliser des packages issus du FHIR Package Registry lorsque l’on définit des dépendances. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l’intérêt du versioning</li>
 </ul>
 
 <h3 id="fsh--sushi">FSH / SUSHI</h3>
@@ -357,7 +378,7 @@ Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient<
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="dev_nouvel_ig.html">next&gt;</a>
+                <a href="install_dependencies.html">next&gt;</a>
 
               </td>
             </tr>
@@ -367,7 +388,7 @@ Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient<
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.documentation#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 4, 2023 10:24+0000">2023-05-04</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.documentation#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 4, 2023 12:01+0000">2023-05-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

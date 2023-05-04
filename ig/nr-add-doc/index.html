@@ -96,10 +96,10 @@
         <a href="bonnes_pratiques.html">Bonnes pratiques</a>
       </li>
       <li>
-        <a href="dev_nouvel_ig.html">Développement d&apos;un nouvel IG</a>
+        <a href="install_dependencies.html">Installer les dépendances</a>
       </li>
       <li>
-        <a href="install_dependencies.html">Installer les dépendances</a>
+        <a href="dev_nouvel_ig.html">Développement d&apos;un nouvel IG</a>
       </li>
       <li>
         <a href="niveau_maturite.html">Les niveaux de maturité des IG</a>
@@ -246,13 +246,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#les-guides-dimplémentation" id="markdown-toc-les-guides-dimplémentation">Les guides d’implémentation</a></li>
   <li><a href="#a-qui-est-destiné-ce-wiki-" id="markdown-toc-a-qui-est-destiné-ce-wiki-">A qui est destiné ce wiki ?</a></li>
   <li><a href="#reporter-un-problème-une-issue" id="markdown-toc-reporter-un-problème-une-issue">Reporter un problème (une issue)</a></li>
-  <li><a href="#par-où-commencer-" id="markdown-toc-par-où-commencer-">Par où commencer ?</a></li>
+  <li><a href="#modeler--par-où-commencer-" id="markdown-toc-modeler--par-où-commencer-">Modeler : par où commencer ?</a></li>
   <li><a href="#outils-et-vocabulaire" id="markdown-toc-outils-et-vocabulaire">Outils et vocabulaire</a></li>
   <li><a href="#liens-utiles" id="markdown-toc-liens-utiles">Liens utiles</a></li>
 </ul>
 
 </div>
-<p>Bienvenue dans la documentation des guides d’implémentation de l’ANS, elle concerne principalement les volets du CI-SIS qui concernent le format FHIR mais ne se limitent pas à ceux-ci. Celui-ci contient toutes les informations à propos de la modélisation, des outils FSH et IG publisher, ainsi que des tips dans le contexte français.</p>
+<p>Bienvenue dans la documentation des guides d’implémentation de l’ANS, elle concerne principalement les volets du CI-SIS au format FHIR mais ne se limite pas à ceux-ci. Cette documentation contient l’ensemble des informations à propos de la modélisation, des outils FSH et IG publisher, ainsi que des tips dans le contexte français.</p>
 
 <p>Ces travaux se placent dans une démarche d’élaboration continue. L’objectif étant de profiter de l’intelligence collective pour faire évoluer les spécifications versionnées.</p>
 
@@ -267,7 +267,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>De versionner séparément, on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées</li>
   <li>Chacune des specs gère ses dépendances indépendamment des autres (aux ressources du ci-sis, aux profils interopsanté), chacune de ces dépendances peuvent être mises à jour séparément</li>
   <li>Les urls sont claires, on sait directement de quelle spec est issue chaque profil, et on peut directement accéder à l’IG facilement</li>
-  <li>Ca permet aux éditeurs de surspécifier pour réutiliser certains profils pour un autre cas d’usage, en héritant de tout ou partie</li>
+  <li>Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d’usage, en héritant de tout ou partie, ou pour décrire une implémentation précise.</li>
+  <li>L’IG doit obligatoirement hériter des ressources françaises définies par InteropSanté et/ou par les profils définis par l’ANS</li>
 </ul>
 
 <p>Documentation :</p>
@@ -299,15 +300,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>L’issue doit contenir un titre, et une description très détaillée avec une proposition de changement.</p>
 
-<h3 id="par-où-commencer-">Par où commencer ?</h3>
+<h3 id="modeler--par-où-commencer-">Modeler : par où commencer ?</h3>
 
-<p>1/ Installer les dépendances grâce à la page “Installer les dépendances [Windows/mac]” de ce wiki</p>
+<p>1/ Installer les dépendances grâce à la page “Installer les dépendances [Windows/mac]”</p>
 
 <p>2/ Développer un Implementation Guide :</p>
 <ul>
   <li>Si vous souhaitez créer un Implementation Guide pour publication : suivre la procédure Développement d’un nouvel IG</li>
-  <li>Si vous souhaitez modifier un Implementation Guide existant : cloner le GitHub repository désiré</li>
-  <li>Si vous souhaitez tester FSH et les Implementation Guide : cloner le GitHub repository FIG_ans-ig-sample ou téléchargez-le au format zip</li>
+  <li>Si vous souhaitez modifier un Implementation Guide existant : cloner le GitHub repository désiré en local</li>
+  <li>Si vous souhaitez tester FSH et la génération d’Implementation Guide : cloner le GitHub repository IG-modele ou téléchargez-le au format zip</li>
 </ul>
 
 <h3 id="outils-et-vocabulaire">Outils et vocabulaire</h3>
@@ -436,7 +437,7 @@ Il prend en entrée une arborescence de dossiers / fichiers bien définis, conte
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.documentation#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 4, 2023 10:24+0000">2023-05-04</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fhir.fr.documentation#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 4, 2023 12:01+0000">2023-05-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
