@@ -9,6 +9,7 @@ https://hub.docker.com/r/hapiproject/hapi
 Sur mac ou linux : ```docker pull hapiproject/hapi```
 
 3. Lancer le docker container de hapi en appuyant sur le bouton start
+
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/48218773/185607031-45268753-0fb3-4e09-9788-0739d29dea02.png">
 
 4. Chercher l'url d'accès à hapi
