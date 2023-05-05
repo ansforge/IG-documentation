@@ -5,13 +5,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://interop.esante.gouv.fr/ig/documentation/Patient/frpatient-exemple> a fhir:Patient ;
+<https://interop.esante.gouv.fr/ig/documentation/Patient/frpatient-exemple> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "frpatient-exemple"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://interop.esante.gouv.fr/ig/documentation/StructureDefinition/fr-patient"^^xsd:anyURI ;
-       fhir:link <http://interop.esante.gouv.fr/ig/documentation/StructureDefinition/fr-patient>
+       fhir:v "https://interop.esante.gouv.fr/ig/documentation/StructureDefinition/fr-patient"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/documentation/StructureDefinition/fr-patient>
      ] )
   ] ; # 
   fhir:text [

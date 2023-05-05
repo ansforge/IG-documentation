@@ -3,7 +3,7 @@
 
 err = 0, warn = 14, info = 4
 IG Publisher Version: 1.3.8
-Generated Fri May 05 12:31:31 UTC 2023. FHIR version 4.0.1 for ans.fr.documentation#0.1.0 (canonical = http://interop.esante.gouv.fr/ig/documentation)
+Generated Fri May 05 12:37:35 UTC 2023. FHIR version 4.0.1 for ans.fr.documentation#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/documentation)
  Build Errors : 24 / 4 / 0
  /home/runner/work/IG-documentation/IG-documentation/fsh-generated/resources/CodeSystem-competence-code-system : 0 / 2 / 2
  /home/runner/work/IG-documentation/IG-documentation/fsh-generated/resources/CodeSystem-type-carte-code-system : 0 / 2 / 2
@@ -57,7 +57,7 @@ WARNING: CodeSystem/type-carte-code-system: CodeSystem: The ShareableCodeSystem 
 == fsh-generated/resources/Patient-frpatient-exemple.json ==
 == fsh-generated/resources/StructureDefinition-EyeColor.json ==
 WARNING: StructureDefinition/EyeColor: StructureDefinition.context[0]: Review the extension type: extensions should not have a context of Element unless it's really intended that they can be used anywhere
-WARNING: StructureDefinition.where(url = 'http://interop.esante.gouv.fr/ig/documentation/StructureDefinition/EyeColor'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/documentation/StructureDefinition/EyeColor'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-fr-patient.json ==
 INFORMATION: StructureDefinition/fr-patient: StructureDefinition.snapshot.element[18].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/fr-patient: StructureDefinition.snapshot.element[40].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
