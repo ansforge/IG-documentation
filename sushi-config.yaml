@@ -1,13 +1,13 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
-id: ans.fhir.fr.[code]
-canonical: http://interop.esante.gouv.fr/ig/fhir/[code] # the last part of canonical and id must be the same
-name: ExampleIG
-title: ANS IG Example
+id: ans.fhir.fr.documentation
+canonical: http://interop.esante.gouv.fr/ig/documentation # the last part of canonical and id must be the same
+name: Documentation
+title: Documentation des guides d'implémentation de l'ANS
 publisher:
   name: ANS
   url: https://esante.gouv.fr
-status: draft
+status: active
 version: 0.1.0 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
 fhirVersion: 4.0.1
 copyrightYear: 2020+
@@ -16,24 +16,29 @@ releaseLabel: ci-build
 parameters:
     shownav: 'true'
 
-
-
 pages:
     index.md:
         title: Accueil
-    specifications_techniques.md:
-        construction_des_flux.md:
-        st_flux1.md:
-            title: Flux 01
-        st_flux2.md:
-            title: Flux 02
+    doc_modeler.md:
+        bonnes_pratiques.md:
+            title: Bonnes pratiques
+        install_dependencies.md:
+            title: Installer les dépendances
+        dev_nouvel_ig.md:
+            title: Développement d'un nouvel IG
+        niveau_maturite.md:
+            title: Les niveaux de maturité des IG
+        erreurs.md:
+            title: Les erreurs courantes
+        github.md:
+            title: Usage de GitHub
+    doc_implementer.md:
+        instance_hapi.md:
+            title: Déployer une instance HAPI
+        valider_res.md:
+            title: Valider une ressource contre un profil
     autres_ressources.md:
         title: Autres Ressources
-        securite.md:
-            title: Sécurité
-        downloads.md:
-            title: Téléchargements et usages
-
     tests.md:
         title: Tests      
     about.md:
@@ -41,15 +46,18 @@ pages:
 
 menu:
     Accueil: index.html
-    Description des flux:
-        Construction des flux: construction_des_flux.html
-        Flux 01: st_flux1.html
-        Flux 02: st_flux2.html
-    Ressources de conformance: artifacts.html
-    Tests:   tests.html
+    Documentation des FHIR modelers:
+        Bonnes pratiques: bonnes_pratiques.html
+        Installer les dépendances: install_dependencies.html
+        Développement d'un nouvel IG: dev_nouvel_ig.html
+        Les niveaux de maturité des IG: niveau_maturite.html
+        Les erreurs courantes: erreurs.html
+        Usage de GitHub: github.html
+    Documentation des FHIR implementers:
+        Déployer une instance HAPI: instance_hapi.html
+        Valider une ressource contre un profil: valider_res.html
     Autres ressources:
-        Sécurité: securite.html
-        Téléchargements et usage: downloads.html
+        Tests: tests.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
     A propos de ce guide: about.html
