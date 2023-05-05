@@ -2,7 +2,7 @@
     "package-id" : "ans.fr.documentation",
     "version" : "0.1.0",
     "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.0",
-    "mode" : "milestone", //"working" | "milestone" | "technical-correction"
+    "mode" : "milestone",
     "status" : "release",
     "sequence" : "STU1",
     "title" : "Documentation des guides d'implémentation de l'ANS",
