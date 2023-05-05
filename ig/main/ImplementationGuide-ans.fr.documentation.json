@@ -1,16 +1,16 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ans.fhir.fr.documentation",
+  "id" : "ans.fr.documentation",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Documentation</h2><p>The official URL for this implementation guide is: </p><pre>http://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fhir.fr.documentation</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Documentation</h2><p>The official URL for this implementation guide is: </p><pre>http://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation</pre></div>"
   },
-  "url" : "http://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fhir.fr.documentation",
+  "url" : "http://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation",
   "version" : "0.1.0",
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2023-05-05T12:25:10+00:00",
+  "date" : "2023-05-05T12:31:03+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -19,7 +19,7 @@
       "value" : "https://esante.gouv.fr"
     }]
   }],
-  "packageId" : "ans.fhir.fr.documentation",
+  "packageId" : "ans.fr.documentation",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{

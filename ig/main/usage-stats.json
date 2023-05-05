@@ -1,5 +1,5 @@
 {
-  "package": "ans.fhir.fr.documentation",
+  "package": "ans.fr.documentation",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "extensions": [

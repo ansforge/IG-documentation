@@ -14,9 +14,9 @@
     "name" : "TypeCarteCS"
   },
   {
-    "id" : "ans.fhir.fr.documentation",
+    "id" : "ans.fr.documentation",
     "type" : "ImplementationGuide",
-    "url" : "http://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fhir.fr.documentation",
+    "url" : "http://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation",
     "version" : "0.1.0",
     "name" : "Documentation"
   },
