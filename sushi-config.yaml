@@ -1,7 +1,7 @@
 # Documentation à propos de cette page : https://fshschool.org/docs/sushi/configuration/
 
 id: ans.fr.documentation
-canonical: http://interop.esante.gouv.fr/ig/documentation # the last part of canonical and id must be the same
+canonical: https://interop.esante.gouv.fr/ig/documentation # the last part of canonical and id must be the same
 name: Documentation
 title: Documentation des guides d'implémentation de l'ANS
 publisher:
