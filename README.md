@@ -1,4 +1,4 @@
-Ce guide d'implémentation contient la documentation pour la création et l'utilisation des des guides d'implémentation. Il est à destination des FHIR Modelers (créateur de guide d'implémentation) et des FHIR Implementers (implémenteur de spécification).
+Ce guide d'implémentation contient la documentation pour la création et l'utilisation des guides d'implémentation. Il est à destination des FHIR Modelers (créateur de guide d'implémentation) et des FHIR Implementers (implémenteur de spécification).
 
 # CI/CD
 Les workflows associés à ce repository (.github/workflows) permettent : 
