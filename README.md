@@ -1,4 +1,4 @@
-Ce guide d'implémentation contient la documentation pour la création et l'utilisation des des guides d'implémentation
+Ce guide d'implémentation contient la documentation pour la création et l'utilisation des des guides d'implémentation. Il est à destination des FHIR Modelers (créateur de guide d'implémentation) et des FHIR Implementers (implémenteur de spécification).
 
 # CI/CD
 Les workflows associés à ce repository (.github/workflows) permettent : 
@@ -13,5 +13,3 @@ Les workflows associés à ce repository (.github/workflows) permettent :
 * FHIR : Fast Healthcare Interoperability Resources
 * FIG : FHIR Implementation Guide
 * HL7 : Health Level Seven
-
-[A COMPLETER : acronymes utilisés dans le cadre de ce projet]
