@@ -4,7 +4,7 @@
     "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.0",
     "mode" : "milestone",
     "status" : "release",
-    "sequence" : "STU1",
+    "sequence" : "release",
     "title" : "Documentation des guides d'implémentation de l'ANS",
     "desc" : "Première version de la documentation des guides d'implémentation",
     "ci-build" : "https://ansforge.github.io/IG-documentation/ig/main",
