@@ -6,7 +6,7 @@ Ces travaux se placent dans une démarche d'élaboration continue. L'objectif é
 
 Selon la documentation FHIR, un Implementation Guide contient un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière.
 
-Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR. Il contient également de manière systématique un package, versionné, contenant l'ensemble des ressources de conformité.
+Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR [ImplementationGuide](https://www.hl7.org/fhir/R4/implementationguide.html). Le site web contient également de manière systématique un package, versionné, contenant l'ensemble des ressources de conformité.
 
 La meilleure pratique consiste à créer un Implementation Guide par projet bien spécifique, cela permet:
 - De versionner séparément, on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées
