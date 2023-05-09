@@ -217,7 +217,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Active
           
-            as of 2023-05-05
+            as of 2023-05-09
           
         
       </td>
@@ -260,7 +260,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Selon la documentation FHIR, un Implementation Guide contient un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière.</p>
 
-<p>Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR. Il contient également de manière systématique un package, versionné, contenant l’ensemble des ressources de conformité.</p>
+<p>Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR <a href="https://www.hl7.org/fhir/R4/implementationguide.html">ImplementationGuide</a>. Le site web contient également de manière systématique un package, versionné, contenant l’ensemble des ressources de conformité.</p>
 
 <p>La meilleure pratique consiste à créer un Implementation Guide par projet bien spécifique, cela permet:</p>
 <ul>
@@ -271,11 +271,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>L’IG doit obligatoirement hériter des ressources françaises définies par InteropSanté et/ou par les profils définis par l’ANS</li>
 </ul>
 
-<p>Documentation :</p>
-<ul>
-  <li>https://www.hl7.org/fhir/implementationguide.html</li>
-  <li>https://confluence.hl7.org/display/FHIR/NPM+Package+Specification</li>
-</ul>
+<p>Documentation : <a href="https://www.hl7.org/fhir/implementationguide.html">ImplementationGuide</a>, <a href="https://confluence.hl7.org/display/FHIR/NPM+Package+Specification">Packages</a></p>
 
 <h3 id="a-qui-est-destiné-ce-wiki-">A qui est destiné ce wiki ?</h3>
 
@@ -320,16 +316,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h4 id="sushi">SUSHI</h4>
 
 <p>Sushi est le logiciel permettant de générer les ressources au format json ou xml à partir de la grammaire FSH.
-Il est disponible en ligne : https://fshschool.org/
-Ou bien en invite de commande : https://www.npmjs.com/package/fsh-sushi</p>
+Il est disponible en ligne sur le site <a href="https://fshschool.org/">FSHSchool</a> ou bien en <a href="https://www.npmjs.com/package/fsh-sushi">invite de commande</a></p>
 
 <p>Par défaut, sushi ne génère que les differential. Pour générer les snapshots, il faut utiliser l’option <code class="language-plaintext highlighter-rouge">sushi -s .</code></p>
 
 <h4 id="gofsh">GOFSH</h4>
 
 <p>GoFSH permet de faire la transformation inverse StructureDefinition –&gt; FSH.
-Il est disponible en ligne : https://fshschool.org/
-Ou bien en invite de commande : https://www.npmjs.com/package/gofsh</p>
+Il est également disponible en ligne sur le site <a href="https://fshschool.org/">FSHSchool</a> ou bien en <a href="https://www.npmjs.com/package/gofsh">invite de commande</a></p>
 
 <p>Par défaut, GoFSH ne traite que les fichiers json. Il va falloir rajouter l’option <code class="language-plaintext highlighter-rouge">goFSH -t json-and-xml .</code> pour traiter les deux</p>
 
@@ -338,58 +332,26 @@ Ou bien en invite de commande : https://www.npmjs.com/package/gofsh</p>
 <p>L’IG publisher est l’outil permettant de générer les pages web de l’implementation guide (usage de jekyll, java, …).
 Il prend en entrée une arborescence de dossiers / fichiers bien définis, contenant : des pages en markdown, des fichiers fsh, des ressources FHIR au format json ou xml, des images…</p>
 
-<p>La documentation est disponible ici : https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation</p>
+<p>La documentation est disponible ici : <a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">IG publisher documentation</a></p>
 
 <h3 id="liens-utiles">Liens utiles</h3>
 
 <p>Des exemples d’ImplementationGuide:</p>
 <ul>
-  <li>Us-core https://hl7.org/fhir/us/core/
-    <ul>
-      <li>https://github.com/HL7/US-Core</li>
-    </ul>
-  </li>
-  <li>mcode https://build.fhir.org/ig/HL7/fhir-mCODE-ig/ (qui se base sur uscore)
-    <ul>
-      <li>https://github.com/HL7/fhir-mCODE-ig</li>
-    </ul>
-  </li>
-  <li>SDC, IG qui définit des profils de la ressource FHIR Questionnaire. Ces profils rajoutent des fonctionnalités de : préremplissage des champs, indiquer un design de formulaire, calcul automatique…)
-    <ul>
-      <li>http://hl7.org/fhir/uv/sdc/index.html</li>
-    </ul>
-  </li>
+  <li>Us-core : <a href="https://hl7.org/fhir/us/core/">Publication</a>, <a href="https://github.com/HL7/US-Core">GitHub</a></li>
+  <li>mcode (qui se base sur uscore) : <a href="http://hl7.org/fhir/us/mcode/">Publication</a>, <a href="https://github.com/HL7/fhir-mCODE-ig">GitHub</a></li>
+  <li>SDC, IG qui définit des profils de la ressource FHIR Questionnaire. Ces profils rajoutent des fonctionnalités de : préremplissage des champs, indiquer un design de formulaire, calcul automatique…) : <a href="http://hl7.org/fhir/uv/sdc/index.html">Publication</a>, <a href="https://github.com/HL7/sdc">GitHub</a></li>
 </ul>
 
-<p>Les éditeurs de profils :</p>
-<ul>
-  <li>FSH (Grammaire de définition de profils)
-    <ul>
-      <li>https://fshschool.org/</li>
-      <li>https://build.fhir.org/ig/HL7/fhir-shorthand/</li>
-    </ul>
-  </li>
-  <li>Forge (définition de profils via interface graphique)
-    <ul>
-      <li>https://simplifier.net/forge</li>
-    </ul>
-  </li>
-</ul>
+<p>L’éditeur de profils FSH (Grammaire de définition de profils) : <a href="https://fshschool.org/">getting started</a>, <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">documentation</a></p>
 
 <p>Autres :</p>
 <ul>
-  <li>IG publisher documentation (officiel HL7):
-    <ul>
-      <li>https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation</li>
-    </ul>
-  </li>
-  <li>Doc CQL (langage d’expression FHIR, permettant par ex de décrire le calcul de l’IMC) :
-    <ul>
-      <li>https://build.fhir.org/ig/HL7/cqf-measures/using-cql.html</li>
-      <li>https://cql.hl7.org/</li>
-    </ul>
-  </li>
+  <li><a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">IG publisher documentation</a> (officiel HL7)</li>
+  <li>Doc CQL (langage d’expression FHIR, permettant par ex de décrire le calcul de l’IMC) : <a href="https://cql.hl7.org/">Publication</a>
+, <a href="https://build.fhir.org/ig/HL7/cqf-measures/using-cql.html">Documentation</a>, <a href="https://github.com/HL7/cql">GitHub</a></li>
 </ul>
+
 
 
 
@@ -437,7 +399,7 @@ Il prend en entrée une arborescence de dossiers / fichiers bien définis, conte
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, May 5, 2023 15:37+0000">2023-05-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 9, 2023 15:39+0000">2023-05-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
