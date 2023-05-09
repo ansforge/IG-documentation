@@ -15,9 +15,7 @@ La meilleure pratique consiste à créer un Implementation Guide par projet bien
 - Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d'usage, en héritant de tout ou partie, ou pour décrire une implémentation précise.
 - L'IG doit obligatoirement hériter des ressources françaises définies par InteropSanté et/ou par les profils définis par l'ANS
 
-Documentation : 
-- https://www.hl7.org/fhir/implementationguide.html
-- https://confluence.hl7.org/display/FHIR/NPM+Package+Specification
+Documentation : [ImplementationGuide](https://www.hl7.org/fhir/implementationguide.html), [Packages](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification)
 
 ### A qui est destiné ce wiki ?
 
@@ -58,16 +56,14 @@ FSH est la grammaire de définition des ressources FHIR (instance, StructureDefi
 #### SUSHI
 
 Sushi est le logiciel permettant de générer les ressources au format json ou xml à partir de la grammaire FSH.
-Il est disponible en ligne : https://fshschool.org/
-Ou bien en invite de commande : https://www.npmjs.com/package/fsh-sushi
+Il est disponible en ligne sur le site [FSHSchool](https://fshschool.org/) ou bien en [invite de commande](https://www.npmjs.com/package/fsh-sushi)
 
 Par défaut, sushi ne génère que les differential. Pour générer les snapshots, il faut utiliser l'option `sushi -s .`
 
 #### GOFSH
 
 GoFSH permet de faire la transformation inverse StructureDefinition --> FSH.
-Il est disponible en ligne : https://fshschool.org/
-Ou bien en invite de commande : https://www.npmjs.com/package/gofsh
+Il est également disponible en ligne sur le site [FSHSchool](https://fshschool.org/) ou bien en [invite de commande](https://www.npmjs.com/package/gofsh)
 
 Par défaut, GoFSH ne traite que les fichiers json. Il va falloir rajouter l'option `goFSH -t json-and-xml .` pour traiter les deux
 
@@ -77,29 +73,19 @@ Par défaut, GoFSH ne traite que les fichiers json. Il va falloir rajouter l'opt
 L'IG publisher est l'outil permettant de générer les pages web de l'implementation guide (usage de jekyll, java, ...).
 Il prend en entrée une arborescence de dossiers / fichiers bien définis, contenant : des pages en markdown, des fichiers fsh, des ressources FHIR au format json ou xml, des images...
 
-La documentation est disponible ici : https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation
+La documentation est disponible ici : [IG publisher documentation](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
 
 ### Liens utiles
 
 Des exemples d'ImplementationGuide:
-- Us-core https://hl7.org/fhir/us/core/
-    - https://github.com/HL7/US-Core
-- mcode https://build.fhir.org/ig/HL7/fhir-mCODE-ig/ (qui se base sur uscore)
-    - https://github.com/HL7/fhir-mCODE-ig
-- SDC, IG qui définit des profils de la ressource FHIR Questionnaire. Ces profils rajoutent des fonctionnalités de : préremplissage des champs, indiquer un design de formulaire, calcul automatique…)   
-    - http://hl7.org/fhir/uv/sdc/index.html
+- Us-core : [Publication](https://hl7.org/fhir/us/core/), [GitHub](https://github.com/HL7/US-Core)
+- mcode (qui se base sur uscore) : [Publication](http://hl7.org/fhir/us/mcode/), [GitHub](https://github.com/HL7/fhir-mCODE-ig)
+- SDC, IG qui définit des profils de la ressource FHIR Questionnaire. Ces profils rajoutent des fonctionnalités de : préremplissage des champs, indiquer un design de formulaire, calcul automatique…) : [Publication](http://hl7.org/fhir/uv/sdc/index.html), [GitHub](https://github.com/HL7/sdc)
 
-Les éditeurs de profils :
-- FSH (Grammaire de définition de profils)
-    - https://fshschool.org/
-    - https://build.fhir.org/ig/HL7/fhir-shorthand/
- 
-- Forge (définition de profils via interface graphique)
-    - https://simplifier.net/forge
+L'éditeur de profils FSH (Grammaire de définition de profils) : [getting started](https://fshschool.org/), [documentation](https://build.fhir.org/ig/HL7/fhir-shorthand/)
  
 Autres :
-- IG publisher documentation (officiel HL7):
-    - https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation
-- Doc CQL (langage d'expression FHIR, permettant par ex de décrire le calcul de l'IMC) :
-    - https://build.fhir.org/ig/HL7/cqf-measures/using-cql.html
-    - https://cql.hl7.org/
+- [IG publisher documentation](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) (officiel HL7)
+- Doc CQL (langage d'expression FHIR, permettant par ex de décrire le calcul de l'IMC) : [Publication](https://cql.hl7.org/)
+, [Documentation](https://build.fhir.org/ig/HL7/cqf-measures/using-cql.html), [GitHub](https://github.com/HL7/cql)
+        
