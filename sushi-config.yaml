@@ -20,7 +20,7 @@ pages:
     index.md:
         title: Accueil
     doc_modeler.md:
-        bonnes_pratiques.md:
+        bonnes_pratiques_modeler.md:
             title: Bonnes pratiques
         install_dependencies.md:
             title: Installer les dépendances
@@ -33,6 +33,8 @@ pages:
         github.md:
             title: Usage de GitHub
     doc_implementer.md:
+        bonnes_pratiques_implementer.md:
+            title: Bonnes pratiques
         instance_hapi.md:
             title: Déployer une instance HAPI
         valider_res.md:
@@ -47,13 +49,14 @@ pages:
 menu:
     Accueil: index.html
     Documentation des FHIR modelers:
-        Bonnes pratiques: bonnes_pratiques.html
+        Bonnes pratiques: bonnes_pratiques_modeler.html
         Installer les dépendances: install_dependencies.html
         Développement d'un nouvel IG: dev_nouvel_ig.html
         Les niveaux de maturité des IG: niveau_maturite.html
         Les erreurs courantes: erreurs.html
         Usage de GitHub: github.html
     Documentation des FHIR implementers:
+        Bonnes pratiques: bonnes_pratiques_implementer.html
         Déployer une instance HAPI: instance_hapi.html
         Valider une ressource contre un profil: valider_res.html
     Autres ressources:
