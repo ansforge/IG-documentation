@@ -8,4 +8,3 @@ C'est la raison pour laquelle, lors du développement d'une spécification, il f
 Les ressources exposées ou acceptées en lecture doivent être conformes aux profils proposés dans la spécification, téléchargeable dans le package.
 
 Des serveurs FHIR open source tel que HAPI permettent de développer simplement une API FHIR supportant déjà la plupart des fonctionnalités attendues.
-
