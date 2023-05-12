@@ -10,7 +10,7 @@
   <name value="Documentation"/>
   <title value="Documentation des guides d'implémentation de l'ANS"/>
   <status value="active"/>
-  <date value="2023-05-09T15:41:54+00:00"/>
+  <date value="2023-05-12T16:28:07+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -557,9 +557,9 @@
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="bonnes_pratiques.html"/>
+            <valueUrl value="bonnes_pratiques_modeler.html"/>
           </extension>
-          <nameUrl value="bonnes_pratiques.html"/>
+          <nameUrl value="bonnes_pratiques_modeler.html"/>
           <title value="Bonnes pratiques"/>
           <generation value="markdown"/>
         </page>
@@ -611,6 +611,14 @@
         <nameUrl value="doc_implementer.html"/>
         <title value="Doc Implementer"/>
         <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="bonnes_pratiques_implementer.html"/>
+          </extension>
+          <nameUrl value="bonnes_pratiques_implementer.html"/>
+          <title value="Bonnes pratiques"/>
+          <generation value="markdown"/>
+        </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="instance_hapi.html"/>

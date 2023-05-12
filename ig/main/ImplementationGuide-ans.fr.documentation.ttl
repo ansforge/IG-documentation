@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "Documentation"] ; # 
   fhir:title [ fhir:v "Documentation des guides d'implémentation de l'ANS"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2023-05-09T15:41:54+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-05-12T16:28:07+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -636,9 +636,9 @@
          fhir:page ( [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [ fhir:v "bonnes_pratiques.html"^^xsd:anyURI ]
+             fhir:value [ fhir:v "bonnes_pratiques_modeler.html"^^xsd:anyURI ]
            ] ) ;
-           fhir:name [ fhir:v "bonnes_pratiques.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "bonnes_pratiques_modeler.html"^^xsd:anyURI ] ;
            fhir:title [ fhir:v "Bonnes pratiques" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
@@ -691,6 +691,14 @@
          fhir:title [ fhir:v "Doc Implementer" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "bonnes_pratiques_implementer.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "bonnes_pratiques_implementer.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Bonnes pratiques" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
            fhir:extension ( [
              fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
              fhir:value [ fhir:v "instance_hapi.html"^^xsd:anyURI ]
