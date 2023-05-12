@@ -1,10 +1,12 @@
+
+
 ### Règles de nommage des ressources de conformité
 
 Ces règles de nommages ont été établies en s'inspirant des ressources us-core
 
 | **Attribut** | **Description** | **Exemple us-core** |
 | ----- | ----- | ----- |
-| id | utiliser le format kebab-case, ex : fr-patient. (/!\ sur Forge, l'id n'est pas obligatoire, c'est important de le rajouter!). Lors de la création d'un IG pour un projet en particulier, il est possible de préfixer l'ensemble des ressources de conformité par le trigramme du projet (ex : "ror-...") | us-core-patient |
+| id | utiliser le format kebab-case, ex : fr-patient. (/!\ sur Forge, l'id n'est pas obligatoire, il est important de le rajouter !). Lors de la création d'un IG pour un projet en particulier, il est possible de préfixer l'ensemble des ressources de conformité par le trigramme du projet (ex : "ror-...") | us-core-patient |
 | title | similaire au nom, avec espaces. Ex : Fr Patient | US Core Patient Profile |
 | name | Utiliser le format PascalCase sans espace. Ex : FrPatient | USCorePatientProfile |
 | url | [base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition). | ttp://hl7.org/fhir/us/core/StructureDefinition/us-core-patient |
@@ -91,4 +93,6 @@ Exemple:
 > Alias: $FrObservationBp = http://interopsante.org/fhir/StructureDefinition/FrObservationBp  
 > Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient  
 
+### Exemples de guides d'implémentation
 
+Pour plus d'informations, consultez la [liste des guides d'implémentation](https://interop.esante.gouv.fr/ig/fhir/) à titre d'exemple.

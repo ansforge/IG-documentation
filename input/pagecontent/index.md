@@ -23,9 +23,13 @@ Il est destiné à celles et ceux qui utilisent FHIR !
 
 - Les FHIR modelers, qui créent ces guides et profilent des ressources
 - Les FHIR implementers, qui lisent ces guides et développent des APIs 
-- Les experts fonctionnels, qui challengent ces travaux.
+- Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux.
 
 Les experts fonctionnels ont également une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : c'est les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.
+
+### La liste des guides d'implémentation de l'ANS
+
+La liste des guides d'implémentation est accessible [à cette adresse](https://interop.esante.gouv.fr/ig/fhir/).
 
 ### Reporter un problème (une issue)
 
