@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>ANS.FR.DOCUMENTATION\Les niveaux de maturité des IG - FHIR v4.0.1</title>
+    <title>ANS.FR.DOCUMENTATION\Collaborons - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2.4"}
-    h3,h4,h5,h6{--heading-prefix:"2.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -162,15 +162,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='doc_modeler.html'><b>Doc Modeler</b></a></li><li><b>Les niveaux de maturité des IG</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Collaborons</b></li>
 
           <span style="float:right;">
 
-            <a href="dev_nouvel_ig.html">&lt;prev</a> | 
+            <a href="valider_res.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="erreurs.html">next&gt;</a>
+          | <a href="autres_ressources.html">next&gt;</a>
 
           </span>
 
@@ -193,7 +193,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publication Build: This will be filled in by the publication tooling</p><!--EndReleaseHeader-->
-  <h2>Les niveaux de maturité des IG</h2>
+  <h2>Collaborons</h2>
   
 
 
@@ -211,30 +211,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h3 id="les-niveaux-de-maturité-des-guides-dimplémentation">Les niveaux de maturité des guides d’implémentation</h3>
+<p>L’interopérabilité française doit se construire de manière collaborative avec un maximum d’acteurs (développeurs, experts métiers, experts interopérabilité…). FHIR étant très générique de base pour correspondre à tous les cas d’usages, il faut le contraindre pour vraiment gagner en interopérabilité.</p>
 
-<p>Une réflexion sur les niveaux de maturité des guides d’implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion.</p>
-
-<h4 id="critères-de-maturité">Critères de maturité</h4>
-
-<p>La liste des critères de maturité actuellement envisagés sont:</p>
-
+<p>Plusieurs types de profils existent, avec une notion d’héritage :</p>
 <ul>
-  <li>Nombre d’implémentation ? (Déclaratif : Convergence / DSI ?)</li>
-  <li>Nombre de tests réalisés lors de projectathon</li>
-  <li>Nombre d’issue et résolutions sur le repo GitHub</li>
-  <li>Nombre de commentaires lors des phases de concertation</li>
-  <li>Publication du package avec des dépendances : les ressources héritées ne sont pas dupliquées</li>
-  <li>Description complète pour l’ensemble des ressources de conformité</li>
-  <li>Publication de retours d’expérience sur l’implémentation des spécifications</li>
+  <li>les profils fr core, très génériques qui doivent être systématiquement hérités et utilisés en France;</li>
+  <li>les profils par cas d’usage (cf liste des guides ANS)[https://interop.esante.gouv.fr/ig/fhir].</li>
 </ul>
 
-<p>Critères de qualité:</p>
-
+<p>Pour collaborer, implémenter une spécification, il faudra :</p>
 <ul>
-  <li>Publication de l’IG sans erreurs (Q/A)</li>
-  <li>Suivi des bonnes conventions et règles de nomage</li>
+  <li>connaître l’écosystème français (connaître les différents guides d’implémentation ainsi que leurs héritages);</li>
+  <li>utiliser GitHub (poster des issues ou des Pull Requests) : tous les travaux sont diffusés en open source pour faciliter la collaboration.</li>
 </ul>
+
+<p>Si un sujet n’est pas encore traité en France, il est possible de proposer un nouveau sujet de travail pour poster un nouveau volet dans le cadre d’interopérabilité français : https://esante.gouv.fr/offres-services/ci-sis/demarche-elaboration</p>
 
 
 
@@ -264,7 +255,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="dev_nouvel_ig.html">&lt;prev</a>
+                <a href="valider_res.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -272,7 +263,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="erreurs.html">next&gt;</a>
+                <a href="autres_ressources.html">next&gt;</a>
 
               </td>
             </tr>
