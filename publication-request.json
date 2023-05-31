@@ -1,12 +1,13 @@
 {
     "package-id" : "ans.fr.documentation",
-    "version" : "0.1.0",
-    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.0",
+    "version" : "0.1.1",
+    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.1",
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "release",
     "title" : "Documentation des guides d'implémentation de l'ANS",
-    "desc" : "Première version de la documentation des guides d'implémentation",
+    "desc" : "Documentation des guides d'implémentation de l'ANS",
+    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.1\n- Réparation des liens de la page d'accueil : (repare links #5)[https://github.com/ansforge/IG-documentation/pull/5]\n- Passage de ci-build à release : (Update README.md and change release label to release #3)[https://github.com/ansforge/IG-documentation/pull/3]\n- Ajout du lien vers la liste des IG de l'ANS et Ajout d'une page bonnes pratiques pour les implementer : (add bonne pratique implementer #8)[https://github.com/ansforge/IG-documentation/pull/8]\n- Ajout d'une page \"comment collaborer ?\" (Add first version of collaborons page #12)[https://github.com/ansforge/IG-documentation/pull/12]",
     "ci-build" : "https://ansforge.github.io/IG-documentation/ig/main",
     "category" : "Documentation",
     "introduction" : "Documentation des guides d'implémentation de l'ANS"
