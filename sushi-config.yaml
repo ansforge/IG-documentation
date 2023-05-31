@@ -39,6 +39,8 @@ pages:
             title: Déployer une instance HAPI
         valider_res.md:
             title: Valider une ressource contre un profil
+    collaborons.md: 
+        title: Collaborons
     autres_ressources.md:
         title: Autres Ressources
     tests.md:
@@ -59,6 +61,7 @@ menu:
         Bonnes pratiques: bonnes_pratiques_implementer.html
         Déployer une instance HAPI: instance_hapi.html
         Valider une ressource contre un profil: valider_res.html
+    Collaborons: collaborons.html
     Autres ressources:
         Tests: tests.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
