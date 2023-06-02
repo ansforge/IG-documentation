@@ -7,4 +7,4 @@ on:
   workflow_dispatch:
 jobs:
   Call-Fhir-Workflows :
-    uses: ansforge/FIG_ans.workflows/.github/workflows/release_ig_fhir.yml@main
+    uses: ansforge/FIG_ans.workflows/.github/workflows/release_ig.yml@main
