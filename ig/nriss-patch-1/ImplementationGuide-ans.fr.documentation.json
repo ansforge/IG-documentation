@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Documentation</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation",
-  "version" : "0.1.0",
+  "version" : "0.1.1",
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2023-05-08T14:52:00+00:00",
+  "date" : "2023-06-02T09:23:31+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -31,6 +31,16 @@
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
     "version" : "5.0.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "1.0.0"
   }],
   "definition" : {
     "extension" : [{
@@ -587,114 +597,6 @@
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
-    "resource" : [{
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/fr-patient"
-      },
-      "name" : "Patient français",
-      "description" : "Description du patient français",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/EyeColor"
-      },
-      "name" : "EyeColor",
-      "description" : "Eye color extension",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/EyeColorVS"
-      },
-      "name" : "EyeColor Value Set",
-      "description" : "Different eye colors.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/MeltingPotVS"
-      },
-      "name" : "Melting Pot Value Set",
-      "description" : "Melting Pot Value Set.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/ModifiedAdministrativeGender"
-      },
-      "name" : "ModifiedAdministrativeGender",
-      "description" : "AdministrativeGender without unknown code",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/TypeCarteVS"
-      },
-      "name" : "Type Carte Value Set",
-      "description" : "Type Carte Value Set.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/competence-code-system"
-      },
-      "name" : "Compétences CodeSystem",
-      "description" : "Compétences des professionnels de santé.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/type-carte-code-system"
-      },
-      "name" : "Type de carte",
-      "description" : "Type de carte professionnelle et personnelle.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/frpatient-exemple"
-      },
-      "name" : "frpatient-exemple",
-      "description" : "Exemple d'un patient français",
-      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/documentation/StructureDefinition/fr-patient"
-    }],
     "page" : {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
@@ -723,9 +625,9 @@
         "page" : [{
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "bonnes_pratiques.html"
+            "valueUrl" : "bonnes_pratiques_modeler.html"
           }],
-          "nameUrl" : "bonnes_pratiques.html",
+          "nameUrl" : "bonnes_pratiques_modeler.html",
           "title" : "Bonnes pratiques",
           "generation" : "markdown"
         },
@@ -786,6 +688,15 @@
         "page" : [{
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "bonnes_pratiques_implementer.html"
+          }],
+          "nameUrl" : "bonnes_pratiques_implementer.html",
+          "title" : "Bonnes pratiques",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
             "valueUrl" : "instance_hapi.html"
           }],
           "nameUrl" : "instance_hapi.html",
@@ -801,6 +712,15 @@
           "title" : "Valider une ressource contre un profil",
           "generation" : "markdown"
         }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "collaborons.html"
+        }],
+        "nameUrl" : "collaborons.html",
+        "title" : "Collaborons",
+        "generation" : "markdown"
       },
       {
         "extension" : [{

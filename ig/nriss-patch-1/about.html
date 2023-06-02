@@ -42,8 +42,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"6"}
-    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
           <!-- Placeholder for child template header declarations -->
@@ -57,7 +57,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Documentation des guides d'implémentation de l'ANS</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - release
+            <span style="display:inline-block;">0.1.1 - release
 
 
             </span>
@@ -93,7 +93,7 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="bonnes_pratiques.html">Bonnes pratiques</a>
+        <a href="bonnes_pratiques_modeler.html">Bonnes pratiques</a>
       </li>
       <li>
         <a href="install_dependencies.html">Installer les dépendances</a>
@@ -118,12 +118,18 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="bonnes_pratiques_implementer.html">Bonnes pratiques</a>
+      </li>
+      <li>
         <a href="instance_hapi.html">Déployer une instance HAPI</a>
       </li>
       <li>
         <a href="valider_res.html">Valider une ressource contre un profil</a>
       </li>
     </ul>
+  </li>
+  <li>
+    <a href="collaborons.html">Collaborons</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
@@ -208,7 +214,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Cet Implementation Guide a été généré avec l’outil HL7 publisher développé par HL7. Il permet d’associer une documentation technique et une documentation narrative au sein d’un même site web :</p>
 <ul>
   <li>La documentation narrative se trouve dans les différentes pages de cette spécification naviguable à travers les boutons “prev”, “bottom”, “next” présents en haut et bas de page ou avec la barre de navigation.</li>
-  <li>Une représentation graphique des profils spécifiés sous forme de <a href="http://hl7.org/fhir/R4/formats.html#table">table logique</a> se trouve dans l’onglet Autres ressources &gt; <a href="artifacts.html">artifacts</a>.</li>
+  <li>La documentation technique se présente sous forme de liste des ressources de conformité détaillée dans une <a href="http://hl7.org/fhir/R4/formats.html#table">table logique</a> dans la page <a href="artifacts.html">artifacts</a>.</li>
 </ul>
 
 <p>Cette nouvelle proposition de diffusion de spécifications se base sur les tendances internationales d’HL7 et utilise les outils open source <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FSH</a> et <a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">IG Publisher</a>.
@@ -222,7 +228,7 @@ Exemples d’usage :</p>
 
 <p>Une fois validé et publié sur le <a href="https://registry.fhir.org/">FHIR Registry</a>, ce guide pourra être utilisé comme héritage pour être surspécifié. Par exemple, il pourra être surspécifié et versionné pour créer une documentation applicative.</p>
 
-<p><a name="l410">​</a>L’onglet de <a href="downloads.html">téléchargement</a> vous permettra de télécharger :</p>
+<p><a name="l422">​</a>L’onglet de <a href="downloads.html">téléchargement</a> vous permettra de télécharger :</p>
 <ul>
   <li>le package qui contient toutes les ressources de conformance (StructureDefinition, SearchParameter, …)</li>
   <li>L’ensemble de cette documentation pour consultation hors ligne.</li>
@@ -232,7 +238,6 @@ Exemples d’usage :</p>
 
 <p>Liens utiles :</p>
 <ul>
-  <li><a href="https://github.com/ansforge/FIG_ans-ig-sample/wiki">Wiki ANS sur les IGs</a> (en cours de construction)</li>
   <li><a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">Documentation IG Publisher</a></li>
 </ul>
 
@@ -283,7 +288,7 @@ Exemples d’usage :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 8, 2023 14:52+0000">2023-05-08</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 2, 2023 09:23+0000">2023-06-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

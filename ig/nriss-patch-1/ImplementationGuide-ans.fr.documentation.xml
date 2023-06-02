@@ -6,11 +6,11 @@
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Documentation</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation"/>
-  <version value="0.1.0"/>
+  <version value="0.1.1"/>
   <name value="Documentation"/>
   <title value="Documentation des guides d'implémentation de l'ANS"/>
   <status value="active"/>
-  <date value="2023-05-08T14:52:00+00:00"/>
+  <date value="2023-06-02T09:23:31+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -29,6 +29,14 @@
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
     <version value="5.0.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="1.0.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -434,105 +442,6 @@
         <valueString value="true"/>
       </extension>
     </extension>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/fr-patient"/>
-      </reference>
-      <name value="Patient français"/>
-      <description value="Description du patient français"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/EyeColor"/>
-      </reference>
-      <name value="EyeColor"/>
-      <description value="Eye color extension"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/EyeColorVS"/>
-      </reference>
-      <name value="EyeColor Value Set"/>
-      <description value="Different eye colors."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/MeltingPotVS"/>
-      </reference>
-      <name value="Melting Pot Value Set"/>
-      <description value="Melting Pot Value Set."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/ModifiedAdministrativeGender"/>
-      </reference>
-      <name value="ModifiedAdministrativeGender"/>
-      <description value="AdministrativeGender without unknown code"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/TypeCarteVS"/>
-      </reference>
-      <name value="Type Carte Value Set"/>
-      <description value="Type Carte Value Set."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/competence-code-system"/>
-      </reference>
-      <name value="Compétences CodeSystem"/>
-      <description value="Compétences des professionnels de santé."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/type-carte-code-system"/>
-      </reference>
-      <name value="Type de carte"/>
-      <description value="Type de carte professionnelle et personnelle."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/frpatient-exemple"/>
-      </reference>
-      <name value="frpatient-exemple"/>
-      <description value="Exemple d'un patient français"/>
-      <exampleCanonical value="https://interop.esante.gouv.fr/ig/documentation/StructureDefinition/fr-patient"/>
-    </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
         <valueUrl value="toc.html"/>
@@ -557,9 +466,9 @@
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="bonnes_pratiques.html"/>
+            <valueUrl value="bonnes_pratiques_modeler.html"/>
           </extension>
-          <nameUrl value="bonnes_pratiques.html"/>
+          <nameUrl value="bonnes_pratiques_modeler.html"/>
           <title value="Bonnes pratiques"/>
           <generation value="markdown"/>
         </page>
@@ -613,6 +522,14 @@
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="bonnes_pratiques_implementer.html"/>
+          </extension>
+          <nameUrl value="bonnes_pratiques_implementer.html"/>
+          <title value="Bonnes pratiques"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="instance_hapi.html"/>
           </extension>
           <nameUrl value="instance_hapi.html"/>
@@ -627,6 +544,14 @@
           <title value="Valider une ressource contre un profil"/>
           <generation value="markdown"/>
         </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="collaborons.html"/>
+        </extension>
+        <nameUrl value="collaborons.html"/>
+        <title value="Collaborons"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
