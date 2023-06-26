@@ -1,3 +1,19 @@
+### Le choix de la version FHIR
+
+Avant de commencer à développer un guide d'implémentation, il faut choisir la version de FHIR sur laquelle se baser : R4, R4B, R5 ? 
+
+A l'heure actuelle, l'écosystème français est en R4 (fr-core, IG ANS, Annuaire, ROR...). 
+
+L'objectif étant d'avoir un écosystème uniforme et simple qui hérite systématiquement de fr-core pour avoir des modélisations les plus cohérentes possibles. Il est ainsi préférable d'utiliser R4, pour profiter de l'héritage de fr-core et des volets du ci-sis, et ne pas être "hors système".
+
+Travailler sur R4 et R5 parallèlement engendre beaucoup de questions : doubles travaux de maintenance, nécessité de maintenir des mappings/connecteurs entre versions (R4 <-> R5, R4 <-> R6, R5 <-> R6), augmentation de la complexité de l'écosystème avec certains acteurs en R4, d'autres en R5...
+Les ressources étant limitées, il est préférable de se concentrer sur l'amélioration de nos profils nationaux en R4 et de faire monter l'écosystème en compétences.
+
+La release R5 reste cependant intéressante, notamment pour sa documentation et certaines ressources améliorées (Documentation FHIR Search, Ressources MedicinalProduct, ...). 
+Ce choix n'est pas tranché, et il s'agit bien de l'écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d'utiliser R5 (notamment pour des cas d'usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5.
+
+A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif. Grahame Grieve a ainsi proposé de faire l'effort de transition sur R6.
+
 ### Mise en place du repo GitHub
 
 Prérequis:
