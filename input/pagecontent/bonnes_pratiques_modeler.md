@@ -70,14 +70,12 @@ Le package doit toujours dépendre de fr-core et/ou les projets de l'ANS pour as
 
 ### Les URL canoniques
 
-L'URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d'identifier de manière unique:
-- chaque implementation guide
-- chaque profil
+L'URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d'identifier de manière unique chaque implementation guide (IG) et chaque profil.
 
 #### L'URL canonique de l'IG
 
 L'URL canonique de l'IG permet d'accéder à sa page web, c'est à dire la spécification narrative et technique (ex : https://www.hl7.org/fhir/us/core).
-Dans le cas des IG de l'ANS, l'url canonique est https://interop.esante.gouv.fr/ig/fhir/[code]
+Dans le cas des IG de l'ANS, l'url canonique est https://interop.esante.gouv.fr/ig/[fhir/][code]
 
 #### L'URL canonique des ressources de conformité
 
