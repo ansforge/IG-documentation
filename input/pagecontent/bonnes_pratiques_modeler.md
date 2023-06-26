@@ -43,31 +43,6 @@ Dans certains cas, mettre les VS dans l'IG est possible, notamment pour les prof
 TODO : rajouter lien vers la procédure de création d'un VS
 -->
 
-### Mise en place du repo GitHub
-
-Prérequis:
-* Avoir un [compte GitHub](https://ansforge.github.io/Documentation/pages/docs/github.html)
-* L'associer à l'[organisation ANS](https://ansforge.github.io/Documentation/pages/quick-start/biencommencer.html)
-* Lire la documentation [best practice](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
-
-Tâche:
-* Créer un [nouveau repository](https://github.com/organizations/ansforge/repositories/new) public en utilisant le template ansforge/FIG_ans-ig-sample.
-* Nommer le repository pour qu'il soit facilement retrouvé et compréhensible par n'importe qui : Descriptif, lisible, cohérent, contextuel, extensible, réutilisable, bref. Il doit être préfixé par "IG-"[...]. Exemple : IG-fhir-partage-de-documents-de-sante. N'hésitez pas à demander avis à la team interop :)
-* Mettre à jour le README selon le template proposé
-
-L'IG est créé! Il faut maintenant le personnaliser
-
-### Paramétrage de l'IG
-
-Lors de la création d'un IG, il y a une première phase de paramétrage à effectuer. Il faut remplir:
-* Le fichier [sushi-config](https://fshschool.org/docs/sushi/configuration/), avec:
-   * l'id, qui sera également l'id du package, qui doit s'appeler "ans.fhir.fr.[codeprojet]"
-   * l'url canonique, au format https://interop.esante.gouv.fr/ig/fhir/[codeprojet], avec [codeprojet] identique à celui du package id et en minuscule
-   * le nom, le titre ...
-* Rapporter les mêmes modifications dans package-list:
-   * package-id, titre, url canonique, introduction descriptive...
-* modifier le paramètre ig dans ig.ini pour qu'il soit de la forme fsh-generated/resources/ImplementationGuide-[package-id].json --> Cette étape est nécessaire, sans cela, il y aura des erreurs.
-* Le fichier input/data/features.yml : mettre à jour le lien vers la github issue
 
 ### Règles de nommage des ressources de conformité
 
