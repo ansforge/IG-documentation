@@ -212,8 +212,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#le-choix-de-la-version-fhir" id="markdown-toc-le-choix-de-la-version-fhir">Le choix de la version FHIR</a></li>
   <li><a href="#création-des-ressources-de-conformité" id="markdown-toc-création-des-ressources-de-conformité">Création des ressources de conformité</a></li>
-  <li><a href="#mise-en-place-du-repo-github" id="markdown-toc-mise-en-place-du-repo-github">Mise en place du repo GitHub</a></li>
-  <li><a href="#paramétrage-de-lig" id="markdown-toc-paramétrage-de-lig">Paramétrage de l’IG</a></li>
   <li><a href="#règles-de-nommage-des-ressources-de-conformité" id="markdown-toc-règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</a></li>
   <li><a href="#les-packages-et-les-dépendances" id="markdown-toc-les-packages-et-les-dépendances">Les packages et les dépendances</a></li>
   <li><a href="#les-url-canoniques" id="markdown-toc-les-url-canoniques">Les URL canoniques</a></li>
@@ -266,44 +264,6 @@ Dans certains cas, mettre les VS dans l'IG est possible, notamment pour les prof
 
 TODO : rajouter lien vers la procédure de création d'un VS
 -->
-
-<h3 id="mise-en-place-du-repo-github">Mise en place du repo GitHub</h3>
-
-<p>Prérequis:</p>
-<ul>
-  <li>Avoir un <a href="https://ansforge.github.io/Documentation/pages/docs/github.html">compte GitHub</a></li>
-  <li>L’associer à l’<a href="https://ansforge.github.io/Documentation/pages/quick-start/biencommencer.html">organisation ANS</a></li>
-  <li>Lire la documentation <a href="https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html">best practice</a></li>
-</ul>
-
-<p>Tâche:</p>
-<ul>
-  <li>Créer un <a href="https://github.com/organizations/ansforge/repositories/new">nouveau repository</a> public en utilisant le template ansforge/FIG_ans-ig-sample.</li>
-  <li>Nommer le repository pour qu’il soit facilement retrouvé et compréhensible par n’importe qui : Descriptif, lisible, cohérent, contextuel, extensible, réutilisable, bref. Il doit être préfixé par “IG-“[…]. Exemple : IG-fhir-partage-de-documents-de-sante. N’hésitez pas à demander avis à la team interop :)</li>
-  <li>Mettre à jour le README selon le template proposé</li>
-</ul>
-
-<p>L’IG est créé! Il faut maintenant le personnaliser</p>
-
-<h3 id="paramétrage-de-lig">Paramétrage de l’IG</h3>
-
-<p>Lors de la création d’un IG, il y a une première phase de paramétrage à effectuer. Il faut remplir:</p>
-<ul>
-  <li>Le fichier <a href="https://fshschool.org/docs/sushi/configuration/">sushi-config</a>, avec:
-    <ul>
-      <li>l’id, qui sera également l’id du package, qui doit s’appeler “ans.fhir.fr.[codeprojet]”</li>
-      <li>l’url canonique, au format https://interop.esante.gouv.fr/ig/fhir/[codeprojet], avec [codeprojet] identique à celui du package id et en minuscule</li>
-      <li>le nom, le titre …</li>
-    </ul>
-  </li>
-  <li>Rapporter les mêmes modifications dans package-list:
-    <ul>
-      <li>package-id, titre, url canonique, introduction descriptive…</li>
-    </ul>
-  </li>
-  <li>modifier le paramètre ig dans ig.ini pour qu’il soit de la forme fsh-generated/resources/ImplementationGuide-[package-id].json –&gt; Cette étape est nécessaire, sans cela, il y aura des erreurs.</li>
-  <li>Le fichier input/data/features.yml : mettre à jour le lien vers la github issue</li>
-</ul>
 
 <h3 id="règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</h3>
 
@@ -485,7 +445,7 @@ Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient<
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 26, 2023 09:05+0000">2023-06-26</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 26, 2023 09:08+0000">2023-06-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
