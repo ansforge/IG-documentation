@@ -8,7 +8,7 @@ Les ressources étant limitées, il est préférable de se concentrer sur l'amé
 La release R5 reste cependant intéressante, notamment pour l'amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct, ...). 
 Ce choix n'est pas tranché, c'est l'écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d'utiliser R5 (notamment pour des cas d'usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5.
 
-A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif. Grahame Grieve a ainsi proposé de faire l'effort de transition sur R6.
+A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif. [Grahame Grieve](https://www.linkedin.com/in/grahame-grieve-952637/) (directeur produit FHIR) a ainsi proposé de faire l'effort de transition sur R6.
 
 En conclusion : privilégier R4 pour ne pas être "hors système" et être cohérent avec fr-core et les IGs de l'ANS. Utiliser R5 uniquement si l'écosystème l'exige (ex : héritage d'un IG international en R5, héritage de ressources retravaillées en R5, ...) et partager ce besoin en issue GitHub.
 
@@ -31,10 +31,10 @@ Où chercher les profils-extensions déjà créés ?
 
 Ce paragraphe sera complété lorsque le FHIR Terminology Service sera en service.
 
-<!-- FSH et l'IG publisher permet de générer ces ressources directement au sein des IG. Ainsi, le package de l'IG contiendra les CodeSystem (CS) et les ValueSet (VS). 
+<!-- FSH et l'IG publisher permet de générer ces ressources directement au sein des IG. Ainsi, le package de l'IG contiendra les [CodeSystem](https://www.hl7.org/fhir/R4/codesystem.html) (CS) et les [ValueSet](https://www.hl7.org/fhir/R4/valueset.html) (VS). 
 Il se pose alors la question : est-ce que les CS et VS doivent le SMT ou dans les IGs ?
 
-Il n'y a pas de réponse générique, mais il fait privilégier l'usage du SMT car c'est une source de vérité.
+Il n'y a pas de réponse générique, mais il faut privilégier l'usage du SMT car c'est une source de vérité.
 
 Dans certains cas, mettre les VS dans l'IG est possible, notamment pour les profils applicatifs, mais dans ce cas:
 * Il faut favoriser l'inclusion des CodeSystem et des ValueSet entiers dans ce VS plutôt que d'inclure des codes individuels. Cela permet d'éviter des erreurs de divergence entre les versions des terminologies.
