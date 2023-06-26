@@ -61,8 +61,8 @@ menu:
         Bonnes pratiques: bonnes_pratiques_implementer.html
         Déployer une instance HAPI: instance_hapi.html
         Valider une ressource contre un profil: valider_res.html
-    Collaborons: collaborons.html
     Autres ressources:
+        Collaborons: collaborons.html
         Tests: tests.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/

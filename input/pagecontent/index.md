@@ -71,14 +71,14 @@ De la même manière qu'FSH, GoFSH est également disponible en ligne sur [le si
 
 Par défaut, GoFSH ne traite que les fichiers json. Il va falloir rajouter l'option `goFSH -t json-and-xml .` pour traiter les deux.
 
-A noter, la fonction fshing-trip lancée avec la commande `gofsh --fshing-trip` permet de lancer goFSH puis sushi et de générer une comparaison entre le json initial et le json généré avec sushi.
+A noter, la fonction fshing-trip lancée avec la commande `gofsh --fshing-trip` permet de lancer goFSH puis sushi et de générer une comparaison entre le json initial et le json généré avec sushi visualisable sous la forme d'une page html.
 
 #### IG Publisher
 
 L'IG publisher est l'outil permettant de générer les pages web de l'implementation guide (usage de jekyll, java, ...).
 Il prend en entrée une arborescence de dossiers / fichiers bien définis, contenant : des pages en markdown, des fichiers fsh, des ressources FHIR au format json ou xml, des images...
 
-La documentation officielle de l'IG publisher est disponible [ici](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation).
+Vous pouvez vous référer à [la documentation officielle de l'IG publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation).
 
 ### Liens utiles
 
