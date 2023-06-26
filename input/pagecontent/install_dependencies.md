@@ -11,6 +11,7 @@ https://code.visualstudio.com/
 - [Requis] "[FHIR Shorthand](https://marketplace.visualstudio.com/items?itemName=MITRE-Health.vscode-language-fsh)"
 - [Optionnel] "[Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)"
 - [Optionnel] "[Kodjin FHIR Profiler](https://marketplace.visualstudio.com/items?itemName=edenlabio.fhir-profiler-tool)"
+- [Optionnel] "[codfsh](https://github.com/gematik/codfsh)"
 
 1. Lancer VS Code
 2. Aller dans le menu extension (les 4 carrés dont un qui se décolle à gauche), chercher et installer "FHIR Shorthand"
