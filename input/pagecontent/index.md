@@ -69,8 +69,9 @@ Par défaut, sushi ne génère que les differential. Pour générer les snapshot
 GoFSH permet de faire la transformation inverse StructureDefinition --> FSH.
 Il est également disponible en ligne sur le site [FSHSchool](https://fshschool.org/) ou bien en [invite de commande](https://www.npmjs.com/package/gofsh)
 
-Par défaut, GoFSH ne traite que les fichiers json. Il va falloir rajouter l'option `goFSH -t json-and-xml .` pour traiter les deux
+Par défaut, GoFSH ne traite que les fichiers json. Il va falloir rajouter l'option `goFSH -t json-and-xml .` pour traiter les deux.
 
+A noter, la fonction fshing-trip lancée avec la commande `gofsh --fshing-trip` permet de lancer goFSH puis sushi et de générer une comparaison entre le json initial et le json généré avec sushi.
 
 #### IG Publisher
 
