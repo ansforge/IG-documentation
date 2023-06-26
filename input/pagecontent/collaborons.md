@@ -6,7 +6,7 @@ Plusieurs types de profils existent, avec une notion d'héritage :
 
 Pour collaborer, implémenter une spécification, il faudra :
 - connaître l'écosystème français (connaître les différents guides d'implémentation ainsi que leurs héritages);
+- connaître FHIR / FSH
 - utiliser GitHub (poster des issues ou des Pull Requests) : tous les travaux sont diffusés en open source pour faciliter la collaboration.
 
-
-Si un sujet n'est pas encore traité en France, il est possible de proposer un nouveau sujet de travail pour poster un nouveau volet dans le cadre d'interopérabilité français : https://esante.gouv.fr/offres-services/ci-sis/demarche-elaboration
+Liste des cas d'usages déjà traités en France accessible dans les (volets du ci-sis)(https://esante.gouv.fr/offres-services/ci-sis/espace-publication). Si un sujet n'est pas encore traité en France, il est possible de proposer un nouveau sujet de travail pour poster un nouveau volet dans le cadre d'interopérabilité français : https://esante.gouv.fr/offres-services/ci-sis/demarche-elaboration
