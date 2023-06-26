@@ -252,7 +252,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#les-guides-dimplémentation" id="markdown-toc-les-guides-dimplémentation">Les guides d’implémentation</a></li>
   <li><a href="#a-qui-est-destiné-ce-wiki-" id="markdown-toc-a-qui-est-destiné-ce-wiki-">A qui est destiné ce wiki ?</a></li>
   <li><a href="#la-liste-des-guides-dimplémentation-de-lans" id="markdown-toc-la-liste-des-guides-dimplémentation-de-lans">La liste des guides d’implémentation de l’ANS</a></li>
-  <li><a href="#reporter-un-problème-une-issue" id="markdown-toc-reporter-un-problème-une-issue">Reporter un problème (une issue)</a></li>
+  <li><a href="#reporter-un-problème-ou-une-suggestion-damélioration" id="markdown-toc-reporter-un-problème-ou-une-suggestion-damélioration">Reporter un problème ou une suggestion d’amélioration</a></li>
   <li><a href="#modeler--par-où-commencer-" id="markdown-toc-modeler--par-où-commencer-">Modeler : par où commencer ?</a></li>
   <li><a href="#outils-et-vocabulaire" id="markdown-toc-outils-et-vocabulaire">Outils et vocabulaire</a></li>
   <li><a href="#liens-utiles" id="markdown-toc-liens-utiles">Liens utiles</a></li>
@@ -296,7 +296,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>La liste des guides d’implémentation est accessible <a href="https://interop.esante.gouv.fr/ig/fhir/">à cette adresse</a>.</p>
 
-<h3 id="reporter-un-problème-une-issue">Reporter un problème (une issue)</h3>
+<h3 id="reporter-un-problème-ou-une-suggestion-damélioration">Reporter un problème ou une suggestion d’amélioration</h3>
 
 <p>Vous avez identifié une erreur sur un des guides ? L’onglet issue permet de signaler un problème sur un projet donné.</p>
 
@@ -314,7 +314,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>2/ Développer un Implementation Guide :</p>
 <ul>
   <li>Si vous souhaitez créer un Implementation Guide pour publication : suivre la procédure Développement d’un nouvel IG</li>
-  <li>Si vous souhaitez modifier un Implementation Guide existant : cloner le GitHub repository désiré en local</li>
+  <li>Si vous souhaitez modifier un Implementation Guide existant : cloner le GitHub repository désiré et proposer une Pull Request une fois le travail effectué</li>
   <li>Si vous souhaitez tester FSH et la génération d’Implementation Guide : cloner le GitHub repository IG-modele ou téléchargez-le au format zip</li>
 </ul>
 
@@ -327,14 +327,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h4 id="sushi">SUSHI</h4>
 
 <p>Sushi est le logiciel permettant de générer les ressources au format json ou xml à partir de la grammaire FSH.
-Il est disponible en ligne sur le site <a href="https://fshschool.org/">FSHSchool</a> ou bien en <a href="https://www.npmjs.com/package/fsh-sushi">invite de commande</a></p>
+Il est disponible en ligne sur <a href="https://fshschool.org/">le site FSHSchool</a> ou en <a href="https://www.npmjs.com/package/fsh-sushi">invite de commande</a></p>
 
 <p>Par défaut, sushi ne génère que les differential. Pour générer les snapshots, il faut utiliser l’option <code class="language-plaintext highlighter-rouge">sushi -s .</code></p>
 
 <h4 id="gofsh">GOFSH</h4>
 
-<p>GoFSH permet de faire la transformation inverse StructureDefinition –&gt; FSH.
-Il est également disponible en ligne sur le site <a href="https://fshschool.org/">FSHSchool</a> ou bien en <a href="https://www.npmjs.com/package/gofsh">invite de commande</a></p>
+<p>GoFSH permet de faire la transformation inverse StructureDefinition –&gt; FSH. Il permet de faciliter la prise en main et la conversion d’anciens projets json dans la syntaxe FSH.
+De la même manière qu’FSH, GoFSH est également disponible en ligne sur <a href="https://fshschool.org/">le site FSHSchool</a> ou en <a href="https://www.npmjs.com/package/gofsh">invite de commande</a></p>
 
 <p>Par défaut, GoFSH ne traite que les fichiers json. Il va falloir rajouter l’option <code class="language-plaintext highlighter-rouge">goFSH -t json-and-xml .</code> pour traiter les deux.</p>
 
@@ -345,7 +345,7 @@ Il est également disponible en ligne sur le site <a href="https://fshschool.org
 <p>L’IG publisher est l’outil permettant de générer les pages web de l’implementation guide (usage de jekyll, java, …).
 Il prend en entrée une arborescence de dossiers / fichiers bien définis, contenant : des pages en markdown, des fichiers fsh, des ressources FHIR au format json ou xml, des images…</p>
 
-<p>La documentation est disponible ici : <a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">IG publisher documentation</a></p>
+<p>La documentation officielle de l’IG publisher est disponible <a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">ici</a>.</p>
 
 <h3 id="liens-utiles">Liens utiles</h3>
 
@@ -412,7 +412,7 @@ Il prend en entrée une arborescence de dossiers / fichiers bien définis, conte
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 26, 2023 12:57+0000">2023-06-26</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 26, 2023 13:10+0000">2023-06-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
