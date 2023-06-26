@@ -1,4 +1,73 @@
+### Le choix de la version FHIR
 
+Avant de commencer à développer un guide d'implémentation, il faut choisir la version FHIR sur laquelle se baser : R4, R4B, R5 ? L'objectif étant d'avoir un écosystème uniforme et simple qui hérite systématiquement de fr-core pour avoir des modélisations les plus cohérentes possibles.
+
+A l'heure actuelle, l'écosystème français est en R4 (fr-core, IG ANS, Annuaire santé, ROR...).  Or travailler sur R4 et R5 parallèlement engendre beaucoup de questions : travaux de maintenance doublés, nécessité de maintenir des mappings/connecteurs entre versions (R4 <-> R5, R4 <-> R6, R5 <-> R6), augmentation de la complexité de l'écosystème avec certains acteurs en R4, d'autres en R5...
+Les ressources étant limitées, il est préférable de se concentrer sur l'amélioration de nos profils nationaux en R4 et de faire monter l'écosystème en compétences.
+
+La release R5 reste cependant intéressante, notamment pour l'amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct, ...). 
+Ce choix n'est pas tranché, c'est l'écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d'utiliser R5 (notamment pour des cas d'usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5.
+
+A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif. Grahame Grieve a ainsi proposé de faire l'effort de transition sur R6.
+
+En conclusion : privilégier R4 pour ne pas être "hors système" et être cohérent avec fr-core et les IGs de l'ANS. Utiliser R5 uniquement si l'écosystème l'exige (ex : héritage d'un IG international en R5, héritage de ressources retravaillées en R5, ...) et partager ce besoin en issue GitHub.
+
+### Création des ressources de conformité
+
+#### La définition des profils et des extensions
+
+Pour être intéropérable, il faut tout d'abord éviter la sur-profilisation, c'est à dire créer des profils qui existent déjà. Pour cela, il est nécessaire d'hériter au maximum des profils internationaux, pour que les contraintes et modélisations soit partagées au maximum entre les acteurs répondant à un cas d'usage.
+
+De la même manière, l'usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d'hériter d'extensions déjà créées.
+
+
+Où chercher les profils-extensions déjà créés ?
+* [Profils IHE](https://www.ihe.net/resources/profiles/)
+* [FHIR Package Registry](https://registry.fhir.org/)
+* [Extensions](https://www.hl7.org/fhir/R4/extensibility-registry.html) et [profils](https://www.hl7.org/fhir/R4/profilelist.html) définis dans FHIR core
+
+
+#### La définition des ressources terminologiques (ValueSet et CodeSystem)
+
+Ce paragraphe sera complété lorsque le FHIR Terminology Service sera en service.
+
+<!-- FSH et l'IG publisher permet de générer ces ressources directement au sein des IG. Ainsi, le package de l'IG contiendra les CodeSystem (CS) et les ValueSet (VS). 
+Il se pose alors la question : est-ce que les CS et VS doivent le SMT ou dans les IGs ?
+
+Il n'y a pas de réponse générique, mais il fait privilégier l'usage du SMT car c'est une source de vérité.
+
+Dans certains cas, mettre les VS dans l'IG est possible, notamment pour les profils applicatifs, mais dans ce cas:
+* Il faut favoriser l'inclusion des CodeSystem et des ValueSet entiers dans ce VS plutôt que d'inclure des codes individuels. Cela permet d'éviter des erreurs de divergence entre les versions des terminologies.
+* Il faut préciser que l'expansion indiquée dans l'IG n'est pas forcément un reflet de la réalité : elle l'était à un instant T lors de la génération de l'IG, mais les CodeSystem ont pu évoluer entre temps. 
+
+TODO : rajouter lien vers la procédure de création d'un VS
+-->
+
+### Mise en place du repo GitHub
+
+Prérequis:
+* Avoir un [compte GitHub](https://ansforge.github.io/Documentation/pages/docs/github.html)
+* L'associer à l'[organisation ANS](https://ansforge.github.io/Documentation/pages/quick-start/biencommencer.html)
+* Lire la documentation [best practice](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
+
+Tâche:
+* Créer un [nouveau repository](https://github.com/organizations/ansforge/repositories/new) public en utilisant le template ansforge/FIG_ans-ig-sample.
+* Nommer le repository pour qu'il soit facilement retrouvé et compréhensible par n'importe qui : Descriptif, lisible, cohérent, contextuel, extensible, réutilisable, bref. Il doit être préfixé par "IG-"[...]. Exemple : IG-fhir-partage-de-documents-de-sante. N'hésitez pas à demander avis à la team interop :)
+* Mettre à jour le README selon le template proposé
+
+L'IG est créé! Il faut maintenant le personnaliser
+
+### Paramétrage de l'IG
+
+Lors de la création d'un IG, il y a une première phase de paramétrage à effectuer. Il faut remplir:
+* Le fichier [sushi-config](https://fshschool.org/docs/sushi/configuration/), avec:
+   * l'id, qui sera également l'id du package, qui doit s'appeler "ans.fhir.fr.[codeprojet]"
+   * l'url canonique, au format https://interop.esante.gouv.fr/ig/fhir/[codeprojet], avec [codeprojet] identique à celui du package id et en minuscule
+   * le nom, le titre ...
+* Rapporter les mêmes modifications dans package-list:
+   * package-id, titre, url canonique, introduction descriptive...
+* modifier le paramètre ig dans ig.ini pour qu'il soit de la forme fsh-generated/resources/ImplementationGuide-[package-id].json --> Cette étape est nécessaire, sans cela, il y aura des erreurs.
+* Le fichier input/data/features.yml : mettre à jour le lien vers la github issue
 
 ### Règles de nommage des ressources de conformité
 
