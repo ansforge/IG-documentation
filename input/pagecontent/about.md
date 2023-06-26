@@ -6,8 +6,8 @@ Cette nouvelle proposition de diffusion de spécifications se base sur les tenda
 Exemples d'usage :
 * L'IG [US core](https://www.hl7.org/fhir/us/core)
 * L'IG [mcode](http://hl7.org/fhir/us/mcode)
-* L'IG [CH core](http://build.fhir.org/ig/hl7ch/ch-core)
-* L'IG [BE core](https://build.fhir.org/ig/hl7-be/core)
+* L'IG [CH core](http://fhir.ch/ig/ch-core)
+* L'IG [BE core](https://www.ehealth.fgov.be/standards/fhir/core/)
 
 Une fois validé et publié sur le [FHIR Registry](https://registry.fhir.org/), ce guide pourra être utilisé comme héritage pour être surspécifié. Par exemple, il pourra être surspécifié et versionné pour créer une documentation applicative.
 
