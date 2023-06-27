@@ -2,7 +2,7 @@
 
 Prérequis:
 * Suivre la [documentation](https://ansforge.github.io/Documentation) pour créer un compte GitHub et l'associer à l'organisation ANS
-* Lire la documentation [best practice](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
+* Lire la documentation [IG best practice](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 
 Tâche:
 * Créer un [nouveau repository](https://github.com/organizations/ansforge/repositories/new) public en utilisant le template ansforge/FIG_ans-ig-sample.
