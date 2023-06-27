@@ -1,8 +1,7 @@
 ### Mise en place du repo GitHub
 
 Prérequis:
-* Avoir un [compte GitHub](https://ansforge.github.io/Documentation/pages/docs/github.html)
-* L'associer à l'[organisation ANS](https://ansforge.github.io/Documentation/pages/quick-start/biencommencer.html)
+* Suivre la [documentation](https://ansforge.github.io/Documentation) pour créer un compte GitHub et l'associer à l'organisation ANS
 * Lire la documentation [best practice](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 
 Tâche:
