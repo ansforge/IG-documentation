@@ -93,6 +93,11 @@ Documentation :
 - https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs
 
 
+### Les cardinalités des champs "id" et "lastUpdated"
+
+* La cardinalité du champs id ne doit pas être contrainte, car la [documentation](https://www.hl7.org/fhir/R4/resource.html#id) indique que dans certains cas (HTTP POST), l'id n'a pas de raison d'être rempli.
+* La [documentation](https://www.hl7.org/fhir/R4/resource.html#Meta) concernant lastUpdated indique que ce champs doit être automatiquement populé par le serveur, lors d'une opération de type "write" (mot clé SHALL), il n'est donc pas nécessaire de forcer la cardinalité de lastUpdated.
+
 ### FSH / SUSHI
 
 #### Factorisation
