@@ -128,14 +128,14 @@
       </li>
     </ul>
   </li>
-  <li>
-    <a href="collaborons.html">Collaborons</a>
-  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="collaborons.html">Collaborons</a>
+      </li>
       <li>
         <a href="tests.html">Tests</a>
       </li>
@@ -210,6 +210,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#le-choix-de-la-version-fhir" id="markdown-toc-le-choix-de-la-version-fhir">Le choix de la version FHIR</a></li>
+  <li><a href="#création-des-ressources-de-conformité" id="markdown-toc-création-des-ressources-de-conformité">Création des ressources de conformité</a></li>
   <li><a href="#règles-de-nommage-des-ressources-de-conformité" id="markdown-toc-règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</a></li>
   <li><a href="#les-packages-et-les-dépendances" id="markdown-toc-les-packages-et-les-dépendances">Les packages et les dépendances</a></li>
   <li><a href="#les-url-canoniques" id="markdown-toc-les-url-canoniques">Les URL canoniques</a></li>
@@ -218,6 +220,48 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
+<h3 id="le-choix-de-la-version-fhir">Le choix de la version FHIR</h3>
+
+<p>Avant de commencer à développer un guide d’implémentation, il faut choisir la version FHIR sur laquelle se baser : R4, R4B, R5 ? L’objectif étant d’avoir un écosystème uniforme et simple qui hérite systématiquement de fr-core pour avoir des modélisations les plus cohérentes possibles.</p>
+
+<p>A l’heure actuelle, les spécifications des projets nationaux utilisent la R4 (fr-core, IG ANS, Annuaire, ROR…).  Or travailler sur R4 et R5 parallèlement engendre beaucoup de questions : travaux de maintenance doublés, nécessité de maintenir des mappings/connecteurs entre versions (R4 &lt;-&gt; R5, R4 &lt;-&gt; R6, R5 &lt;-&gt; R6, + FHIR/CDA ?), augmentation de la complexité de l’écosystème avec certains acteurs en R4, d’autres en R5…
+Les ressources étant limitées, il est préférable de se concentrer sur l’amélioration de nos profils nationaux en R4 et de faire monter l’écosystème en compétences.</p>
+
+<p>La release R5 reste cependant intéressante, notamment pour l’amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct…). 
+Ce choix n’est pas tranché, c’est l’écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d’utiliser R5 (notamment pour des cas d’usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5. A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l’objectif de transition.</p>
+
+<p>En conclusion : privilégier R4 pour ne pas être “hors système” et être cohérent avec fr-core et les IGs de l’ANS. Utiliser R5 uniquement si l’écosystème l’exige (ex : héritage d’un IG international en R5, héritage de ressources retravaillées en R5…) et partager ce besoin en issue GitHub.</p>
+
+<h3 id="création-des-ressources-de-conformité">Création des ressources de conformité</h3>
+
+<h4 id="la-définition-des-profils-et-des-extensions">La définition des profils et des extensions</h4>
+
+<p>Pour être intéropérable, il faut tout d’abord éviter la sur-profilisation, c’est à dire créer des profils qui existent déjà. Pour cela, il est nécessaire d’hériter au maximum des profils internationaux, pour que les contraintes et modélisations soit partagées au maximum entre les acteurs répondant à un cas d’usage.</p>
+
+<p>De la même manière, l’usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d’hériter d’extensions déjà créées.</p>
+
+<p>Où chercher les profils-extensions déjà créés ?</p>
+<ul>
+  <li><a href="https://www.ihe.net/resources/profiles/">Profils IHE</a></li>
+  <li><a href="https://registry.fhir.org/">FHIR Package Registry</a></li>
+  <li><a href="https://www.hl7.org/fhir/R4/extensibility-registry.html">Extensions</a> et <a href="https://www.hl7.org/fhir/R4/profilelist.html">profils</a> définis dans FHIR core</li>
+</ul>
+
+<h4 id="la-définition-des-ressources-terminologiques-valueset-et-codesystem">La définition des ressources terminologiques (ValueSet et CodeSystem)</h4>
+
+<p>Ce paragraphe sera complété lorsque le FHIR Terminology Service sera en service.</p>
+
+<!-- FSH et l'IG publisher permet de générer ces ressources directement au sein des IG. Ainsi, le package de l'IG contiendra les [CodeSystem](https://www.hl7.org/fhir/R4/codesystem.html) (CS) et les [ValueSet](https://www.hl7.org/fhir/R4/valueset.html) (VS). 
+Il se pose alors la question : est-ce que les CS et VS doivent le SMT ou dans les IGs ?
+
+Il n'y a pas de réponse générique, mais il faut privilégier l'usage du SMT car c'est une source de vérité.
+
+Dans certains cas, mettre les VS dans l'IG est possible, notamment pour les profils applicatifs, mais dans ce cas:
+* Il faut favoriser l'inclusion des CodeSystem et des ValueSet entiers dans ce VS plutôt que d'inclure des codes individuels. Cela permet d'éviter des erreurs de divergence entre les versions des terminologies.
+* Il faut préciser que l'expansion indiquée dans l'IG n'est pas forcément un reflet de la réalité : elle l'était à un instant T lors de la génération de l'IG, mais les CodeSystem ont pu évoluer entre temps. 
+
+TODO : rajouter lien vers la procédure de création d'un VS
+-->
 
 <h3 id="règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</h3>
 
@@ -250,7 +294,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td>url</td>
       <td>[base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition).</td>
-      <td>ttp://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</td>
+      <td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</td>
     </tr>
     <tr>
       <td>SearchParameter.code</td>
@@ -276,16 +320,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="les-url-canoniques">Les URL canoniques</h3>
 
-<p>L’URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d’identifier de manière unique:</p>
-<ul>
-  <li>chaque implementation guide</li>
-  <li>chaque profil</li>
-</ul>
+<p>L’URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d’identifier de manière unique chaque implementation guide (IG) et chaque profil.</p>
 
 <h4 id="lurl-canonique-de-lig">L’URL canonique de l’IG</h4>
 
 <p>L’URL canonique de l’IG permet d’accéder à sa page web, c’est à dire la spécification narrative et technique (ex : https://www.hl7.org/fhir/us/core).
-Dans le cas des IG de l’ANS, l’url canonique est https://interop.esante.gouv.fr/ig/fhir/[code]</p>
+Dans le cas des IG de l’ANS, l’url canonique est https://interop.esante.gouv.fr/ig/[fhir/][code]</p>
 
 <h4 id="lurl-canonique-des-ressources-de-conformité">L’URL canonique des ressources de conformité</h4>
 
@@ -399,7 +439,7 @@ Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient<
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 2, 2023 09:32+0000">2023-06-02</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 4, 2023 13:47+0000">2023-07-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
