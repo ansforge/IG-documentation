@@ -1,9 +1,8 @@
 ### Mise en place du repo GitHub
 
 Prérequis:
-* Avoir un [compte GitHub](https://ansforge.github.io/Documentation/pages/docs/github.html)
-* L'associer à l'[organisation ANS](https://ansforge.github.io/Documentation/pages/quick-start/biencommencer.html)
-* Lire la documentation [best practice](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
+* Suivre la [documentation](https://ansforge.github.io/Documentation) pour créer un compte GitHub et l'associer à l'organisation ANS
+* Lire la documentation [IG best practice](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 
 Tâche:
 * Créer un [nouveau repository](https://github.com/organizations/ansforge/repositories/new) public en utilisant le template ansforge/FIG_ans-ig-sample.
@@ -23,7 +22,6 @@ Lors de la création d'un IG, il y a une première phase de paramétrage à effe
    * package-id, titre, url canonique, introduction descriptive...
 * modifier le paramètre ig dans ig.ini pour qu'il soit de la forme fsh-generated/resources/ImplementationGuide-[package-id].json --> Cette étape est nécessaire, sans cela, il y aura des erreurs.
 * Le fichier input/data/features.yml : mettre à jour le lien vers la github issue
-
 
 ### Paramétrage du menu de navigation de l'IG
 

@@ -1,3 +1,45 @@
+### Le choix de la version FHIR
+
+Avant de commencer à développer un guide d'implémentation, il faut choisir la version FHIR sur laquelle se baser : R4, R4B, R5 ? L'objectif étant d'avoir un écosystème uniforme et simple qui hérite systématiquement de fr-core pour avoir des modélisations les plus cohérentes possibles.
+
+A l'heure actuelle, les spécifications des projets nationaux utilisent la R4 (fr-core, IG ANS, Annuaire, ROR...).  Or travailler sur R4 et R5 parallèlement engendre beaucoup de questions : travaux de maintenance doublés, nécessité de maintenir des mappings/connecteurs entre versions (R4 <-> R5, R4 <-> R6, R5 <-> R6, + FHIR/CDA ?), augmentation de la complexité de l'écosystème avec certains acteurs en R4, d'autres en R5...
+Les ressources étant limitées, il est préférable de se concentrer sur l'amélioration de nos profils nationaux en R4 et de faire monter l'écosystème en compétences.
+
+La release R5 reste cependant intéressante, notamment pour l'amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct...). 
+Ce choix n'est pas tranché, c'est l'écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d'utiliser R5 (notamment pour des cas d'usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5. A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l'objectif de transition.
+
+En conclusion : privilégier R4 pour ne pas être "hors système" et être cohérent avec fr-core et les IGs de l'ANS. Utiliser R5 uniquement si l'écosystème l'exige (ex : héritage d'un IG international en R5, héritage de ressources retravaillées en R5...) et partager ce besoin en issue GitHub.
+
+### Création des ressources de conformité
+
+#### La définition des profils et des extensions
+
+Pour être intéropérable, il faut tout d'abord éviter la sur-profilisation, c'est à dire créer des profils qui existent déjà. Pour cela, il est nécessaire d'hériter au maximum des profils internationaux, pour que les contraintes et modélisations soit partagées au maximum entre les acteurs répondant à un cas d'usage.
+
+De la même manière, l'usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d'hériter d'extensions déjà créées.
+
+
+Où chercher les profils-extensions déjà créés ?
+* [Profils IHE](https://www.ihe.net/resources/profiles/)
+* [FHIR Package Registry](https://registry.fhir.org/)
+* [Extensions](https://www.hl7.org/fhir/R4/extensibility-registry.html) et [profils](https://www.hl7.org/fhir/R4/profilelist.html) définis dans FHIR core
+
+
+#### La définition des ressources terminologiques (ValueSet et CodeSystem)
+
+Ce paragraphe sera complété lorsque le FHIR Terminology Service sera en service.
+
+<!-- FSH et l'IG publisher permet de générer ces ressources directement au sein des IG. Ainsi, le package de l'IG contiendra les [CodeSystem](https://www.hl7.org/fhir/R4/codesystem.html) (CS) et les [ValueSet](https://www.hl7.org/fhir/R4/valueset.html) (VS). 
+Il se pose alors la question : est-ce que les CS et VS doivent le SMT ou dans les IGs ?
+
+Il n'y a pas de réponse générique, mais il faut privilégier l'usage du SMT car c'est une source de vérité.
+
+Dans certains cas, mettre les VS dans l'IG est possible, notamment pour les profils applicatifs, mais dans ce cas:
+* Il faut favoriser l'inclusion des CodeSystem et des ValueSet entiers dans ce VS plutôt que d'inclure des codes individuels. Cela permet d'éviter des erreurs de divergence entre les versions des terminologies.
+* Il faut préciser que l'expansion indiquée dans l'IG n'est pas forcément un reflet de la réalité : elle l'était à un instant T lors de la génération de l'IG, mais les CodeSystem ont pu évoluer entre temps. 
+
+TODO : rajouter lien vers la procédure de création d'un VS
+-->
 
 
 ### Règles de nommage des ressources de conformité
@@ -9,7 +51,7 @@ Ces règles de nommages ont été établies en s'inspirant des ressources us-cor
 | id | utiliser le format kebab-case, ex : fr-patient. (/!\ sur Forge, l'id n'est pas obligatoire, il est important de le rajouter !). Lors de la création d'un IG pour un projet en particulier, il est possible de préfixer l'ensemble des ressources de conformité par le trigramme du projet (ex : "ror-...") | us-core-patient |
 | title | similaire au nom, avec espaces. Ex : Fr Patient | US Core Patient Profile |
 | name | Utiliser le format PascalCase sans espace. Ex : FrPatient | USCorePatientProfile |
-| url | [base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition). | ttp://hl7.org/fhir/us/core/StructureDefinition/us-core-patient |
+| url | [base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition). | http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient |
 | SearchParameter.code | toujours en minuscule, mots séparés par des tirets "-" si besoin | - |
 {: .grid }
 
@@ -28,14 +70,12 @@ Le package doit toujours dépendre de fr-core et/ou les projets de l'ANS pour as
 
 ### Les URL canoniques
 
-L'URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d'identifier de manière unique:
-- chaque implementation guide
-- chaque profil
+L'URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d'identifier de manière unique chaque implementation guide (IG) et chaque profil.
 
 #### L'URL canonique de l'IG
 
 L'URL canonique de l'IG permet d'accéder à sa page web, c'est à dire la spécification narrative et technique (ex : https://www.hl7.org/fhir/us/core).
-Dans le cas des IG de l'ANS, l'url canonique est https://interop.esante.gouv.fr/ig/fhir/[code]
+Dans le cas des IG de l'ANS, l'url canonique est https://interop.esante.gouv.fr/ig/[fhir/][code]
 
 #### L'URL canonique des ressources de conformité
 
