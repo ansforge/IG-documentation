@@ -7,7 +7,7 @@
     "sequence" : "release",
     "title" : "Documentation des guides d'implémentation de l'ANS",
     "desc" : "Documentation des guides d'implémentation de l'ANS",
-    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.2\n- Usage FHIR R4/R5\n- bonnes pratiques de création de profils-extensions\n- ajout information codfsh",
+    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.2\n- Usage FHIR R4/R5\n- Bonnes pratiques de création de profils-extensions\n- Ajout information codfsh",
     "ci-build" : "https://ansforge.github.io/IG-documentation/ig/main",
     "category" : "Documentation",
     "introduction" : "Documentation des guides d'implémentation de l'ANS"
