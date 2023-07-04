@@ -1,6 +1,6 @@
 # publish on ig
 
-name: Release FHIR
+name: Release FHIR Inside
 
 on:
   workflow_call:
