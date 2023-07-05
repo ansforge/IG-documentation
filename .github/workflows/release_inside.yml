@@ -94,8 +94,8 @@ jobs:
       - name: Commit change
         run: |
           cd  IG-website-release
-          git config user.name github-actions
-          git config user.email github-actions@esante.gouv.fr
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add -A 
           git commit -m updated
           
@@ -105,4 +105,4 @@ jobs:
           github_token: ${{ secrets.ANS_IG_API_TOKEN }}
           directory: IG-website-release
           repository : ansforge/IG-website-release
-          force_with_lease: true
+          force : true
