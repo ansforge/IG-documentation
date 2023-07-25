@@ -1,13 +1,13 @@
 {
     "package-id" : "ans.fr.documentation",
-    "version" : "0.1.2",
-    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.2",
+    "version" : "0.1.3",
+    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.3",
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "release",
     "title" : "Documentation des guides d'implémentation de l'ANS",
     "desc" : "Documentation des guides d'implémentation de l'ANS",
-    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.2\n- Usage FHIR R4/R5\n- Bonnes pratiques de création de profils-extensions\n- Ajout information codfsh",
+    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.3\n- Ajout d'une page décrivant les différents niveaux de cas de tests",
     "ci-build" : "https://ansforge.github.io/IG-documentation/ig/main",
     "category" : "Documentation",
     "introduction" : "Documentation des guides d'implémentation de l'ANS"
