@@ -37,3 +37,4 @@ Les étapes de cas de tests pourront avoir plusieurs types.
 | [PREUVE] | Ce type d'étape est une demande de preuve (screenshot, lien permanent...) à l'attention du moniteur |
 | [INFORMATION] | Message informatif à l'attention de l'editeur concernant le fonctionnement du cas de test |
 | [VALIDATION] | Ce type d'étape est une demande de validation d'une ressource sur EVSClient |
+| [INSTRUCTION] | Ce type d'étape est une action demandée à l'éditeur sans preuve exigée |
