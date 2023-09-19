@@ -7,19 +7,19 @@ Le niveau le plus bas permettra aux éditeurs de tester la conformité des messa
 
 #### Niveau 1 (N1)
 
-Les tests de niveau 1 représentent les tests unitaires sans partenaire.
+Les tests de niveau 1 sont des tests unitaires sans partenaire.
 Chaque cas de test de niveau 1 correspond à un flux de la spécification technique.
 L’objectif de ces cas de tests est de valider la ressource ou la requête produite par le système avec un validateur EVSClient indiqué dans le cas de test.
 
 #### Niveau 2 (N2)
 
-Les tests de niveau 2 représentent les tests unitaires avec partenaire.
+Les tests de niveau 2 sont des tests unitaires avec partenaire.
 Pour être exécutés, il faut qu’au préalable les cas de test de niveau 1 indiqués en prérequis aient été exécutés par les 2 mêmes systèmes.
 L’objectif de ces cas de test est de valider la ressource ou la requête construite ainsi que la capacité des systèmes à créer / intégrer ou requêter / envoyer des ressources. Les cas de tests de type N2 correspondent généralement à un flux spécifique.
 
 #### Niveau 3 (N3)
 
-Les tests de niveau 3 représentent les tests avec partenaire basés sur l’enchaînement de différents tests unitaires avec partenaire (N2) en suivant un scénario complexe. Pour être exécutés, il faut qu’au préalable les cas de test de niveaux 1 et 2 indiqués en prérequis aient été exécutés entre les 2 mêmes systèmes.
+Les tests de niveau 3 sont des tests avec partenaire basés sur l’enchaînement de différents tests unitaires avec partenaire (N2) en suivant un scénario complexe. Pour être exécutés, il faut qu’au préalable les cas de test de niveaux 1 et 2 indiqués en prérequis aient été exécutés entre les 2 mêmes systèmes.
 
 L’objectif de ces cas de test est de créer un scénario complexe faisant appel aux différents flux de la spécification technique et ainsi créer un exemple d’usage.
 
