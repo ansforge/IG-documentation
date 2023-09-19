@@ -18,7 +18,7 @@ Il est notamment utilisé lors des Projectathons organisés par l’ANS pour les
 
 #### HAPI FHIR
 
-Ce serveur FHIR open source est particulièrement utile pour importer des profils et tester la validité des ressources générées contre les profils..
+Ce serveur FHIR open source est particulièrement utile pour importer des profils et tester la validité des ressources générées contre les profils.
 
 ### Projectathon
 
