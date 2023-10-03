@@ -35,6 +35,8 @@ pages:
     doc_implementer.md:
         bonnes_pratiques_implementer.md:
             title: Bonnes pratiques
+        demarrer_sur_fhir.md:
+            title: Quick start FHIR
         instance_hapi.md:
             title: Déployer une instance HAPI
         valider_res.md:
@@ -62,6 +64,7 @@ menu:
         Usage de GitHub: github.html
     Documentation des FHIR implementers:
         Bonnes pratiques: bonnes_pratiques_implementer.html
+        Quick start FHIR: demarrer_sur_fhir.html
         Déployer une instance HAPI: instance_hapi.html
         Valider une ressource contre un profil: valider_res.html
     Tests:
