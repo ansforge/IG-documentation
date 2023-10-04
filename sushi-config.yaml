@@ -33,6 +33,8 @@ pages:
         github.md:
             title: Usage de GitHub
     doc_implementer.md:
+        demarrer_sur_fhir.md:
+            title: Quick start FHIR
         bonnes_pratiques_implementer.md:
             title: Bonnes pratiques
         instance_hapi.md:
@@ -61,6 +63,7 @@ menu:
         Les erreurs courantes: erreurs.html
         Usage de GitHub: github.html
     Documentation des FHIR implementers:
+        Quick start FHIR: demarrer_sur_fhir.html
         Bonnes pratiques: bonnes_pratiques_implementer.html
         Déployer une instance HAPI: instance_hapi.html
         Valider une ressource contre un profil: valider_res.html
