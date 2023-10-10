@@ -1,10 +1,10 @@
 {
     "package-id" : "ans.fr.documentation",
-    "version" : "0.1.3",
-    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.3",
+    "version" : "0.1.4",
+    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.4",
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "release",
     "desc" : "Documentation des guides d'implémentation de l'ANS",
-    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.3\n- Ajout d'une page décrivant les différents niveaux de cas de tests"
+    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.4\n- Ajout d'une page Quick start FHIR pour aider les implémenteurs à démarrer sur FHIR ([issue 32](https://github.com/ansforge/IG-documentation/issues/32)) \n- Ajout étape de test \"instruction\" dans https://interop.esante.gouv.fr/ig/documentation/type_cas_tests.html ([issue 30](https://github.com/ansforge/IG-documentation/issues/30))"
   }
