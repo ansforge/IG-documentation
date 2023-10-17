@@ -6,7 +6,7 @@ Une réflexion sur les niveaux de maturité des guides d'implémentation se basa
 
 * Nombre d'implémentation ? (Déclaratif : Convergence / DSI ?)
 * Nombre de tests réalisés lors de projectathon
-* Nombre d'issue et résolutions sur le repo GitHub
+* Nombre d'issues et résolutions sur le repo GitHub
 * Nombre de commentaires lors des phases de concertation
 * Publication du package avec des dépendances : les ressources héritées ne sont pas dupliquées
 * Description complète pour l'ensemble des ressources de conformité

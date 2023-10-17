@@ -6,7 +6,7 @@
 
 L'espace de test est composé de deux outils :
 
-* EVSClient, qui permet de vérifier la conformité : des documents CDA, des archives IHE_XDM.ZIP utilisés pour les échanges, des ressources FHIR...
+* EVSClient, qui permet de vérifier la conformité : des documents CDA, des archives IHE_XDM.ZIP utilisées pour les échanges, des ressources FHIR...
 * Gazelle, qui permet de tester des scénarios complets avec plusieurs interactions d'échanges de données.
 
 Ces outils sont accessibles en ligne sur le site [https://interop.esante.gouv.fr/](https://interop.esante.gouv.fr/) et notamment utilisés lors des Projectathons organisés par l’ANS pour les éditeurs.
@@ -15,7 +15,7 @@ Ces outils sont accessibles en ligne sur le site [https://interop.esante.gouv.fr
 
 L’ANS organise régulièrement des projectathons pour permettre à un industriel de vérifier la conformité de l’implémentation des spécifications d’interopérabilité et de réaliser des tests d’interopérabilité  avec d’autres éditeurs.
 
-Vous serez informé par l’ANS des prochains projectathons (date, lieu,…) pour pouvoir y participer.
+Vous serez informés par l’ANS des prochains projectathons (date, lieu,…) pour pouvoir y participer.
 
 ### Gazelle : les niveaux de cas de tests
 

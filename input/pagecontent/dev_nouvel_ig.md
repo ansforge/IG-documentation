@@ -123,7 +123,7 @@ Puis:
 * lancer `_updatePublisher` (lancer `_updatePublisher.bat` dans le bon dossier sur l'invite de commande). Attention ! Il ne peut pas y avoir d'espace dans le path du dossier, ce qui peut engendrer des erreurs, notamment avec OneDrive.
 * lancer `_genonce` (lancer `_genonce.bat` dans le bon dossier sur l'invite de commande)
 
-Si tout s'est bien passé, le dossier output est apparu, il suffit de lancer `index.html` pour démarrer l'IG généré.
+Si tout s'est bien passé, le dossier output est apparu, il suffit de lancer `index.html` pour visualiser l'IG généré.
 
 Vous pouvez maintenant commencer à développer votre implementation guide ! :)
 
@@ -148,7 +148,7 @@ Il est aussi possible de l'installer via [`nvm` (Node Version Manager)](https://
 
 ###### Java
 
-Pour installer Java, vous pouvez vous tourner vers le [JDK officiel sur la page d'Oracle](https://www.oracle.com/fr/java/technologies/downloads/). Vous y trouverez un `.deb` ou un `.rpm` à installer facilement sur votre distrubtion.
+Pour installer Java, vous pouvez vous tourner vers le [JDK officiel sur la page d'Oracle](https://www.oracle.com/fr/java/technologies/downloads/). Vous y trouverez un `.deb` ou un `.rpm` à installer facilement sur votre distribution.
 Vous pouvez aussi utiliser [`openjdk`](https://openjdk.org/) pour une implémentation open-source de la plateforme Java.
 
 ```bash
