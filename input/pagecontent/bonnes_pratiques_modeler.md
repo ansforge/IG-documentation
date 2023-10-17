@@ -1,14 +1,23 @@
-### Le choix de la version FHIR
+### Les critères de maturité
 
-Avant de commencer à développer un guide d'implémentation, il faut choisir la version FHIR sur laquelle se baser : R4, R4B, R5 ? L'objectif étant d'avoir un écosystème uniforme et simple qui hérite systématiquement de fr-core pour avoir des modélisations les plus cohérentes possibles.
+Une réflexion sur les niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. Il est important de respecter un maximum de ces crtères de qualité.
 
-A l'heure actuelle, les spécifications des projets nationaux utilisent la R4 (fr-core, IG ANS, Annuaire, ROR...).  Or travailler sur R4 et R5 parallèlement engendre beaucoup de questions : travaux de maintenance doublés, nécessité de maintenir des mappings/connecteurs entre versions (R4 <-> R5, R4 <-> R6, R5 <-> R6, + FHIR/CDA ?), augmentation de la complexité de l'écosystème avec certains acteurs en R4, d'autres en R5...
-Les ressources étant limitées, il est préférable de se concentrer sur l'amélioration de nos profils nationaux en R4 et de faire monter l'écosystème en compétences.
+#### Critères de maturité
 
-La release R5 reste cependant intéressante, notamment pour l'amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct...). 
-Ce choix n'est pas tranché, c'est l'écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d'utiliser R5 (notamment pour des cas d'usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5. A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l'objectif de transition.
+* Nombre d'implémentation ? (Déclaratif : Convergence / DSI ?)
+* Nombre de tests réalisés lors de projectathon
+* Nombre d'issue et résolutions sur le repo GitHub
+* Nombre de commentaires lors des phases de concertation
+* Publication du package avec des dépendances : les ressources héritées ne sont pas dupliquées
+* Description complète pour l'ensemble des ressources de conformité
+* Publication de retours d'expérience sur l'implémentation des spécifications
+* Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
+* respect des bonnes pratiques nationales (règles de nommages indiquées ci-dessous)
 
-En conclusion : privilégier R4 pour ne pas être "hors système" et être cohérent avec fr-core et les IGs de l'ANS. Utiliser R5 uniquement si l'écosystème l'exige (ex : héritage d'un IG international en R5, héritage de ressources retravaillées en R5...) et partager ce besoin en issue GitHub.
+Critères de qualité:
+
+* Publication de l'IG sans erreurs (Q/A)
+* Suivi des bonnes conventions et règles de nomage
 
 ### Création des ressources de conformité
 
@@ -18,12 +27,11 @@ Pour être intéropérable, il faut tout d'abord éviter la sur-profilisation, c
 
 De la même manière, l'usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d'hériter d'extensions déjà créées.
 
-
 Où chercher les profils-extensions déjà créés ?
+
 * [Profils IHE](https://www.ihe.net/resources/profiles/)
 * [FHIR Package Registry](https://registry.fhir.org/)
 * [Extensions](https://www.hl7.org/fhir/R4/extensibility-registry.html) et [profils](https://www.hl7.org/fhir/R4/profilelist.html) définis dans FHIR core
-
 
 #### La définition des ressources terminologiques (ValueSet et CodeSystem)
 
@@ -41,7 +49,6 @@ Dans certains cas, mettre les VS dans l'IG est possible, notamment pour les prof
 TODO : rajouter lien vers la procédure de création d'un VS
 -->
 
-
 ### Règles de nommage des ressources de conformité
 
 Ces règles de nommages ont été établies en s'inspirant des ressources us-core
@@ -56,17 +63,17 @@ Ces règles de nommages ont été établies en s'inspirant des ressources us-cor
 {: .grid }
 
 Nom des slices:
-- Prendre l'id de l'extension s'il s'agit d'une extension
-- Sinon, lowerCamelCase
+
+* Prendre l'id de l'extension s'il s'agit d'une extension
+* Sinon, lowerCamelCase
 
 La documentation officielle se trouve sur le [confluence d'HL7](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines)
 
-
 ### Les packages et les dépendances
 
-L'id de package ne doit pas avoir de majuscule. 
+L'id de package ne doit pas avoir de majuscule.
 
-Le package doit toujours dépendre de fr-core et/ou les projets de l'ANS pour assurer une cohérence globale à l'échelle française. Ces packages sont publiés sur le FHIR Package Registry et doivent être indiqués dans le fichier `sushi-config.yaml`. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l'intérêt du versioning.
+Le package doit toujours dépendre de fr-core, de l'annuaire santé et/ou les projets de l'ANS pour assurer une cohérence globale à l'échelle française. Ces packages sont publiés sur le FHIR Package Registry et doivent être indiqués dans le fichier `sushi-config.yaml`. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l'intérêt du versioning.
 
 ### Les URL canoniques
 
@@ -89,9 +96,9 @@ Ainsi, l'url canonique d'un profil permet de facilement retrouver la spécificat
 A noter le ResourceType doit respecter la même casse et le même nom que les ResourceName FHIR.
 
 Documentation :
-- https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-CanonicalURL
-- https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs
 
+* [https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-CanonicalURL]
+* [https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs]
 
 ### FSH / SUSHI
 
@@ -107,7 +114,7 @@ Idem pour la version du profil.
 Le statut et la version des l'ensemble des profils seront renseignées exclusivement dans sushi-config.yaml:
 
 > status: active  
-> version: 0.1.3 (utiliser le semver) 
+> version: 0.1.3 (utiliser le semver)
 
 #### Extensions et ValueSets
 
@@ -123,16 +130,28 @@ Par exemple, on peut ainsi définir l’alias $phdDevice pour représenter l’U
 > Alias: $PhdDevice = http://hl7.org/fhir/uv/phd/StructureDefinition/PhdDevice
 > \* device only Reference($PhdDevice)
 
-
 Par soucis de clarté, il est recommandé de rassembler tous les alias dans un fichier unique, appelé « aliases.fsh » et situé dans le répertoire racine (évite les redondances et facilite la gestion).
 
 Exemple:
-> Alias: $PhdDevice = http://hl7.org/fhir/uv/phd/StructureDefinition/PhdDevice   
-> Alias: $UCUM = http://unitsofmeasure.org   
-> Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns   
+> Alias: $PhdDevice = http://hl7.org/fhir/uv/phd/StructureDefinition/PhdDevice
+> Alias: $UCUM = http://unitsofmeasure.org
+> Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 > Alias: $FrObservationBp = http://interopsante.org/fhir/StructureDefinition/FrObservationBp  
 > Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient  
 
 ### Exemples de guides d'implémentation
 
 Pour plus d'informations, consultez la [liste des guides d'implémentation](https://interop.esante.gouv.fr/ig/fhir/) à titre d'exemple.
+
+
+### Le choix de la version FHIR
+
+Avant de commencer à développer un guide d'implémentation, il faut choisir la version FHIR sur laquelle se baser : R4, R4B, R5 ? L'objectif étant d'avoir un écosystème uniforme et simple qui hérite systématiquement de fr-core pour avoir des modélisations les plus cohérentes possibles.
+
+A l'heure actuelle, les spécifications des projets nationaux utilisent la R4 (fr-core, IG ANS, Annuaire, ROR...).  Or travailler sur R4 et R5 parallèlement engendre beaucoup de questions : travaux de maintenance doublés, nécessité de maintenir des mappings/connecteurs entre versions (R4 <-> R5, R4 <-> R6, R5 <-> R6, + FHIR/CDA ?), augmentation de la complexité de l'écosystème avec certains acteurs en R4, d'autres en R5...
+Les ressources étant limitées, il est préférable de se concentrer sur l'amélioration de nos profils nationaux en R4 et de faire monter l'écosystème en compétences.
+
+La release R5 reste cependant intéressante, notamment pour l'amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct...). 
+Ce choix n'est pas tranché, c'est l'écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d'utiliser R5 (notamment pour des cas d'usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5. A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l'objectif de transition.
+
+En conclusion : privilégier R4 pour ne pas être "hors système" et être cohérent avec fr-core et les IGs de l'ANS tant qu'il n'y a pas de socle commun à l'utilisation de R5. Utiliser R5 uniquement si l'écosystème l'exige (ex : héritage d'un IG international en R5, héritage de ressources retravaillées en R5...) et partager ce besoin en issue GitHub.

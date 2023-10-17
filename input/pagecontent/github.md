@@ -1,6 +1,6 @@
 GitHub est une sorte de sharepoint, un repository versionné avec un système de branche pour travailler de manière collaborative sur du contenu textuel (code, écriture, grammaire ...)
 
-Les branches: 
+Les branches:
 Un repository (ou répertoire) Github contient une arborescence de branche, permettant d'individualiser le travail de chacun puis de pousser son travail dans la branche de travail commune : typiquement `main`.
 
 ### Reporter un problème (une issue)
