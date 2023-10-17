@@ -106,14 +106,19 @@ Documentation :
 Sushi et FSH permettent de factoriser beaucoup d'informations, et de les centraliser afin d'en faciliter l'accès et la gestion.
 Il est recommandé de faire bénéficier au maximum les projets de cette possibilité de centraliser les informations redondantes.
 
-#### Statut et version des profils
+#### Configuration de sushi-config : status, version, releaseLabel
 
-Dans le cas où les structures-definitions d'un projet sont au même niveau de statut ( Active, draft etc...) , il est recommandé de configurer le statut dans le fichier sushi-config.yaml et de supprimer le paramètre "status" renseigné dans les profils.  
-Idem pour la version du profil.  
-Le statut et la version des l'ensemble des profils seront renseignées exclusivement dans sushi-config.yaml:
+Le **status** devra être placé à draft lorsque celui-ci n'est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaine partie de la spécification est en mode draft.
+
+Le **numéro de version** doit respecter le processus semver, soit majeur.mineur.patch. La définition de chacun de ces éléments est défini dans la [documentation semver](https://semver.org/lang/fr/).
+
+Le **releaseLabel** doit être systématiquement placé à STU1 pour l'instant. Des labels plus fins seront proposés dans le futur dépendant des critères de maturité.
+
+Le statut, la version le releaseLabel sont à renseigner dans le fichier [sushi-config.yaml](https://fshschool.org/docs/sushi/configuration/)
 
 > status: active  
-> version: 0.1.3 (utiliser le semver)
+> version: 0.1.3
+> releaseLabel: STU1
 
 #### Extensions et ValueSets
 
@@ -137,12 +142,6 @@ Exemple:
 > Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 > Alias: $FrObservationBp = http://interopsante.org/fhir/StructureDefinition/FrObservationBp  
 > Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient  
-
-#### status, numéro de version et labelRelease
-
-Le status devra être placé à draft lorsque celui-ci n'est pas officiellement publié. Il devra être placé à active lors de la première publication.
-Le numéro de version doit respecter le processus semver, soit majeur.mineur.patch. La définition de chacun de ces éléments est défini dans la [documentation semver](https://semver.org/lang/fr/).
-Le labelRelease doit être systématiquement placé à STU1 pour l'instant. Des labels plus fins seront proposés dans le futur dépendant des critères de maturité.
 
 ### Exemples de guides d'implémentation
 
