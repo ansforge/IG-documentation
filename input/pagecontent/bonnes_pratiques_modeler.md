@@ -12,12 +12,11 @@ Une réflexion sur les niveaux de maturité des guides d'implémentation se basa
 * Description complète pour l'ensemble des ressources de conformité
 * Publication de retours d'expérience sur l'implémentation des spécifications
 * Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
-* respect des bonnes pratiques nationales (règles de nommages indiquées ci-dessous)
 
 Critères de qualité:
 
 * Publication de l'IG sans erreurs (Q/A)
-* Suivi des bonnes conventions et règles de nomage
+* Respect des bonnes pratiques nationales (règles de nommages indiquées ci-dessous)
 
 ### Création des ressources de conformité
 
