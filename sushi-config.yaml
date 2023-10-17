@@ -22,10 +22,10 @@ pages:
     doc_modeler.md:
         dev_nouvel_ig.md:
             title: Quick start IG
-        erreurs.md:
-            title: Les erreurs courantes
         bonnes_pratiques_modeler.md:
             title: Bonnes pratiques
+        erreurs.md:
+            title: Les erreurs courantes
         github.md:
             title: Usage de GitHub
     doc_implementer.md:
@@ -50,8 +50,8 @@ menu:
     Accueil: index.html
     Documentation des FHIR modelers:
         Quick start IG: dev_nouvel_ig.html
-        Les erreurs courantes: erreurs.html
         Bonnes pratiques: bonnes_pratiques_modeler.html
+        Les erreurs courantes: erreurs.html
         Usage de GitHub: github.html
     Documentation des FHIR implementers:
         Quick start FHIR: demarrer_sur_fhir.html
