@@ -138,10 +138,15 @@ Exemple:
 > Alias: $FrObservationBp = http://interopsante.org/fhir/StructureDefinition/FrObservationBp  
 > Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient  
 
+#### status, numéro de version et labelRelease
+
+Le status devra être placé à draft lorsque celui-ci n'est pas officiellement publié. Il devra être placé à active lors de la première publication.
+Le numéro de version doit respecter le processus semver, soit majeur.mineur.patch. La définition de chacun de ces éléments est défini dans la [documentation semver](https://semver.org/lang/fr/).
+Le labelRelease doit être systématiquement placé à STU1 pour l'instant. Des labels plus fins seront proposés dans le futur dépendant des critères de maturité.
+
 ### Exemples de guides d'implémentation
 
 Pour plus d'informations, consultez la [liste des guides d'implémentation](https://interop.esante.gouv.fr/ig/fhir/) à titre d'exemple.
-
 
 ### Le choix de la version FHIR
 
