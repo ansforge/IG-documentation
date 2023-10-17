@@ -23,3 +23,4 @@ Pour que cela soit possible, il convient de respecter plusieurs règles :
 * L'ANS doit être informé de ces travaux avant leur début
 * Les travaux doivent être en cohérence avec l'écosystème : pas de chevauchement avec l'existant, héritage des profils FrCore, annuaire santé
 * Les <a href="dev_nouvel_ig.html">bonnes pratiques</a> doivent être respectées, avec un maximum de critères de maturité.
+* Une concertation de minimum trois mois doit être lancée sur la plateforme [participez](https://participez.esante.gouv.fr)
