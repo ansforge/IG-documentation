@@ -2,8 +2,15 @@
 
 Une réflexion sur les niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. Il est important de respecter un maximum de ces crtères de qualité.
 
+#### Critères de qualité
+
+* Respect des bonnes pratiques nationales (règles de nommages indiquées ci-dessous)
+* Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
+* Publication de l'IG sans erreurs (cf session Q/A)
+
 #### Critères de maturité
 
+* Ensemble des critères de qualité respectés
 * Nombre d'implémentation ? (Déclaratif : Convergence / DSI ?)
 * Nombre de tests réalisés lors de projectathon
 * Nombre d'issues et résolutions sur le repo GitHub
@@ -11,12 +18,6 @@ Une réflexion sur les niveaux de maturité des guides d'implémentation se basa
 * Publication du package avec des dépendances : les ressources héritées ne sont pas dupliquées
 * Description complète pour l'ensemble des ressources de conformité
 * Publication de retours d'expérience sur l'implémentation des spécifications
-* Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
-
-Critères de qualité:
-
-* Publication de l'IG sans erreurs (Q/A)
-* Respect des bonnes pratiques nationales (règles de nommages indiquées ci-dessous)
 
 ### Création des ressources de conformité
 
@@ -110,9 +111,9 @@ Il est recommandé de faire bénéficier au maximum les projets de cette possibi
 
 Le **status** devra être placé à draft lorsque celui-ci n'est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaine partie de la spécification est en mode draft.
 
-Le **numéro de version** doit respecter le processus semver, soit majeur.mineur.patch. La définition de chacun de ces éléments est défini dans la [documentation semver](https://semver.org/lang/fr/).
+Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/).
 
-Le **releaseLabel** doit être systématiquement placé à STU1 pour l'instant. Des labels plus fins seront proposés dans le futur dépendant des critères de maturité.
+Le **releaseLabel** doit être systématiquement placé à STU1 pour l'instant. Des labels plus fins seront proposés dans le futur, établi en fonction de critères de maturité.
 
 Le statut, la version le releaseLabel sont à renseigner dans le fichier [sushi-config.yaml](https://fshschool.org/docs/sushi/configuration/)
 
