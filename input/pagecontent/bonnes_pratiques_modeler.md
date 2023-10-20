@@ -114,6 +114,7 @@ Le **status** devra être placé à draft lorsque celui-ci n'est pas officiellem
 Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/).
 
 Le **releaseLabel** doit être systématiquement placé à STU1 pour l'instant. Des labels plus fins seront proposés dans le futur, établi en fonction de critères de maturité.
+Pour préciser le statut de maturité, il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise \<blockquote class=\"stu-note\"\>\<blockquote\>.
 
 Le statut, la version le releaseLabel sont à renseigner dans le fichier [sushi-config.yaml](https://fshschool.org/docs/sushi/configuration/)
 
@@ -155,7 +156,7 @@ Avant de commencer à développer un guide d'implémentation, il faut choisir la
 A l'heure actuelle, les spécifications des projets nationaux utilisent la R4 (fr-core, IG ANS, Annuaire, ROR...).  Or travailler sur R4 et R5 parallèlement engendre beaucoup de questions : travaux de maintenance doublés, nécessité de maintenir des mappings/connecteurs entre versions (R4 <-> R5, R4 <-> R6, R5 <-> R6, + FHIR/CDA ?), augmentation de la complexité de l'écosystème avec certains acteurs en R4, d'autres en R5...
 Les ressources étant limitées, il est préférable de se concentrer sur l'amélioration de nos profils nationaux en R4 et de faire monter l'écosystème en compétences.
 
-La release R5 reste cependant intéressante, notamment pour l'amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct...). 
+La release R5 reste cependant intéressante, notamment pour l'amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct...).
 Ce choix n'est pas tranché, c'est l'écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d'utiliser R5 (notamment pour des cas d'usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5. A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l'objectif de transition.
 
 En conclusion : privilégier R4 pour ne pas être "hors système" et être cohérent avec fr-core et les IGs de l'ANS tant qu'il n'y a pas de socle commun à l'utilisation de R5. Utiliser R5 uniquement si l'écosystème l'exige (ex : héritage d'un IG international en R5, héritage de ressources retravaillées en R5...) et partager ce besoin en issue GitHub.
