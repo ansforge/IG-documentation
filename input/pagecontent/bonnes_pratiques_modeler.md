@@ -113,8 +113,8 @@ Le **status** devra être placé à draft lorsque celui-ci n'est pas officiellem
 
 Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/).
 
-Le **releaseLabel** doit être systématiquement placé à STU1 pour l'instant. Des labels plus fins seront proposés dans le futur, établi en fonction de critères de maturité.
-Pour préciser le statut de maturité, il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise \<blockquote class=\"stu-note\"\>\<blockquote\>.
+Le **releaseLabel** doit être systématiquement placé à trial-use pour l'instant. Des labels plus fins seront proposés dans le futur, établi en fonction de critères de maturité.
+Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise \<blockquote class=\"stu-note\"\>\<blockquote\>.
 
 Le statut, la version le releaseLabel sont à renseigner dans le fichier [sushi-config.yaml](https://fshschool.org/docs/sushi/configuration/)
 

@@ -11,7 +11,7 @@ status: active
 version: 0.1.4 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
 fhirVersion: 4.0.1
 copyrightYear: 2020+
-releaseLabel: STU1
+releaseLabel: trial-use
 
 parameters:
     shownav: 'true'
