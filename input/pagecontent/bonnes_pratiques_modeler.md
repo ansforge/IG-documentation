@@ -118,7 +118,7 @@ Le statut, la version le releaseLabel sont à renseigner dans le fichier [sushi-
 
 > status: active  
 > version: 0.1.3
-> releaseLabel: STU1
+> releaseLabel: trial-use
 
 #### Extensions et ValueSets
 
