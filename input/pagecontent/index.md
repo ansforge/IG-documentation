@@ -9,11 +9,12 @@ Selon la documentation FHIR, un Implementation Guide contient un ensemble cohér
 Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR [ImplementationGuide](https://www.hl7.org/fhir/R4/implementationguide.html). Le site web contient également de manière systématique un package, versionné, contenant l'ensemble des ressources de conformité.
 
 La meilleure pratique consiste à créer un Implementation Guide par projet bien spécifique, cela permet:
-- De versionner séparément, on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées
-- Chacune des specs gère ses dépendances indépendamment des autres (aux ressources du ci-sis, aux profils interopsanté), chacune de ces dépendances peuvent être mises à jour séparément
-- Les urls sont claires, on sait directement de quelle spec est issue chaque profil, et on peut directement accéder à l'IG facilement
-- Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d'usage, en héritant de tout ou partie, ou pour décrire une implémentation précise.
-- L'IG doit obligatoirement hériter des ressources françaises définies par InteropSanté et/ou par les profils définis par l'ANS
+
+* De versionner séparément, on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées
+* Chacune des specs gère ses dépendances indépendamment des autres (aux ressources du ci-sis, aux profils interopsanté), chacune de ces dépendances peuvent être mises à jour séparément
+* Les urls sont claires, on sait directement de quelle spec est issue chaque profil, et on peut directement accéder à l'IG facilement
+* Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d'usage, en héritant de tout ou partie, ou pour décrire une implémentation précise.
+* L'IG doit obligatoirement hériter des ressources françaises définies par InteropSanté et/ou par les profils définis par l'ANS
 
 Documentation : [ImplementationGuide](https://www.hl7.org/fhir/implementationguide.html), [Packages](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification)
 
@@ -21,9 +22,9 @@ Documentation : [ImplementationGuide](https://www.hl7.org/fhir/implementationgui
 
 Il est destiné à celles et ceux qui utilisent FHIR !
 
-- Les FHIR modelers, qui créent ces guides et profilent des ressources
-- Les FHIR implementers, qui lisent ces guides et développent des APIs 
-- Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux.
+* Les FHIR modelers, qui créent ces guides et profilent des ressources
+* Les FHIR implementers, qui lisent ces guides et développent des APIs 
+* Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux.
 
 Les experts fonctionnels ont également une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : c'est les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.
 
@@ -84,14 +85,14 @@ Vous pouvez vous référer à [la documentation officielle de l'IG publisher](ht
 ### Liens utiles
 
 Des exemples d'ImplementationGuide:
-- Us-core : [Publication](https://hl7.org/fhir/us/core/), [GitHub](https://github.com/HL7/US-Core)
-- mcode (qui se base sur uscore) : [Publication](http://hl7.org/fhir/us/mcode/), [GitHub](https://github.com/HL7/fhir-mCODE-ig)
-- SDC, IG qui définit des profils de la ressource FHIR Questionnaire. Ces profils rajoutent des fonctionnalités de : préremplissage des champs, indiquer un design de formulaire, calcul automatique…) : [Publication](http://hl7.org/fhir/uv/sdc/index.html), [GitHub](https://github.com/HL7/sdc)
+
+* Us-core : [Publication](https://hl7.org/fhir/us/core/), [GitHub](https://github.com/HL7/US-Core)
+* mcode (qui se base sur uscore) : [Publication](http://hl7.org/fhir/us/mcode/), [GitHub](https://github.com/HL7/fhir-mCODE-ig)
+* SDC, IG qui définit des profils de la ressource FHIR Questionnaire. Ces profils rajoutent des fonctionnalités de : préremplissage des champs, indiquer un design de formulaire, calcul automatique…) : [Publication](http://hl7.org/fhir/uv/sdc/index.html), [GitHub](https://github.com/HL7/sdc)
 
 L'éditeur de profils FSH (Grammaire de définition de profils) : [getting started](https://fshschool.org/), [documentation](https://build.fhir.org/ig/HL7/fhir-shorthand/)
- 
+
 Autres :
-- [IG publisher documentation](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) (officiel HL7)
-- Doc CQL (langage d'expression FHIR, permettant par ex de décrire le calcul de l'IMC) : [Publication](https://cql.hl7.org/)
-, [Documentation](https://build.fhir.org/ig/HL7/cqf-measures/using-cql.html), [GitHub](https://github.com/HL7/cql)
-        
+
+* [IG publisher - documentation officielle HL7](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
+* [Clinical Quality Language (CQL)](https://cql.hl7.org/) (langage d'expression FHIR, permettant par ex de décrire le calcul de l'IMC), [Documentation](https://build.fhir.org/ig/HL7/cqf-measures/using-cql.html), [GitHub](https://github.com/HL7/cql)
