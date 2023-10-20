@@ -1,14 +1,12 @@
-### Les critères de maturité
-
-Une réflexion sur les niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. Il est important de respecter un maximum de ces crtères de qualité.
-
-#### Critères de qualité
+### Critères de qualité
 
 * Respect des bonnes pratiques nationales (règles de nommages indiquées ci-dessous)
 * Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 * Publication de l'IG sans erreurs (cf session Q/A)
 
-#### Critères de maturité
+### Critères de maturité
+
+Une réflexion sur les niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. Il est important de respecter un maximum de ces crtères de qualité.
 
 * Ensemble des critères de qualité respectés
 * Nombre d'implémentation ? (Déclaratif : Convergence / DSI ?)
