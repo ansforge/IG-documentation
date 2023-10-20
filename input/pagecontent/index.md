@@ -35,10 +35,10 @@ La liste des guides d'implémentation est accessible [à cette adresse](https://
 
 Vous avez identifié une erreur sur un des guides ? L'onglet issue permet de signaler un problème sur un projet donné.
 
-<img width="1541" alt="image" src="https://user-images.githubusercontent.com/48218773/215773144-31a47623-a853-4a4e-8ba0-ad1d66b29961.png">
+<img width="100%" alt="image" src="https://user-images.githubusercontent.com/48218773/215773144-31a47623-a853-4a4e-8ba0-ad1d66b29961.png">
 
 Un lien est également disponible sous chaque guide d'implémentation pour accéder aux issues :
-<img width="1541" alt="image" src="new_issue.png">
+<img width="100%" alt="image" src="new_issue.png">
 
 L'issue doit contenir un titre, et une description très détaillée avec une proposition de changement.
 
@@ -47,11 +47,12 @@ L'issue doit contenir un titre, et une description très détaillée avec une pr
 1/ Installer les dépendances grâce à la page "Installer les dépendances [Windows/mac]"
 
 2/ Développer un Implementation Guide :
+
 * Si vous souhaitez créer un Implementation Guide pour publication : suivre la procédure Développement d'un nouvel IG
 * Si vous souhaitez modifier un Implementation Guide existant : cloner le GitHub repository désiré et proposer une Pull Request une fois le travail effectué
 * Si vous souhaitez tester FSH et la génération d'Implementation Guide : cloner le GitHub repository IG-modele ou téléchargez-le au format zip
 
-### Outils et vocabulaire 
+### Outils et vocabulaire
 
 #### FSH
 
