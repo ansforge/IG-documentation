@@ -1,5 +1,4 @@
-Nos guides d'implémentation se basent sur la norme HL7 FHIR.
-Ils utilisent la terminologie, les notations et les principes de conception propres à FHIR. Avant de lire le guide d'implémentation, il est important de se familiariser avec certains des principes de base de FHIR ainsi qu'avec des conseils généraux sur la façon de lire les spécifications FHIR. Les lecteurs qui ne connaissent pas FHIR sont encouragés à lire (ou au moins à survoler) ce qui suit avant d'explorer plus en avant nos guides d'implémentation.
+Nos guides d'implémentation se basent sur la norme HL7 FHIR. Ils utilisent la terminologie, les notations et les principes de conception propres à FHIR. Avant de lire le guide d'implémentation, il est important de se familiariser avec certains des principes de base de FHIR ainsi qu'avec des conseils généraux sur la façon de lire les spécifications FHIR. Les lecteurs qui ne connaissent pas FHIR sont encouragés à lire (ou au moins à survoler) ce qui suit avant d'explorer plus en avant nos guides d'implémentation.
 
 <ul>
   <li>
