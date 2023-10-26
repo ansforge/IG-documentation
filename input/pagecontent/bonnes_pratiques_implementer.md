@@ -1,6 +1,6 @@
 ### Gestion des versions
 
-Il est important de prendre en compte qu'une spécification est en perpétuelle évolution. Au même titre qu'une application déployée au grand public, des bugs peuvent être découverts, ou des suggestions d'amélioration peuvent être proposées. Or, les implémentations ne doivent pas être un frein à l'avancée de l'interopérabilité et de la maturité des spécifications.
+Il est important de prendre en compte qu'une spécification est en **perpétuelle évolution**. Au même titre qu'une application déployée au grand public, des bugs peuvent être découverts, ou des suggestions d'amélioration peuvent être proposées.
 
 C'est la raison pour laquelle, lors du développement d'une spécification, il est conseillé de :
 
@@ -8,4 +8,4 @@ C'est la raison pour laquelle, lors du développement d'une spécification, il e
 
 * **Anticiper** les futures évolutions de l'API pour les rendre moins douloureuses. Pour cela, une des possibilité est de faire un mapping entre un modèle de base de données et une API FHIR. Lorsqu'une API doit être mise à jour, il est conseillé de maintenir l'ancienne version pendant une durée précise (par ex. un an) avant de la rendre obsolète et de maintir uniquement une nouvelle version.
 
-Un décalage entre la dernière version des spécifications et une implémentation est possible, mais il est toujours préférable de le minimiser.
+Une spécification ne peut pas s'arrêter d'évoluer pour une implémentation donnée, le système de versioning permet à chaque implémentation de choisir sa feuille de route pour évoluer vers la dernière release. Un décalage entre la version courante de la spécification et une implémentation est possible, mais il est toujours préférable de le minimiser.
