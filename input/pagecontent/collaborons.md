@@ -29,4 +29,4 @@ Pour que cela soit possible, il convient de respecter plusieurs points :
 * Les <a href="bonnes_pratiques_modeler.html">bonnes pratiques</a> doivent être respectées, avec un maximum de critères de maturité.
 * Une concertation de minimum trois mois doit être lancée sur la plateforme [participez](https://participez.esante.gouv.fr)
 
-Si des travaux ont déjà été entamés sans respecter ces critères, contactez-nous via la [l'adresse email du CI-SIS](ci-sis@esante.gouv.fr), nous trouverons une solution pour retrouver le cycle de développement classique (transformation au format IG, mise en qualité, héritage FrCore / annuaire, concertation) pour publication dans le CI-SIS.
+Si des travaux ont déjà été entamés, contactez-nous via la [l'adresse email du CI-SIS](ci-sis@esante.gouv.fr). Une solution sera établie pour retrouver le cycle de développement classique (transformation au format IG, mise en qualité, héritage FrCore / Annuaire, concertation, ...) pour publication dans le CI-SIS.
