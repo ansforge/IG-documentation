@@ -1,10 +1,10 @@
 {
     "package-id" : "ans.fr.documentation",
-    "version" : "0.1.4",
-    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.4",
+    "version" : "0.1.5",
+    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.5",
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "release",
     "desc" : "Documentation des guides d'implémentation de l'ANS",
-    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.4\n- Ajout d'une page Quick start FHIR pour aider les implémenteurs à démarrer sur FHIR ([issue 32](https://github.com/ansforge/IG-documentation/issues/32)) \n- Ajout étape de test \"instruction\" dans https://interop.esante.gouv.fr/ig/documentation/type_cas_tests.html ([issue 30](https://github.com/ansforge/IG-documentation/issues/30))"
+    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.5\n- Ajout de conseils de versioning sur l'implémentation ([PR 39](https://github.com/ansforge/IG-documentation/pull/39)) \n- Amélioration de la page collaborons, refactoring, amélioration du wording ([PR 37](https://github.com/ansforge/IG-documentation/pull/37))"
   }
