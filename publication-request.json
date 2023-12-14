@@ -1,10 +1,11 @@
 {
     "package-id" : "ans.fr.documentation",
-    "version" : "0.1.5",
-    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.5",
+    "version" : "0.1.6",
+    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.6",
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "release",
+    "first": false,
     "desc" : "Documentation des guides d'implémentation de l'ANS",
-    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.5\n- Ajout de conseils de versioning sur l'implémentation ([PR 39](https://github.com/ansforge/IG-documentation/pull/39)) \n- Amélioration de la page collaborons, refactoring, amélioration du wording ([PR 37](https://github.com/ansforge/IG-documentation/pull/37))"
+    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.6\n- Ajout de conseils de versioning sur l'implémentation ([PR 39](https://github.com/ansforge/IG-documentation/pull/39)) \n- Amélioration de la page collaborons, refactoring, amélioration du wording ([PR 37](https://github.com/ansforge/IG-documentation/pull/37))"
   }
