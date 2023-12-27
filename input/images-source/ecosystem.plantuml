@@ -1,26 +1,14 @@
 @startuml
 
-
-database APIFHIRAnnuaire [
-<b>Annuaire</b> FHIR API
-]
-
-database APIFHIRROR [
-<b>ROR</b> FHIR API
-]
-
-
-
-artifact "FR Core" as frcore
+artifact "FR Core" as frcore #pink
 url of frcore is  [[https://hl7.fr/ig/fhir/core]]
 
-archimate #Technology "Annuaire santé (AnnuaireSante)" as annuaire <<technology-device>>
+artifact "Annuaire santé (AnnuaireSante) 🔌" as annuaire #pink
 url of annuaire is  [[https://interop.esante.gouv.fr/ig/fhir/annuaire]]
 
 annuaire --> frcore 
-annuaire --> APIFHIRAnnuaire 
 
-artifact "Partage de Docuemnts de Santé en mobilité (PDSm)" as pdsm
+artifact "Partage de Docuemnts de Santé en mobilité (PDSm)" as pdsm 
 url of pdsm is  [[https://interop.esante.gouv.fr/ig/fhir/pdsm]]
 
 pdsm --> frcore 
@@ -52,15 +40,18 @@ gap --> annuaire
 
 
 
-archimate #Technology "Répertoire Offre Ressources en santé (ROR)" as ror <<technology-device>>
+artifact "Répertoire Offre Ressources en santé (ROR) 🔌" as ror
 url of ror is  [[https://interop.esante.gouv.fr/ig/fhir/ror]]
 
 
 ror --> frcore 
-ror --> APIFHIRROR
 
-artifact "Essais CLiniques Accessibles Interconnectés pour la Recherche ouverts à l'Ecosystème (ECLAIRE)" as eclaire 
+artifact "Essais CLiniques Accessibles Interconnectés pour la Recherche ouverts à l'Ecosystème (ECLAIRE) 🔌" as eclaire 
 url of eclaire is  [[https://interop.esante.gouv.fr/ig/fhir/eclaire]]
 
+legend right
+    🔌 Une API FHIR nationale est implémentée
+    <font color=#ffb6c4>▪️</font> IG socle
+end legend 
 
 @enduml
