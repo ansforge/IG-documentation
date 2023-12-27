@@ -17,6 +17,10 @@ Une réflexion sur les niveaux de maturité des guides d'implémentation se basa
 * Description complète pour l'ensemble des ressources de conformité
 * Publication de retours d'expérience sur l'implémentation des spécifications
 
+### Choix de la version de FHIR
+
+Pour garantir la cohérence de l'écosystème, il faudra privilégier l'usage de R4. Si l'usage de R5 est néanmoins nécessaire (cas d'usage international, évolution des ressources, ...), une étude de normes et standards devra être fournie pour justifier ce choix.
+
 ### Création des ressources de conformité
 
 #### La définition des profils et des extensions
