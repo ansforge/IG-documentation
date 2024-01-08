@@ -28,7 +28,7 @@ Le serveur HAPI utilise le validateur FHIR. Il est ainsi possible d'utiliser HAP
 Les StructureDefinition peuvent être accessibles sous deux formes:
 
 * Sous forme d'un package pour un cas d'usage particulier, c'est sous cette forme qu'ils sont définis dans le [FHIR REGISTRY](https://registry.fhir.org/) (dans les ImplementationGuide, un package est systématiquement généré à l'adresse [url]/package.tgz, ex : [https://www.hl7.org/fhir/us/core/package.tgz])
-* Le / les profils ne sont pas issus d'un contexte particulier et se présentent sous forme d'un ficher xml ou json (pratique à déconseillée)
+* Le / les profils ne sont pas issus d'un contexte particulier et se présentent sous forme d'un ficher xml ou json (pratique à déconseiller)
 
 ##### Cas a : à partir d'un package
 
