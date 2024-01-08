@@ -5,4 +5,4 @@ Documentation : Validation Results
 
 err = 1, warn = 4, info = 0
 IG Publisher Version: 1.5.8
-Generated Mon Dec 18 09:14:37 UTC 2023. FHIR version 4.0.1 for ans.fr.documentation#0.1.6 (canonical = https://interop.esante.gouv.fr/ig/documentation)
+Generated Mon Jan 08 14:15:56 UTC 2024. FHIR version 4.0.1 for ans.fr.documentation#0.1.6 (canonical = https://interop.esante.gouv.fr/ig/documentation)
