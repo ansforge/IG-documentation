@@ -8,7 +8,7 @@ url of annuaire is  [[https://interop.esante.gouv.fr/ig/fhir/annuaire]]
 
 annuaire --> frcore 
 
-artifact "Partage de Docuemnts de Santé en mobilité (PDSm)" as pdsm 
+artifact "Partage de Documents de Santé en mobilité (PDSm)" as pdsm 
 url of pdsm is  [[https://interop.esante.gouv.fr/ig/fhir/pdsm]]
 
 pdsm --> frcore 
@@ -40,7 +40,7 @@ gap --> annuaire
 
 
 
-artifact "Répertoire Offre Ressources en santé (ROR) 🔌" as ror
+artifact "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social (ROR) 🔌" as ror
 url of ror is  [[https://interop.esante.gouv.fr/ig/fhir/ror]]
 
 
