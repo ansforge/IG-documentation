@@ -15,7 +15,7 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 * Nombre d'issues et résolutions sur le repo GitHub
 * Nombre de commentaires lors des phases de concertation
 * Publication du package avec des dépendances : les ressources héritées ne sont pas dupliquées
-* Description complète pour l'ensemble des ressources de conformité
+* L'ensemble des ressources de conformité doit avoir une description précise de son utilité
 
 ### Choix de la version de FHIR
 
