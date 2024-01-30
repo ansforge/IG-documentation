@@ -9,13 +9,12 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 
 ### Critères de maturité
 
-* Ensemble des critères de qualité respectés
+* Respect de l'ensemble des critères de qualité mentionnés ci-dessus
 * Nombre d'implémentation obtenu par déclaration (par convergence ou par les DSI). Idéalement, publier des retours d'expérience sur l'implémentation des spécifications
-* Nombre de tests réalisés lors de projectathon, et nombre de partenaires
+* Nombre de projectathons, nombre de tests réalisés lors de projectathon, et nombre de partenaires
 * Nombre d'issues et résolutions sur le repo GitHub
 * Nombre de commentaires lors des phases de concertation
-* Publication du package avec des dépendances : les ressources héritées ne sont pas dupliquées
-* L'ensemble des ressources de conformité doit avoir une description précise de son utilité
+* L'ensemble des ressources de conformité doit avoir une description précise de son usage
 
 ### Choix de la version de FHIR
 
