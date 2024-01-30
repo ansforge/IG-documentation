@@ -1,5 +1,5 @@
 
-La mise en place de niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. Il est important de respecter un maximum de ces critères indiqués ci-dessous.
+La mise en place de niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. En attandant la publication de ces niveaux de maturité, il est important de respecter au maximum les critères indiqués ci-dessous.
 
 ### Critères de qualité
 
