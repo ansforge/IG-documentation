@@ -7,16 +7,21 @@ Un repository (ou répertoire) Github contient une arborescence de branche, perm
 
 Vous avez identifié une erreur sur un des guides ? L'onglet issue permet de signaler un problème sur un projet donné.
 
-<img width="1541" alt="image" src="https://user-images.githubusercontent.com/48218773/215773144-31a47623-a853-4a4e-8ba0-ad1d66b29961.png">
+<div class="figure" style="width:100%;">
+    <img width="1541" alt="image" src="https://user-images.githubusercontent.com/48218773/215773144-31a47623-a853-4a4e-8ba0-ad1d66b29961.png">
+</div>
 
 Un lien est également disponible sous chaque guide d'implémentation pour accéder aux issues :
-<img width="1541" alt="image" src="new_issue.png">
+<div class="figure" style="width:100%;">
+    <img width="1541" alt="image" src="new_issue.png">
+</div>
 
 L'issue doit contenir un titre, et une description très détaillée avec une proposition de changement.
 
 ### Travailler sur un repository
 
 GitHub peut s'utiliser de deux façons :  
+
 - Via l'application GitHub Desktop
 - Via l'invite de commande
 
@@ -24,8 +29,9 @@ GitHub peut s'utiliser de deux façons :
 
 La commande git clone permet de copier l'intégralité d'un repository en local.
 Le xxx est à remplacer avec l'indication dans ssh :
-<img width="462" alt="image" src="https://user-images.githubusercontent.com/48218773/207010144-e80b05a0-9763-4026-bf59-debd8b2a2411.png">
-
+<div class="figure">
+    <img width="462" alt="image" src="https://user-images.githubusercontent.com/48218773/207010144-e80b05a0-9763-4026-bf59-debd8b2a2411.png">
+</div>
 
 #### Git checkout -b nom_travail_en_cours
 
@@ -48,5 +54,6 @@ Cette commande pousse l'ensemble des modifications validées avec des commit sur
 
 Ensuite, il faut aller sur l'interface graphique, dans l'onglet, "Pull Requests", et créer une nouvelle PR qui permet de dire : je veux intégrer les modifications que j'ai faites sur la branche x à la branche main.
 Chaque PR doit être validée par quelqu'un d'autre pour : 
+
 - Etre sûr que le savoir n'est pas concentré sur une personne
 - Permettre une relecture pour éviter les erreurs
