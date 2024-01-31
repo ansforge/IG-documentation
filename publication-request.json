@@ -7,5 +7,5 @@
     "sequence" : "release",
     "first": false,
     "desc" : "Documentation des guides d'implémentation de l'ANS",
-    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.6\n- Ajout de conseils de versioning sur l'implémentation ([PR 39](https://github.com/ansforge/IG-documentation/pull/39)) \n- Amélioration de la page collaborons, refactoring, amélioration du wording ([PR 37](https://github.com/ansforge/IG-documentation/pull/37))"
+    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.6\n- Ajout de conseils de validation des ressources FHIR ([PR 44](https://github.com/ansforge/IG-documentation/pull/44)) \n- Ajout de la documentation sur le choix de la version de FHIR ([PR 47](https://github.com/ansforge/IG-documentation/pull/47))\n- Mise à jour des critères de qualité et maturité ([PR 49](https://github.com/ansforge/IG-documentation/pull/49))"
   }
