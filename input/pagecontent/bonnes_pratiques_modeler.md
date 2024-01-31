@@ -1,21 +1,20 @@
+
+La mise en place de niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. En attandant la publication de ces niveaux de maturité, il est important de respecter au maximum les critères indiqués ci-dessous.
+
 ### Critères de qualité
 
-* Respect des bonnes pratiques nationales (règles de nommages indiquées ci-dessous)
+* Respect des bonnes pratiques nationales tel que les règles de nommages indiquées ci-dessous
 * Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 * Publication de l'IG sans erreurs (cf session Q/A)
 
 ### Critères de maturité
 
-Une réflexion sur les niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. Il est important de respecter un maximum de ces crtères de qualité.
-
-* Ensemble des critères de qualité respectés
-* Nombre d'implémentation ? (Déclaratif : Convergence / DSI ?)
-* Nombre de tests réalisés lors de projectathon
+* Respect de l'ensemble des critères de qualité mentionnés ci-dessus
+* Nombre d'implémentation obtenu par déclaration (par convergence ou par les DSI). Idéalement, publier des retours d'expérience sur l'implémentation des spécifications
+* Nombre de projectathons, nombre de tests réalisés lors de projectathon, et nombre de partenaires
 * Nombre d'issues et résolutions sur le repo GitHub
 * Nombre de commentaires lors des phases de concertation
-* Publication du package avec des dépendances : les ressources héritées ne sont pas dupliquées
-* Description complète pour l'ensemble des ressources de conformité
-* Publication de retours d'expérience sur l'implémentation des spécifications
+* L'ensemble des ressources de conformité doit avoir une description précise de son usage
 
 ### Choix de la version de FHIR
 
