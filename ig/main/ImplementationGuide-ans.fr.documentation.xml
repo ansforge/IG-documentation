@@ -6,11 +6,11 @@
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Documentation</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation"/>
-  <version value="0.1.5"/>
+  <version value="0.1.6"/>
   <name value="Documentation"/>
   <title value="Documentation des guides d'implémentation de l'ANS"/>
   <status value="active"/>
-  <date value="2024-01-31T14:18:04+00:00"/>
+  <date value="2024-01-31T14:19:25+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
