@@ -1,5 +1,5 @@
 
-La mise en place de niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. En attandant la publication de ces niveaux de maturité, il est important de respecter au maximum les critères indiqués ci-dessous.
+La mise en place de niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. En attendant la publication de ces niveaux de maturité, il est important de respecter au maximum les critères indiqués ci-dessous.
 
 ### Critères de qualité
 
@@ -10,8 +10,8 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 ### Critères de maturité
 
 * Respect de l'ensemble des critères de qualité mentionnés ci-dessus
-* Nombre d'implémentation obtenu par déclaration (par convergence ou par les DSI). Idéalement, publier des retours d'expérience sur l'implémentation des spécifications
-* Nombre de projectathons, nombre de tests réalisés lors de projectathon, et nombre de partenaires
+* Nombre d'implémentations obtenu par déclaration (par convergence ou par les DSI). Idéalement, publier des retours d'expérience sur l'implémentation des spécifications
+* Nombre de passage en projectathons, nombre de tests réalisés lors de projectathon, et nombre de partenaires
 * Nombre d'issues et résolutions sur le repo GitHub
 * Nombre de commentaires lors des phases de concertation
 * L'ensemble des ressources de conformité doit avoir une description précise de son usage
@@ -24,7 +24,7 @@ Pour garantir la cohérence de l'écosystème, il faudra privilégier l'usage de
 
 #### La définition des profils et des extensions
 
-Pour être intéropérable, il faut tout d'abord éviter la sur-profilisation, c'est à dire créer des profils qui existent déjà. Pour cela, il est nécessaire d'hériter au maximum des profils internationaux, pour que les contraintes et modélisations soit partagées au maximum entre les acteurs répondant à un cas d'usage.
+Pour être intéropérable, il faut tout d'abord éviter la multiplication des profils qui conduit à créer des profils qui existent déjà. Pour cela, il est nécessaire d'hériter au maximum des profils internationaux, pour que les contraintes et modélisations soit partagées au maximum entre les acteurs répondant à un cas d'usage.
 
 De la même manière, l'usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d'hériter d'extensions déjà créées.
 
@@ -52,13 +52,13 @@ TODO : rajouter lien vers la procédure de création d'un VS
 
 ### Règles de nommage des ressources de conformité
 
-Ces règles de nommages ont été établies en s'inspirant des ressources us-core
+Ces règles de nommage ont été établies en s'inspirant des ressources us-core
 
 | **Attribut** | **Description** | **Exemple us-core** |
 | ----- | ----- | ----- |
-| id | utiliser le format kebab-case, ex : fr-patient. (/!\ sur Forge, l'id n'est pas obligatoire, il est important de le rajouter !). Lors de la création d'un IG pour un projet en particulier, il est possible de préfixer l'ensemble des ressources de conformité par le trigramme du projet (ex : "ror-...") | us-core-patient |
-| title | similaire au nom, avec espaces. Ex : Fr Patient | US Core Patient Profile |
-| name | Utiliser le format PascalCase sans espace. Ex : FrPatient | USCorePatientProfile |
+| id | utiliser le format kebab-case, ex : fr-core-patient. (/!\ sur Forge, l'id n'est pas obligatoire, il est important de le rajouter !). Lors de la création d'un IG pour un projet en particulier, il est possible de préfixer l'ensemble des ressources de conformité par le trigramme du projet (ex : "ror-...") | us-core-patient |
+| title | similaire au nom, avec espaces. Ex : Fr Core Patient | US Core Patient Profile |
+| name | Utiliser le format PascalCase sans espace. Ex : FrCorePatient | USCorePatientProfile |
 | url | [base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition). | http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient |
 | SearchParameter.code | toujours en minuscule, mots séparés par des tirets "-" si besoin | - |
 {: .grid }
@@ -74,7 +74,7 @@ La documentation officielle se trouve sur le [confluence d'HL7](https://confluen
 
 L'id de package ne doit pas avoir de majuscule.
 
-Le package doit toujours dépendre de fr-core, de l'annuaire santé et/ou les projets de l'ANS pour assurer une cohérence globale à l'échelle française. Ces packages sont publiés sur le FHIR Package Registry et doivent être indiqués dans le fichier `sushi-config.yaml`. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l'intérêt du versioning.
+Le package doit toujours dépendre de fr-core, de l'annuaire santé et/ou des projets de l'ANS pour assurer une cohérence globale à l'échelle française. Ces packages sont publiés sur le FHIR Package Registry et doivent être indiqués dans le fichier `sushi-config.yaml`. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l'intérêt du versioning.
 
 ### Les URL canoniques
 
@@ -110,7 +110,7 @@ Il est recommandé de faire bénéficier au maximum les projets de cette possibi
 
 #### Configuration de sushi-config : status, version, releaseLabel
 
-Le **status** devra être placé à draft lorsque celui-ci n'est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaine partie de la spécification est en mode draft.
+Le **status** devra être placé à draft lorsque celui-ci n'est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft.
 
 Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/).
 
@@ -137,7 +137,7 @@ Par exemple, on peut ainsi définir l’alias $phdDevice pour représenter l’U
 > Alias: $PhdDevice = http://hl7.org/fhir/uv/phd/StructureDefinition/PhdDevice
 > \* device only Reference($PhdDevice)
 
-Par soucis de clarté, il est recommandé de rassembler tous les alias dans un fichier unique, appelé « aliases.fsh » et situé dans le répertoire racine (évite les redondances et facilite la gestion).
+Par souci de clarté, il est recommandé de rassembler tous les alias dans un fichier unique, appelé « aliases.fsh » et situé dans le répertoire racine (évite les redondances et facilite la gestion).
 
 Exemple:
 > Alias: $PhdDevice = http://hl7.org/fhir/uv/phd/StructureDefinition/PhdDevice
