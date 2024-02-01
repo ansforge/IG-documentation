@@ -6,7 +6,7 @@ Ces travaux se placent dans une démarche d'élaboration continue. L'objectif é
 
 Selon la documentation FHIR, un Implementation Guide contient un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière.
 
-Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR [ImplementationGuide](https://www.hl7.org/fhir/R4/implementationguide.html). Le site web contient également de manière systématique un package, versionné, contenant l'ensemble des ressources de conformité.
+Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR [ImplementationGuide](https://www.hl7.org/fhir/R4/implementationguide.html). Le site web contient également de manière systématique un package versionné contenant l'ensemble des ressources de conformité.
 
 La meilleure pratique consiste à créer un Implementation Guide par projet bien spécifique, cela permet :
 
@@ -14,7 +14,7 @@ La meilleure pratique consiste à créer un Implementation Guide par projet bien
 * Chacune des specs gère ses dépendances indépendamment des autres (aux ressources du ci-sis, aux profils interopsanté), chacune de ces dépendances peuvent être mises à jour séparément
 * Les urls sont claires, on sait directement de quelle spec est issue chaque profil, et on peut directement accéder à l'IG facilement
 * Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d'usage, en héritant de tout ou partie, ou pour décrire une implémentation précise.
-* L'IG doit obligatoirement hériter des ressources françaises définies par InteropSanté et/ou par les profils définis par l'ANS
+* L'IG doit obligatoirement hériter des profils FHIR réalisés par InteropSanté et/ou par l'ANS
 
 Documentation : [ImplementationGuide](https://www.hl7.org/fhir/implementationguide.html), [Packages](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification)
 
@@ -26,7 +26,7 @@ Il est destiné à celles et ceux qui utilisent FHIR !
 * Les FHIR implementers, qui lisent ces guides et développent des APIs 
 * Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux.
 
-Les experts fonctionnels ont également une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : c'est les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.
+Les experts fonctionnels ont également une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : ce sont les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.
 
 ### La liste des guides d'implémentation de l'ANS
 
