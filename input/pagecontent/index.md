@@ -2,6 +2,11 @@ Bienvenue dans la documentation des guides d'implémentation de l'ANS, elle conc
 
 Ces travaux se placent dans une démarche d'élaboration continue. L'objectif étant de profiter de l'intelligence collective pour faire évoluer les spécifications versionnées. 
 
+### L'écosystème FHIR France
+
+
+<div style="text-align: center;">{%include ecosystem.svg%}</div>
+
 ### Les guides d'implémentation
 
 Selon la documentation FHIR, un Implementation Guide contient un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière.
