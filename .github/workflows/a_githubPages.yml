@@ -18,4 +18,4 @@ jobs:
           validator_cli: "true"        
           repo_ig: "./igSource"   
           github_page: "true"
-          github_page_token: ${{ secrets.GITHUB_TOKEN }}
+          github_page_token: ${{ secrets.ANS_IG_API_TOKEN  }}
