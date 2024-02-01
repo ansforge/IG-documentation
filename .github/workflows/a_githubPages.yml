@@ -13,8 +13,6 @@ jobs:
           path: igSource
       - uses: ansforge/IG-workflows@addAction
         with:      
-          bake: "true"
-          nos: "true"
           validator_cli: "true"        
           repo_ig: "./igSource"   
           github_page: "true"
