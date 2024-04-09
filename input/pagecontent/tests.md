@@ -11,11 +11,26 @@ L'espace de test est composé de deux outils :
 
 Ces outils sont accessibles en ligne sur le site [https://interop.esante.gouv.fr/](https://interop.esante.gouv.fr/) et notamment utilisés lors des Projectathons organisés par l’ANS pour les éditeurs.
 
-### Projectathon
+### Matchbox
 
-L’ANS organise régulièrement des projectathons pour permettre à un industriel de vérifier la conformité de l’implémentation des spécifications d’interopérabilité et de réaliser des tests d’interopérabilité  avec d’autres éditeurs.
+Matchbox est un outil permettant notamment de valider des instances de ressources FHIR contre un profil. L'outil matchbox est [open source](https://github.com/ahdis/matchbox).
 
-Vous serez informés par l’ANS des prochains projectathons (date, lieu,…) pour pouvoir y participer.
+L'instance matchbox de l'ANS est accessible via [cette URL](https://interop.esante.gouv.fr/matchboxv3). Elle contient les guides d'implémentation de l'ANS et d'InteropSanté pour valider la conformité des ressources par rapport aux profils définis dans l'IG.
+
+Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le boutôn "Validate ..."
+
+<div style="text-align: center;"><img width="80%" alt="image" src="homepage-matchbox.png"></div>
+
+Sur cette deuxième page, il suffira de déposer le fichier contenant la ressource FHIR à valider. Optionnellement, il est possible de sélectionner le numéro de version du guide d'implémentation ainsi que le profil à valider. A défaut, le profil à valider sera défini automatiquement à partir de l'attribut meta.profile.
+
+<div style="text-align: center;"><img width="80%" alt="image" src="validate-fr-patient-ins.png"></div>
+
+Vous obtiendrez ainsi le résultat de la validation, à noter que les codes et les displays sont validés par le FHIR Terminology Service (FTS) du Serveur Multi Terminologique ([SMT](https://smt.esante.gouv.fr/)).
+
+Une fois validé, les messages d'erreurs sont accessibles en-dessous :
+
+<div style="text-align: center;"><img width="80%" alt="image" src="resultat-validation.png"></div>
+<div style="text-align: center;"><img width="80%" alt="image" src="erreurs-lignes.png"></div>
 
 ### Gazelle : les niveaux de cas de tests
 

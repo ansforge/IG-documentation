@@ -30,3 +30,9 @@ Pour que cela soit possible, il convient de respecter plusieurs points :
 * Une concertation de minimum trois mois doit être lancée sur la plateforme [participez](https://participez.esante.gouv.fr)
 
 Si des travaux ont déjà été entamés, contactez-nous via la [l'adresse email du CI-SIS](ci-sis@esante.gouv.fr). Une solution sera établie pour retrouver le cycle de développement classique (transformation au format IG, mise en qualité, héritage FrCore / Annuaire, concertation, ...) pour publication dans le CI-SIS.
+
+### Projectathon
+
+L’ANS organise régulièrement des projectathons pour permettre à un industriel de vérifier la conformité de l’implémentation des spécifications d’interopérabilité et de réaliser des tests d’interopérabilité  avec d’autres éditeurs.
+
+Vous serez informés par l’ANS des prochains projectathons (date, lieu,…) pour pouvoir y participer.
