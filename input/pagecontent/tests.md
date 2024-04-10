@@ -1,4 +1,4 @@
-### Outils de tests
+### Organisation des tests
 
 <div style="text-align: center;">{%include tests.svg%}</div>
 
@@ -11,37 +11,71 @@ L'espace de test est composé de deux outils :
 
 Ces outils sont accessibles en ligne sur le site [https://interop.esante.gouv.fr/](https://interop.esante.gouv.fr/) et notamment utilisés lors des Projectathons organisés par l’ANS pour les éditeurs.
 
-### Projectathon
+### Matchbox
 
-L’ANS organise régulièrement des projectathons pour permettre à un industriel de vérifier la conformité de l’implémentation des spécifications d’interopérabilité et de réaliser des tests d’interopérabilité  avec d’autres éditeurs.
+Matchbox est un outil permettant notamment de valider des instances de ressources FHIR contre un profil. L'outil matchbox est [open source](https://github.com/ahdis/matchbox).
 
-Vous serez informés par l’ANS des prochains projectathons (date, lieu,…) pour pouvoir y participer.
 
-### Gazelle : les niveaux de cas de tests
+#### Accés à Matchbox et à  la validation
+L'instance matchbox de l'ANS est accessible via [cette URL](https://interop.esante.gouv.fr/matchboxv3). 
+
+Cette instance permet de faire des vérification au regard :  
+- Des guides d'implémentation de l'ANS
+- Des guides d'implementation d'InteropSanté
+- Du  FHIR Terminology Service (FTS) du Serveur Multi Terminologique ([SMT](https://smt.esante.gouv.fr/)).
+
+
+Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le boutôn "Validate ..."
+
+<div style="text-align: center;"><img width="80%" alt="image" src="homepage-matchbox.png"></div>
+
+#### Chargement de la ressource FHIR à valider
+
+Sur cette deuxième page, il suffira de déposer le fichier contenant la ressource FHIR à valider. Optionnellement, il est possible de sélectionner le numéro de version du guide d'implémentation ainsi que le profil à valider. A défaut, le profil à valider sera défini automatiquement à partir de l'attribut meta.profile.
+
+<div style="text-align: center;"><img width="80%" alt="image" src="validate-fr-patient-ins.png"></div>
+
+#### Résultat de la validation
+
+Vous obtiendrez ainsi le résultat de la validation, à noter que les codes et les displays sont validés par le FHIR Terminology Service (FTS) du Serveur Multi Terminologique ([SMT](https://smt.esante.gouv.fr/)).
+
+Une fois validé, les messages d'erreurs sont accessibles en-dessous :
+
+<div style="text-align: center;"><img width="80%" alt="image" src="resultat-validation.png"></div>
+
+Un détail par ligne est également accessible :
+
+<div style="text-align: center;"><img width="80%" alt="image" src="erreurs-lignes.png"></div>
+
+### Gazelle
+
+Gazelle est un outil de tests qui s'appuie sur des validateurs tel que matchbox pour FHIR pour établir des scénarios de tests complets.
+
+### Les niveaux des scénarios gazelle
 
 Différents niveaux de tests sont proposés sur l’espace de test de l’ANS afin d’aider les éditeurs dans leur préparation aux évènements de type projectathon.
 
 Le niveau le plus bas permettra aux éditeurs de tester la conformité des messages unitaires qu’ils produisent. Le niveau intermédiaire permettra aux éditeurs de tester face à un autre système la conformité et l’interopérabilité des messages unitaires. Le niveau le plus élevé correspond aux scénarios proposés jusqu’à maintenant dans le cadre des projectathons et permettra aux éditeurs de tester des scénarios complexes face à un autre système.
 
-#### Niveau 1 (N1)
+##### Niveau 1 (N1)
 
 Les tests de niveau 1 sont des tests unitaires sans partenaire.
 Chaque cas de test de niveau 1 correspond à un flux de la spécification technique.
 L’objectif de ces cas de tests est de valider la ressource ou la requête produite par le système avec un validateur EVSClient indiqué dans le cas de test.
 
-#### Niveau 2 (N2)
+##### Niveau 2 (N2)
 
 Les tests de niveau 2 sont des tests unitaires avec partenaire.
 Pour être exécutés, il faut qu’au préalable les cas de test de niveau 1 indiqués en prérequis aient été exécutés par les 2 mêmes systèmes.
 L’objectif de ces cas de test est de valider la ressource ou la requête construite ainsi que la capacité des systèmes à créer / intégrer ou requêter / envoyer des ressources. Les cas de tests de type N2 correspondent généralement à un flux spécifique.
 
-#### Niveau 3 (N3)
+##### Niveau 3 (N3)
 
 Les tests de niveau 3 sont des tests avec partenaire basés sur l’enchaînement de différents tests unitaires avec partenaire (N2) en suivant un scénario complexe. Pour être exécutés, il faut qu’au préalable les cas de test de niveaux 1 et 2 indiqués en prérequis aient été exécutés entre les 2 mêmes systèmes.
 
 L’objectif de ces cas de test est de créer un scénario complexe faisant appel aux différents flux de la spécification technique et ainsi créer un exemple d’usage.
 
-### Types d'étapes de cas de tests
+#### Les types d'étapes de cas de tests
 
 Les étapes de cas de tests pourront avoir plusieurs types.
 

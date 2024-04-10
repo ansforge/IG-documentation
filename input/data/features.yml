@@ -4,4 +4,4 @@ feedback:
   - active: true
     dashboard:
       label: New Issue
-      url: https://github.com/ansforge/IG-documentation
+      url: https://github.com/ansforge/IG-documentation/issues
