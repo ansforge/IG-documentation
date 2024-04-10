@@ -5,7 +5,7 @@ Les workflows associés à ce repository (.github/workflows) permettent :
 
 * d'éxecuter Sushi pour vérifier la grammaire ;
 * de faire les tests avec le validator_cli ;
-* de publier les pages : https://ansforge.github.io/IG-documentation/ig/main.
+* de publier les pages : https://ansforge.github.io/IG-documentation/main/ig.
 
 ## Acronymes
 
