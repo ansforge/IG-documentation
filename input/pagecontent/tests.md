@@ -1,4 +1,4 @@
-### Outils de tests
+### Organisation des tests
 
 <div style="text-align: center;">{%include tests.svg%}</div>
 
@@ -15,15 +15,27 @@ Ces outils sont accessibles en ligne sur le site [https://interop.esante.gouv.fr
 
 Matchbox est un outil permettant notamment de valider des instances de ressources FHIR contre un profil. L'outil matchbox est [open source](https://github.com/ahdis/matchbox).
 
-L'instance matchbox de l'ANS est accessible via [cette URL](https://interop.esante.gouv.fr/matchboxv3). Elle contient les guides d'implémentation de l'ANS et d'InteropSanté pour valider la conformité des ressources par rapport aux profils définis dans l'IG.
+
+#### Accés à Matchbox et à  la validation
+L'instance matchbox de l'ANS est accessible via [cette URL](https://interop.esante.gouv.fr/matchboxv3). 
+
+Cette instance permet de faire des vérification au regard :  
+- Des guides d'implémentation de l'ANS
+- Des guides d'implementation d'InteropSanté
+- Du  FHIR Terminology Service (FTS) du Serveur Multi Terminologique ([SMT](https://smt.esante.gouv.fr/)).
+
 
 Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le boutôn "Validate ..."
 
 <div style="text-align: center;"><img width="80%" alt="image" src="homepage-matchbox.png"></div>
 
+#### Chargement de la ressource FHIR à valider
+
 Sur cette deuxième page, il suffira de déposer le fichier contenant la ressource FHIR à valider. Optionnellement, il est possible de sélectionner le numéro de version du guide d'implémentation ainsi que le profil à valider. A défaut, le profil à valider sera défini automatiquement à partir de l'attribut meta.profile.
 
 <div style="text-align: center;"><img width="80%" alt="image" src="validate-fr-patient-ins.png"></div>
+
+#### Résultat de la validation
 
 Vous obtiendrez ainsi le résultat de la validation, à noter que les codes et les displays sont validés par le FHIR Terminology Service (FTS) du Serveur Multi Terminologique ([SMT](https://smt.esante.gouv.fr/)).
 
