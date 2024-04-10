@@ -57,3 +57,18 @@ Chaque PR doit être validée par quelqu'un d'autre pour :
 
 - Etre sûr que le savoir n'est pas concentré sur une personne
 - Permettre une relecture pour éviter les erreurs
+
+### Mettre en place un workflow de validation/génération/publication
+
+Afin de faciliter les actions au regards des IG, l'ANS  met à disposition un [GitHub Action](https://github.com/ansforge/IG-workflows)  avec les fonctionnalités suivantes : 
+- Lancement de sushi
+- Tests avec le validateur_cli
+- Incorporation des projets de simplifier (Methode bake)
+- Publication des releases sur un repo github
+- Génération du diagramme plantuml à partir de des données de l'IG
+- Génération des diagrammes de mapping plantuml
+- Génération des testscripts avec le projet testscript-generator
+- Publication sur les pages github :
+  - Diagramme de class plantuml généré à partir des données de l'IG
+  - Rapport de validation du validator_cli
+
