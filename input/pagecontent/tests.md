@@ -25,7 +25,7 @@ Cette instance permet de faire des vérification au regard :
 * Des guides d'implementation d'InteropSanté
 * Du FHIR Terminology Service (FTS) du Serveur Multi Terminologique ([SMT](https://smt.esante.gouv.fr/)).
 
-Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le boutôn "Validate ..."
+Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le bouton "Validate ..."
 
 <div style="text-align: center;"><img width="80%" alt="image" src="homepage-matchbox.png"></div>
 
