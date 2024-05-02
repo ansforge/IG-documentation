@@ -16,8 +16,8 @@ La plateforme de test [Gazelle](https://interop.esante.gouv.fr/), et plus partic
 
 Plusieurs projets open-source permettent de valider des ressources FHIR via l'interface graphique d'un site web :
 
-* [https://validator.fhir.org]
-* [https://test.ahdis.ch/matchbox]
+* [FHIR Validator](https://validator.fhir.org)
+* [Matchbox]([https://test.ahdis.ch/matchbox](https://test.ahdis.ch/matchbox/#/))
 
 ### Validation avec HAPI FHIR et l'opération $Validate
 
