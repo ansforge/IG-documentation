@@ -1,0 +1,19 @@
+{
+  "url" : "https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation",
+  "name" : "Documentation",
+  "title" : "Documentation des guides d'implémentation de l'ANS",
+  "description" : null,
+  "status" : "active",
+  "package-id" : "ans.fr.documentation",
+  "ig-ver" : "0.1.6",
+  "date" : "Thu, 02 May, 2024 11:46:14 +0000",
+  "dateISO8601" : "2024-05-02T11:46:14+00:00",
+  "errs" : 3,
+  "warnings" : 4,
+  "hints" : 0,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1205728360
+}
