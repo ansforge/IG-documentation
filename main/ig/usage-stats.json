@@ -1,6 +1,6 @@
 {
   "package": "ans.fr.documentation",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
   "extensions": [],
