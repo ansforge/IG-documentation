@@ -17,7 +17,7 @@ Matchbox est un outil permettant notamment de valider des instances de ressource
 
 
 #### Accés à Matchbox et à  la validation
-L'instance matchbox de l'ANS est accessible via [cette URL](https://interop.esante.gouv.fr/matchboxv3). 
+L'instance matchbox de l'ANS est accessible via [cette URL](https://interop.esante.gouv.fr/matchboxv4). 
 
 Cette instance permet de faire des vérification au regard :  
 - Des guides d'implémentation de l'ANS
@@ -25,7 +25,7 @@ Cette instance permet de faire des vérification au regard :
 - Du  FHIR Terminology Service (FTS) du Serveur Multi Terminologique ([SMT](https://smt.esante.gouv.fr/)).
 
 
-Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le boutôn "Validate ..."
+Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le boutôn "Validate ressource"
 
 <div style="text-align: center;"><img width="80%" alt="image" src="homepage-matchbox.png"></div>
 
