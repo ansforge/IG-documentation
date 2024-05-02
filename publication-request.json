@@ -7,5 +7,5 @@
     "sequence" : "release",
     "first": false,
     "desc" : "Documentation des guides d'implémentation de l'ANS",
-    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.7\n- Ajout de conseils de validation des ressources FHIR avec matchbox([PR 60](https://github.com/ansforge/IG-documentation/pull/60))"
+    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.7\n- Ajout de conseils de validation des ressources FHIR avec matchbox([PR 60](https://github.com/ansforge/IG-documentation/pull/60) et [PR 62](https://github.com/ansforge/IG-documentation/pull/62))"
   }
