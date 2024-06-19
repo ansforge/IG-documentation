@@ -1,5 +1,13 @@
 Nos guides d'implémentation se basent sur la norme HL7 FHIR. Ils utilisent la terminologie, les notations et les principes de conception propres à FHIR. Avant de lire le guide d'implémentation, il est important de se familiariser avec certains des principes de base de FHIR ainsi qu'avec des conseils généraux sur la façon de lire les spécifications FHIR. Les lecteurs qui ne connaissent pas FHIR sont encouragés à lire (ou au moins à survoler) ce qui suit avant d'explorer plus en avant nos guides d'implémentation.
 
+Liste des implémentations open source :
+
+* https://hl7.org/fhir/R4/implsupport-module.html
+* https://confluence.hl7.org/display/FHIR/Open+Source+Implementations
+* https://foundry.hl7.org/
+
+Documentation FHIR :
+
 <ul>
   <li>
    <a href="http://hl7.org/fhir/R4/overview.html">Vue d'ensemble de FHIR</a>
@@ -32,3 +40,4 @@ Nos guides d'implémentation se basent sur la norme HL7 FHIR. Ils utilisent la t
 
 N'hésitez pas à explorer d'autres aspects de la spécification FHIR qui vous semblent pertinents ou intéressants par rapport à vos besoins.
 Bonne lecture :-)
+
