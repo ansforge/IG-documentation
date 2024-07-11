@@ -134,7 +134,7 @@ Les travaux de mise à jour actuelle définissent des nouveaux statuts pour les 
 | public-comment | draft | ballot | working |
 | for implementation | active | trial-use | milestone |
 | final-text | active | final-text | milestone|
-| withdrawn ou deprecated | retired | withdrawn ouo retired | withdrawal |
+| withdrawn ou deprecated | retired | resp. withdrawn ou retired | withdrawal |
 
 #### Extensions et ValueSets
 
@@ -181,8 +181,8 @@ FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup 
 
 Règles d'utilisation de GitHub :
 
-* Toutes modifications d'un guide d'implémentation et d'une spécification GitHub doit se faire au niveau d'une branche.
-* Le nom de la branche doit être préfixé par les initiales (ex : "nr-") suivi de la description des travaux (ex : "nr-ajout-bonnespratiques-github)
+* Toutes modifications d'une spécification sur GitHub doit se faire au niveau d'une branche.
+* Le nom de la branche doit être préfixé par les initiales de l'auteur (ex : "sb-" pour Sébastien Brunelle) suivi de la description des travaux (ex : "sb-ajout-bonnespratiques-github)
 * Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l'ANS.
 * Une fois la Pull Request validée, c'est à l'auteur des modifications de fusionner (=merge) la pull request avec la branche principale "main".
 
