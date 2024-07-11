@@ -115,7 +115,7 @@ Le **mode de publication** permet de paramétrer la release. Celui-ci doit être
 
 Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les guides d'implémentation, voici la correspondance entre les statuts pressentis et les paramètres de publication :
 
-| Statut de maturité CI-SIS | Statut (fichier sushi-config) | label de publication (fichier publication-request) et releaseLabel (fichier sushi-config) | Mode de publication (fichier publication-request) |
+| Statut de maturité CI-SIS | Statut IG | label de publication | Mode de publication |
 | --- | --- | --- | --- |
 | draft | draft | ci-build | N/A |
 | public-comment | draft | ballot | working |
