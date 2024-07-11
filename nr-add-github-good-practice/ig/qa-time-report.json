@@ -1,5 +1,5 @@
 {
-  "date" : "Thu, 11 Jul, 2024 09:46:20 +0000",
+  "date" : "Thu, 11 Jul, 2024 09:51:55 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -7,54 +7,59 @@
       "size" : 3484,
       "processes" : [
         {
-          "activity" : "load",
-          "start" : 22,
-          "length" : 36
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 22,
-          "length" : 7
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 22,
-          "length" : 74
-        },
-        {
-          "activity" : "validate",
-          "start" : 22,
-          "length" : 3101
-        },
-        {
-          "activity" : "loadLists",
-          "start" : 25,
+          "activity" : "loadDepInfo",
+          "start" : 23,
           "length" : 1
         },
         {
+          "activity" : "load",
+          "start" : 23,
+          "length" : 27
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 23,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 23,
+          "length" : 78
+        },
+        {
+          "activity" : "validate",
+          "start" : 23,
+          "length" : 2956
+        },
+        {
           "activity" : "scanForUsageStats",
-          "start" : 25,
+          "start" : 26,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 25,
-          "length" : 113
-        },
-        {
-          "activity" : "generate2",
-          "start" : 27,
+          "start" : 26,
           "length" : 108
         },
         {
+          "activity" : "generate2",
+          "start" : 28,
+          "length" : 102
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 35,
+          "length" : 1
+        },
+        {
           "activity" : "generateValidationPack",
-          "start" : 34,
-          "length" : 2
+          "start" : 35,
+          "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 36,
-          "length" : 2
+          "start" : 37,
+          "length" : 3
         }
       ]
     }
