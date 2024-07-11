@@ -6,6 +6,7 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 * Respect des bonnes pratiques nationales tel que les règles de nommages indiquées ci-dessous
 * Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 * Respecter le choix de la version FHIR
+* L'ensemble des ressources de conformité doit avoir une description précise de son usage
 * Publication de l'IG sans erreurs (cf session Q/A)
 
 ### Critères de maturité
@@ -15,7 +16,6 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 * Nombre de passage en projectathons, nombre de tests réalisés lors de projectathon, et nombre de partenaires
 * Nombre d'issues et résolutions sur le repo GitHub
 * Nombre de commentaires lors des phases de concertation
-* L'ensemble des ressources de conformité doit avoir une description précise de son usage
 
 ### Création des ressources de conformité
 
