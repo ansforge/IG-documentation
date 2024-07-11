@@ -1,0 +1,19 @@
+Documentation : Validation Results
+=========================================
+
+err = 1, warn = 4, info = 0
+IG Publisher Version: 1.6.15
+Generated Thu Jul 11 09:48:17 UTC 2024. FHIR version 4.0.1 for ans.fr.documentation#0.1.7 (canonical = https://interop.esante.gouv.fr/ig/documentation)
+ Build Errors : 3 / 4 / 0
+ /home/runner/work/IG-documentation/IG-documentation/igSource/fsh-generated/resources/ImplementationGuide-ans.fr.documentation : 1 / 0 / 1
+</table>
+== n/a ==
+ERROR: /home/runner/work/IG-documentation/IG-documentation/igSource/output/about.html#/html/body/div/div/div/div/div/p/a at Line 237, column 17: The link 'downloads.html' for "téléchargement" cannot be resolved
+ERROR: /home/runner/work/IG-documentation/IG-documentation/igSource/output/about.html#/html/body/div/div/div/div/div/ul/li/a at Line 247, column 8: The link 'https://interop.esante.gouv.fr/ig/documentation/' for "Documentation ANS sur les IGs" cannot be resolved
+ERROR: /home/runner/work/IG-documentation/IG-documentation/igSource/output/valider_res.html#/html/body/div/div/div/div/div/ul/li/a at Line 240, column 8: The link '[https://test.ahdis.ch/matchbox](https://test.ahdis.ch/matchbox/#/)' for "Matchbox" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-ans.fr.documentation.json ==
+ERROR: ImplementationGuide/ans.fr.documentation: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
