@@ -126,7 +126,7 @@ Le statut, la version le releaseLabel sont à renseigner dans le fichier [sushi-
 
 ### Release d'un IG FHIR
 
-Les travaux de mise à jour actuelle définissent des nouveaux statuts pour les guides d'implémentation, voici la correspondance entre les statuts et les paramètres de publication :
+Les travaux de mise à jour actuelle définissent des nouveaux statuts pour les guides d'implémentation, voici la correspondance entre les statuts pressentis et les paramètres de publication :
 
 | Statut de maturité CI-SIS | Statut sushi-config | label de publication | Mode de publication |
 | *** | *** | *** | *** |
