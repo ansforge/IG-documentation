@@ -212,7 +212,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#critères-de-qualité" id="markdown-toc-critères-de-qualité">Critères de qualité</a></li>
   <li><a href="#critères-de-maturité" id="markdown-toc-critères-de-maturité">Critères de maturité</a></li>
-  <li><a href="#choix-de-la-version-de-fhir" id="markdown-toc-choix-de-la-version-de-fhir">Choix de la version de FHIR</a></li>
   <li><a href="#création-des-ressources-de-conformité" id="markdown-toc-création-des-ressources-de-conformité">Création des ressources de conformité</a></li>
   <li><a href="#règles-de-nommage-des-ressources-de-conformité" id="markdown-toc-règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</a></li>
   <li><a href="#les-packages-et-les-dépendances" id="markdown-toc-les-packages-et-les-dépendances">Les packages et les dépendances</a></li>
@@ -233,6 +232,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>Respect des bonnes pratiques nationales tel que les règles de nommages indiquées ci-dessous</li>
   <li>Respect des <a href="https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html">bonnes pratiques internationales</a></li>
+  <li>Respecter le choix de la version FHIR</li>
   <li>Publication de l’IG sans erreurs (cf session Q/A)</li>
 </ul>
 
@@ -246,10 +246,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Nombre de commentaires lors des phases de concertation</li>
   <li>L’ensemble des ressources de conformité doit avoir une description précise de son usage</li>
 </ul>
-
-<h3 id="choix-de-la-version-de-fhir">Choix de la version de FHIR</h3>
-
-<p>Pour garantir la cohérence de l’écosystème, il faudra privilégier l’usage de R4. Si l’usage d’une autre version de FHIR est néanmoins nécessaire (cas d’usage international, évolution des ressources, …), une étude de normes et standards devra être fournie pour justifier ce choix.</p>
 
 <h3 id="création-des-ressources-de-conformité">Création des ressources de conformité</h3>
 
@@ -343,14 +339,10 @@ TODO : rajouter lien vers la procédure de création d'un VS
 
 <p>L’URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d’identifier de manière unique chaque implementation guide (IG) et chaque profil.</p>
 
-<h4 id="lurl-canonique-de-lig">L’URL canonique de l’IG</h4>
-
-<p>L’URL canonique de l’IG permet d’accéder à sa page web, c’est à dire la spécification narrative et technique (ex : https://www.hl7.org/fhir/us/core).
+<p>L’<strong>URL canonique de l’IG</strong> permet d’accéder à sa page web, c’est à dire la spécification narrative et technique (ex : https://www.hl7.org/fhir/us/core).
 Dans le cas des IG de l’ANS, l’url canonique est https://interop.esante.gouv.fr/ig/[fhir/][code]</p>
 
-<h4 id="lurl-canonique-des-ressources-de-conformité">L’URL canonique des ressources de conformité</h4>
-
-<p>A partir de ce lien, il y a une API Rest FHIR, qui permet d’accéder aux ressources de conformité conformément à la FHIR search (https://www.hl7.org/fhir/search.html). On obtient ainsi les url canoniques de chaque profil (ex : http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient).
+<p>L’<strong>URL canonique des ressources de conformité</strong> permet d’identifier de manière unique chaque ressource de conformité. A partir de ce lien, il y a une API Rest FHIR, qui permet d’accéder aux ressources de conformité conformément à la FHIR search (https://www.hl7.org/fhir/search.html). On obtient ainsi les url canoniques de chaque profil (ex : http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient).
 L’URL canonique des profils est construite au format : [base]/[ResourceType]/[id] pour qu’elle corresponde à une requête FHIR Search</p>
 
 <p>L’outil HL7 IG Publisher, combiné avec sushi, gère automatiquement certaines redirections et génère automatiquement les urls des profils à partir de l’url base indiquée.</p>
@@ -368,38 +360,31 @@ L’URL canonique des profils est construite au format : [base]/[ResourceType]/[
 
 <h3 id="fsh--sushi">FSH / SUSHI</h3>
 
-<h4 id="factorisation">Factorisation</h4>
-
 <p>Sushi et FSH permettent de factoriser beaucoup d’informations, et de les centraliser afin d’en faciliter l’accès et la gestion.
 Il est recommandé de faire bénéficier au maximum les projets de cette possibilité de centraliser les informations redondantes.</p>
 
-<h4 id="configuration-de-sushi-config--status-version-releaselabel">Configuration de sushi-config : status, version, releaseLabel</h4>
-
-<p>Le <strong>status</strong> devra être placé à draft lorsque celui-ci n’est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft.</p>
-
-<p>Le numéro de <strong>version</strong> doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la <a href="https://semver.org/lang/fr/">documentation semver</a>.</p>
-
-<p>Le <strong>releaseLabel</strong> doit être systématiquement placé à trial-use pour l’instant. Des labels plus fins seront proposés dans le futur, établi en fonction de critères de maturité.
-Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise &lt;blockquote class="stu-note"&gt;&lt;blockquote&gt;.</p>
-
-<p>Le statut, la version le releaseLabel sont à renseigner dans le fichier <a href="https://fshschool.org/docs/sushi/configuration/">sushi-config.yaml</a></p>
-
-<blockquote>
-  <p>status: active<br />
-version: 0.1.3
-releaseLabel: trial-use</p>
-</blockquote>
-
 <h3 id="release-dun-ig-fhir">Release d’un IG FHIR</h3>
 
-<p>Les travaux de mise à jour actuelle définissent des nouveaux statuts pour les guides d’implémentation, voici la correspondance entre les statuts pressentis et les paramètres de publication :</p>
+<p>Le <strong>statut</strong> devra être placé à draft lorsque celui-ci n’est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft.
+Le statut doit se placer dans l’attribut “status” du fichier sushi-config</p>
+
+<p>Le numéro de <strong>version</strong> doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la <a href="https://semver.org/lang/fr/">documentation semver</a>.
+Le statut doit se placer dans l’attribut “version” du fichier sushi-config et dans l’attribut “version du fichier publication-request</p>
+
+<p>Le <strong>label de publication</strong> doit contenir “ci-build”, “ballot”, “trial-use” ou “final-text” en fonction des cas qui seront détaillés dans le cycle de vie des spécifications bientôt publiés.
+Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise &lt;blockquote class="stu-note"&gt;&lt;blockquote&gt;.
+Le label de publication doit se placer dans l’attribut “label” du fichier “publication-request” et dans l’attribut releaseLabel du fichier sushi-config</p>
+
+<p>Le <strong>mode de publication</strong> permet de paramétrer la release. Celui-ci doit être indiqué dans l’attribut “mode” du fichier publication-request.</p>
+
+<p>Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les guides d’implémentation, voici la correspondance entre les statuts pressentis et les paramètres de publication :</p>
 
 <table>
   <thead>
     <tr>
       <th> Statut de maturité CI-SIS</th>
       <th>Statut (fichier sushi-config)</th>
-      <th>label de publication (fichier publication-request)</th>
+      <th>label de publication (fichier publication-request) et releaseLabel (fichier sushi-config)</th>
       <th>Mode de publication (fichier publication-request)</th>
     </tr>
   </thead>
@@ -444,16 +429,7 @@ Les structure-definitions des profils seront placés dans input\fsh.</p>
 
 <h4 id="gestion-des-alias">Gestion des alias</h4>
 
-<p>Les alias FSH sont des variables permettant de définir un raccourci pour une URL ou un OID.</p>
-
-<p>Par exemple, on peut ainsi définir l’alias $phdDevice pour représenter l’URL «http://hl7.org/fhir/uv/phd/StructureDefinition/PhdDevice» et l’utiliser de la manière suivante au sein d’un profil FSH :</p>
-
-<blockquote>
-  <p>Alias: $PhdDevice = http://hl7.org/fhir/uv/phd/StructureDefinition/PhdDevice
-* device only Reference($PhdDevice)</p>
-</blockquote>
-
-<p>Par souci de clarté, il est recommandé de rassembler tous les alias dans un fichier unique, appelé « aliases.fsh » et situé dans le répertoire racine (évite les redondances et facilite la gestion).</p>
+<p>Les <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#defining-aliases">alias FSH</a> sont des variables permettant de définir un raccourci pour une URL ou un OID. Par souci de clarté, il est recommandé de rassembler tous les alias dans un fichier unique, appelé « aliases.fsh » et situé dans le répertoire racine (évite les redondances et facilite la gestion).</p>
 
 <p>Exemple:</p>
 <blockquote>
@@ -469,6 +445,8 @@ Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient<
 <p>Pour plus d’informations, consultez la <a href="https://interop.esante.gouv.fr/ig/fhir/">liste des guides d’implémentation</a> à titre d’exemple.</p>
 
 <h3 id="le-choix-de-la-version-fhir">Le choix de la version FHIR</h3>
+
+<p>Pour garantir la cohérence de l’écosystème, il faudra privilégier l’usage de R4. Si l’usage d’une autre version de FHIR est néanmoins nécessaire (cas d’usage international, évolution des ressources, …), une étude de normes et standards devra être fournie pour justifier ce choix.</p>
 
 <p>Avant de commencer à développer un guide d’implémentation, il faut choisir la version FHIR sur laquelle se baser : R4, R4B, R5 ? L’objectif étant d’avoir un écosystème uniforme et simple qui hérite systématiquement de fr-core pour avoir des modélisations les plus cohérentes possibles.</p>
 
@@ -536,7 +514,7 @@ Ce choix n’est pas tranché, c’est l’écosystème qui dictera quelle versi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 11, 2024 09:36+0000">2024-07-11</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 11, 2024 09:46+0000">2024-07-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
