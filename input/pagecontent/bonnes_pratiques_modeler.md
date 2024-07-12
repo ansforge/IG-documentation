@@ -22,9 +22,9 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 
 #### La définition des profils et des extensions
 
-Pour être intéropérable, il faut tout d'abord éviter la multiplication des profils qui conduit à créer des profils qui existent déjà. Pour cela, il est nécessaire d'hériter au maximum des profils internationaux, pour que les contraintes et modélisations soit partagées au maximum entre les acteurs répondant à un cas d'usage.
+Pour être intéropérable, il faut tout d'abord éviter la multiplication des profils qui conduit à créer des profils qui existent déjà. Pour cela, il est primordial de se raccrocher à l'écosystème national. Le package doit toujours dépendre de fr-core, de l'annuaire santé et/ou des projets de l'ANS pour assurer une cohérence globale à l'échelle française. 
 
-De la même manière, l'usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d'hériter d'extensions déjà créées.
+De plus, il est également nécessaire d'hériter des profils internationaux pour profiter de l'intelligence collective des groupes de travail internationaux et harmoniser au maximum les travaux. De la même manière, l'usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d'hériter de rechercher des extensions déjà créées dans l'écosystème FHIR.
 
 Où chercher les profils-extensions déjà créés ?
 
@@ -64,10 +64,6 @@ Ces règles de nommage ont été établies en s'inspirant des ressources us-core
 {: .grid }
 
 La documentation officielle se trouve sur le [confluence d'HL7](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines)
-
-### Dépendances
-
-Le package doit toujours dépendre de fr-core, de l'annuaire santé et/ou des projets de l'ANS pour assurer une cohérence globale à l'échelle française. Ces packages sont publiés sur le FHIR Package Registry et doivent être indiqués dans le fichier `sushi-config.yaml`. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l'intérêt du versioning.
 
 ### Les URL canoniques
 
