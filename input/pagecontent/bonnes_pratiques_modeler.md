@@ -5,7 +5,8 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 
 * Respect des bonnes pratiques nationales tel que les règles de nommages indiquées ci-dessous
 * Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
-* Respecter le choix de la version FHIR
+* Respecter le stratégie nationale des choix de version FHIR
+* Chaque ressource de conformité doit avoir une description
 * L'ensemble des ressources de conformité doit avoir une description précise de son usage
 * Publication de l'IG sans erreurs (cf session Q/A)
 
