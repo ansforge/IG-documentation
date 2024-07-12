@@ -214,7 +214,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#critères-de-maturité" id="markdown-toc-critères-de-maturité">Critères de maturité</a></li>
   <li><a href="#création-des-ressources-de-conformité" id="markdown-toc-création-des-ressources-de-conformité">Création des ressources de conformité</a></li>
   <li><a href="#règles-de-nommage-des-ressources-de-conformité" id="markdown-toc-règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</a></li>
-  <li><a href="#les-packages-et-les-dépendances" id="markdown-toc-les-packages-et-les-dépendances">Les packages et les dépendances</a></li>
   <li><a href="#les-url-canoniques" id="markdown-toc-les-url-canoniques">Les URL canoniques</a></li>
   <li><a href="#fsh--sushi" id="markdown-toc-fsh--sushi">FSH / SUSHI</a></li>
   <li><a href="#release-dun-ig-fhir" id="markdown-toc-release-dun-ig-fhir">Release d’un IG FHIR</a></li>
@@ -252,9 +251,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h4 id="la-définition-des-profils-et-des-extensions">La définition des profils et des extensions</h4>
 
-<p>Pour être intéropérable, il faut tout d’abord éviter la multiplication des profils qui conduit à créer des profils qui existent déjà. Pour cela, il est nécessaire d’hériter au maximum des profils internationaux, pour que les contraintes et modélisations soit partagées au maximum entre les acteurs répondant à un cas d’usage.</p>
+<p>Pour être intéropérable, il faut tout d’abord éviter la multiplication des profils qui conduit à créer des profils qui existent déjà. Pour cela, il est primordial de se raccrocher à l’écosystème national. Le package doit toujours dépendre de fr-core, de l’annuaire santé et/ou des projets de l’ANS pour assurer une cohérence globale à l’échelle française.</p>
 
-<p>De la même manière, l’usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d’hériter d’extensions déjà créées.</p>
+<p>De plus, il est également nécessaire d’hériter des profils internationaux pour profiter de l’intelligence collective des groupes de travail internationaux et harmoniser au maximum les travaux. De la même manière, l’usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d’hériter de rechercher des extensions déjà créées dans l’écosystème FHIR.</p>
 
 <p>Où chercher les profils-extensions déjà créés ?</p>
 
@@ -287,54 +286,59 @@ TODO : rajouter lien vers la procédure de création d'un VS
 <table class="grid">
   <thead>
     <tr>
-      <th><strong>Attribut</strong></th>
-      <th><strong>Description</strong></th>
+      <th><strong>Paramètre</strong></th>
+      <th><strong>Objet concerné</strong></th>
+      <th><strong>Règle</strong></th>
       <th><strong>Exemple us-core</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>id</td>
+      <td>ressources de conformité </td>
       <td>utiliser le format kebab-case, ex : fr-core-patient. (/!\ sur Forge, l’id n’est pas obligatoire, il est important de le rajouter !). Lors de la création d’un IG pour un projet en particulier, il est possible de préfixer l’ensemble des ressources de conformité par le trigramme du projet (ex : “ror-…”)</td>
       <td>us-core-patient</td>
     </tr>
     <tr>
       <td>title</td>
+      <td>ressources de conformité </td>
       <td>similaire au nom, avec espaces. Ex : Fr Core Patient</td>
       <td>US Core Patient Profile</td>
     </tr>
     <tr>
       <td>name</td>
+      <td>ressources de conformité </td>
       <td>Utiliser le format PascalCase sans espace. Ex : FrCorePatient</td>
       <td>USCorePatientProfile</td>
     </tr>
     <tr>
       <td>url</td>
+      <td>ressources de conformité </td>
       <td>[base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition).</td>
       <td>http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</td>
     </tr>
     <tr>
-      <td>SearchParameter.code</td>
+      <td>code</td>
+      <td>SearchParameter</td>
       <td>toujours en minuscule, mots séparés par des tirets “-“ si besoin</td>
       <td>-</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>slice</td>
+      <td>utiliser l’id de l’extension s’il s’agit d’une extension sinon utiliser le format lowerCamelCase</td>
+      <td>us-core-genderIdentity</td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>package</td>
+      <td>utiliser des minuscules</td>
+      <td>hl7.fhir.us.core <a href="https://confluence.hl7.org/display/FHIR/NPM+Package+Specification">lien vers la documentation</a></td>
     </tr>
   </tbody>
 </table>
 
-<p>Nom des slices:</p>
-
-<ul>
-  <li>Prendre l’id de l’extension s’il s’agit d’une extension</li>
-  <li>Sinon, lowerCamelCase</li>
-</ul>
-
 <p>La documentation officielle se trouve sur le <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&amp;Guidelines">confluence d’HL7</a></p>
-
-<h3 id="les-packages-et-les-dépendances">Les packages et les dépendances</h3>
-
-<p>L’id de package ne doit pas avoir de majuscule.</p>
-
-<p>Le package doit toujours dépendre de fr-core, de l’annuaire santé et/ou des projets de l’ANS pour assurer une cohérence globale à l’échelle française. Ces packages sont publiés sur le FHIR Package Registry et doivent être indiqués dans le fichier <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>. La duplication des fichiers ou la référence par URL est une très mauvaise pratique car on perd tout l’intérêt du versioning.</p>
 
 <h3 id="les-url-canoniques">Les URL canoniques</h3>
 
@@ -515,7 +519,7 @@ Ce choix n’est pas tranché, c’est l’écosystème qui dictera quelle versi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 12, 2024 12:27+0000">2024-07-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 12, 2024 12:48+0000">2024-07-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
