@@ -20,13 +20,13 @@ Documentation : [ImplementationGuide](https://www.hl7.org/fhir/implementationgui
 
 ### A qui est destiné ce wiki ?
 
-Il est destiné à celles et ceux qui utilisent FHIR !
+Il est destiné à celles et ceux qui utilisent FHIR :
 
 * Les FHIR modelers, qui créent ces guides et profilent des ressources
 * Les FHIR implementers, qui lisent ces guides et développent des APIs
-* Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux.
+* Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux. Les experts fonctionnels ont une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : ce sont les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.
 
-Les experts fonctionnels ont une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : ce sont les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.
+Pour plus d'informations sur la modélisation ou l'implémentation FHIR, il suffit de naviguer au sein du menu de ci-dessus.
 
 ### La liste des guides d'implémentation de l'ANS
 
@@ -42,6 +42,35 @@ Un lien est également disponible sous chaque guide d'implémentation pour accé
 <img width="100%" alt="image" src="new_issue.png">
 
 L'issue doit contenir un titre, et une description très détaillée avec une proposition de changement.
+
+### Les outils utilisés dans ce guide
+
+#### FSH
+
+FSH est la grammaire de définition des ressources FHIR (instance, StructureDefinition, SearchParameter, CapabilityStatement, ImplementationGuide, ...)
+
+#### SUSHI
+
+Sushi est le logiciel permettant de générer les ressources au format json ou xml à partir de la grammaire FSH.
+Il est disponible en ligne sur [le site FSHSchool](https://fshschool.org/) ou en [invite de commande](https://www.npmjs.com/package/fsh-sushi)
+
+Par défaut, sushi ne génère que les differential. Pour générer les snapshots, il faut utiliser l'option `sushi -s .`
+
+#### GOFSH
+
+GoFSH permet de faire la transformation inverse StructureDefinition --> FSH. Il permet de faciliter la prise en main et la conversion d'anciens projets json dans la syntaxe FSH.
+De la même manière qu'FSH, GoFSH est également disponible en ligne sur [le site FSHSchool](https://fshschool.org/) ou en [invite de commande](https://www.npmjs.com/package/gofsh)
+
+Par défaut, GoFSH ne traite que les fichiers json. Il va falloir rajouter l'option `goFSH -t json-and-xml .` pour traiter les deux.
+
+A noter, la fonction fshing-trip lancée avec la commande `gofsh --fshing-trip` permet de lancer goFSH puis sushi et de générer une comparaison entre le json initial et le json généré avec sushi visualisable sous la forme d'une page html.
+
+#### IG Publisher
+
+L'IG publisher est l'outil permettant de générer les pages web de l'implementation guide (usage de jekyll, java, ...).
+Il prend en entrée une arborescence de dossiers / fichiers bien définis, contenant : des pages en markdown, des fichiers fsh, des ressources FHIR au format json ou xml, des images...
+
+Vous pouvez vous référer à [la documentation officielle de l'IG publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation).
 
 ### Liens utiles
 
