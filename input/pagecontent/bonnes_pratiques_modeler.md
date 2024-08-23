@@ -50,7 +50,7 @@ TODO : rajouter lien vers la procédure de création d'un VS
 
 ### Règles de nommage des ressources de conformité
 
-Ces règles de nommage ont été établies en s'inspirant des ressources us-core
+Ces règles de nommage ont été établies en s'inspirant des ressources us-core et des bonnes pratiques indiquées [ici](https://build.fhir.org/ig/HL7/crmi-ig/artifact-conventions.html).
 
 | **Paramètre** | **Objet concerné** | **Règle** | **Exemple us-core** |
 | ----- | ----- | ----- | ----- |
