@@ -2,7 +2,7 @@
 
 Prérequis : suivre la [documentation](https://ansforge.github.io/Documentation) pour créer un compte GitHub, l'associer à l'organisation ANS et créer un nouveau projet.
 
-Ce nouveau projet doit utiliser le GitHub template ansforge/IG-modele et doit être préfixé par "IG-...". Le repository GitHub doit être nommé de sorte  qu'il soit facilement retrouvé et compréhensible par n'importe qui : Descriptif, lisible, cohérent, contextuel, extensible, réutilisable, bref. Il doit être préfixé par "IG-"[...]. Exemple : IG-fhir-partage-de-documents-de-sante. N'hésitez pas à demander avis à la team interop :).
+Ce nouveau projet doit utiliser le GitHub template ansforge/IG-modele et doit être préfixé par "IG-...". Le repository GitHub doit être nommé de sorte  qu'il soit facilement retrouvé et compréhensible par n'importe qui : Descriptif, lisible, cohérent, contextuel, extensible, réutilisable, bref. Il doit être préfixé par "IG-"[...]. Exemple : IG-fhir-partage-de-documents-de-sante. N'hésitez pas à solliciter la team interopérabilité de l'ANS pour avis.
 L'IG est créé! Il faut maintenant le personnaliser
 
 ### Paramétrage de l'IG
