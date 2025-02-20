@@ -87,7 +87,7 @@ Prérequis :
 
 https://code.visualstudio.com/
 
-* [Requis] "[FHIR Shorthand](https://marketplace.visualstudio.com/items?itemName=MITRE-Health.vscode-language-fsh)"
+* [Requis] "[FHIR Shorthand](https://marketplace.visualstudio.com/items?itemName=FHIR-Shorthand.vscode-fsh)"
 * [Requis] "[Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)"
 * [Optionnel] "[Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)"
 * [Optionnel] "[Kodjin FHIR Profiler](https://marketplace.visualstudio.com/items?itemName=edenlabio.fhir-profiler-tool)"
