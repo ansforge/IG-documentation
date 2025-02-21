@@ -229,7 +229,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Active
           
-            as of 2025-02-20
+            as of 2025-02-21
           
         
       </td>
@@ -259,8 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#a-qui-est-destiné-ce-wiki-" id="markdown-toc-a-qui-est-destiné-ce-wiki-">A qui est destiné ce wiki ?</a></li>
   <li><a href="#la-liste-des-guides-dimplémentation-de-lans" id="markdown-toc-la-liste-des-guides-dimplémentation-de-lans">La liste des guides d’implémentation de l’ANS</a></li>
   <li><a href="#reporter-un-problème-ou-une-suggestion-damélioration" id="markdown-toc-reporter-un-problème-ou-une-suggestion-damélioration">Reporter un problème ou une suggestion d’amélioration</a></li>
-  <li><a href="#modeler--par-où-commencer-" id="markdown-toc-modeler--par-où-commencer-">Modeler : par où commencer ?</a></li>
-  <li><a href="#outils-et-vocabulaire" id="markdown-toc-outils-et-vocabulaire">Outils et vocabulaire</a></li>
+  <li><a href="#les-outils-utilisés-dans-ce-guide" id="markdown-toc-les-outils-utilisés-dans-ce-guide">Les outils utilisés dans ce guide</a></li>
   <li><a href="#liens-utiles" id="markdown-toc-liens-utiles">Liens utiles</a></li>
 </ul>
 
@@ -273,35 +272,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Selon la documentation FHIR, un Implementation Guide contient un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière.</p>
 
-<p>Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR <a href="https://www.hl7.org/fhir/R4/implementationguide.html">ImplementationGuide</a>. Le site web contient également de manière systématique un package versionné contenant l’ensemble des ressources de conformité.</p>
+<p>Un implementation guide se présente sous forme d’un site web et d’un package contenant l’ensemble des ressources de conformité. Les implementation guides (site web, ressources de conformité et package) sont versionnés. L’ensemble des versions historiques seront toujours accessibles.</p>
 
 <p>La meilleure pratique consiste à créer un Implementation Guide par projet bien spécifique, cela permet :</p>
 
 <ul>
   <li>De versionner séparément, on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées</li>
   <li>Chacune des specs gère ses dépendances indépendamment des autres (aux ressources du ci-sis, aux profils interopsanté), chacune de ces dépendances peuvent être mises à jour séparément</li>
-  <li>Les urls sont claires, on sait directement de quelle spec est issue chaque profil, et on peut directement accéder à l’IG facilement</li>
-  <li>Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d’usage, en héritant de tout ou partie, ou pour décrire une implémentation précise.</li>
-  <li>L’IG doit obligatoirement hériter des profils FHIR réalisés par InteropSanté et/ou par l’ANS</li>
+  <li>Les urls sont claires, on sait directement de quelle spécification est issue chaque profil, et on peut directement accéder à l’IG en connaissant l’url canonique de l’IG</li>
+  <li>Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d’usage, en héritant de tout ou partie, ou pour décrire une implémentation précise</li>
+  <li>L’IG doit obligatoirement hériter des profils FHIR réalisés par InteropSanté et/ou par l’ANS s’ils existent.</li>
 </ul>
 
 <p>Documentation : <a href="https://www.hl7.org/fhir/implementationguide.html">ImplementationGuide</a>, <a href="https://confluence.hl7.org/display/FHIR/NPM+Package+Specification">Packages</a></p>
 
 <h3 id="a-qui-est-destiné-ce-wiki-">A qui est destiné ce wiki ?</h3>
 
-<p>Il est destiné à celles et ceux qui utilisent FHIR !</p>
+<p>Il est destiné à celles et ceux qui utilisent FHIR :</p>
 
 <ul>
   <li>Les FHIR modelers, qui créent ces guides et profilent des ressources</li>
   <li>Les FHIR implementers, qui lisent ces guides et développent des APIs</li>
-  <li>Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux.</li>
+  <li>Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux. Les experts fonctionnels ont une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : ce sont les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.</li>
 </ul>
 
-<p>Les experts fonctionnels ont également une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : ce sont les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.</p>
+<p>Pour plus d’informations sur la modélisation ou l’implémentation FHIR, il suffit de naviguer au sein du menu de ci-dessus.</p>
 
 <h3 id="la-liste-des-guides-dimplémentation-de-lans">La liste des guides d’implémentation de l’ANS</h3>
 
-<p>La liste des guides d’implémentation est accessible <a href="https://interop.esante.gouv.fr/ig/fhir/">à cette adresse</a>.</p>
+<p>La liste des guides d’implémentation est accessible <a href="https://interop.esante.gouv.fr/ig/">à cette adresse</a>.</p>
 
 <h3 id="reporter-un-problème-ou-une-suggestion-damélioration">Reporter un problème ou une suggestion d’amélioration</h3>
 
@@ -314,19 +313,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>L’issue doit contenir un titre, et une description très détaillée avec une proposition de changement.</p>
 
-<h3 id="modeler--par-où-commencer-">Modeler : par où commencer ?</h3>
-
-<p>1/ Installer les dépendances grâce à la page “Installer les dépendances [Windows/mac]”</p>
-
-<p>2/ Développer un Implementation Guide :</p>
-
-<ul>
-  <li>Si vous souhaitez créer un Implementation Guide pour publication : suivre la procédure Développement d’un nouvel IG</li>
-  <li>Si vous souhaitez modifier un Implementation Guide existant : cloner le GitHub repository désiré et proposer une Pull Request une fois le travail effectué</li>
-  <li>Si vous souhaitez tester FSH et la génération d’Implementation Guide : cloner le GitHub repository IG-modele ou téléchargez-le au format zip</li>
-</ul>
-
-<h3 id="outils-et-vocabulaire">Outils et vocabulaire</h3>
+<h3 id="les-outils-utilisés-dans-ce-guide">Les outils utilisés dans ce guide</h3>
 
 <h4 id="fsh">FSH</h4>
 
@@ -357,7 +344,7 @@ Il prend en entrée une arborescence de dossiers / fichiers bien définis, conte
 
 <h3 id="liens-utiles">Liens utiles</h3>
 
-<p>Des exemples d’ImplementationGuide:</p>
+<p>Des exemples d’Implementation Guide :</p>
 
 <ul>
   <li>Us-core : <a href="https://hl7.org/fhir/us/core/">Publication</a>, <a href="https://github.com/HL7/US-Core">GitHub</a></li>
@@ -415,7 +402,7 @@ Il prend en entrée une arborescence de dossiers / fichiers bien définis, conte
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 20, 2025 13:15+0000">2025-02-20</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Feb 21, 2025 17:07+0000">2025-02-21</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
