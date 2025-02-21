@@ -6,31 +6,31 @@ Ces travaux se placent dans une démarche d'élaboration continue. L'objectif é
 
 Selon la documentation FHIR, un Implementation Guide contient un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière.
 
-Un implementation guide est un ensemble cohérent regroupant une page web et une ressource FHIR [ImplementationGuide](https://www.hl7.org/fhir/R4/implementationguide.html). Le site web contient également de manière systématique un package versionné contenant l'ensemble des ressources de conformité.
+Un implementation guide se présente sous forme d'un site web et d'un package contenant l'ensemble des ressources de conformité. Les implementation guides (site web, ressources de conformité et package) sont versionnés. L'ensemble des versions historiques seront toujours accessibles.
 
 La meilleure pratique consiste à créer un Implementation Guide par projet bien spécifique, cela permet :
 
 * De versionner séparément, on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées
 * Chacune des specs gère ses dépendances indépendamment des autres (aux ressources du ci-sis, aux profils interopsanté), chacune de ces dépendances peuvent être mises à jour séparément
-* Les urls sont claires, on sait directement de quelle spec est issue chaque profil, et on peut directement accéder à l'IG facilement
-* Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d'usage, en héritant de tout ou partie, ou pour décrire une implémentation précise.
-* L'IG doit obligatoirement hériter des profils FHIR réalisés par InteropSanté et/ou par l'ANS
+* Les urls sont claires, on sait directement de quelle spécification est issue chaque profil, et on peut directement accéder à l'IG en connaissant l'url canonique de l'IG
+* Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d'usage, en héritant de tout ou partie, ou pour décrire une implémentation précise
+* L'IG doit obligatoirement hériter des profils FHIR réalisés par InteropSanté et/ou par l'ANS s'ils existent.
 
 Documentation : [ImplementationGuide](https://www.hl7.org/fhir/implementationguide.html), [Packages](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification)
 
 ### A qui est destiné ce wiki ?
 
-Il est destiné à celles et ceux qui utilisent FHIR !
+Il est destiné à celles et ceux qui utilisent FHIR :
 
 * Les FHIR modelers, qui créent ces guides et profilent des ressources
-* Les FHIR implementers, qui lisent ces guides et développent des APIs 
-* Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux.
+* Les FHIR implementers, qui lisent ces guides et développent des APIs
+* Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux. Les experts fonctionnels ont une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : ce sont les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.
 
-Les experts fonctionnels ont également une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : ce sont les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.
+Pour plus d'informations sur la modélisation ou l'implémentation FHIR, il suffit de naviguer au sein du menu de ci-dessus.
 
 ### La liste des guides d'implémentation de l'ANS
 
-La liste des guides d'implémentation est accessible [à cette adresse](https://interop.esante.gouv.fr/ig/fhir/).
+La liste des guides d'implémentation est accessible [à cette adresse](https://interop.esante.gouv.fr/ig/).
 
 ### Reporter un problème ou une suggestion d'amélioration
 
@@ -43,17 +43,7 @@ Un lien est également disponible sous chaque guide d'implémentation pour accé
 
 L'issue doit contenir un titre, et une description très détaillée avec une proposition de changement.
 
-### Modeler : par où commencer ?
-
-1/ Installer les dépendances grâce à la page "Installer les dépendances [Windows/mac]"
-
-2/ Développer un Implementation Guide :
-
-* Si vous souhaitez créer un Implementation Guide pour publication : suivre la procédure Développement d'un nouvel IG
-* Si vous souhaitez modifier un Implementation Guide existant : cloner le GitHub repository désiré et proposer une Pull Request une fois le travail effectué
-* Si vous souhaitez tester FSH et la génération d'Implementation Guide : cloner le GitHub repository IG-modele ou téléchargez-le au format zip
-
-### Outils et vocabulaire
+### Les outils utilisés dans ce guide
 
 #### FSH
 
@@ -84,7 +74,7 @@ Vous pouvez vous référer à [la documentation officielle de l'IG publisher](ht
 
 ### Liens utiles
 
-Des exemples d'ImplementationGuide:
+Des exemples d'Implementation Guide :
 
 * Us-core : [Publication](https://hl7.org/fhir/us/core/), [GitHub](https://github.com/HL7/US-Core)
 * mcode (qui se base sur uscore) : [Publication](http://hl7.org/fhir/us/mcode/), [GitHub](https://github.com/HL7/fhir-mCODE-ig)
