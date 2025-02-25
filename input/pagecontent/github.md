@@ -1,9 +1,48 @@
-GitHub est une sorte de sharepoint, un repository versionné avec un système de branche pour travailler de manière collaborative sur du contenu textuel (code, écriture, grammaire ...)
+GitHub est une sorte de sharepoint, un répertoire (=repository) versionné avec un système de branche pour travailler de manière collaborative sur du contenu textuel (code, écriture, grammaire ...)
 
 Les branches:
 Un repository (ou répertoire) Github contient une arborescence de branche, permettant d'individualiser le travail de chacun puis de pousser son travail dans la branche de travail commune : typiquement `main`.
 
-### Reporter un problème (une issue)
+### Premiers pas sur GiHub
+
+Pour créer un compte GitHub et être enrôlé dans l'organisation ansforge, il suffit de suivre [cette documentation](https://ansforge.github.io/Documentation/)
+
+### Création d'un nouveau projet
+
+#### les règles de nommage
+
+Des règles ont déjà été [définies](https://ansforge.github.io/Documentation/pages/docs/creationprojet.html) au niveau de l'organisation ANS. Celles-ci ont été sur-contraintes pour les projets liés à l'intéropérabilité
+
+Le nom du repository devra être sous forme interop-[type]-[optionnel-format]-[optionnel-projet/produit]-[nom-descriptif] avec :
+
+* [type] = ig / exemples / outil / termino...
+* [optionnel-format] = fhir / cda / owl / …
+* [optionnel-projet/produit] = drim / smt / nrc
+* [nom-descriptif] = nom clair et concis sans acronyme séparé avec des tirets.
+
+L'ensemble du nom devra être en minuscule.
+
+Exemples : interop-ig-fhir-annuaire, interop-outils-cda
+
+#### les règles de création de tags associés à un repository GitHub
+
+Les tags sont des informations complémentaires au titre du repository. Ils doivent être en minuscule sans espace, sans tiret.
+
+Exemples de tags qui peuvent être utilisés :
+
+* Standard (fhir, cda, hl7v2, …)
+* Termino (snomed, loinc, …)
+* ci-sis
+* Domaine IHE (domaine métier) / couloir ségur
+* [optionnel] ancien nom si changement de nom de repo
+
+Tags à éviter :
+* implementation-guide (trop générique et dans le titre)
+* HL7 (trop générique, risque d'être confondu avec hl7v2)
+* volet (inutile, trop générique)
+* Redondance entre le nom du repo et le tag à éviter
+
+### Reporter un problème (une issue) sur un des repository GitHub
 
 Vous avez identifié une erreur sur un des guides ? L'onglet issue permet de signaler un problème sur un projet donné.
 
@@ -17,6 +56,8 @@ Un lien est également disponible sous chaque guide d'implémentation pour accé
 </div>
 
 L'issue doit contenir un titre, et une description très détaillée avec une proposition de changement.
+
+Cf. documentation officielle : https://docs.github.com/fr/issues/tracking-your-work-with-issues/using-issues/creating-an-issue
 
 ### Travailler sur un repository
 
@@ -48,15 +89,17 @@ Une fois les travaux menés (tout ou partie), il faut faire des commit : c'est �
 
 #### Git push
 
-Cette commande pousse l'ensemble des modifications validées avec des commit sur le GitHub global.
+Cette commande pousse l'ensemble des modifications validées avec des commit sur le GitHub distant.
 
-#### Faire une Pull Request (PR)
+#### Faire une demande de tirage ou Pull Request (PR)
 
 Ensuite, il faut aller sur l'interface graphique, dans l'onglet, "Pull Requests", et créer une nouvelle PR qui permet de dire : je veux intégrer les modifications que j'ai faites sur la branche x à la branche main.
-Chaque PR doit être validée par quelqu'un d'autre pour : 
 
-- Etre sûr que le savoir n'est pas concentré sur une personne
-- Permettre une relecture pour éviter les erreurs
+Chaque PR doit être validée par quelqu'un d'autre pour :
+* Etre sûr que le savoir n'est pas concentré sur une personne
+* Permettre une relecture pour éviter les erreurs
+
+Cf. documentation officielle : https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
 
 ### Mettre en place un workflow de validation/génération/publication
 
@@ -71,4 +114,3 @@ Afin de faciliter les actions au regards des IG, l'ANS  met à disposition un [G
 - Publication sur les pages github :
   - Diagramme de class plantuml généré à partir des données de l'IG
   - Rapport de validation du validator_cli
-
