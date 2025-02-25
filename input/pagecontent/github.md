@@ -38,7 +38,7 @@ Tags à éviter :
 * implementation-guide (trop générique et dans le titre)
 * HL7 (trop générique, risque d'être confondu avec hl7v2)
 * volet (inutile, trop générique)
-* Redondance entre le nom du repo et le tag à éviter
+* Sous-ensemble du nom du répertoire
 
 ### Reporter un problème (une issue) sur un des repository GitHub
 
