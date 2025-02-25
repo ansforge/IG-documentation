@@ -224,10 +224,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>GitHub est une sorte de sharepoint, un répertoire (=repository) versionné avec un système de branche pour travailler de manière collaborative sur du contenu textuel (code, écriture, grammaire …)</p>
-
-<p>Les branches:
-Un repository (ou répertoire) Github contient une arborescence de branche, permettant d'individualiser le travail de chacun puis de pousser son travail dans la branche de travail commune : typiquement <code class="language-plaintext highlighter-rouge">main</code>.</p>
+<p>GitHub est l'équivalent d'un sharepoint, un répertoire (=repository) versionné avec un système de branche pour travailler de manière collaborative sur du contenu textuel (code, écriture, grammaire …).</p>
 
 <h3 id="premiers-pas-sur-gihub">Premiers pas sur GiHub</h3>
 
@@ -267,6 +264,7 @@ Un repository (ou répertoire) Github contient une arborescence de branche, perm
 </ul>
 
 <p>Tags à éviter :</p>
+
 <ul>
   <li>implementation-guide (trop générique et dans le titre)</li>
   <li>HL7 (trop générique, risque d'être confondu avec hl7v2)</li>
@@ -293,12 +291,7 @@ Un repository (ou répertoire) Github contient une arborescence de branche, perm
 
 <h3 id="travailler-sur-un-repository">Travailler sur un repository</h3>
 
-<p>GitHub peut s'utiliser de deux façons :</p>
-
-<ul>
-  <li>Via l'application GitHub Desktop</li>
-  <li>Via l'invite de commande</li>
-</ul>
+<p>GitHub peut s'utiliser de deux façons via l'application GitHub Desktop ou via l'invite de commande. Il est détaillé ci-dessous comment faire une modification via l'invite de commande.</p>
 
 <h4 id="git-clone-xxx">Git clone xxx</h4>
 
@@ -310,8 +303,11 @@ Le xxx est à remplacer avec l'indication dans ssh :</p>
 
 <h4 id="git-checkout--b-nom_travail_en_cours">Git checkout -b nom_travail_en_cours</h4>
 
-<p>Pour éviter que tout le monde travaille sur le même environnement, il faut créer une branche, et l'appeler par le nom du travail prévu dans cette branche .
-A ce moment là, vous pouvez faire les modifications en local, ces modifications seront reportées sur github pour tout le monde à l'issue des prochaines étapes</p>
+<p>Les branches : un repository (ou répertoire) Github contient une arborescence de branche, permettant d'individualiser le travail de chacun puis de pousser son travail dans la branche de travail commune : typiquement <code class="language-plaintext highlighter-rouge">main</code>.</p>
+
+<p>Pour éviter que tout le monde travaille sur le même environnement, il est nécessaire de créer une nouvelle branche, et de l'appeler par le nom du travail prévu dans cette branche. Le nom de la branche doit être en minuscule et commencer par son acronyme (ex : nr- pour Nicolas Riss).</p>
+
+<p>Une fois la branche créée, il est possible de faire les modifications pour ensuite les reporter sur le repository GitHub distant pour revue.</p>
 
 <h4 id="git-add-fichiers_à_ajouter">Git add fichiers_à_ajouter</h4>
 
@@ -330,6 +326,7 @@ A ce moment là, vous pouvez faire les modifications en local, ces modifications
 <p>Ensuite, il faut aller sur l'interface graphique, dans l'onglet, "Pull Requests", et créer une nouvelle PR qui permet de dire : je veux intégrer les modifications que j'ai faites sur la branche x à la branche main.</p>
 
 <p>Chaque PR doit être validée par quelqu'un d'autre pour :</p>
+
 <ul>
   <li>Etre sûr que le savoir n'est pas concentré sur une personne</li>
   <li>Permettre une relecture pour éviter les erreurs</li>
@@ -340,6 +337,7 @@ A ce moment là, vous pouvez faire les modifications en local, ces modifications
 <h3 id="mettre-en-place-un-workflow-de-validationgénérationpublication">Mettre en place un workflow de validation/génération/publication</h3>
 
 <p>Afin de faciliter les actions au regards des IG, l'ANS  met à disposition un <a href="https://github.com/ansforge/IG-workflows">GitHub Action</a>  avec les fonctionnalités suivantes :</p>
+
 <ul>
   <li>Lancement de sushi</li>
   <li>Tests avec le validateur_cli</li>
@@ -396,7 +394,7 @@ A ce moment là, vous pouvez faire les modifications en local, ces modifications
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 25, 2025 16:08+0000">2025-02-25</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 25, 2025 16:28+0000">2025-02-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
