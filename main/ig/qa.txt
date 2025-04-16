@@ -2,8 +2,8 @@ Documentation : Validation Results
 =========================================
 
 err = 1, warn = 4, info = 0
-IG Publisher Version: 1.8.16
-Generated Fri Mar 07 13:03:43 UTC 2025. FHIR version 4.0.1 for ans.fr.documentation#0.1.7 (canonical = https://interop.esante.gouv.fr/ig/documentation)
+IG Publisher Version: 1.8.23
+Generated Wed Apr 16 15:18:41 UTC 2025. FHIR version 4.0.1 for ans.fr.documentation#0.1.7 (canonical = https://interop.esante.gouv.fr/ig/documentation)
  Build Errors : 3 / 5 / 0
  /home/runner/work/IG-documentation/IG-documentation/igSource/fsh-generated/resources/ImplementationGuide-ans.fr.documentation : 1 / 0 / 1
 </table>
