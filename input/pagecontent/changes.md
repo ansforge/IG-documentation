@@ -39,7 +39,7 @@ Modifications apportées dans la release [0.1.5](https://github.com/ansforge/IG-
 
 ### Release 0.1.4 de l'IG Documentation
 
-Modifications apportées dans la release [0.1.4](https://github.com/ansforge/IG-documentation/milestone/8?closed=1) :
+Modifications apportées dans la release [0.1.4](https://github.com/ansforge/IG-documentation/milestone/3?closed=1) :
 
 * Ajout quick start implémenteurs FHIR [#33](https://github.com/ansforge/IG-documentation/pull/33)
 * Ajout du type "instruction" aux cas de tests FHIR [#31](https://github.com/ansforge/IG-documentation/pull/31)
