@@ -8,7 +8,7 @@ publisher:
   name: ANS
   url: https://esante.gouv.fr
 status: active
-version: 0.1.7 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
+version: 0.1.8 # shall conforms to Semantic Versioning https://fr.wiktionary.org/wiki/SemVer
 fhirVersion: 4.0.1
 copyrightYear: 2020+
 releaseLabel: trial-use
@@ -46,6 +46,8 @@ pages:
         title: Autres Ressources 
     about.md:
         title: A propos de ce guide
+    changes.md:
+        title: Historique des changements
 
 menu:
     Accueil: index.html
@@ -65,3 +67,4 @@ menu:
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
         "A propos de ce guide": about.html
+    Historique: changes.html
