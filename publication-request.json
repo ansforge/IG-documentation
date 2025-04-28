@@ -1,11 +1,11 @@
 {
     "package-id" : "ans.fr.documentation",
-    "version" : "0.1.7",
-    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.7",
+    "version" : "0.1.8",
+    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.8",
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "release",
     "first": false,
-    "desc" : "Documentation des guides d'implémentation de l'ANS",
-    "descmd" : "Documentation des guides d'implémentation de l'ANS v 0.1.7\n- Ajout de conseils de validation des ressources FHIR avec matchbox([PR 60](https://github.com/ansforge/IG-documentation/pull/60) et [PR 62](https://github.com/ansforge/IG-documentation/pull/62))"
+    "changes": "changes.html",
+    "desc" : "Documentation des guides d'implémentation de l'ANS"
   }
