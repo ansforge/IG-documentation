@@ -1,5 +1,5 @@
 {
-  "date" : "Mon, 28 Apr, 2025 16:29:53 +0000",
+  "date" : "Mon, 28 Apr, 2025 16:30:18 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -9,7 +9,7 @@
         {
           "activity" : "load",
           "start" : 23,
-          "length" : 39
+          "length" : 46
         },
         {
           "activity" : "checkR4R4B",
@@ -19,31 +19,36 @@
         {
           "activity" : "generateNarratives",
           "start" : 24,
-          "length" : 467
+          "length" : 212
         },
         {
           "activity" : "validate",
           "start" : 24,
-          "length" : 7445
+          "length" : 6513
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 38,
+          "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 40,
-          "length" : 70
+          "start" : 38,
+          "length" : 74
         },
         {
           "activity" : "generate2",
-          "start" : 43,
-          "length" : 87
+          "start" : 41,
+          "length" : 104
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 51,
+          "start" : 47,
           "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 54,
+          "start" : 50,
           "length" : 2
         }
       ]
