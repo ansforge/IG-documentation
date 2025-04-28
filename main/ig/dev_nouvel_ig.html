@@ -223,6 +223,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#installer-les-dépendances" id="markdown-toc-installer-les-dépendances">Installer les dépendances</a></li>
   <li><a href="#windows" id="markdown-toc-windows">Windows</a></li>
   <li><a href="#mac--linux" id="markdown-toc-mac--linux">MAC / Linux</a></li>
+  <li><a href="#publication-dune-nouvelle-version-dun-guide-dimplémentation" id="markdown-toc-publication-dune-nouvelle-version-dun-guide-dimplémentation">Publication d’une nouvelle version d’un guide d’implémentation</a></li>
 </ul>
 
 </div>
@@ -433,6 +434,24 @@ Sushi est développé en JavaScript sous forme de module npm.</p>
 bash _genonce.sh <span class="c"># Génère l'IG</span>
 </code></pre></div></div>
 
+<h3 id="publication-dune-nouvelle-version-dun-guide-dimplémentation">Publication d’une nouvelle version d’un guide d’implémentation</h3>
+
+<h4 id="au-sein-de-lans">Au sein de l’ANS</h4>
+
+<p>Pour publier une nouvelle version (release) d’un guide d’implémentation, il est nécessaire de remplir à la racine du répertoire GitHub un fichier publication-request.json dont <a href="https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation">la documentation peut être trouvée ici</a>.
+Ensuite, il suffit de lancer le workflow de release sur GitHub.</p>
+
+<h4 id="en-dehors-de-lans">En dehors de l’ANS</h4>
+
+<p>Pour publier des guides d’implémentation en dehors de l’ANS, il est nécessaire de :</p>
+
+<p>1/ Créer un template pour votre organisation (<a href="https://github.com/ansforge/IG-template">exemple de celui de l’ANS</a>)
+2/ Créer un répertoire GitHub qui va contenir le contenu des pages web à publier (<a href="https://github.com/ansforge/IG-website-release">exemple de celui de l’ANS</a>)
+3/ Lancer l’IG publisher avec l’option -go-publish (<a href="https://confluence.hl7.org/spaces/FHIR/pages/104580055/Process+for+Publishing+a+FHIR+Implementation+Guide+for+non-HL7+IGs">Documentation</a>)
+4/ Publier le contenu sur un serveur web
+5/ Faire une Pull Request dans <a href="https://github.com/FHIR/ig-registry">ce repo</a> pour ajouter votre flux rss (dans le fichier package-feeds.json)</p>
+
+<p>Pour rappel, les bonnes pratiques imposent de respecter les modélisations faites au niveau national : <a href="https://hl7.fr/ig/fhir/core">FrCore</a> et <a href="https://interop.esante.gouv.fr/ig/fhir/">guides d’implémentation de l’ANS</a></p>
 
 
 
@@ -474,7 +493,7 @@ bash _genonce.sh <span class="c"># Génère l'IG</span>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 28, 2025 07:17+0000">2025-04-28</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 28, 2025 15:01+0000">2025-04-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

@@ -130,7 +130,7 @@ Documentation des guides d'implémentation de l'ANS - Local Development build (v
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>
 .  Package ans.fr.documentation#0.1.7 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Mon, Apr 28, 2025 07:17+0000">2025-04-28</span>
+. Generated           <span title="Mon, Apr 28, 2025 15:01+0000">2025-04-28</span>
 
                     <br/>
 
@@ -160,7 +160,7 @@ Documentation des guides d'implémentation de l'ANS - Local Development build (v
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>
 .  Package ans.fr.documentation#0.1.7 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Mon, Apr 28, 2025 07:17+0000">2025-04-28</span>
+. Generated           <span title="Mon, Apr 28, 2025 15:01+0000">2025-04-28</span>
 
                     <br/>
 
@@ -288,6 +288,18 @@ Si un sujet n’est pas encore traité en France, il est possible de proposer un
         </td>
         <td>
 Une concertation de minimum trois mois doit être lancée sur la plateforme           <a href="https://participez.esante.gouv.fr">participez</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="demarrer_sur_fhir.html">web</a>
+        </td>
+        <td>
+          <a href="https://smt.esante.gouv.fr">smt.esante.gouv.fr</a>
+        </td>
+        <td>
+Les artifacts terminologiques (Terminologies et Jeux de Valeurs) pour usage français sont accessibles par consultation du           <a href="https://smt.esante.gouv.fr">Serveur Multi Terminologies (SMT)</a>
+ de l’ANS. Le SMT permet d’accéder à ces artifacts de différentes manières : par API FHIR, par interface graphique, par des requêtes SPARQL … Celui-ci est complémentaire aux guides d’implémentation car celui-ci permet d’obtenir, via des jeux de valeurs (ValueSet), l’ensemble des concepts codés pour un contexte particulier.
         </td>
       </tr>
       <tr>
@@ -534,6 +546,87 @@ Des difficultés pour installer ruby et jekyll peuvent survenir sur mac M1, M2 :
         <td>
 Pour information,           <a href="https://github.com/FHIR/GoFSH">GoFSH</a>
  permet de faire la transformation inverse : transformer une StructureDefinition au format FSH.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="dev_nouvel_ig.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/IG-template">github.com</a>
+        </td>
+        <td>
+1/ Créer un template pour votre organisation (          <a href="https://github.com/ansforge/IG-template">exemple de celui de l’ANS</a>
+)
+2/ Créer un répertoire GitHub qui va contenir le contenu des pages web à publier (          <a href="https://github.com/ansforge/IG-website-release">exemple de celui de l’ANS</a>
+)
+3/ Lancer l’IG publisher avec l’option -go-publish (          <a href="https://confluence.hl7.org/spaces/FHIR/pages/104580055/Process+for+Publishing+a+FHIR+Implementation+Guide+for+non-HL7+IGs">Documentation</a>
+)
+4/ Publier le contenu sur un serveur web
+5/ Faire une Pull Request dans           <a href="https://github.com/FHIR/ig-registry">ce repo</a>
+ pour ajouter votre flux rss (dans le fichier package-feeds.json)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="dev_nouvel_ig.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/IG-website-release">github.com</a>
+        </td>
+        <td>
+1/ Créer un template pour votre organisation (          <a href="https://github.com/ansforge/IG-template">exemple de celui de l’ANS</a>
+)
+2/ Créer un répertoire GitHub qui va contenir le contenu des pages web à publier (          <a href="https://github.com/ansforge/IG-website-release">exemple de celui de l’ANS</a>
+)
+3/ Lancer l’IG publisher avec l’option -go-publish (          <a href="https://confluence.hl7.org/spaces/FHIR/pages/104580055/Process+for+Publishing+a+FHIR+Implementation+Guide+for+non-HL7+IGs">Documentation</a>
+)
+4/ Publier le contenu sur un serveur web
+5/ Faire une Pull Request dans           <a href="https://github.com/FHIR/ig-registry">ce repo</a>
+ pour ajouter votre flux rss (dans le fichier package-feeds.json)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="dev_nouvel_ig.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/FHIR/ig-registry">github.com</a>
+        </td>
+        <td>
+1/ Créer un template pour votre organisation (          <a href="https://github.com/ansforge/IG-template">exemple de celui de l’ANS</a>
+)
+2/ Créer un répertoire GitHub qui va contenir le contenu des pages web à publier (          <a href="https://github.com/ansforge/IG-website-release">exemple de celui de l’ANS</a>
+)
+3/ Lancer l’IG publisher avec l’option -go-publish (          <a href="https://confluence.hl7.org/spaces/FHIR/pages/104580055/Process+for+Publishing+a+FHIR+Implementation+Guide+for+non-HL7+IGs">Documentation</a>
+)
+4/ Publier le contenu sur un serveur web
+5/ Faire une Pull Request dans           <a href="https://github.com/FHIR/ig-registry">ce repo</a>
+ pour ajouter votre flux rss (dans le fichier package-feeds.json)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="dev_nouvel_ig.html">web</a>
+        </td>
+        <td>
+          <a href="https://hl7.fr/ig/fhir/core">hl7.fr</a>
+        </td>
+        <td>
+Pour rappel, les bonnes pratiques imposent de respecter les modélisations faites au niveau national :           <a href="https://hl7.fr/ig/fhir/core">FrCore</a>
+ et           <a href="https://interop.esante.gouv.fr/ig/fhir/">guides d’implémentation de l’ANS</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="dev_nouvel_ig.html">web</a>
+        </td>
+        <td>
+          <a href="https://interop.esante.gouv.fr/ig/fhir/">interop.esante.gouv.fr</a>
+        </td>
+        <td>
+Pour rappel, les bonnes pratiques imposent de respecter les modélisations faites au niveau national :           <a href="https://hl7.fr/ig/fhir/core">FrCore</a>
+ et           <a href="https://interop.esante.gouv.fr/ig/fhir/">guides d’implémentation de l’ANS</a>
         </td>
       </tr>
       <tr>
