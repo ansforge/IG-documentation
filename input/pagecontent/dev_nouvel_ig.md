@@ -191,3 +191,22 @@ Pour information, [GoFSH](https://github.com/FHIR/GoFSH) permet de faire la tran
 bash _updatePublisher.sh # Mise à jour du publisher java
 bash _genonce.sh # Génère l'IG
 ```
+
+### Publication d'une nouvelle version d'un guide d'implémentation
+
+#### Au sein de l'ANS
+
+Pour publier une nouvelle version (release) d'un guide d'implémentation, il est nécessaire de remplir à la racine du répertoire GitHub un fichier publication-request.json dont [la documentation peut être trouvée ici](https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation).
+Ensuite, il suffit de lancer le workflow de release sur GitHub.
+
+#### En dehors de l'ANS
+
+Pour publier des guides d'implémentation en dehors de l'ANS, il est nécessaire de :
+
+1/ Créer un template pour votre organisation ([exemple de celui de l'ANS](https://github.com/ansforge/IG-template))
+2/ Créer un répertoire GitHub qui va contenir le contenu des pages web à publier ([exemple de celui de l'ANS](https://github.com/ansforge/IG-website-release))
+3/ Lancer l'IG publisher avec l'option -go-publish ([Documentation](https://confluence.hl7.org/spaces/FHIR/pages/104580055/Process+for+Publishing+a+FHIR+Implementation+Guide+for+non-HL7+IGs))
+4/ Publier le contenu sur un serveur web
+5/ Faire une Pull Request dans [ce repo](https://github.com/FHIR/ig-registry) pour ajouter votre flux rss (dans le fichier package-feeds.json)
+
+Pour rappel, les bonnes pratiques imposent de respecter les modélisations faites au niveau national : [FrCore](https://hl7.fr/ig/fhir/core) et [guides d'implémentation de l'ANS](https://interop.esante.gouv.fr/ig/fhir/)
