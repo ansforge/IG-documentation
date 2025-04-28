@@ -54,4 +54,4 @@ Les artifacts terminologiques (Terminologies et Jeux de Valeurs) pour usage fran
 
 Ces jeux de valeurs peuvent reprendre des concepts définis dans des terminologies de deux manières : via l'ajout de concept unitaire, ou via l'ajout de règles logiques (Exemple : l'ensemble des pathologies du système nerveux de la terminologie CIM-10).
 
-Pour accéder à la liste de code associée à un jeu de valeurs indiqué en utilisant une règle logique, il existe une opération FHIR appelée [$expand](https://www.hl7.org/fhir/R4/valueset-operation-expand.html) permettant d'obtenir l'ensemble des codes par expansion. Cette opération est disponible sur le FHIR Terminology Service du Serveur Multi Terminologique dans les cas où les terminologies sont disponibles.
+Pour accéder à la liste de codes associés à un jeu de valeurs indiqué en utilisant une règle logique, il existe une opération FHIR appelée [$expand](https://www.hl7.org/fhir/R4/valueset-operation-expand.html) permettant d'obtenir l'ensemble des codes par expansion. Cette opération est disponible sur le FHIR Terminology Service du Serveur Multi Terminologique dans les cas où les terminologies sont disponibles.
