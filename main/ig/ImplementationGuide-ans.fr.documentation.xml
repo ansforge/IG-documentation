@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide ans.fr.documentation</b></p><a name="ans.fr.documentation"> </a><a name="hcans.fr.documentation"> </a><a name="ans.fr.documentation-fr-FR"> </a><h2>Documentation</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation"/>
-  <version value="0.1.7"/>
+  <version value="0.1.8"/>
   <name value="Documentation"/>
   <title value="Documentation des guides d'implémentation de l'ANS"/>
   <status value="active"/>
-  <date value="2025-04-28T15:01:22+00:00"/>
+  <date value="2025-04-28T16:25:38+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -590,6 +590,14 @@
         </extension>
         <nameUrl value="about.html"/>
         <title value="A propos de ce guide"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="changes.html"/>
+        </extension>
+        <nameUrl value="changes.html"/>
+        <title value="Historique des changements"/>
         <generation value="markdown"/>
       </page>
     </page>
