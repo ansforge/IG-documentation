@@ -3,7 +3,7 @@ Le guide d’implémentation est un support de publication des spécifications d
 
 Ce guide d'implémentation "documentation" contient l'ensemble des bonnes pratiques de création de guides d'implémentation pour les FHIR modelers, ainsi que la documentation sur "comment lire un guide d'implémentation" pour un implémenteur.
 
-Ces travaux se placent dans une démarche d'élaboration continue. L'objectif étant de profiter de l'intelligence collective pour faire évoluer les spécifications versionnées.
+Ces travaux se placent dans une démarche d'amélioration continue. L'objectif étant de profiter de l'intelligence collective pour faire évoluer les spécifications versionnées.
 
 ### Les guides d'implémentation
 
