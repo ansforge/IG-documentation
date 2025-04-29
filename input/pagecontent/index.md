@@ -1,6 +1,9 @@
-Bienvenue dans la documentation des guides d'implémentation de l'ANS, elle concerne principalement les volets du CI-SIS au format FHIR mais ne se limite pas à ceux-ci. Cette documentation contient l'ensemble des informations à propos de la modélisation, des outils FSH et IG publisher, ainsi que des tips dans le contexte français.
 
-Ces travaux se placent dans une démarche d'élaboration continue. L'objectif étant de profiter de l'intelligence collective pour faire évoluer les spécifications versionnées. 
+Le guide d’implémentation est un support de publication des spécifications d’interopérabilité, combinant une documentation technique et une documentation narrative. Il n’est pas réservé aux seuls organismes de normalisation (comme InteropSanté ou l’ANS) : tout acteur peut en publier afin de rendre visibles ses spécifications, à condition qu’elles soient cohérentes avec l’écosystème français et compatibles avec les guides d’implémentation nationaux, notamment grâce au mécanisme d’héritage.
+
+Ce guide d'implémentation "documentation" contient l'ensemble des bonnes pratiques de création de guides d'implémentation pour les FHIR modelers, ainsi que la documentation sur "comment lire un guide d'implémentation" pour un implémenteur.
+
+Ces travaux se placent dans une démarche d'élaboration continue. L'objectif étant de profiter de l'intelligence collective pour faire évoluer les spécifications versionnées.
 
 ### Les guides d'implémentation
 
