@@ -439,6 +439,8 @@ bash _genonce.sh <span class="c"># Génère l'IG</span>
 
 <h3 id="publication-dune-nouvelle-version-dun-guide-dimplémentation">Publication d’une nouvelle version d’un guide d’implémentation</h3>
 
+<p>Une fois le guide d’implémentation prêt, il est nécessaire de le publier pour que celui-ci soit versionné, historisé, et publier dans le FHIR Package Registry.</p>
+
 <h4 id="au-sein-de-lans">Au sein de l’ANS</h4>
 
 <p>Pour publier une nouvelle version (release) d’un guide d’implémentation, il est nécessaire de remplir à la racine du répertoire GitHub un fichier publication-request.json dont <a href="https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation">la documentation peut être trouvée ici</a>.
@@ -449,10 +451,10 @@ Ensuite, il suffit de lancer le workflow de release sur GitHub.</p>
 <p>Pour publier des guides d’implémentation en dehors de l’ANS, il est nécessaire de :</p>
 
 <ul>
-  <li>1/ Créer un template pour votre organisation (<a href="https://github.com/ansforge/IG-template">exemple de celui de l’ANS</a>)</li>
-  <li>2/ Créer un répertoire GitHub qui va contenir le contenu des pages web à publier (<a href="https://github.com/ansforge/IG-website-release">exemple de celui de l’ANS</a>)</li>
+  <li>1/ Créer un template adapté à votre organisation (<a href="https://github.com/ansforge/IG-template">exemple de celui de l’ANS</a>)</li>
+  <li>2/ Créer un répertoire GitHub qui va porter le contenu des pages web à publier (<a href="https://github.com/ansforge/IG-website-release">exemple de celui de l’ANS</a>). Celui-ci doit avoir la bonne arborescence de dossiers.</li>
   <li>3/ Lancer l’IG publisher avec l’option -go-publish (<a href="https://confluence.hl7.org/spaces/FHIR/pages/104580055/Process+for+Publishing+a+FHIR+Implementation+Guide+for+non-HL7+IGs">Documentation</a>)</li>
-  <li>4/ Publier le contenu sur un serveur web</li>
+  <li>4/ Publier le contenu du dossier www dans le répertoire GitHub IG-website-release sur un serveur web</li>
   <li>5/ Faire une Pull Request dans <a href="https://github.com/FHIR/ig-registry">ce repo</a> pour ajouter votre flux rss (dans le fichier package-feeds.json)</li>
 </ul>
 
@@ -499,7 +501,7 @@ Ensuite, il suffit de lancer le workflow de release sur GitHub.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.8 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 29, 2025 09:19+0000">2025-04-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.8 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 29, 2025 09:22+0000">2025-04-29</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
