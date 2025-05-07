@@ -5,6 +5,11 @@ Ce guide d'implémentation "documentation" contient l'ensemble des bonnes pratiq
 
 L’objectif est d’encourager la participation de l’ensemble des parties prenantes. Bien qu’il existe déjà des publications versionnées, celles-ci ne sont pas définitives : elles restent ouvertes à l’évolution et peuvent être adaptées en fonction des contributions et des retours de l'ensemble des lecteurs.
 
+### L'écosystème FHIR France
+
+
+<div style="text-align: center;">{%include ecosystem.svg%}</div>
+
 ### Les guides d'implémentation
 
 Selon la documentation FHIR, un Implementation Guide contient un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière.

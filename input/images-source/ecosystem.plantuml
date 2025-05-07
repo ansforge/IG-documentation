@@ -1,0 +1,57 @@
+@startuml
+
+artifact "FR Core" as frcore #pink
+url of frcore is  [[https://hl7.fr/ig/fhir/core]]
+
+artifact "Annuaire santé (AnnuaireSante) 🔌" as annuaire #pink
+url of annuaire is  [[https://interop.esante.gouv.fr/ig/fhir/annuaire]]
+
+annuaire --> frcore 
+
+artifact "Partage de Documents de Santé en mobilité (PDSm)" as pdsm 
+url of pdsm is  [[https://interop.esante.gouv.fr/ig/fhir/pdsm]]
+
+pdsm --> frcore 
+pdsm --> annuaire
+
+
+artifact "Mesures de santé (mesures)" as mesures
+url of mesures is  [[https://interop.esante.gouv.fr/ig/fhir/mesures]]
+
+mesures --> frcore 
+
+
+artifact "Suivi Décisions Orientation (SDO)" as sdo
+url of sdo is  [[https://interop.esante.gouv.fr/ig/fhir/sdo]]
+
+
+artifact "Gestion d'Agendas Partagés (GAP)" as gap
+url of gap is  [[https://interop.esante.gouv.fr/ig/fhir/gap]]
+
+gap --> frcore 
+gap --> annuaire
+
+
+' artifact "Cercle De Soins (CDS)" as cds
+' url of frcore is  [[https://interop.esante.gouv.fr/ig/fhir/cds]]
+
+' artifact "Cahier De Liaison (CDL)" as cdl
+' url of frcore is  [[https://interop.esante.gouv.fr/ig/fhir/cdl]]
+
+
+
+artifact "Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social (ROR) 🔌" as ror
+url of ror is  [[https://interop.esante.gouv.fr/ig/fhir/ror]]
+
+
+ror --> frcore 
+
+artifact "Essais CLiniques Accessibles Interconnectés pour la Recherche ouverts à l'Ecosystème (ECLAIRE) 🔌" as eclaire 
+url of eclaire is  [[https://interop.esante.gouv.fr/ig/fhir/eclaire]]
+
+legend right
+    🔌 Une API FHIR nationale est implémentée
+    <font color=#ffb6c4>▪️</font> IG socle
+end legend 
+
+@enduml
