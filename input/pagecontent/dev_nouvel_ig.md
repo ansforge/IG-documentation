@@ -205,10 +205,21 @@ Ensuite, il suffit de lancer le workflow de release sur GitHub.
 
 Pour publier des guides d'implémentation en dehors de l'ANS, il est nécessaire de :
 
-* 1/ Créer un template adapté à votre organisation ([exemple de celui de l'ANS](https://github.com/ansforge/IG-template))
-* 2/ Créer un répertoire GitHub qui va porter le contenu des pages web à publier ([exemple de celui de l'ANS](https://github.com/ansforge/IG-website-release)). Celui-ci doit avoir la bonne arborescence de dossiers.
-* 3/ Lancer l'IG publisher avec l'option -go-publish ([Documentation](https://confluence.hl7.org/spaces/FHIR/pages/104580055/Process+for+Publishing+a+FHIR+Implementation+Guide+for+non-HL7+IGs))
-* 4/ Publier le contenu du dossier www dans le répertoire GitHub IG-website-release sur un serveur web
-* 5/ Faire une Pull Request dans [ce repo](https://github.com/FHIR/ig-registry) pour ajouter votre flux rss (dans le fichier package-feeds.json)
+* 1/ [optionnel] Créer un template adapté à votre organisation ([exemple de celui de l'ANS](https://github.com/ansforge/IG-template))
+
+* 2/ [requis la première fois] Créer un répertoire GitHub qui va porter le contenu des pages web à publier ([exemple de celui de l'ANS](https://github.com/ansforge/IG-website-release)). Celui-ci doit avoir la bonne arborescence de dossiers avec les submodules et le fichier publication-setup bien paramétré.
+
+* 3/ [requis à chaque publication d'IG] Créer un fichier publication-request.json à la racine du repository du guide d'implémentation pour définir la release en suivant cette [documentation](https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation).
+
+* 4/ [requis à chaque publication d'IG] Lancer l'IG publisher avec l'option -go-publish ([Documentation](https://confluence.hl7.org/spaces/FHIR/pages/104580055/Process+for+Publishing+a+FHIR+Implementation+Guide+for+non-HL7+IGs))
+
+Lancer le publisher avec l'option -go-publish permet de publier votre IG avec les bonnes redirections pour que celui-ci soit prêt à être publié sur un serveur web. Les URLs canoniques doivent mimer le lien où sera publié le site web.
+
+* 5/ [requis à chaque publication d'IG] Publier le contenu du dossier www dans le répertoire GitHub IG-website-release sur un serveur web
+
+* 6/ [requis la première fois] Faire une Pull Request dans [ce repository](https://github.com/FHIR/ig-registry) pour ajouter votre flux rss (dans le fichier package-feeds.json)
 
 Pour rappel, les bonnes pratiques imposent de respecter les modélisations faites au niveau national : [FrCore](https://hl7.fr/ig/fhir/core) et [guides d'implémentation de l'ANS](https://interop.esante.gouv.fr/ig/fhir/)
+
+Liens vers les documentations internationales :
+* [documentation sur les templates et bonnes pratiques](https://build.fhir.org/ig/FHIR/ig-guidance/index.html)
