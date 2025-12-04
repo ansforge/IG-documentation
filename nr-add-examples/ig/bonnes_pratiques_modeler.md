@@ -145,7 +145,7 @@ A noter qu’aucune modification doit être faite directement dans main.
 
 ### Modèle de nommage par ressource FHIR
 
-Ci-dessous figurent les règles spécifiques à chaque type de ressource FHIR issus des travaux de David Ouagne (AP-HP) sous la forme de fiche. Chaque fiche présente les propriétés obligatoires de l’objet, avec le nom de la propriété puis sa valeur en respectant le format. Puis la règle de nommage du fichier contenant la ressource. Et enfin l’entête obligatoire du contenu du fichier de la ressource.
+Ci-dessous figurent les règles spécifiques à chaque type de ressource FHIR issus des [travaux de David Ouagne (AP-HP)](https://interop.aphp.fr/ig/fhir/core/best-practice.html) sous la forme de fiche. Chaque fiche présente les propriétés obligatoires de l’objet, avec le nom de la propriété puis sa valeur en respectant le format. Puis la règle de nommage du fichier contenant la ressource. Et enfin l’entête obligatoire du contenu du fichier de la ressource.
 
 #### StructureDefinition : profil
 
