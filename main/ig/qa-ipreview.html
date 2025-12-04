@@ -6,47 +6,22 @@
   </head>
   <body>
     <h2>Unattributed Code Systems</h2>
-    <ul></ul>
+    <ul>
+      <li>
+        <a href="index.html">
+<code>urn:iso:std:iso:3166</code>        </a>
+      </li>
+    </ul>
     <h2>Copyright Fragment</h2>
     <p style="color: maroon">
       <b>This fragment is not visible to the reader</b>
     </p>
-    <div>
-      <p>Ce • cet publication inclut la propriété intellectuelle couverte par les déclarations suivantes.</p>
-
-      <ul>
-
-        <li>
-ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page:           <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>
-          <div onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1">
-             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
-          </div>
-          <div style="display: none" id="ipp2_1">
-
-            <ul>
-
-              <li>
-                <a href="http://terminology.hl7.org/6.2.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
-:                 <a href="index.html">Documentation</a>
-              </li>
-
-
-            </ul>
-
-
-          </div>
-        </li>
-
-
-      </ul>
-
-
-    </div>
+    <div>Pas dusage de PI externe (autre que celles de la spécification FHIR)</div>
     <h2>Copyright and Registered Trademark Uses</h2>
     <ul>
       <li>
 
-          IG &copy; 2020+ ANS.  Package ans.fr.documentation#0.1.8 based on FHIR 4.0.1. Generated 2025-04-29 
+          IG &copy; 2020+ ANS.  Package ans.fr.documentation#0.1.8 based on FHIR 4.0.1. Generated 2025-12-04 
           
            
             Liens: Table des matières  |
@@ -59,7 +34,7 @@ Historique des versions
 )
       </li>
       <li>
-Documentation des guides d'implémentation de l'ANS - Local Development build (v0.1.8) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the Directory of published versions (        <a href="valider_res.html">src</a>
+Documentation des guides d'implémentation de l'ANS - version de développement local (v0.1.8) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le répertoire des versions publiées (        <a href="valider_res.html">src</a>
 )
       </li>
     </ul>
@@ -130,7 +105,7 @@ Documentation des guides d'implémentation de l'ANS - Local Development build (v
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>
 .  Package ans.fr.documentation#0.1.8 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Tue, Apr 29, 2025 12:06+0000">2025-04-29</span>
+. Generated           <span title="Thu, Dec 4, 2025 21:09+0000">2025-12-04</span>
 
                     <br/>
 
@@ -160,7 +135,7 @@ Documentation des guides d'implémentation de l'ANS - Local Development build (v
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>
 .  Package ans.fr.documentation#0.1.8 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Tue, Apr 29, 2025 12:06+0000">2025-04-29</span>
+. Generated           <span title="Thu, Dec 4, 2025 21:09+0000">2025-12-04</span>
 
                     <br/>
 
@@ -1035,7 +1010,7 @@ Pour information,           <a href="https://github.com/FHIR/GoFSH">GoFSH</a>
           <a href="https://github.com/ansforge/IG-template">github.com</a>
         </td>
         <td>
-1/ Créer un template adapté à votre organisation (          <a href="https://github.com/ansforge/IG-template">exemple de celui de l’ANS</a>
+1/ [optionnel] Créer un template adapté à votre organisation (          <a href="https://github.com/ansforge/IG-template">exemple de celui de l’ANS</a>
 )
         </td>
       </tr>
@@ -1047,8 +1022,8 @@ Pour information,           <a href="https://github.com/FHIR/GoFSH">GoFSH</a>
           <a href="https://github.com/ansforge/IG-website-release">github.com</a>
         </td>
         <td>
-2/ Créer un répertoire GitHub qui va porter le contenu des pages web à publier (          <a href="https://github.com/ansforge/IG-website-release">exemple de celui de l’ANS</a>
-). Celui-ci doit avoir la bonne arborescence de dossiers.
+2/ [requis la première fois] Créer un répertoire GitHub qui va porter le contenu des pages web à publier (          <a href="https://github.com/ansforge/IG-website-release">exemple de celui de l’ANS</a>
+). Celui-ci doit avoir la bonne arborescence de dossiers avec les submodules et le fichier publication-setup bien paramétré.
         </td>
       </tr>
       <tr>
@@ -1059,7 +1034,7 @@ Pour information,           <a href="https://github.com/FHIR/GoFSH">GoFSH</a>
           <a href="https://github.com/FHIR/ig-registry">github.com</a>
         </td>
         <td>
-5/ Faire une Pull Request dans           <a href="https://github.com/FHIR/ig-registry">ce repo</a>
+6/ [requis la première fois] Faire une Pull Request dans           <a href="https://github.com/FHIR/ig-registry">ce repository</a>
  pour ajouter votre flux rss (dans le fichier package-feeds.json)
         </td>
       </tr>
