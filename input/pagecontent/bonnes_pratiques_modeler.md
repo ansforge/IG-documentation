@@ -175,7 +175,7 @@ Chaque fiche présente les propriétés obligatoires de l'objet, avec le nom de 
 | title | Titre du profil |
 | code | - |
 | description | description du profil |
-| nom du fichier | profiles/StructureDefinition-id.fsh |
+| nom du fichier | Profiles/NomDuProfilProfile.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -199,7 +199,7 @@ Attention, l'usage d'extension doit être réfléchi et documenté (il faut docu
 | title | Titre de l'extension |
 | code | - |
 | description | Description de l'extension. |
-| nom du fichier | extensions/StructureDefinition-id.fsh |
+| nom du fichier | Extensions/NomDeLExtensionExtension.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -221,7 +221,7 @@ Context: Sur quoi s'applique l'extension
 | title | Titre du modèle logique |
 | code | - |
 | description | Description du modèle logique. |
-| nom du fichier | logicals/StructureDefinition-id.fsh |
+| nom du fichier | Logicals/NomDuModeleLogiqueLogical.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -243,7 +243,7 @@ Description: "Description du modèle logique."
 | title | Titre de l'exemple |
 | code | - |
 | description | Description de l'exemple. |
-| nom du fichier | Resource-id.fsh |
+| nom du fichier | Examples/NomDeLExampleExample.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -265,7 +265,7 @@ Usage: #example
 | title | Titre du questionnaire |
 | code | - |
 | description | Description du questionnaire. |
-| nom du fichier | Questionnaire-id.fsh |
+| nom du fichier | Instances/NomDuQuestionnaireQuestionnaire.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -291,7 +291,7 @@ Usage: #definition
 | title | Titre du processus |
 | code | - |
 | description | Description du processus. |
-| nom du fichier | PlanDefinition-id.fsh |
+| nom du fichier | Instances/NomDuProcessusPlanDefinition.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -315,7 +315,7 @@ Usage: #definition
 | title | Titre de l'organisation |
 | code | - |
 | description | Description de l'organisation. |
-| nom du fichier | examples/Organization-id.fsh |
+| nom du fichier | Examples/NomDeLOrganizationExample.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -339,7 +339,7 @@ Usage: #definition
 | title | Titre du lieu |
 | code | - |
 | description | Description du lieu. |
-| nom du fichier | examples/Location-id.fsh |
+| nom du fichier | Examples/NomDeLaRessourceExample.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -354,54 +354,6 @@ Usage: #example
 * name = "NomDuLieu"
 ```
 
-#### HealthcareService
-
-| **Paramètre** | **Format** |
-| --- | --- |
-| id | nom-du-service |
-| name | NomDuService |
-| title | Titre du service |
-| code | - |
-| description | Description du service. |
-| nom du fichier | examples/HealthcareService-id.fsh |
-{: .grid }
-
-Entête du fichier FSH :
-
-```fsh
-Instance: nom-du-service
-InstanceOf: HealthcareService
-Title: "Titre du service"
-Description: "Description du service."
-Usage: #example
-
-* name = "NomDuService"
-```
-
-#### Endpoint
-
-| **Paramètre** | **Format** |
-| --- | --- |
-| id | nom-de-l-application |
-| name | NomDeLApplication |
-| title | Titre de l'application |
-| code | - |
-| description | Description de l'application. |
-| nom du fichier | Endpoint-id.fsh |
-{: .grid }
-
-Entête du fichier FSH :
-
-```fsh
-Instance: nom-de-l-application
-InstanceOf: Endpoint
-Title: "Titre de l'application"
-Description: "Description de l'application."
-Usage: #definition
-
-* name = "NomDeLApplication"
-```
-
 #### PractitionerRole
 
 | **Paramètre** | **Format** |
@@ -411,7 +363,7 @@ Usage: #definition
 | title | Titre du rôle du professionnel |
 | code | - |
 | description | Description du rôle du professionnel. |
-| nom du fichier | examples/PractitionerRole-id.fsh |
+| nom du fichier | Examples/NomDeLaRessourceExample.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -423,22 +375,6 @@ Title: "Titre du rôle du professionnel"
 Description: "Description du rôle du professionnel."
 Usage: #example
 ```
-
-#### Practitioner
-
-| **Paramètre** | **Format** |
-| --- | --- |
-| id | nom-de-l-employé |
-| name | NomDeLEmploye |
-| title | Titre de l'employé |
-| code | - |
-| description | Description de l'employé. |
-| nom du fichier | Practitioner-id.fsh |
-{: .grid }
-
-Entête du fichier FSH :
-
-A faire
 
 #### Ressources terminologiques : CodeSystem, ValueSet et ConceptMap
 
@@ -453,7 +389,7 @@ Se référer au FHIR Terminology Service (FTS) du Serveur Multi Terminologies (S
 | title | Titre de la StructureMap |
 | code | - |
 | description | Description de la StructureMap. |
-| nom du fichier | StructureMap-NomStructureMap.fml |
+| nom du fichier | Instances/StructureMap-NomStructureMap.fml |
 {: .grid }
 
 Nom du fichier FML : StructureMap-NomStructureMap.fml
@@ -477,7 +413,7 @@ Entête du fichier FML :
 | title | Titre du capability statement |
 | code | - |
 | description | Description du capability statement. |
-| nom du fichier | CapabilityStatement-id.fsh |
+| nom du fichier | Instances/NomDeLaRessourceInstance.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -501,7 +437,7 @@ Usage: #definition
 | title | Titre de l'opération |
 | code | nomDeLOperation |
 | description | Description de l'opération. |
-| nom du fichier | OperationDefinition-Ressource-code.fsh |
+| nom du fichier | Instances/NomDeLaRessourceOperationDefinition.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -531,7 +467,7 @@ Usage: #definition
 | title | Titre du search parameter |
 | code | nomDuSearchParameter |
 | description | Description du search parameter. |
-| nom du fichier | SearchParameter-Ressource-code.fsh |
+| nom du fichier | Instances/NomDeLaRessourceSearchParameter.fsh |
 {: .grid }
 
 Entête du fichier FSH :
