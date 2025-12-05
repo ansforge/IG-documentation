@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation | *Version*:0.1.8 |
-| Active as of 2025-12-04 | *Computable Name*:Documentation |
+| Active as of 2025-12-05 | *Computable Name*:Documentation |
 
 Le guide d’implémentation est un support de publication des spécifications d’interopérabilité, combinant une documentation technique et une documentation narrative. Il n’est pas réservé aux seuls organismes de normalisation (comme InteropSanté ou l’ANS) : tout acteur peut en publier afin de rendre visibles ses spécifications, à condition qu’elles soient cohérentes avec l’écosystème français et compatibles avec les guides d’implémentation nationaux, notamment permis grâce au mécanisme d’héritage.
 
@@ -110,7 +110,7 @@ Autres :
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2025-12-04T21:36:20+00:00",
+  "date" : "2025-12-05T12:59:15+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

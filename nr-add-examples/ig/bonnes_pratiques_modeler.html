@@ -523,7 +523,7 @@ Chaque fiche présente les propriétés obligatoires de l’objet, avec le nom d
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>profiles/StructureDefinition-id.fsh</td>
+      <td>Profiles/NomDuProfilProfile.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -571,7 +571,7 @@ Description: "Description du profil."
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>extensions/StructureDefinition-id.fsh</td>
+      <td>Extensions/NomDeLExtensionExtension.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -617,7 +617,7 @@ Context: Sur quoi s'applique l'extension
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>logicals/StructureDefinition-id.fsh</td>
+      <td>Logicals/NomDuModeleLogiqueLogical.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -663,7 +663,7 @@ Description: "Description du modèle logique."
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>Resource-id.fsh</td>
+      <td>Examples/NomDeLExampleExample.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -709,7 +709,7 @@ Usage: #example
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>Questionnaire-id.fsh</td>
+      <td>Instances/NomDuQuestionnaireQuestionnaire.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -759,7 +759,7 @@ Usage: #definition
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>PlanDefinition-id.fsh</td>
+      <td>Instances/NomDuProcessusPlanDefinition.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -807,7 +807,7 @@ Usage: #definition
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>examples/Organization-id.fsh</td>
+      <td>Examples/NomDeLOrganizationExample.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -855,7 +855,7 @@ Usage: #definition
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>examples/Location-id.fsh</td>
+      <td>Examples/NomDeLaRessourceExample.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -869,102 +869,6 @@ Description: "Description du lieu."
 Usage: #example
 
 * name = "NomDuLieu"
-</code></pre>
-
-<h4 id="healthcareservice">HealthcareService</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th><strong>Paramètre</strong></th>
-      <th><strong>Format</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>nom-du-service</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>NomDuService</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Titre du service</td>
-    </tr>
-    <tr>
-      <td>code</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>Description du service.</td>
-    </tr>
-    <tr>
-      <td>nom du fichier</td>
-      <td>examples/HealthcareService-id.fsh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Entête du fichier FSH :</p>
-
-<pre><code class="language-fsh">Instance: nom-du-service
-InstanceOf: HealthcareService
-Title: "Titre du service"
-Description: "Description du service."
-Usage: #example
-
-* name = "NomDuService"
-</code></pre>
-
-<h4 id="endpoint">Endpoint</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th><strong>Paramètre</strong></th>
-      <th><strong>Format</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>nom-de-l-application</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>NomDeLApplication</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Titre de l’application</td>
-    </tr>
-    <tr>
-      <td>code</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>Description de l’application.</td>
-    </tr>
-    <tr>
-      <td>nom du fichier</td>
-      <td>Endpoint-id.fsh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Entête du fichier FSH :</p>
-
-<pre><code class="language-fsh">Instance: nom-de-l-application
-InstanceOf: Endpoint
-Title: "Titre de l'application"
-Description: "Description de l'application."
-Usage: #definition
-
-* name = "NomDeLApplication"
 </code></pre>
 
 <h4 id="practitionerrole">PractitionerRole</h4>
@@ -999,7 +903,7 @@ Usage: #definition
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>examples/PractitionerRole-id.fsh</td>
+      <td>Examples/NomDeLaRessourceExample.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -1012,47 +916,6 @@ Title: "Titre du rôle du professionnel"
 Description: "Description du rôle du professionnel."
 Usage: #example
 </code></pre>
-
-<h4 id="practitioner">Practitioner</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th><strong>Paramètre</strong></th>
-      <th><strong>Format</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>nom-de-l-employé</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>NomDeLEmploye</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Titre de l’employé</td>
-    </tr>
-    <tr>
-      <td>code</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>Description de l’employé.</td>
-    </tr>
-    <tr>
-      <td>nom du fichier</td>
-      <td>Practitioner-id.fsh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Entête du fichier FSH :</p>
-
-<p>A faire</p>
 
 <h4 id="ressources-terminologiques--codesystem-valueset-et-conceptmap">Ressources terminologiques : CodeSystem, ValueSet et ConceptMap</h4>
 
@@ -1090,7 +953,7 @@ Usage: #example
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>StructureMap-NomStructureMap.fml</td>
+      <td>Instances/StructureMap-NomStructureMap.fml</td>
     </tr>
   </tbody>
 </table>
@@ -1138,7 +1001,7 @@ Usage: #example
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>CapabilityStatement-id.fsh</td>
+      <td>Instances/NomDeLaRessourceInstance.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -1186,7 +1049,7 @@ Usage: #definition
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>OperationDefinition-Ressource-code.fsh</td>
+      <td>Instances/NomDeLaRessourceOperationDefinition.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -1240,7 +1103,7 @@ Usage: #definition
     </tr>
     <tr>
       <td>nom du fichier</td>
-      <td>SearchParameter-Ressource-code.fsh</td>
+      <td>Instances/NomDeLaRessourceSearchParameter.fsh</td>
     </tr>
   </tbody>
 </table>
@@ -1301,7 +1164,7 @@ Usage: #definition
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.8 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 4, 2025 21:36+0000">2025-12-04</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.8 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 5, 2025 12:59+0000">2025-12-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
