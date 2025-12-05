@@ -128,12 +128,11 @@ Exemple:
 > Alias: $PhdDevice = http://hl7.org/fhir/uv/phd/StructureDefinition/PhdDevice
 > Alias: $UCUM = http://unitsofmeasure.org
 > Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
-> Alias: $FrObservationBp = http://interopsante.org/fhir/StructureDefinition/FrObservationBp  
-> Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient  
+> Alias: $fr-patient = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient  
 
 ### Exemples de guides d'implémentation
 
-Pour plus d'informations, consultez la [liste des guides d'implémentation](https://interop.esante.gouv.fr/ig/fhir/) à titre d'exemple.
+Pour plus d'informations, consultez la [liste des guides d'implémentation](https://interop.esante.gouv.fr/ig/) à titre d'exemple.
 
 ### Le choix de la version FHIR
 
@@ -161,3 +160,329 @@ Règles d'utilisation de GitHub :
 * Une fois la Pull Request validée, c'est à l'auteur des modifications de fusionner (=merge) la pull request avec la branche principale "main".
 
 A noter qu'aucune modification doit être faite directement dans main.
+
+### Modèle de nommage par ressource FHIR
+
+Ci-dessous figurent les règles spécifiques à chaque type de ressource FHIR issus des [travaux de David Ouagne (AP-HP)](https://interop.aphp.fr/ig/fhir/core/best-practice.html) sous la forme de fiche.
+Chaque fiche présente les propriétés obligatoires de l'objet, avec le nom de la propriété puis sa valeur en respectant le format. Puis la règle de nommage du fichier contenant la ressource. Et enfin l'entête obligatoire du contenu du fichier de la ressource.
+
+#### StructureDefinition : profil
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-profil |
+| name | NomDuProfil |
+| title | Titre du profil |
+| code | - |
+| description | description du profil |
+| nom du fichier | Profiles/NomDuProfilProfile.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Profile: NomDuProfil
+Parent: ResourceType
+Id: nom-du-profil
+Title: "Titre du profil"
+Description: "Description du profil."
+```
+
+#### StructureDefinition : extension
+
+Attention, l'usage d'extension doit être réfléchi et documenté (il faut documenter les recherches d'extensions internationales n'ayant pas abouti).
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-de-l-extension |
+| name | NomDeLExtension |
+| title | Titre de l'extension |
+| code | - |
+| description | Description de l'extension. |
+| nom du fichier | Extensions/NomDeLExtensionExtension.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Extension: NomDeLExtension
+Id: nom-de-l-extension
+Title: "Titre de l'extension"
+Description: "Description de l'extension."
+Context: Sur quoi s'applique l'extension
+```
+
+#### StructureDefinition : logic
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-modele-logique |
+| name | NomDuModeleLogique |
+| title | Titre du modèle logique |
+| code | - |
+| description | Description du modèle logique. |
+| nom du fichier | Logicals/NomDuModeleLogiqueLogical.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Logical: NomDuModeleLogique
+Parent: Base
+Characteristics: #can-be-target, #can-bind, #has-target
+Title: "Titre du modèle logique"
+Description: "Description du modèle logique."
+```
+
+#### Exemple
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | uuid |
+| name | NomDeLExemple |
+| title | Titre de l'exemple |
+| code | - |
+| description | Description de l'exemple. |
+| nom du fichier | Examples/NomDeLExampleExample.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: uuid
+InstanceOf: Resource
+Title: "Titre de l'exemple"
+Description: "Description de l'exemple."
+Usage: #example
+```
+
+#### Questionnaire
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-questionnaire |
+| name | NomDuQuestionnaire |
+| title | Titre du questionnaire |
+| code | - |
+| description | Description du questionnaire. |
+| nom du fichier | Instances/NomDuQuestionnaireQuestionnaire.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: nom-du-questionnaire
+InstanceOf: Questionnaire
+Title: "Titre du questionnaire"
+Description: "Description du questionnaire."
+Usage: #definition
+
+* name = "NomDuQuestionnaire"
+```
+
+**Note :** généralement, les ressources Questionnaire ne sont pas laissées au format FHIR Shorthand pour des raisons de performance (temps de construction du guide).
+
+#### PlanDefinition
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-processus |
+| name | NomDuProcessus |
+| title | Titre du processus |
+| code | - |
+| description | Description du processus. |
+| nom du fichier | Instances/NomDuProcessusPlanDefinition.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: nom-du-processus
+InstanceOf: PlanDefinition
+Title: "Titre du processus"
+Description: "Description du processus."
+Usage: #definition
+
+* name = "NomDuProcessus"
+```
+
+#### Organization
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-de-l-organisation |
+| name | NomDeLOrganisation |
+| title | Titre de l'organisation |
+| code | - |
+| description | Description de l'organisation. |
+| nom du fichier | Examples/NomDeLOrganizationExample.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: nom-de-l-organisation
+InstanceOf: Organization
+Title: "Titre de l'organisation"
+Description: "Description de l'organisation."
+Usage: #definition
+
+* name = "NomDeLOrganization"
+```
+
+#### Location
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-lieu |
+| name | NomDuLieu |
+| title | Titre du lieu |
+| code | - |
+| description | Description du lieu. |
+| nom du fichier | Examples/NomDeLaRessourceExample.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: nom-du-lieu
+InstanceOf: Location
+Title: "Titre du lieu"
+Description: "Description du lieu."
+Usage: #example
+
+* name = "NomDuLieu"
+```
+
+#### PractitionerRole
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-role-du-professionnel |
+| name | NomDuRoleDuProfessionnel |
+| title | Titre du rôle du professionnel |
+| code | - |
+| description | Description du rôle du professionnel. |
+| nom du fichier | Examples/NomDeLaRessourceExample.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: nom-du-role-du-professionnel
+InstanceOf: PractitionerRole
+Title: "Titre du rôle du professionnel"
+Description: "Description du rôle du professionnel."
+Usage: #example
+```
+
+#### Ressources terminologiques : CodeSystem, ValueSet et ConceptMap
+
+Se référer au FHIR Terminology Service (FTS) du Serveur Multi Terminologies (SMT).
+
+#### StructureMap
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | - |
+| name | NomStructureMap |
+| title | Titre de la StructureMap |
+| code | - |
+| description | Description de la StructureMap. |
+| nom du fichier | Instances/StructureMap-NomStructureMap.fml |
+{: .grid }
+
+Nom du fichier FML : StructureMap-NomStructureMap.fml
+
+Entête du fichier FML :
+
+```fml
+/// url = 'ROOT_IG/StructureMap/NomStructureMap'
+/// name = 'NomStructureMap'
+/// title = 'Titre de la StructureMap'
+/// description = "Description de la StructureMap."
+/// status = 'active'
+```
+
+#### CapabilityStatement
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-capability-statement |
+| name | NomDuCapabilityStatement |
+| title | Titre du capability statement |
+| code | - |
+| description | Description du capability statement. |
+| nom du fichier | Instances/NomDeLaRessourceInstance.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: nom-du-capability-statement
+InstanceOf: CapabilityStatement
+Title: "Nom du capability statement"
+Description: "Description du capability statement."
+Usage: #definition
+
+* name = "NomDuCapabilityStatement"
+```
+
+#### OperationDefinition
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | Ressource-code |
+| name | NomDeLOperation |
+| title | Titre de l'opération |
+| code | nomDeLOperation |
+| description | Description de l'opération. |
+| nom du fichier | Instances/NomDeLaRessourceOperationDefinition.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: nom-de-l-operation
+InstanceOf: OperationDefinition
+Title: "Titre de l'opération"
+Description: "Description de l'opération."
+Usage: #definition
+
+* name = "NomDeLOperation"
+* kind = #operation
+* status = #active
+* code = #nomDeLOperation
+* system = true|false
+* type = true|false
+* instance = true|false
+```
+
+#### SearchParameter
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | Ressource-code |
+| name | NomDuSearchParameter |
+| title | Titre du search parameter |
+| code | nomDuSearchParameter |
+| description | Description du search parameter. |
+| nom du fichier | Instances/NomDeLaRessourceSearchParameter.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: Ressource-nomDuSearchParameter
+InstanceOf: SearchParameter
+Title: "Titre du search parameter"
+Description: "Description du search parameter."
+Usage: #definition
+
+* name = "NomDuSearchParameter"
+* code = #nomDuSearchParameter
+* status = #active
+* description = "Description du search parameter."
+* type = #number | #date | #string | #token | #reference | #composite | #quantity | #uri | #special
+```
+
