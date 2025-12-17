@@ -1,9 +1,16 @@
-# Historique des changements - Documentation des guides d'implémentation de l'ANS v0.1.8
+# Historique des changements - Documentation des guides d'implémentation de l'ANS v0.1.9
 
 * [**Table of Contents**](toc.md)
 * **Historique des changements**
 
 ## Historique des changements
+
+### Release 0.1.9 de l’IG Documentation
+
+Modifications apportées dans la release [0.1.9](https://github.com/ansforge/IG-documentation/milestone/12?closed=1) :
+
+* Mise à jour de la documentation de publication d’un nouvel IG [#72](https://github.com/ansforge/IG-documentation/pull/72)
+* Mise à jour de la page index - intérêt des IGs pour l’écosystème [#70](https://github.com/ansforge/IG-documentation/pull/70)
 
 ### Release 0.1.8 de l’IG Documentation
 

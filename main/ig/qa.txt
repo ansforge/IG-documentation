@@ -1,11 +1,11 @@
 Documentation : Validation Results
 =========================================
 
-err = 1, warn = 4, info = 0
-IG Publisher Version: 2.0.27
-Generated Thu Dec 04 21:12:25 UTC 2025. FHIR version 4.0.1 for ans.fr.documentation#0.1.8 (canonical = https://interop.esante.gouv.fr/ig/documentation)
+err = 1, warn = 4, info = 1
+IG Publisher Version: 2.0.29
+Generated Wed Dec 17 14:36:16 UTC 2025. FHIR version 4.0.1 for ans.fr.documentation#0.1.9 (canonical = https://interop.esante.gouv.fr/ig/documentation)
  Build Errors : 3 / 5 / 0
- /home/runner/work/IG-documentation/IG-documentation/igSource/fsh-generated/resources/ImplementationGuide-ans.fr.documentation : 1 / 0 / 1
+ /home/runner/work/IG-documentation/IG-documentation/igSource/fsh-generated/resources/ImplementationGuide-ans.fr.documentation : 1 / 0 / 2
 </table>
 == n/a ==
 ERROR: about.html#/html/body/div/div/div/div/div/p/a at Line 246, column 17: The link 'downloads.html' for "téléchargement" cannot be resolved
@@ -17,4 +17,5 @@ WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-v
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/ImplementationGuide-ans.fr.documentation.json ==
+INFORMATION: ImplementationGuide/ans.fr.documentation: ImplementationGuide.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
 ERROR: ImplementationGuide/ans.fr.documentation: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)

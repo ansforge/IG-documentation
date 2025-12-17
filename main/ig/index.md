@@ -1,4 +1,4 @@
-# Accueil - Documentation des guides d'implémentation de l'ANS v0.1.8
+# Accueil - Documentation des guides d'implémentation de l'ANS v0.1.9
 
 * [**Table of Contents**](toc.md)
 * **Accueil**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation | *Version*:0.1.8 |
-| Active as of 2025-12-04 | *Computable Name*:Documentation |
+| *Official URL*:https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation | *Version*:0.1.9 |
+| Active as of 2025-12-17 | *Computable Name*:Documentation |
 
 Le guide d’implémentation est un support de publication des spécifications d’interopérabilité, combinant une documentation technique et une documentation narrative. Il n’est pas réservé aux seuls organismes de normalisation (comme InteropSanté ou l’ANS) : tout acteur peut en publier afin de rendre visibles ses spécifications, à condition qu’elles soient cohérentes avec l’écosystème français et compatibles avec les guides d’implémentation nationaux, notamment permis grâce au mécanisme d’héritage.
 
@@ -106,11 +106,11 @@ Autres :
   "resourceType" : "ImplementationGuide",
   "id" : "ans.fr.documentation",
   "url" : "https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation",
-  "version" : "0.1.8",
+  "version" : "0.1.9",
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2025-12-04T21:09:02+00:00",
+  "date" : "2025-12-17T14:35:18+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
@@ -148,7 +148,7 @@ Autres :
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "7.0.0"
+      "version" : "7.0.1"
     },
     {
       "id" : "hl7ext",
@@ -505,7 +505,7 @@ Autres :
       },
       {
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-        "valueCode" : "hl7.fhir.uv.tools.r4#0.8.0"
+        "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
       },
       {
         "extension" : [
