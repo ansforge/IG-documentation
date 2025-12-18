@@ -5,6 +5,7 @@
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "release",
+    "ci-build" : "https://ansforge.github.io/IG-documentation/main/ig",
     "first": false,
     "changes": "changes.html",
     "desc" : "Documentation des guides d'implémentation de l'ANS"
