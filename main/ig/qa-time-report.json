@@ -1,5 +1,5 @@
 {
-  "date" : "Thu, 18 Dec, 2025 13:27:53 +0000",
+  "date" : "Thu, 18 Dec, 2025 16:46:06 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,52 +8,47 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 26,
+          "start" : 23,
           "length" : 30
         },
         {
-          "activity" : "scan",
-          "start" : 27,
-          "length" : 1
-        },
-        {
           "activity" : "checkR4R4B",
-          "start" : 27,
+          "start" : 24,
           "length" : 16
         },
         {
           "activity" : "generateNarratives",
-          "start" : 27,
-          "length" : 85
+          "start" : 24,
+          "length" : 77
         },
         {
           "activity" : "validate",
-          "start" : 27,
-          "length" : 40517
+          "start" : 24,
+          "length" : 6864
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 84,
+          "start" : 42,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 84,
-          "length" : 71
+          "start" : 42,
+          "length" : 85
         },
         {
           "activity" : "generate2",
-          "start" : 89,
-          "length" : 67
+          "start" : 44,
+          "length" : 80
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 96,
+          "start" : 49,
           "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 99,
+          "start" : 51,
           "length" : 3
         }
       ]
@@ -72,7 +67,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 89,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -83,7 +78,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 89,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -94,7 +89,14 @@
     },
     {
       "name" : "/input/pagecontent/instance_hapi.md",
-      "size" : 792
+      "size" : 792,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 44,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/doc_modeler.md",
@@ -106,18 +108,18 @@
     },
     {
       "name" : "/input/pagecontent/tests.md",
-      "size" : 5719,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 89,
-          "length" : 1
-        }
-      ]
+      "size" : 5719
     },
     {
       "name" : "/input/pagecontent/valider_res.md",
-      "size" : 4754
+      "size" : 4754,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 44,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/changes.md",
@@ -137,7 +139,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 89,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -148,7 +150,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 89,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -163,7 +165,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 89,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -190,7 +192,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 89,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -209,18 +211,18 @@
     },
     {
       "name" : "/input/images/erreurs-lignes.png",
-      "size" : 306173,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 89,
-          "length" : 1
-        }
-      ]
+      "size" : 306173
     },
     {
       "name" : "/temp/pages/_includes/artifacts.xml",
-      "size" : 600
+      "size" : 600,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 44,
+          "length" : 1
+        }
+      ]
     }
   ]
 }
