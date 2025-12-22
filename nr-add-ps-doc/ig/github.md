@@ -12,6 +12,15 @@ GitHub est l’équivalent d’un sharepoint, un répertoire (=repository) versi
 
 Pour créer un compte GitHub et être enrôlé dans l’organisation ansforge, il suffit de suivre [cette documentation](https://ansforge.github.io/Documentation/)
 
+#### Règles d’utilisation de GitHub
+
+* Toutes modifications d’une spécification sur GitHub doit se faire au niveau d’une branche.
+* Le nom de la branche doit être préfixé par les initiales de l’auteur (ex : “sb-“ pour Sébastien Brunelle) suivi de la description des travaux (ex : “sb-ajout-bonnespratiques-github)
+* Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l’ANS.
+* Une fois la Pull Request validée, c’est à l’auteur des modifications de fusionner (=merge) la pull request avec la branche principale “main”.
+
+A noter qu’aucune modification doit être faite directement dans main.
+
 ### Création d’un nouveau projet
 
 #### les règles de nommage
