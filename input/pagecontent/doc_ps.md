@@ -31,14 +31,16 @@ Idéalement, une spécification d'interopérabilité doit être construite de ma
 
 La structure d'une posologie est un bon exemple de la complexité des données de santé. Pour la standardiser correctement, il est nécessaire de prévoir :
 
-- Un nombre de comprimés minimal et maximal
-- Des conditions de prise (exemple : "si douleur", "à jeun")
-- Une durée de traitement
-- Une fréquence (matin, midi, soir)
-- Des instructions particulières
+* Un nombre de comprimés minimal et maximal
+* Des conditions de prise (exemple : "si douleur", "à jeun")
+* Une durée de traitement
+* Une fréquence (matin, midi, soir)
+* Des instructions particulières
 
 Il est indispensable qu'un prescripteur définisse précisément tous ces éléments attendus pour que les experts interopérabilité puissent concevoir des spécifications complètes et utilisables dans la pratique quotidienne.
 </div>
+
+Pour faciliter cette collaboration entre professionnels de santé et experts techniques, des outils méthodologiques ont été développés. Les **modèles logiques**, présentés plus bas dans ce document, constituent justement le pont permettant aux PS d'exprimer leurs besoins métier dans un langage compréhensible avant leur traduction technique en standard FHIR.
 
 ### Le standard FHIR
 
@@ -53,5 +55,3 @@ Un guide d'implémentation (IG) est un document technique qui précise comment u
 ### Les modèles logiques
 
 Un modèle logique est une représentation structurée et simplifiée des données métier, indépendante de toute technologie. Il décrit "ce qui doit être échangé" (par exemple : les informations essentielles d'une consultation) sans entrer dans les détails techniques du "comment". Les modèles logiques servent de pont entre votre compréhension métier des soins et la représentation technique en FHIR. Ils permettent de valider que les spécifications techniques répondent bien à vos besoins professionnels avant leur mise en œuvre dans les logiciels.
-
-
