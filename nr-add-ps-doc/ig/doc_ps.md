@@ -46,9 +46,9 @@ Pour faciliter cette collaboration entre professionnels de santé et experts tec
 
 ### Le standard FHIR
 
-FHIR (Fast Healthcare Interoperability Resources) est un standard international développé par HL7 pour faciliter l’échange de données de santé. Concrètement, FHIR définit des “ressources” standardisées (Patient, Consultation, Prescription, etc.) qui représentent les concepts métier que vous utilisez quotidiennement. Grâce à FHIR, les informations que vous produisez peuvent être comprises par n’importe quel système compatible, permettant ainsi une meilleure coordination des soins et réduisant les ressaisies manuelles d’informations.
+FHIR (Fast Healthcare Interoperability Resources) est un standard international développé par l’organisation internationale Health Level 7 (HL7) pour faciliter l’échange de données de santé. Concrètement, FHIR définit des “ressources” standardisées (Patient, Consultation, Prescription, etc.) qui représentent les concepts métier que vous utilisez quotidiennement. Grâce à FHIR, les informations que vous produisez peuvent être comprises par n’importe quel système compatible, permettant ainsi une meilleure coordination des soins et réduisant les ressaisies manuelles d’informations.
 
-Ce standard est commun à tous les cas d’usages car il est international : recherche, biologie, administratif, …. Pour gagner en interopérabilité, il faut le spécialiser pour la France, pour l’Europe et pour chaque cas d’usages dans des guides d’implémentation.
+Ce standard est très générique pour former un socle commun à tous les cas d’usages et international : recherche, biologie, administratif, … Ainsi, il est très peu contraignant et ne garantit pas de facto une interopérabilité parfaite. Pour gagner en interopérabilité, il faut le spécialiser pour la France, pour l’Europe et pour chaque cas d’usages dans des guides d’implémentation.
 
 ### Les guides d’implémentation
 

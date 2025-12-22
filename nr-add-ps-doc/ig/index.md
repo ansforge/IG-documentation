@@ -95,7 +95,7 @@ Vous pouvez vous référer à [la documentation officielle de l’IG publisher](
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2025-12-22T13:14:24+00:00",
+  "date" : "2025-12-22T13:18:54+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
