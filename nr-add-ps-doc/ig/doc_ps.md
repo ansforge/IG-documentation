@@ -30,7 +30,17 @@ Les données de santé sont complexes et nécessitent une expertise métier fort
 
 Idéalement, une spécification d’interopérabilité doit être construite de manière rapprochée entre un expert métier (professionnel de santé) et un expert interopérabilité. Les professionnels de santé apportent leur connaissance des pratiques, des cas particuliers et des contraintes métier, tandis que les experts techniques traduisent ces besoins en spécifications standardisées.
 
-**Exemple concret : la posologie**La structure d'une posologie est un bon exemple de la complexité des données de santé. Pour la standardiser correctement, il est nécessaire de prévoir : * Un nombre de comprimés minimal et maximal * Des conditions de prise (exemple : "si douleur", "à jeun") * Une durée de traitement * Une fréquence (matin, midi, soir) * Des instructions particulières Il est indispensable qu'un prescripteur définisse précisément tous ces éléments attendus pour que les experts interopérabilité puissent concevoir des spécifications complètes et utilisables dans la pratique quotidienne.
+**Exemple concret : la posologie**
+
+La structure d'une posologie est un bon exemple de la complexité des données de santé. Pour la standardiser correctement, il est nécessaire de prévoir :
+
+* Un nombre de comprimés minimal et maximal
+* Des conditions de prise (exemple : "si douleur", "à jeun")
+* Une durée de traitement
+* Une fréquence (matin, midi, soir)
+* Des instructions particulières
+
+Il est indispensable qu'un prescripteur définisse précisément tous ces éléments attendus pour que les experts interopérabilité puissent concevoir des spécifications complètes et utilisables dans la pratique quotidienne.
 
 Pour faciliter cette collaboration entre professionnels de santé et experts techniques, des outils méthodologiques ont été développés. Les **modèles logiques**, présentés plus bas dans ce document, constituent justement le pont permettant aux PS d’exprimer leurs besoins métier dans un langage compréhensible avant leur traduction technique en standard FHIR.
 
