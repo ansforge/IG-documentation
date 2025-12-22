@@ -95,7 +95,7 @@ Vous pouvez vous référer à [la documentation officielle de l’IG publisher](
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2025-12-22T13:31:24+00:00",
+  "date" : "2025-12-22T13:47:27+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
@@ -861,7 +861,7 @@ Vous pouvez vous référer à [la documentation officielle de l’IG publisher](
             }
           ],
           "nameUrl" : "doc_ps.html",
-          "title" : "Documentation des professionnels de santé",
+          "title" : "Professionnels de santé",
           "generation" : "markdown"
         },
         {

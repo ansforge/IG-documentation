@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "Documentation"] ; # 
   fhir:title [ fhir:v "Documentation des guides d'implémentation de l'ANS"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-12-22T13:31:24+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-12-22T13:47:27+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1394,7 +1394,7 @@
            fhir:v "doc_ps.html"^^xsd:anyURI ;
            fhir:l fhir:doc_ps.html
          ] ;
-         fhir:title [ fhir:v "Documentation des professionnels de santé" ] ;
+         fhir:title [ fhir:v "Professionnels de santé" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
