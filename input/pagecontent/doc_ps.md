@@ -4,11 +4,11 @@ L'interopérabilité désigne la capacité des logiciels de santé à **`partage
 
 Par exemple, les dates peuvent s'écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, etc ... 
 
-L'objectif de l'interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc ...
+L'objectif de l'interopérabilité est de **désigner un format commun** pour les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc ...
 
 <div class="figure" style="width:100%; text-align: center">
-    <img style="height: auto; width: 75%;" src="intro-iop.png" alt="Capture d'écran de la formation introduction webinaire interopérabilité" title="Capture d'écran de la formation introduction webinaire interopérabilité">
-    <p>Capture d'écran de la <a href="https://www.youtube.com/watch?v=JGmJWUkX1nU">formation introduction webinaire interopérabilité</a></p>
+    <img style="height: auto; width: 75%;" src="intro-iop.png" alt="Capture d'écran du webinaire d'introduction à l'interopérabilité" title="Capture d'écran du webinaire d'introduction à l'interopérabilité">
+    <p>Capture d'écran du webinaire d'<a href="https://www.youtube.com/watch?v=JGmJWUkX1nU">introduction à l'interopérabilité</a></p>
 </div>
 
 Dans votre pratique quotidienne, cela signifie que les informations patient que vous saisissez dans votre logiciel peuvent être partagées de manière sécurisée et structurée avec d'autres logiciels, et ainsi vous permettre de :
