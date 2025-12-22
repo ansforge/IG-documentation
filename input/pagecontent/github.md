@@ -1,8 +1,9 @@
 GitHub est l'équivalent d'un sharepoint, un répertoire (=repository) versionné avec un système de branche pour travailler de manière collaborative sur du contenu textuel (code, écriture, grammaire ...).
+Cette page se concentre sur les bonnes pratique au sein de l'organisation GitHub [ansforge](https://github.com/ansforge) sur les guides d'implémentation. Elle peut également servir de bonnes pratiques pour les volets externes.
 
 ### Premiers pas sur GiHub
 
-Pour créer un compte GitHub et être enrôlé dans l'organisation ansforge, il suffit de suivre [cette documentation](https://ansforge.github.io/Documentation/)
+Pour créer un compte GitHub et être enrôlé dans l'organisation [ansforge](https://github.com/ansforge), il suffit de suivre [cette documentation](https://ansforge.github.io/Documentation/).
 
 #### Règles d'utilisation de GitHub
 
@@ -123,4 +124,3 @@ Afin de faciliter les actions au regards des IG, l'ANS  met à disposition un [G
 * Publication sur les pages github :
   * Diagramme de class plantuml généré à partir des données de l'IG
   * Rapport de validation du validator_cli
-  
