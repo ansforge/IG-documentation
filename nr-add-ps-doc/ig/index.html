@@ -157,6 +157,9 @@
       <li>
         <a target="_blank" href="https://esante.gouv.fr">Site de l&apos;ANS </a>
       </li>
+      <li>
+        <a href="about.html">A propos</a>
+      </li>
     </ul>
   </li>
 </ul>
@@ -259,11 +262,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#les-guides-dimplémentation" id="markdown-toc-les-guides-dimplémentation">Les guides d’implémentation</a></li>
-  <li><a href="#a-qui-est-destiné-ce-wiki-" id="markdown-toc-a-qui-est-destiné-ce-wiki-">A qui est destiné ce wiki ?</a></li>
+  <li><a href="#a-qui-est-destiné-cette-documentation-" id="markdown-toc-a-qui-est-destiné-cette-documentation-">A qui est destiné cette documentation ?</a></li>
   <li><a href="#la-liste-des-guides-dimplémentation-de-lans" id="markdown-toc-la-liste-des-guides-dimplémentation-de-lans">La liste des guides d’implémentation de l’ANS</a></li>
   <li><a href="#reporter-un-problème-ou-une-suggestion-damélioration" id="markdown-toc-reporter-un-problème-ou-une-suggestion-damélioration">Reporter un problème ou une suggestion d’amélioration</a></li>
   <li><a href="#les-outils-utilisés-dans-ce-guide" id="markdown-toc-les-outils-utilisés-dans-ce-guide">Les outils utilisés dans ce guide</a></li>
-  <li><a href="#liens-utiles" id="markdown-toc-liens-utiles">Liens utiles</a></li>
 </ul>
 
 </div>
@@ -292,14 +294,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Documentation : <a href="https://www.hl7.org/fhir/implementationguide.html">ImplementationGuide</a>, <a href="https://confluence.hl7.org/display/FHIR/NPM+Package+Specification">Packages</a></p>
 
-<h3 id="a-qui-est-destiné-ce-wiki-">A qui est destiné ce wiki ?</h3>
+<h3 id="a-qui-est-destiné-cette-documentation-">A qui est destiné cette documentation ?</h3>
 
 <p>Il est destiné à celles et ceux qui utilisent FHIR :</p>
 
 <ul>
-  <li>Les FHIR modelers, qui créent ces guides et profilent des ressources</li>
-  <li>Les FHIR implementers, qui lisent ces guides et développent des APIs</li>
-  <li>Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux. Les experts fonctionnels ont une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : ce sont les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.</li>
+  <li>Aux professionnels de santé et établissements de santé, qui ont la vision métier et ont la capacité de challenger ces travaux.</li>
+  <li>Aux FHIR modelers, qui créent ces guides et profilent des ressources</li>
+  <li>Aux FHIR implementers, qui lisent ces guides et développent des APIs</li>
 </ul>
 
 <p>Pour plus d’informations sur la modélisation ou l’implémentation FHIR, il suffit de naviguer au sein du menu de ci-dessus.</p>
@@ -310,14 +312,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="reporter-un-problème-ou-une-suggestion-damélioration">Reporter un problème ou une suggestion d’amélioration</h3>
 
-<p>Vous avez identifié une erreur sur un des guides ? L’onglet issue permet de signaler un problème sur un projet donné.</p>
+<p>Vous avez identifié une erreur sur un des guides ? Le lien <code class="language-plaintext highlighter-rouge">issue</code> permet de signaler un problème sur un projet donné.</p>
 
 <p><img width="100%" alt="image" src="https://user-images.githubusercontent.com/48218773/215773144-31a47623-a853-4a4e-8ba0-ad1d66b29961.png" /></p>
 
-<p>Un lien est également disponible sous chaque guide d’implémentation pour accéder aux issues :
-<img width="100%" alt="image" src="new_issue.png" /></p>
+<p>Un lien est également disponible sous chaque guide d’implémentation pour accéder aux issues :</p>
 
-<p>L’issue doit contenir un titre, et une description très détaillée avec une proposition de changement.</p>
+<p><img width="100%" alt="image" src="new_issue.png" /></p>
+
+<p>L’issue doit contenir un titre, et une description la plus détaillée possible avec idéalement une proposition de changement pour faciliter et améliorer la qualité des modifications apportées.</p>
 
 <h3 id="les-outils-utilisés-dans-ce-guide">Les outils utilisés dans ce guide</h3>
 
@@ -347,25 +350,6 @@ De la même manière qu’FSH, GoFSH est également disponible en ligne sur <a h
 Il prend en entrée une arborescence de dossiers / fichiers bien définis, contenant : des pages en markdown, des fichiers fsh, des ressources FHIR au format json ou xml, des images…</p>
 
 <p>Vous pouvez vous référer à <a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">la documentation officielle de l’IG publisher</a>.</p>
-
-<h3 id="liens-utiles">Liens utiles</h3>
-
-<p>Des exemples d’Implementation Guide :</p>
-
-<ul>
-  <li>Us-core : <a href="https://hl7.org/fhir/us/core/">Publication</a>, <a href="https://github.com/HL7/US-Core">GitHub</a></li>
-  <li>mcode (qui se base sur uscore) : <a href="http://hl7.org/fhir/us/mcode/">Publication</a>, <a href="https://github.com/HL7/fhir-mCODE-ig">GitHub</a></li>
-  <li>SDC, IG qui définit des profils de la ressource FHIR Questionnaire. Ces profils rajoutent des fonctionnalités de : préremplissage des champs, indiquer un design de formulaire, calcul automatique…) : <a href="http://hl7.org/fhir/uv/sdc/index.html">Publication</a>, <a href="https://github.com/HL7/sdc">GitHub</a></li>
-</ul>
-
-<p>L’éditeur de profils FSH (Grammaire de définition de profils) : <a href="https://fshschool.org/">getting started</a>, <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">documentation</a></p>
-
-<p>Autres :</p>
-
-<ul>
-  <li><a href="https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation">IG publisher - documentation officielle HL7</a></li>
-  <li><a href="https://cql.hl7.org/">Clinical Quality Language (CQL)</a> (langage d’expression FHIR, permettant par ex de décrire le calcul de l’IMC), <a href="https://build.fhir.org/ig/HL7/cqf-measures/using-cql.html">Documentation</a>, <a href="https://github.com/HL7/cql">GitHub</a></li>
-</ul>
 
 
 
@@ -408,7 +392,7 @@ Il prend en entrée une arborescence de dossiers / fichiers bien définis, conte
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 22, 2025 10:05+0000">2025-12-22</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 22, 2025 10:18+0000">2025-12-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

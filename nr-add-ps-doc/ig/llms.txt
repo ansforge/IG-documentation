@@ -4,6 +4,7 @@
 
 * [Accueil](index.md)
 * [Doc Implementer](doc_implementer.md)
+* [A propos](about.md)
 * [Déployer une instance HAPI](instance_hapi.md)
 * [Documentation des professionnels de santé](doc_ps.md)
 * [Artifacts Summary](artifacts.md)

@@ -10,7 +10,7 @@
   <name value="Documentation"/>
   <title value="Documentation des guides d'implémentation de l'ANS"/>
   <status value="active"/>
-  <date value="2025-12-22T10:05:39+00:00"/>
+  <date value="2025-12-22T10:18:56+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -597,6 +597,14 @@
           </extension>
           <nameUrl value="collaborons.html"/>
           <title value="Collaborons"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="about.html"/>
+          </extension>
+          <nameUrl value="about.html"/>
+          <title value="A propos"/>
           <generation value="markdown"/>
         </page>
       </page>

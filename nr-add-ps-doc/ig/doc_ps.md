@@ -7,7 +7,7 @@
 
 ### L’interopérabilité en santé
 
-L’interopérabilité désigne la capacité des logiciels de santé à **`partager et intégrer`** des données de santé. Par exemple, les dates peuvent s’écrire de pleins de formats : 22 décembre 2027, 22/12/2027, 12/22/2027 aux Etats-Unis, etc …. L’objectif de l’interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, etc …
+L’interopérabilité désigne la capacité des logiciels de santé à **`partager et intégrer`** des données de santé. Par exemple, les dates peuvent s’écrire dans différents formats : 22 décembre 2027, 22/12/2027, 12/22/2027 aux Etats-Unis, etc …. L’objectif de l’interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, etc …
 
 Dans votre pratique quotidienne, cela signifie que les informations patients que vous saisissez dans votre logiciel peuvent être partagées de manière sécurisée et structurée avec d’autres logiciels, et ainsi vous permettre de :
 
@@ -16,7 +16,7 @@ Dans votre pratique quotidienne, cela signifie que les informations patients que
 
 L’objectif de l’interopérabilité est de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
 
-### Le rôle des professionnels de santé et établissements de santé dans l’interopérabilité
+### Le rôle des professionnels de santé (PS) et établissements de santé (ES) dans l’interopérabilité
 
 Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Par exemple, la structure de la posologie : elle peut contenir un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, … Il est dans ce cas indispensable qu’un prescripteur détermine tout ce qui est attendu d’une structuration de posologie pour que les experts interopérabilité puissent décrire de manière concise et précises les objets contenant ces informations.
 

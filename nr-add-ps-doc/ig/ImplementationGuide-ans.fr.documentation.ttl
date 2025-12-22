@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "Documentation"] ; # 
   fhir:title [ fhir:v "Documentation des guides d'implémentation de l'ANS"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-12-22T10:05:39+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-12-22T10:18:56+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1663,6 +1663,25 @@
              fhir:l fhir:collaborons.html
            ] ;
            fhir:title [ fhir:v "Collaborons" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+             ] ;
+             fhir:value [
+               a fhir:Url ;
+               fhir:v "about.html"^^xsd:anyURI ;
+               fhir:l fhir:about.html
+             ]
+           ] ) ;
+           fhir:name [
+             a fhir:Url ;
+             fhir:v "about.html"^^xsd:anyURI ;
+             fhir:l fhir:about.html
+           ] ;
+           fhir:title [ fhir:v "A propos" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] )

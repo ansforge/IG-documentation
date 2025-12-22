@@ -32,13 +32,13 @@ La meilleure pratique consiste à créer un Implementation Guide par projet bien
 
 Documentation : [ImplementationGuide](https://www.hl7.org/fhir/implementationguide.html), [Packages](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification)
 
-### A qui est destiné ce wiki ?
+### A qui est destiné cette documentation ?
 
 Il est destiné à celles et ceux qui utilisent FHIR :
 
-* Les FHIR modelers, qui créent ces guides et profilent des ressources
-* Les FHIR implementers, qui lisent ces guides et développent des APIs
-* Les experts fonctionnels, qui ont la vision métier et ont la capacité de challenger ces travaux. Les experts fonctionnels ont une plus value à connaître FHIR, la façon de profiler des ressources et de développer les APIs : ce sont les personnes qui connaissent le mieux le besoin métier qui seront le plus à même de juger le travail de modélisation effectué par les experts interopérabilité.
+* Aux professionnels de santé et établissements de santé, qui ont la vision métier et ont la capacité de challenger ces travaux.
+* Aux FHIR modelers, qui créent ces guides et profilent des ressources
+* Aux FHIR implementers, qui lisent ces guides et développent des APIs
 
 Pour plus d’informations sur la modélisation ou l’implémentation FHIR, il suffit de naviguer au sein du menu de ci-dessus.
 
@@ -48,13 +48,15 @@ La liste des guides d’implémentation est accessible [à cette adresse](https:
 
 ### Reporter un problème ou une suggestion d’amélioration
 
-Vous avez identifié une erreur sur un des guides ? L’onglet issue permet de signaler un problème sur un projet donné.
+Vous avez identifié une erreur sur un des guides ? Le lien `issue` permet de signaler un problème sur un projet donné.
 
 ![](https://user-images.githubusercontent.com/48218773/215773144-31a47623-a853-4a4e-8ba0-ad1d66b29961.png)
 
-Un lien est également disponible sous chaque guide d’implémentation pour accéder aux issues : ![](new_issue.png)
+Un lien est également disponible sous chaque guide d’implémentation pour accéder aux issues :
 
-L’issue doit contenir un titre, et une description très détaillée avec une proposition de changement.
+![](new_issue.png)
+
+L’issue doit contenir un titre, et une description la plus détaillée possible avec idéalement une proposition de changement pour faciliter et améliorer la qualité des modifications apportées.
 
 ### Les outils utilisés dans ce guide
 
@@ -82,21 +84,6 @@ L’IG publisher est l’outil permettant de générer les pages web de l’impl
 
 Vous pouvez vous référer à [la documentation officielle de l’IG publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation).
 
-### Liens utiles
-
-Des exemples d’Implementation Guide :
-
-* Us-core : [Publication](https://hl7.org/fhir/us/core/), [GitHub](https://github.com/HL7/US-Core)
-* mcode (qui se base sur uscore) : [Publication](http://hl7.org/fhir/us/mcode/), [GitHub](https://github.com/HL7/fhir-mCODE-ig)
-* SDC, IG qui définit des profils de la ressource FHIR Questionnaire. Ces profils rajoutent des fonctionnalités de : préremplissage des champs, indiquer un design de formulaire, calcul automatique…) : [Publication](http://hl7.org/fhir/uv/sdc/index.html), [GitHub](https://github.com/HL7/sdc)
-
-L’éditeur de profils FSH (Grammaire de définition de profils) : [getting started](https://fshschool.org/), [documentation](https://build.fhir.org/ig/HL7/fhir-shorthand/)
-
-Autres :
-
-* [IG publisher - documentation officielle HL7](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
-* [Clinical Quality Language (CQL)](https://cql.hl7.org/) (langage d’expression FHIR, permettant par ex de décrire le calcul de l’IMC), [Documentation](https://build.fhir.org/ig/HL7/cqf-measures/using-cql.html), [GitHub](https://github.com/HL7/cql)
-
 
 
 ## Resource Content
@@ -110,7 +97,7 @@ Autres :
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2025-12-22T10:05:39+00:00",
+  "date" : "2025-12-22T10:18:56+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
@@ -1035,6 +1022,17 @@ Autres :
               ],
               "nameUrl" : "collaborons.html",
               "title" : "Collaborons",
+              "generation" : "markdown"
+            },
+            {
+              "extension" : [
+                {
+                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+                  "valueUrl" : "about.html"
+                }
+              ],
+              "nameUrl" : "about.html",
+              "title" : "A propos",
               "generation" : "markdown"
             }
           ]
