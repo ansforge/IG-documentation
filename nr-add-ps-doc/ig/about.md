@@ -20,4 +20,5 @@ Autres :
 
 * [IG publisher - documentation officielle HL7](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
 * [Clinical Quality Language (CQL)](https://cql.hl7.org/) (langage d’expression FHIR, permettant par ex de décrire le calcul de l’IMC), [Documentation](https://build.fhir.org/ig/HL7/cqf-measures/using-cql.html), [GitHub](https://github.com/HL7/cql)
+* [Webinaire d’introduction à l’interopérabilité de l’ANS](https://www.youtube.com/watch?v=JGmJWUkX1nU)
 
