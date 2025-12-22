@@ -42,12 +42,12 @@ pages:
             title: Valider une ressource contre un profil
     autres_ressources.md:
         title: Autres Ressources
+        changes.md:
+            title: Historique des changements
         tests.md:
             title: Tests
         collaborons.md: 
             title: Collaborons
-    changes.md:
-        title: Historique des changements
 
 menu:
     Accueil: index.html
@@ -65,6 +65,6 @@ menu:
     Autres ressources:
         Tests: tests.html
         Collaborons: collaborons.html
+        Historique: changes.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
-        "Site de l'ANS ": new-tab https://esante.gouv.fr/
-    Historique: changes.html
+        "Site de l'ANS ": new-tab https://esante.gouv.fr
