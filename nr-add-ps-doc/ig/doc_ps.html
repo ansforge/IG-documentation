@@ -223,7 +223,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#linteropérabilité-en-santé" id="markdown-toc-linteropérabilité-en-santé">L’interopérabilité en santé</a></li>
-  <li><a href="#le-rôle-des-professionnels-de-santé-ps-et-établissements-de-santé-es-dans-linteropérabilité" id="markdown-toc-le-rôle-des-professionnels-de-santé-ps-et-établissements-de-santé-es-dans-linteropérabilité">Le rôle des professionnels de santé (PS) et établissements de santé (ES) dans l’interopérabilité</a></li>
+  <li><a href="#le-rôle-des-professionnels-de-santé-dans-linteropérabilité" id="markdown-toc-le-rôle-des-professionnels-de-santé-dans-linteropérabilité">Le rôle des professionnels de santé dans l’interopérabilité</a></li>
   <li><a href="#le-standard-fhir" id="markdown-toc-le-standard-fhir">Le standard FHIR</a></li>
   <li><a href="#les-guides-dimplémentation" id="markdown-toc-les-guides-dimplémentation">Les guides d’implémentation</a></li>
   <li><a href="#les-modèles-logiques" id="markdown-toc-les-modèles-logiques">Les modèles logiques</a></li>
@@ -254,11 +254,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Il est important de noter que les couches de sécurisation et de gestion des consentements patient viennent en sus.</p>
 
-<h3 id="le-rôle-des-professionnels-de-santé-ps-et-établissements-de-santé-es-dans-linteropérabilité">Le rôle des professionnels de santé (PS) et établissements de santé (ES) dans l’interopérabilité</h3>
+<h3 id="le-rôle-des-professionnels-de-santé-dans-linteropérabilité">Le rôle des professionnels de santé dans l’interopérabilité</h3>
 
-<p>Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Idéalement, une spécification d’interopérabilité doit être construite de manière rapprochée entre un expert métier comme un professionnel de santé et un expert interopérabilité.</p>
+<p>Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Sans cette expertise, les spécifications techniques risquent de ne pas répondre aux besoins réels du terrain ou d’oublier des cas d’usage importants.</p>
 
-<p>Pour le cas de la structure de la posologie par exemple, il est nécessaire de prévoir la standardisation d’un certain nombre de données : permettre d’indiquer un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, … Il est dans ce cas indispensable qu’un prescripteur détermine ce qui est attendu d’une structuration de posologie de manière étendue pour que les experts interopérabilité puissent décrire de manière concise et précis les objets contenant ces informations.</p>
+<p>Idéalement, une spécification d’interopérabilité doit être construite de manière rapprochée entre un expert métier (professionnel de santé) et un expert interopérabilité. Les professionnels de santé apportent leur connaissance des pratiques, des cas particuliers et des contraintes métier, tandis que les experts techniques traduisent ces besoins en spécifications standardisées.</p>
+
+<div style="background-color: #f0f8ff; border-left: 4px solid #4CAF50; padding: 15px; margin: 20px 0;">
+<strong>Exemple concret : la posologie</strong>
+
+La structure d'une posologie est un bon exemple de la complexité des données de santé. Pour la standardiser correctement, il est nécessaire de prévoir :
+
+- Un nombre de comprimés minimal et maximal
+- Des conditions de prise (exemple : "si douleur", "à jeun")
+- Une durée de traitement
+- Une fréquence (matin, midi, soir)
+- Des instructions particulières
+
+Il est indispensable qu'un prescripteur définisse précisément tous ces éléments attendus pour que les experts interopérabilité puissent concevoir des spécifications complètes et utilisables dans la pratique quotidienne.
+</div>
 
 <h3 id="le-standard-fhir">Le standard FHIR</h3>
 
@@ -315,7 +329,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 22, 2025 13:05+0000">2025-12-22</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 22, 2025 13:08+0000">2025-12-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
