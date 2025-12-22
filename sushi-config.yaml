@@ -51,7 +51,7 @@ pages:
 
 menu:
     Accueil: index.html
-    Documentation des professionnels de santé :doc_ps.html
+    Documentation des professionnels de santé : doc_ps.html
     Documentation des FHIR modelers:
         Quick start IG: dev_nouvel_ig.html
         Bonnes pratiques: bonnes_pratiques_modeler.html
