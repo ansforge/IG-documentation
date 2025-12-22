@@ -11,20 +11,20 @@ L'objectif de l'interopérabilité est de désigner **un format commun et non am
     <p>Capture d'écran du webinaire d'<a href="https://www.youtube.com/watch?v=JGmJWUkX1nU">introduction à l'interopérabilité</a></p>
 </div>
 
-Dans votre pratique quotidienne, cela signifie que les informations patient que vous saisissez dans votre logiciel peuvent être partagées et ainsi vous permettre de :
+Dans votre pratique quotidienne, cela signifie que les informations patient que vous saisissez dans un logiciel peuvent être partagées pour débloquer tout leur potentiel :
 
-* Accéder aux données issus de différents logiciels dans un seul logiciel (par exemple, les données du serveur de résultats de biologie se retrouvent automatiquement dans votre logiciel de soin).
+* Aggréger les données issues de différents logiciels dans un seul logiciel (par exemple, les données du serveur de résultats de biologie se retrouvent automatiquement dans votre logiciel de soin).
 * Faire des projets de recherche (extraire automatiquement des informations d'intérêt)
 
-Ainsi, l'objectif de l'interopérabilité est de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
+L'interopérabilité permet de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
+
+Il est important de noter que les couches de sécurisation et de gestion des consentements patient viennent en sus.
 
 ### Le rôle des professionnels de santé (PS) et établissements de santé (ES) dans l'interopérabilité
 
-Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Pour le cas de la structure de la posologie par exemple, la structure nécessite de s'adapter à un certain nombre de contextes : permettre d'indiquer un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, ...
+Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Idéalement, une spécification d'interopérabilité doit être construite de manière rapprochée entre un expert métier comme un professionnel de santé et un expert interopérabilité.
 
-Il est dans ce cas indispensable qu'un prescripteur détermine tout ce qui est attendu d'une structuration de posologie pour que les experts interopérabilité puissent décrire de manière concise et précis les objets contenant ces informations.
-
-Idéalement, une spécification d'interopérabilité doit être construite de manière rapprochée entre un expert métier comme un professionnel de santé et un expert interopérabilité.
+Pour le cas de la structure de la posologie par exemple, il est nécessaire de prévoir la standardisation d'un certain nombre de données : permettre d'indiquer un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, ... Il est dans ce cas indispensable qu'un prescripteur détermine ce qui est attendu d'une structuration de posologie de manière étendue pour que les experts interopérabilité puissent décrire de manière concise et précis les objets contenant ces informations.
 
 ### Le standard FHIR
 
@@ -39,3 +39,5 @@ Un guide d'implémentation (IG) est un document technique qui précise comment u
 ### Les modèles logiques
 
 Un modèle logique est une représentation structurée et simplifiée des données métier, indépendante de toute technologie. Il décrit "ce qui doit être échangé" (par exemple : les informations essentielles d'une consultation) sans entrer dans les détails techniques du "comment". Les modèles logiques servent de pont entre votre compréhension métier des soins et la représentation technique en FHIR. Ils permettent de valider que les spécifications techniques répondent bien à vos besoins professionnels avant leur mise en œuvre dans les logiciels.
+
+
