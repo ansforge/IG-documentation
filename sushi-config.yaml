@@ -48,6 +48,8 @@ pages:
             title: Tests
         collaborons.md: 
             title: Collaborons
+        about.md: 
+            title: A propos
 
 menu:
     Accueil: index.html
@@ -68,3 +70,4 @@ menu:
         Historique: changes.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr
+        A propos: about.html
