@@ -6,8 +6,8 @@
   "status" : "active",
   "package-id" : "ans.fr.documentation",
   "ig-ver" : "0.1.9",
-  "date" : "Mon, 22 Dec, 2025 10:59:15 +0000",
-  "dateISO8601" : "2025-12-22T10:59:15+00:00",
+  "date" : "Mon, 22 Dec, 2025 11:02:38 +0000",
+  "dateISO8601" : "2025-12-22T11:02:38+00:00",
   "errs" : 1,
   "warnings" : 4,
   "hints" : 1,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 738117632
+  "maxMemory" : 764675616
 }
