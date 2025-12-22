@@ -20,11 +20,25 @@ L'interopérabilité permet de garantir que ces données restent exploitables et
 
 Il est important de noter que les couches de sécurisation et de gestion des consentements patient viennent en sus.
 
-### Le rôle des professionnels de santé (PS) et établissements de santé (ES) dans l'interopérabilité
+### Le rôle des professionnels de santé dans l'interopérabilité
 
-Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Idéalement, une spécification d'interopérabilité doit être construite de manière rapprochée entre un expert métier comme un professionnel de santé et un expert interopérabilité.
+Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Sans cette expertise, les spécifications techniques risquent de ne pas répondre aux besoins réels du terrain ou d'oublier des cas d'usage importants.
 
-Pour le cas de la structure de la posologie par exemple, il est nécessaire de prévoir la standardisation d'un certain nombre de données : permettre d'indiquer un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, ... Il est dans ce cas indispensable qu'un prescripteur détermine ce qui est attendu d'une structuration de posologie de manière étendue pour que les experts interopérabilité puissent décrire de manière concise et précis les objets contenant ces informations.
+Idéalement, une spécification d'interopérabilité doit être construite de manière rapprochée entre un expert métier (professionnel de santé) et un expert interopérabilité. Les professionnels de santé apportent leur connaissance des pratiques, des cas particuliers et des contraintes métier, tandis que les experts techniques traduisent ces besoins en spécifications standardisées.
+
+<div style="background-color: #f0f8ff; border-left: 4px solid #4CAF50; padding: 15px; margin: 20px 0;">
+<strong>Exemple concret : la posologie</strong>
+
+La structure d'une posologie est un bon exemple de la complexité des données de santé. Pour la standardiser correctement, il est nécessaire de prévoir :
+
+- Un nombre de comprimés minimal et maximal
+- Des conditions de prise (exemple : "si douleur", "à jeun")
+- Une durée de traitement
+- Une fréquence (matin, midi, soir)
+- Des instructions particulières
+
+Il est indispensable qu'un prescripteur définisse précisément tous ces éléments attendus pour que les experts interopérabilité puissent concevoir des spécifications complètes et utilisables dans la pratique quotidienne.
+</div>
 
 ### Le standard FHIR
 
