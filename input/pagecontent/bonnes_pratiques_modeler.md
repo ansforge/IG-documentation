@@ -150,4 +150,3 @@ Ce choix n'est pas tranché, c'est l'écosystème qui dictera quelle version uti
 La conclusion actuelle (octobre 2023) est de privilégier R4 pour ne pas être "hors système" et être cohérent avec fr-core et les IGs de l'ANS tant qu'il n'y a pas de socle commun à l'utilisation de R5. Utiliser R5 uniquement si l'écosystème l'exige (ex : héritage d'un IG international en R5, héritage de ressources retravaillées en R5...) et partager ce besoin en issue GitHub.
 
 FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l'objectif de transition.
-

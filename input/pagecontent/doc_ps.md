@@ -2,13 +2,15 @@
 
 L'interopérabilité désigne la capacité des logiciels de santé à **`partager et intégrer`** des données de santé.
 
-Par exemple, les dates peuvent s'écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, etc .... L'objectif de l'interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc ...
+Par exemple, les dates peuvent s'écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, etc ... 
+L'objectif de l'interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc ...
 
 <div class="figure" style="width:100%; text-align: center">
     <img style="height: auto; width: 75%;" src="intro-iop.png" alt="Capture d'écran de la formation introduction webinaire interopérabilité" title="Capture d'écran de la formation introduction webinaire interopérabilité">
+    <p>Capture d'écran de la <a href="https://www.youtube.com/watch?v=JGmJWUkX1nU">formation introduction webinaire interopérabilité</a></p>
 </div>
 
-<p style="text-align: center;"><a href="https://www.youtube.com/watch?v=JGmJWUkX1nU">Capture d'écran de la formation introduction webinaire interopérabilité</a></p>
+
 
 Dans votre pratique quotidienne, cela signifie que les informations patient que vous saisissez dans votre logiciel peuvent être partagées de manière sécurisée et structurée avec d'autres logiciels, et ainsi vous permettre de :
 
@@ -16,6 +18,11 @@ Dans votre pratique quotidienne, cela signifie que les informations patient que 
 * Faire des projets de recherche (extraire automatiquement des informations d'intérêt)
 
 L'objectif de l'interopérabilité est de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
+
+### TODO
+
+- Une mauvaise compréhension des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients
+- 
 
 ### Le rôle des professionnels de santé (PS) et établissements de santé (ES) dans l'interopérabilité
 
