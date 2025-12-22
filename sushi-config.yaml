@@ -20,6 +20,8 @@ parameters:
 pages:
     index.md:
         title: Accueil
+    doc_ps.md:
+        title: Documentation des professionnels de santé
     doc_modeler.md:
         dev_nouvel_ig.md:
             title: Quick start IG
@@ -38,19 +40,18 @@ pages:
             title: Déployer une instance HAPI
         valider_res.md:
             title: Valider une ressource contre un profil
-    tests.md:
-        title: Tests
-    collaborons.md: 
-        title: Collaborons
     autres_ressources.md:
-        title: Autres Ressources 
-    about.md:
-        title: A propos de ce guide
+        title: Autres Ressources
+        tests.md:
+            title: Tests
+        collaborons.md: 
+            title: Collaborons
     changes.md:
         title: Historique des changements
 
 menu:
     Accueil: index.html
+    Documentation des professionnels de santé :doc_ps.html
     Documentation des FHIR modelers:
         Quick start IG: dev_nouvel_ig.html
         Bonnes pratiques: bonnes_pratiques_modeler.html
@@ -61,10 +62,9 @@ menu:
         Bonnes pratiques: bonnes_pratiques_implementer.html
         Déployer une instance HAPI: instance_hapi.html
         Valider une ressource contre un profil: valider_res.html
-    Tests: tests.html
-    Collaborons: collaborons.html
     Autres ressources:
+        Tests: tests.html
+        Collaborons: collaborons.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
-        "A propos de ce guide": about.html
     Historique: changes.html
