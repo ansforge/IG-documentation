@@ -232,31 +232,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="linteropérabilité-en-santé">L’interopérabilité en santé</h3>
 
-<p>L’interopérabilité désigne la capacité des logiciels de santé à <strong><code class="language-plaintext highlighter-rouge">partager et intégrer</code></strong> des données de santé.</p>
+<p>L’interopérabilité désigne la capacité des logiciels de santé à <strong>partager et intégrer</strong> des données de santé.</p>
 
-<p>Par exemple, les dates peuvent s’écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, etc …</p>
+<p>Par exemple, les dates peuvent s’écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, … Il devient ainsi évident qu’une mauvaise interprétation des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients ou des biais conséquents lors d’études cliniques.</p>
 
-<p>L’objectif de l’interopérabilité est de <strong>désigner un format commun</strong> pour les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc …</p>
+<p>L’objectif de l’interopérabilité est de désigner <strong>un format commun et non ambigû</strong> pour les données partagées : les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc …</p>
 
 <div class="figure" style="width:100%; text-align: center">
     <img style="height: auto; width: 75%;" src="intro-iop.png" alt="Capture d'écran du webinaire d'introduction à l'interopérabilité" title="Capture d'écran du webinaire d'introduction à l'interopérabilité" />
     <p>Capture d'écran du webinaire d'<a href="https://www.youtube.com/watch?v=JGmJWUkX1nU">introduction à l'interopérabilité</a></p>
 </div>
 
-<p>Dans votre pratique quotidienne, cela signifie que les informations patient que vous saisissez dans votre logiciel peuvent être partagées de manière sécurisée et structurée avec d’autres logiciels, et ainsi vous permettre de :</p>
+<p>Dans votre pratique quotidienne, cela signifie que les informations patient que vous saisissez dans un logiciel peuvent être partagées pour débloquer tout leur potentiel :</p>
 
 <ul>
-  <li>Partager des données entre différents logiciels (par exemple, les données du serveur de résultats de biologie se retrouvent automatiquement dans votre logiciel de soin).</li>
+  <li>Aggréger les données issues de différents logiciels dans un seul logiciel (par exemple, les données du serveur de résultats de biologie se retrouvent automatiquement dans votre logiciel de soin).</li>
   <li>Faire des projets de recherche (extraire automatiquement des informations d’intérêt)</li>
 </ul>
 
-<p>Une mauvaise compréhension des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients. Ainsi, l’objectif de l’interopérabilité est de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.</p>
+<p>L’interopérabilité permet de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.</p>
+
+<p>Il est important de noter que les couches de sécurisation et de gestion des consentements patient viennent en sus.</p>
 
 <h3 id="le-rôle-des-professionnels-de-santé-ps-et-établissements-de-santé-es-dans-linteropérabilité">Le rôle des professionnels de santé (PS) et établissements de santé (ES) dans l’interopérabilité</h3>
 
-<p>Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Par exemple, la structure de la posologie : elle peut contenir un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, … Il est dans ce cas indispensable qu’un prescripteur détermine tout ce qui est attendu d’une structuration de posologie pour que les experts interopérabilité puissent décrire de manière concise et précis les objets contenant ces informations.</p>
+<p>Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Idéalement, une spécification d’interopérabilité doit être construite de manière rapprochée entre un expert métier comme un professionnel de santé et un expert interopérabilité.</p>
 
-<p>Idéalement, une spécification d’interopérabilité doit être construite de manière rapprochée entre un expert métier comme un professionnel de santé et un expert interopérabilité.</p>
+<p>Pour le cas de la structure de la posologie par exemple, il est nécessaire de prévoir la standardisation d’un certain nombre de données : permettre d’indiquer un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, … Il est dans ce cas indispensable qu’un prescripteur détermine ce qui est attendu d’une structuration de posologie de manière étendue pour que les experts interopérabilité puissent décrire de manière concise et précis les objets contenant ces informations.</p>
 
 <h3 id="le-standard-fhir">Le standard FHIR</h3>
 
@@ -313,7 +315,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 22, 2025 11:02+0000">2025-12-22</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 22, 2025 13:05+0000">2025-12-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
