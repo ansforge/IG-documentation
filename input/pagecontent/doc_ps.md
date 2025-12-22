@@ -27,16 +27,16 @@ Les données de santé sont complexes et nécessitent une expertise métier fort
 Idéalement, une spécification d'interopérabilité doit être construite de manière rapprochée entre un expert métier (professionnel de santé) et un expert interopérabilité. Les professionnels de santé apportent leur connaissance des pratiques, des cas particuliers et des contraintes métier, tandis que les experts techniques traduisent ces besoins en spécifications standardisées.
 
 <div style="background-color: #f0f8ff; border-left: 4px solid #4CAF50; padding: 15px; margin: 20px 0;">
-<strong>Exemple concret : la posologie</strong>
-
-La structure d'une posologie est un bon exemple de la complexité des données de santé. Pour la standardiser correctement, il est nécessaire de prévoir :
-
-* Un nombre de comprimés minimal et maximal
-* Des conditions de prise (exemple : "si douleur", "à jeun")
-* Une durée de traitement
-* Une fréquence (matin, midi, soir)
-* Des instructions particulières
-
+<strong>Exemple concret : la posologie</strong><br/><br/>
+La structure d'une posologie est un bon exemple de la complexité des données de santé. Pour la standardiser correctement, il est nécessaire de prévoir :<br/><br/>
+<ul>
+<li>Un nombre de comprimés minimal et maximal</li>
+<li>Des conditions de prise (exemple : "si douleur", "à jeun")</li>
+<li>Une durée de traitement</li>
+<li>Une fréquence (matin, midi, soir)</li>
+<li>Des instructions particulières</li>
+</ul>
+<br/>
 Il est indispensable qu'un prescripteur définisse précisément tous ces éléments attendus pour que les experts interopérabilité puissent concevoir des spécifications complètes et utilisables dans la pratique quotidienne.
 </div>
 
