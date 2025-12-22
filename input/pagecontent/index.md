@@ -7,11 +7,9 @@ L’objectif est d’encourager la participation de l’ensemble des parties pre
 
 ### Les guides d'implémentation
 
-Selon la documentation FHIR, un Implementation Guide contient un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière.
+Un guide d'implémentation se présente sous forme d'un site web contenant un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière. Le guide d'implémentation est versionné (l'ensemble des versions reste accessible) et packagé.
 
-Un implementation guide se présente sous forme d'un site web et d'un package contenant l'ensemble des ressources de conformité. Les implementation guides (site web, ressources de conformité et package) sont versionnés. L'ensemble des versions historiques seront toujours accessibles.
-
-La meilleure pratique consiste à créer un Implementation Guide par projet bien spécifique, cela permet :
+La meilleure pratique consiste à créer un guide d'implémentation par projet bien spécifique, cela permet :
 
 * De versionner séparément, on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées
 * Chacune des specs gère ses dépendances indépendamment des autres (aux ressources du ci-sis, aux profils interopsanté), chacune de ces dépendances peuvent être mises à jour séparément

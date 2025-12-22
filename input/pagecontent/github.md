@@ -4,6 +4,15 @@ GitHub est l'équivalent d'un sharepoint, un répertoire (=repository) versionn�
 
 Pour créer un compte GitHub et être enrôlé dans l'organisation ansforge, il suffit de suivre [cette documentation](https://ansforge.github.io/Documentation/)
 
+#### Règles d'utilisation de GitHub
+
+* Toutes modifications d'une spécification sur GitHub doit se faire au niveau d'une branche.
+* Le nom de la branche doit être préfixé par les initiales de l'auteur (ex : "sb-" pour Sébastien Brunelle) suivi de la description des travaux (ex : "sb-ajout-bonnespratiques-github)
+* Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l'ANS.
+* Une fois la Pull Request validée, c'est à l'auteur des modifications de fusionner (=merge) la pull request avec la branche principale "main".
+
+A noter qu'aucune modification doit être faite directement dans main.
+
 ### Création d'un nouveau projet
 
 #### les règles de nommage
@@ -102,7 +111,7 @@ Cf. documentation officielle : https://docs.github.com/fr/pull-requests/collabor
 
 ### Mettre en place un workflow de validation/génération/publication
 
-Afin de faciliter les actions au regards des IG, l'ANS  met à disposition un [GitHub Action](https://github.com/ansforge/IG-workflows)  avec les fonctionnalités suivantes : 
+Afin de faciliter les actions au regards des IG, l'ANS  met à disposition un [GitHub Action](https://github.com/ansforge/IG-workflows)  avec les fonctionnalités suivantes :
 
 * Lancement de sushi
 * Tests avec le validateur_cli
@@ -114,3 +123,4 @@ Afin de faciliter les actions au regards des IG, l'ANS  met à disposition un [G
 * Publication sur les pages github :
   * Diagramme de class plantuml généré à partir des données de l'IG
   * Rapport de validation du validator_cli
+  
