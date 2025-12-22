@@ -62,3 +62,7 @@ Un guide d’implémentation (IG) est un document technique qui précise comment
 
 Un modèle logique est une représentation structurée et simplifiée des données métier, indépendante de toute technologie. Il décrit “ce qui doit être échangé” (par exemple : les informations essentielles d’une consultation) sans entrer dans les détails techniques du “comment”. Les modèles logiques servent de pont entre votre compréhension métier des soins et la représentation technique en FHIR. Ils permettent de valider que les spécifications techniques répondent bien à vos besoins professionnels avant leur mise en œuvre dans les logiciels.
 
+### Exemple concret de la ePrescription
+
+La Haute Autorité de Santé (HAS) a organisé un groupe de travail autour de la [structuration de la posologie](https://www.has-sante.fr/jcms/p_3555137/fr/structuration-de-la-posologie-des-medicaments) fournissant une description métier très précise de ce qui est attendu de la posologie. Ce document a permis aux experts interopérabilité d’InteropSanté et de l’ANS de générer un modèle logique et de créer des profils FHIR sur la structuration de la posologie **(lien à rajouter lorsque l’IG sera publié)**.
+
