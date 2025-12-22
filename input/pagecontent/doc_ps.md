@@ -4,7 +4,7 @@ L'interopérabilité désigne la capacité des logiciels de santé à **partager
 
 Par exemple, les dates peuvent s'écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, ... Il devient ainsi évident qu'une mauvaise interprétation des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients ou des biais conséquents lors d'études cliniques.
 
-L'objectif de l'interopérabilité est de désigner **un format commun et non ambigû** pour les données partagées : les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc ...
+L'objectif de l'interopérabilité est de désigner **un format commun et non ambigu** pour les données partagées : les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc ...
 
 <div class="figure" style="width:100%; text-align: center">
     <img style="height: auto; width: 75%;" src="intro-iop.png" alt="Capture d'écran du webinaire d'introduction à l'interopérabilité" title="Capture d'écran du webinaire d'introduction à l'interopérabilité">
@@ -46,7 +46,12 @@ Pour faciliter cette collaboration entre professionnels de santé et experts tec
 
 FHIR (Fast Healthcare Interoperability Resources) est un standard international développé par l'organisation internationale Health Level 7 (HL7) pour faciliter l'échange de données de santé. Concrètement, FHIR définit des "ressources" standardisées (Patient, Consultation, Prescription, etc.) qui représentent les concepts métier que vous utilisez quotidiennement. Grâce à FHIR, les informations que vous produisez peuvent être comprises par n'importe quel système compatible, permettant ainsi une meilleure coordination des soins et réduisant les ressaisies manuelles d'informations.
 
-Ce standard est très générique pour former un socle commun à tous les cas d'usages et international : recherche, biologie, administratif, ... Ainsi, il est très peu contraignant et ne garantit pas de facto une interopérabilité parfaite. Pour gagner en interopérabilité, il faut le spécialiser pour la France, pour l'Europe et pour chaque cas d'usages dans des guides d'implémentation.
+Le standard FHIR est très générique pour former un socle commun à tous les cas d'usages et international : recherche, biologie, administratif, ...
+
+<div style="background-color: #fff3cd; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0;">
+<strong>⚠️ Point clé</strong><br/><br/>
+FHIR seul est trop générique et peu contraignant pour garantir une interopérabilité efficace. C'est précisément pour cette raison que les guides d'implémentation sont indispensables : ils ajoutent les contraintes et règles nécessaires pour assurer que les systèmes puissent réellement échanger des données de manière cohérente et exploitable dans un contexte donné (pays, programme de santé, cas d'usage).
+</div>
 
 ### Les guides d'implémentation
 
