@@ -1,6 +1,6 @@
 ### L'interopérabilité en santé
 
-L'interopérabilité désigne la capacité des logiciels de santé à partager et intégrer des données de santé.
+L'interopérabilité désigne la capacité des logiciels de santé à `partager et intégrer` des données de santé.
 Par exemple, les dates peuvent s'écrire de pleins de formats : 22 décembre 2027, 22/12/2027, 12/22/2027 aux Etats-Unis, etc .... L'objectif de l'interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, etc ...
 
 Dans votre pratique quotidienne, cela signifie que les informations patients que vous saisissez dans votre logiciel peuvent être partagées de manière sécurisée et structurée avec d'autres logiciels. Concrètement, l'interopérabilité vous permettra de :
