@@ -9,7 +9,9 @@
 
 L’interopérabilité désigne la capacité des logiciels de santé à **`partager et intégrer`** des données de santé.
 
-Par exemple, les dates peuvent s’écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, etc … L’objectif de l’interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc …
+Par exemple, les dates peuvent s’écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, etc …
+
+L’objectif de l’interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc …
 
 Capture d'écran de la [formation introduction webinaire interopérabilité](https://www.youtube.com/watch?v=JGmJWUkX1nU)
 
@@ -18,12 +20,7 @@ Dans votre pratique quotidienne, cela signifie que les informations patient que 
 * Partager des données entre différents logiciels (par exemple, les données du serveur de résultats de biologie se retrouvent automatiquement dans votre logiciel de soin).
 * Faire des projets de recherche (extraire automatiquement des informations d’intérêt)
 
-L’objectif de l’interopérabilité est de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
-
-### TODO
-
-* Une mauvaise compréhension des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients
-* 
+Une mauvaise compréhension des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients. Ainsi, l’objectif de l’interopérabilité est de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
 
 ### Le rôle des professionnels de santé (PS) et établissements de santé (ES) dans l’interopérabilité
 

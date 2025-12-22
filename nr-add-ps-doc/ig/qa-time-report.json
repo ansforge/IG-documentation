@@ -1,5 +1,5 @@
 {
-  "date" : "Mon, 22 Dec, 2025 10:58:07 +0000",
+  "date" : "Mon, 22 Dec, 2025 10:59:15 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,33 +8,43 @@
       "processes" : [
         {
           "activity" : "load",
+          "start" : 23,
+          "length" : 30
+        },
+        {
+          "activity" : "scan",
           "start" : 24,
-          "length" : 38
+          "length" : 1
         },
         {
           "activity" : "checkR4R4B",
           "start" : 24,
-          "length" : 19
+          "length" : 18
         },
         {
           "activity" : "generateNarratives",
           "start" : 24,
-          "length" : 89
+          "length" : 91
         },
         {
           "activity" : "validate",
           "start" : 24,
-          "length" : 5966
+          "length" : 6431
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 30,
+          "length" : 1
         },
         {
           "activity" : "generate1",
           "start" : 31,
-          "length" : 78
+          "length" : 82
         },
         {
           "activity" : "generate2",
           "start" : 33,
-          "length" : 99
+          "length" : 85
         },
         {
           "activity" : "generateValidationPack",
@@ -44,7 +54,7 @@
         {
           "activity" : "scanExamplesForR5",
           "start" : 40,
-          "length" : 2
+          "length" : 1
         }
       ]
     },
@@ -62,7 +72,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 33,
+          "start" : 34,
           "length" : 1
         }
       ]
@@ -73,7 +83,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 33,
+          "start" : 34,
           "length" : 1
         }
       ]
@@ -96,7 +106,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 33,
+          "start" : 34,
           "length" : 1
         }
       ]
@@ -111,7 +121,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 33,
+          "start" : 34,
           "length" : 1
         }
       ]
@@ -134,25 +144,25 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 33,
+          "start" : 34,
           "length" : 1
         }
       ]
     },
     {
       "name" : "/input/pagecontent/doc_ps.md",
-      "size" : 4694,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 33,
-          "length" : 1
-        }
-      ]
+      "size" : 4685
     },
     {
       "name" : "/input/pagecontent/collaborons.md",
-      "size" : 3223
+      "size" : 3223,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 34,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/bonnes_pratiques_implementer.md",
@@ -164,7 +174,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 33,
+          "start" : 34,
           "length" : 1
         }
       ]
@@ -187,14 +197,7 @@
     },
     {
       "name" : "/input/images/validate-fr-patient-ins.png",
-      "size" : 83326,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 33,
-          "length" : 1
-        }
-      ]
+      "size" : 83326
     },
     {
       "name" : "/input/images/new_issue.png",
@@ -206,7 +209,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 33,
+          "start" : 34,
           "length" : 1
         }
       ]
@@ -221,7 +224,14 @@
     },
     {
       "name" : "/input/images/erreurs-lignes.png",
-      "size" : 306173
+      "size" : 306173,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 34,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/temp/pages/_includes/artifacts.xml",
