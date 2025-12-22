@@ -7,9 +7,9 @@
 
 ### L’interopérabilité en santé
 
-L’interopérabilité désigne la capacité des logiciels de santé à `partager et intégrer` des données de santé. Par exemple, les dates peuvent s’écrire de pleins de formats : 22 décembre 2027, 22/12/2027, 12/22/2027 aux Etats-Unis, etc …. L’objectif de l’interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, etc …
+L’interopérabilité désigne la capacité des logiciels de santé à **`partager et intégrer`** des données de santé. Par exemple, les dates peuvent s’écrire de pleins de formats : 22 décembre 2027, 22/12/2027, 12/22/2027 aux Etats-Unis, etc …. L’objectif de l’interopérabilité est de désigner un format commun pour les dates, les résultats de biologie, les pathologies, les symptômes, etc …
 
-Dans votre pratique quotidienne, cela signifie que les informations patients que vous saisissez dans votre logiciel peuvent être partagées de manière sécurisée et structurée avec d’autres logiciels. Concrètement, l’interopérabilité vous permettra de :
+Dans votre pratique quotidienne, cela signifie que les informations patients que vous saisissez dans votre logiciel peuvent être partagées de manière sécurisée et structurée avec d’autres logiciels, et ainsi vous permettre de :
 
 * Partager facilement des données entre différents logiciels (par exemple, les données du serveur de résultats de biologie se retrouvent automatiquement dans votre logiciel de soin).
 * Faire des projets de recherche (extraire automatiquement des informations d’intérêt)
@@ -18,9 +18,9 @@ L’objectif de l’interopérabilité est de garantir que ces données restent 
 
 ### Le rôle des professionnels de santé et établissements de santé dans l’interopérabilité
 
-Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre : quelles données ont quelles valeur, quelles données sont pertinentes, quelles données doivent être échangées … Une spécification d’interopérabilité de qualité doit être validée par un expert métier.
+Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Par exemple, la structure de la posologie : elle peut contenir un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, … Il est dans ce cas indispensable qu’un prescripteur détermine tout ce qui est attendu d’une structuration de posologie pour que les experts interopérabilité puissent décrire de manière concise et précises les objets contenant ces informations.
 
-Par exemple, la structure de la posologie : elle peut contenir un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, … Il est dans ce cas indispensable qu’un prescripteur détermine tout ce qui est attendu d’une structuration de posologie pour que les experts interopérabilité puissent décrire de manière concise et précises les objets contenant ces informations.
+Idéalement, une spécification d’interopérabilité doit être construite de manière rapprochée entre un expert métier comme un professionnel de santé et un expert interopérabilité.
 
 ### Le standard FHIR
 
