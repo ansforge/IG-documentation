@@ -1,5 +1,5 @@
 {
-  "date" : "Mon, 22 Dec, 2025 09:52:16 +0000",
+  "date" : "Mon, 22 Dec, 2025 09:58:19 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,47 +8,47 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 29,
-          "length" : 39
+          "start" : 25,
+          "length" : 37
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 30,
-          "length" : 18
+          "start" : 26,
+          "length" : 17
         },
         {
           "activity" : "generateNarratives",
-          "start" : 30,
-          "length" : 78
+          "start" : 26,
+          "length" : 83
         },
         {
           "activity" : "validate",
-          "start" : 30,
-          "length" : 6132
+          "start" : 26,
+          "length" : 7004
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 36,
+          "start" : 33,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 37,
-          "length" : 76
+          "start" : 34,
+          "length" : 83
         },
         {
           "activity" : "generate2",
-          "start" : 39,
-          "length" : 77
+          "start" : 38,
+          "length" : 75
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 44,
+          "start" : 43,
           "length" : 2
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 46,
+          "start" : 45,
           "length" : 3
         }
       ]
@@ -59,7 +59,14 @@
     },
     {
       "name" : "/input/data/features.yml",
-      "size" : 159
+      "size" : 159,
+      "processes" : [
+        {
+          "activity" : "scan",
+          "start" : 26,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/github.md",
@@ -67,7 +74,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 39,
+          "start" : 38,
           "length" : 1
         }
       ]
@@ -78,7 +85,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 39,
+          "start" : 38,
           "length" : 1
         }
       ]
@@ -101,7 +108,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 39,
+          "start" : 38,
           "length" : 1
         }
       ]
@@ -116,7 +123,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 39,
+          "start" : 38,
           "length" : 1
         }
       ]
@@ -135,18 +142,25 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 39,
+          "start" : 38,
           "length" : 1
         }
       ]
     },
     {
       "name" : "/input/pagecontent/doc_ps.md",
-      "size" : 3267
+      "size" : 4116
     },
     {
       "name" : "/input/pagecontent/collaborons.md",
-      "size" : 3223
+      "size" : 3223,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 38,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/bonnes_pratiques_implementer.md",
@@ -158,7 +172,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 39,
+          "start" : 38,
           "length" : 1
         }
       ]
@@ -173,7 +187,14 @@
     },
     {
       "name" : "/template/config/_config.yml",
-      "size" : 31
+      "size" : 31,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 38,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/images",
@@ -181,14 +202,7 @@
     },
     {
       "name" : "/input/images/validate-fr-patient-ins.png",
-      "size" : 83326,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 39,
-          "length" : 1
-        }
-      ]
+      "size" : 83326
     },
     {
       "name" : "/input/images/new_issue.png",
@@ -204,18 +218,18 @@
     },
     {
       "name" : "/input/images/erreurs-lignes.png",
-      "size" : 306173
-    },
-    {
-      "name" : "/temp/pages/_includes/artifacts.xml",
-      "size" : 600,
+      "size" : 306173,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 39,
+          "start" : 38,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/temp/pages/_includes/artifacts.xml",
+      "size" : 600
     }
   ]
 }

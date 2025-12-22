@@ -16,6 +16,12 @@ Dans votre pratique quotidienne, cela signifie que les informations patients que
 
 L’objectif de l’interopérabilité est de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
 
+### Le rôle des professionnels de santé et établissements de santé dans l’interopérabilité
+
+Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre : quelles données ont quelles valeur, quelles données sont pertinentes, quelles données doivent être échangées … Une spécification d’interopérabilité de qualité doit être validée par un expert métier.
+
+Par exemple, la structure de la posologie : elle peut contenir un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, … Il est dans ce cas indispensable qu’un prescripteur détermine tout ce qui est attendu d’une structuration de posologie pour que les experts interopérabilité puissent décrire de manière concise et précises les objets contenant ces informations.
+
 ### Le standard FHIR
 
 FHIR (Fast Healthcare Interoperability Resources) est un standard international développé par HL7 pour faciliter l’échange de données de santé. Concrètement, FHIR définit des “ressources” standardisées (Patient, Consultation, Prescription, etc.) qui représentent les concepts métier que vous utilisez quotidiennement. Grâce à FHIR, les informations que vous produisez peuvent être comprises par n’importe quel système compatible, permettant ainsi une meilleure coordination des soins et réduisant les ressaisies manuelles d’informations.
