@@ -1,26 +1,28 @@
 ### L'interopérabilité en santé
 
-L'interopérabilité désigne la capacité des logiciels de santé à **`partager et intégrer`** des données de santé.
+L'interopérabilité désigne la capacité des logiciels de santé à **partager et intégrer** des données de santé.
 
-Par exemple, les dates peuvent s'écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, etc ... 
+Par exemple, les dates peuvent s'écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, ... Il devient ainsi évident qu'une mauvaise interprétation des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients ou des biais conséquents lors d'études cliniques.
 
-L'objectif de l'interopérabilité est de **désigner un format commun** pour les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc ...
+L'objectif de l'interopérabilité est de désigner **un format commun et non ambigû** pour les données partagées : les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc ...
 
 <div class="figure" style="width:100%; text-align: center">
     <img style="height: auto; width: 75%;" src="intro-iop.png" alt="Capture d'écran du webinaire d'introduction à l'interopérabilité" title="Capture d'écran du webinaire d'introduction à l'interopérabilité">
     <p>Capture d'écran du webinaire d'<a href="https://www.youtube.com/watch?v=JGmJWUkX1nU">introduction à l'interopérabilité</a></p>
 </div>
 
-Dans votre pratique quotidienne, cela signifie que les informations patient que vous saisissez dans votre logiciel peuvent être partagées de manière sécurisée et structurée avec d'autres logiciels, et ainsi vous permettre de :
+Dans votre pratique quotidienne, cela signifie que les informations patient que vous saisissez dans votre logiciel peuvent être partagées et ainsi vous permettre de :
 
 * Partager des données entre différents logiciels (par exemple, les données du serveur de résultats de biologie se retrouvent automatiquement dans votre logiciel de soin).
 * Faire des projets de recherche (extraire automatiquement des informations d'intérêt)
 
-Une mauvaise compréhension des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients. Ainsi, l'objectif de l'interopérabilité est de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
+Ainsi, l'objectif de l'interopérabilité est de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
 
 ### Le rôle des professionnels de santé (PS) et établissements de santé (ES) dans l'interopérabilité
 
-Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Par exemple, la structure de la posologie : elle peut contenir un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, ... Il est dans ce cas indispensable qu'un prescripteur détermine tout ce qui est attendu d'une structuration de posologie pour que les experts interopérabilité puissent décrire de manière concise et précis les objets contenant ces informations.
+Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Pour le cas de la structure de la posologie par exemple, la structure nécessite de s'adapter à un certain nombre de contextes : permettre d'indiquer un nombre de comprimé minimal, maximal, des conditions de prises (ex : si douleur), une durée, une fréquence, ...
+
+Il est dans ce cas indispensable qu'un prescripteur détermine tout ce qui est attendu d'une structuration de posologie pour que les experts interopérabilité puissent décrire de manière concise et précis les objets contenant ces informations.
 
 Idéalement, une spécification d'interopérabilité doit être construite de manière rapprochée entre un expert métier comme un professionnel de santé et un expert interopérabilité.
 
