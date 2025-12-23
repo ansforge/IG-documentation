@@ -73,9 +73,17 @@ Lien vers quelques exemples : [https://github.com/HL7/US-Core/blob/master/sushi-
 
 Le développement de l’IG se fait essentiellement dans le dossier [input](https://build.fhir.org/ig/FHIR/ig-guidance/using-templates.html#igroot-input). Celui-ci contient les pages kramdown ainsi que les artéfacts FHIR (profils, exemples, terminologies, …)
 
-### Installer les dépendances
+### Générer le guide d’implémentation en utilisant les workflows ANS
 
-#### Windows
+Des workflows ont été développés, utilisant les GitHub actions pour éviter de générer en local et de devoir installer les dépendances.
+
+1/ Rajouter le [dossier .github](https://github.com/ansforge/IG-modele/tree/main/.github) au répertoire GitHub. 2/ Lancer l’action dans l’onglet `Actions`, qui va générer une branche gh-pages 3/ Paramétrer le répertoire dans l’onglet `pages` pour lancer un déploiement sur la branche gh-pages 4/ L’IG en version intégration continue devient accessible à l’adresse https://[ajouter_nom_org].github.io/[ajouter_nom_repo]/[ajouter_nom_de_la_branche]/ig
+
+Le code source du workflow est [disponible sur GitHub](https://github.com/ansforge/IG-workflows)
+
+### Générer le guide d’implémentation en local
+
+#### Windows : installer les dépendances et générer un guide d’implémentation
 
 Prérequis :
 
@@ -127,7 +135,7 @@ Vous pouvez maintenant commencer à développer votre implementation guide ! :)
 * Documentation vers FSH : https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html
 * Documentation sur l’IG Publisher : https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-QuickStart
 
-#### MAC / Linux
+#### MAC / Linux : installer les dépendances et générer un guide d’implémentation
 
 ##### Prérequis : NodeJS, Java, Ruby et Jekyll
 

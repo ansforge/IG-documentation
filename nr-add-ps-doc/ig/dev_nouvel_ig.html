@@ -224,7 +224,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#création-dun-nouveau-projet" id="markdown-toc-création-dun-nouveau-projet">Création d’un nouveau projet</a></li>
   <li><a href="#développement-de-lig" id="markdown-toc-développement-de-lig">Développement de l’IG</a></li>
-  <li><a href="#installer-les-dépendances" id="markdown-toc-installer-les-dépendances">Installer les dépendances</a></li>
+  <li><a href="#générer-le-guide-dimplémentation-en-utilisant-les-workflows-ans" id="markdown-toc-générer-le-guide-dimplémentation-en-utilisant-les-workflows-ans">Générer le guide d’implémentation en utilisant les workflows ANS</a></li>
+  <li><a href="#générer-le-guide-dimplémentation-en-local" id="markdown-toc-générer-le-guide-dimplémentation-en-local">Générer le guide d’implémentation en local</a></li>
   <li><a href="#publication-dune-nouvelle-version-dun-guide-dimplémentation" id="markdown-toc-publication-dune-nouvelle-version-dun-guide-dimplémentation">Publication d’une nouvelle version d’un guide d’implémentation</a></li>
 </ul>
 
@@ -301,9 +302,20 @@ Ces pages sont à ajouter dans input/pagecontent avec l’extension .md. A noter
 
 <p>Le développement de l’IG se fait essentiellement dans le dossier <a href="https://build.fhir.org/ig/FHIR/ig-guidance/using-templates.html#igroot-input">input</a>. Celui-ci contient les pages kramdown ainsi que les artéfacts FHIR (profils, exemples, terminologies, …)</p>
 
-<h3 id="installer-les-dépendances">Installer les dépendances</h3>
+<h3 id="générer-le-guide-dimplémentation-en-utilisant-les-workflows-ans">Générer le guide d’implémentation en utilisant les workflows ANS</h3>
 
-<h4 id="windows">Windows</h4>
+<p>Des workflows ont été développés, utilisant les GitHub actions pour éviter de générer en local et de devoir installer les dépendances.</p>
+
+<p>1/ Rajouter le <a href="https://github.com/ansforge/IG-modele/tree/main/.github">dossier .github</a> au répertoire GitHub.
+2/ Lancer l’action dans l’onglet <code class="language-plaintext highlighter-rouge">Actions</code>, qui va générer une branche gh-pages
+3/ Paramétrer le répertoire dans l’onglet <code class="language-plaintext highlighter-rouge">pages</code> pour lancer un déploiement sur la branche gh-pages
+4/ L’IG en version intégration continue devient accessible à l’adresse https://[ajouter_nom_org].github.io/[ajouter_nom_repo]/[ajouter_nom_de_la_branche]/ig</p>
+
+<p>Le code source du workflow est <a href="https://github.com/ansforge/IG-workflows">disponible sur GitHub</a></p>
+
+<h3 id="générer-le-guide-dimplémentation-en-local">Générer le guide d’implémentation en local</h3>
+
+<h4 id="windows--installer-les-dépendances-et-générer-un-guide-dimplémentation">Windows : installer les dépendances et générer un guide d’implémentation</h4>
 
 <p>Prérequis :</p>
 
@@ -370,7 +382,7 @@ Décompresser le dossier, et le mettre dans un chemin où il n’y a pas d’esp
   <li>Documentation sur l’IG Publisher : https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-QuickStart</li>
 </ul>
 
-<h4 id="mac--linux">MAC / Linux</h4>
+<h4 id="mac--linux--installer-les-dépendances-et-générer-un-guide-dimplémentation">MAC / Linux : installer les dépendances et générer un guide d’implémentation</h4>
 
 <h5 id="prérequis--nodejs-java-ruby-et-jekyll">Prérequis : NodeJS, Java, Ruby et Jekyll</h5>
 
@@ -516,7 +528,7 @@ Ensuite, il suffit de lancer le workflow de release sur GitHub.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 23, 2025 14:56+0000">2025-12-23</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 23, 2025 15:04+0000">2025-12-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
