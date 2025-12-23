@@ -20,7 +20,7 @@ Cette documentation est séparée en trois parties afin d’adapter le discours 
 * Aux [FHIR modelers](dev_nouvel_ig.md), qui créent ces guides et profilent des ressources
 * Aux [FHIR implementers](demarrer_sur_fhir.md), qui lisent ces guides et développent des APIs
 
-La création des guides d’implémentation n’est pas réservée aux seuls organismes de normalisation et de régulation (comme InteropSanté ou l’ANS) : tout acteur peut en publier afin de documenter ses interfaces, à condition qu’elles soient cohérentes avec l’écosystème français et compatibles avec les guides d’implémentation nationaux, notamment permis grâce au mécanisme d’héritage. L’objectif de ces guides est d’encourager la participation de l’ensemble des parties prenantes.
+La création des guides d’implémentation n’est pas réservée aux seuls organismes de normalisation et de régulation (comme InteropSanté ou l’ANS) : tout acteur peut en publier afin de documenter un besoin métier identifier ou une interface, à condition qu’elles soient cohérentes avec l’écosystème français et compatibles avec les guides d’implémentation nationaux, notamment permis grâce au mécanisme d’héritage. L’objectif de ces guides est d’encourager la participation de l’ensemble des parties prenantes.
 
 ### L’intérêt des guides d’implémentation
 
@@ -68,7 +68,7 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2025-12-23T15:30:06+00:00",
+  "date" : "2025-12-23T15:35:12+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
