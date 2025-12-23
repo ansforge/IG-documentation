@@ -73,8 +73,6 @@ Des workflows ont été développés, utilisant les GitHub actions pour éviter 
 3/ Paramétrer le répertoire dans l'onglet `pages` pour lancer un déploiement sur la branche gh-pages
 4/ L'IG en version intégration continue devient accessible à l'adresse https://[ajouter_nom_org].github.io/[ajouter_nom_repo]/[ajouter_nom_de_la_branche]/ig
 
-
-
 Le code source du workflow est [disponible sur GitHub](https://github.com/ansforge/IG-workflows)
 
 ### Générer le guide d'implémentation en local
