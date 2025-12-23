@@ -261,47 +261,41 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#les-guides-dimplémentation" id="markdown-toc-les-guides-dimplémentation">Les guides d’implémentation</a></li>
   <li><a href="#a-qui-est-destiné-cette-documentation-" id="markdown-toc-a-qui-est-destiné-cette-documentation-">A qui est destiné cette documentation ?</a></li>
+  <li><a href="#lintérêt-des-guides-dimplémentation" id="markdown-toc-lintérêt-des-guides-dimplémentation">L’intérêt des guides d’implémentation</a></li>
   <li><a href="#la-liste-des-guides-dimplémentation-de-lans" id="markdown-toc-la-liste-des-guides-dimplémentation-de-lans">La liste des guides d’implémentation de l’ANS</a></li>
   <li><a href="#reporter-un-problème-ou-une-suggestion-damélioration" id="markdown-toc-reporter-un-problème-ou-une-suggestion-damélioration">Reporter un problème ou une suggestion d’amélioration</a></li>
+  <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a></li>
 </ul>
 
 </div>
-
-<p>Le guide d’implémentation est un support de publication des spécifications d’interopérabilité, combinant une documentation technique et une documentation narrative. Il n’est pas réservé aux seuls organismes de normalisation (comme InteropSanté ou l’ANS) : tout acteur peut en publier afin de rendre visibles ses spécifications, à condition qu’elles soient cohérentes avec l’écosystème français et compatibles avec les guides d’implémentation nationaux, notamment permis grâce au mécanisme d’héritage.</p>
-
-<p>Ce guide d’implémentation “documentation” contient l’ensemble des bonnes pratiques de création de guides d’implémentation pour les FHIR modelers, ainsi que la documentation sur “comment lire un guide d’implémentation” pour un implémenteur.</p>
-
-<p>L’objectif est d’encourager la participation de l’ensemble des parties prenantes. Bien qu’il existe déjà des publications versionnées, celles-ci ne sont pas définitives : elles restent ouvertes à l’évolution et peuvent être adaptées en fonction des contributions et des retours de l’ensemble des lecteurs.</p>
-
-<h3 id="les-guides-dimplémentation">Les guides d’implémentation</h3>
-
-<p>Un guide d’implémentation se présente sous forme d’un site web contenant un ensemble cohérent de ressources de conformité pour répondre à une problématique particulière. Le guide d’implémentation est versionné (l’ensemble des versions reste accessible) et packagé.</p>
-
-<p>La meilleure pratique consiste à créer un guide d’implémentation par projet bien spécifique, cela permet :</p>
-
-<ul>
-  <li>De versionner séparément, on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées</li>
-  <li>Chacune des specs gère ses dépendances indépendamment des autres (aux ressources du ci-sis, aux profils interopsanté), chacune de ces dépendances peuvent être mises à jour séparément</li>
-  <li>Les urls sont claires, on sait directement de quelle spécification est issue chaque profil, et on peut directement accéder à l’IG en connaissant l’url canonique de l’IG</li>
-  <li>Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d’usage, en héritant de tout ou partie, ou pour décrire une implémentation précise</li>
-  <li>L’IG doit obligatoirement hériter des profils FHIR réalisés par InteropSanté et/ou par l’ANS s’ils existent.</li>
-</ul>
-
-<p>Documentation : <a href="https://www.hl7.org/fhir/implementationguide.html">ImplementationGuide</a>, <a href="https://confluence.hl7.org/display/FHIR/NPM+Package+Specification">Packages</a></p>
+<p>Le guide d’implémentation est un support de publication des spécifications d’interopérabilité, combinant une documentation technique et une documentation narrative sous format web pour définir de manière précise comment sont échangées les données de santé.</p>
 
 <h3 id="a-qui-est-destiné-cette-documentation-">A qui est destiné cette documentation ?</h3>
 
-<p>Il est destiné à celles et ceux qui utilisent FHIR :</p>
+<p>Cette documentation est séparée en trois parties afin d’adapter le discours à chaque profil :</p>
 
 <ul>
-  <li>Aux professionnels de santé et établissements de santé, qui ont la vision métier et ont la capacité de challenger ces travaux.</li>
-  <li>Aux FHIR modelers, qui créent ces guides et profilent des ressources</li>
-  <li>Aux FHIR implementers, qui lisent ces guides et développent des APIs</li>
+  <li>Aux <a href="doc_ps.html">professionnels de santé et établissements de santé</a>, qui ont la vision métier et ont la capacité de challenger ces travaux.</li>
+  <li>Aux <a href="dev_nouvel_ig.html">FHIR modelers</a>, qui créent ces guides et profilent des ressources</li>
+  <li>Aux <a href="demarrer_sur_fhir.html">FHIR implementers</a>, qui lisent ces guides et développent des APIs</li>
 </ul>
 
-<p>Pour plus d’informations sur la modélisation ou l’implémentation FHIR, il suffit de naviguer au sein du menu de ci-dessus.</p>
+<p>La création des guides d’implémentation n’est pas réservée aux seuls organismes de normalisation et de régulation (comme InteropSanté ou l’ANS) : tout acteur peut en publier afin de documenter ses interfaces, à condition qu’elles soient cohérentes avec l’écosystème français et compatibles avec les guides d’implémentation nationaux, notamment permis grâce au mécanisme d’héritage. L’objectif de ces guides est d’encourager la participation de l’ensemble des parties prenantes.</p>
+
+<h3 id="lintérêt-des-guides-dimplémentation">L’intérêt des guides d’implémentation</h3>
+
+<p>Le guide d’implémentation est versionné (l’ensemble des versions reste accessible) et packagé. Une spécification n’est jamais figée : elles restent ouvertes à l’évolution et peuvent être adaptées en fonction des contributions et des retours de l’ensemble des lecteurs.</p>
+
+<p>Chaque guide d’implémentation est associé à un périmètre, à un cas d’usage, à un métier, ce qui permet permet :</p>
+
+<ul>
+  <li>De gérer les versions des guides de manière séparée : on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées</li>
+  <li>De gérer les dépendances indépendamment des autres guides : dépendances aux ressources du ci-sis, aux profils interopsanté, …</li>
+  <li>Les urls sont claires, on sait directement de quelle spécification est issue chaque profil, et on peut directement accéder à l’IG en connaissant l’url canonique de l’IG</li>
+  <li>Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d’usage, en héritant de tout ou partie, ou pour décrire une implémentation précise</li>
+  <li>L’IG doit obligatoirement hériter des profils FHIR réalisés par InteropSanté et/ou par l’ANS (s’ils existent) pour être conforme au cadre national.</li>
+</ul>
 
 <h3 id="la-liste-des-guides-dimplémentation-de-lans">La liste des guides d’implémentation de l’ANS</h3>
 
@@ -319,6 +313,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>L’issue doit contenir un titre, et une description la plus détaillée possible avec idéalement une proposition de changement pour faciliter et améliorer la qualité des modifications apportées.</p>
 
+<h3 id="documentation">Documentation</h3>
+
+<ul>
+  <li><a href="https://www.hl7.org/fhir/implementationguide.html">ImplementationGuide</a></li>
+  <li><a href="https://confluence.hl7.org/display/FHIR/NPM+Package+Specification">Packages</a></li>
+</ul>
 
 
 
@@ -360,7 +360,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 23, 2025 15:04+0000">2025-12-23</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 23, 2025 15:30+0000">2025-12-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
