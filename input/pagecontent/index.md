@@ -24,7 +24,7 @@ Chaque guide d'implémentation est associé à un périmètre, à un cas d'usage
 
 ### La liste des guides d'implémentation de l'ANS
 
-La liste des guides d'implémentation est accessible [à cette adresse](https://interop.esante.gouv.fr/ig/).
+La liste des guides d'implémentation est accessible [sur le catalogue des guides de l'ANS](https://interop.esante.gouv.fr/ig/).
 
 ### Reporter un problème ou une suggestion d'amélioration
 
