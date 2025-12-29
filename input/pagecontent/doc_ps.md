@@ -11,10 +11,12 @@ L'objectif de l'interopérabilité est de désigner **un format commun et non am
     <p>Capture d'écran du webinaire d'<a href="https://www.youtube.com/watch?v=JGmJWUkX1nU">introduction à l'interopérabilité</a></p>
 </div>
 
-Dans votre pratique quotidienne, cela signifie que les informations patient que vous saisissez dans un logiciel peuvent être partagées pour débloquer tout leur potentiel :
+Dans votre pratique quotidienne, cela signifie que les informations patient et données de santé peuvent être partagées et exploitées :
 
-* Aggréger les données issues de différents logiciels dans un seul logiciel (par exemple, les données du serveur de résultats de biologie se retrouvent automatiquement dans votre logiciel de soin).
-* Faire des projets de recherche (extraire automatiquement des informations d'intérêt)
+* Récupération automatique des données patient (élimination des doubles saisies et réduction des erreurs de transcription)
+* Amélioration de la coordination des soins entre confrères (partage sécurisé d'informations cliniques)
+* Gain de temps en consultation grâce à la disponibilité instantanée des résultats d'examens
+* Simplification de mise en place de projets de recherche (extraire automatiquement des informations d'intérêt)
 
 L'interopérabilité permet de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.
 
