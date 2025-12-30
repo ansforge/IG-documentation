@@ -1,3 +1,13 @@
+<blockquote class="dragon">
+<p>
+  Ce guide d'implémentation est l'équivalent national de l'ig guidance (https://build.fhir.org/ig/FHIR/ig-guidance).
+</p>
+<p>
+  Cette documentation explique comment créer, publier et maintenir des guides d'implémentation FHIR pour l'écosystème français de santé. Elle s'adresse aux professionnels de santé qui challengent les travaux d'interopérabilité, aux FHIR modelers qui créent et profilent les ressources, et aux FHIR implementers qui développent les APIs. L'objectif est de permettre à tout acteur de publier des spécifications versionnées et packagées, cohérentes avec le cadre national, afin de définir précisément comment échanger les données de santé et favoriser la participation de l'ensemble des parties prenantes.
+</p>
+</blockquote>
+{% endif %}
+
 Le guide d’implémentation est un support de publication des spécifications d’interopérabilité, combinant une documentation technique et une documentation narrative sous format web pour définir de manière précise comment sont échangées les données de santé. 
 
 ### A qui est destiné cette documentation ?
