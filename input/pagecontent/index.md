@@ -1,4 +1,4 @@
-<blockquote class="dragon">
+<blockquote class="dragon" style="width: 65%">
 <p>
   Ce guide d'implémentation est l'équivalent national de l'ig guidance (https://build.fhir.org/ig/FHIR/ig-guidance).
 </p>
