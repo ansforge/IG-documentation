@@ -235,7 +235,7 @@ Title: "Titre du modèle logique"
 Description: "Description du modèle logique."
 ```
 
-#### Exemple
+#### Exemples
 
 | **Paramètre** | **Format** |
 | --- | --- |
