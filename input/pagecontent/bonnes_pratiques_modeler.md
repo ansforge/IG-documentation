@@ -213,7 +213,7 @@ Description: "Description de l'extension."
 Context: Sur quoi s'applique l'extension
 ```
 
-#### StructureDefinition : logic
+#### StructureDefinition : modèle logique
 
 | **Paramètre** | **Format** |
 | --- | --- |
