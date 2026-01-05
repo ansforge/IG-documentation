@@ -671,7 +671,7 @@ Description: "Description du modèle logique."
   </tbody>
 </table>
 
-<p>Entête du fichier FSH :</p>
+<p>Exemples d’entête de fichiers FSH :</p>
 
 <pre><code class="language-fsh">Instance: uuid
 InstanceOf: Resource
@@ -679,143 +679,6 @@ Title: "Titre de l'exemple"
 Description: "Description de l'exemple."
 Usage: #example
 </code></pre>
-
-<h4 id="questionnaire">Questionnaire</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th><strong>Paramètre</strong></th>
-      <th><strong>Format</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>nom-du-questionnaire</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>NomDuQuestionnaire</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Titre du questionnaire</td>
-    </tr>
-    <tr>
-      <td>code</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>Description du questionnaire.</td>
-    </tr>
-    <tr>
-      <td>nom du fichier</td>
-      <td>Instances/NomDuQuestionnaireQuestionnaire.fsh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Entête du fichier FSH :</p>
-
-<pre><code class="language-fsh">Instance: nom-du-questionnaire
-InstanceOf: Questionnaire
-Title: "Titre du questionnaire"
-Description: "Description du questionnaire."
-Usage: #definition
-
-* name = "NomDuQuestionnaire"
-</code></pre>
-
-<p><strong>Note :</strong> généralement, les ressources Questionnaire ne sont pas laissées au format FHIR Shorthand pour des raisons de performance (temps de construction du guide).</p>
-
-<h4 id="plandefinition">PlanDefinition</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th><strong>Paramètre</strong></th>
-      <th><strong>Format</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>nom-du-processus</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>NomDuProcessus</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Titre du processus</td>
-    </tr>
-    <tr>
-      <td>code</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>Description du processus.</td>
-    </tr>
-    <tr>
-      <td>nom du fichier</td>
-      <td>Instances/NomDuProcessusPlanDefinition.fsh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Entête du fichier FSH :</p>
-
-<pre><code class="language-fsh">Instance: nom-du-processus
-InstanceOf: PlanDefinition
-Title: "Titre du processus"
-Description: "Description du processus."
-Usage: #definition
-
-* name = "NomDuProcessus"
-</code></pre>
-
-<h4 id="organization">Organization</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th><strong>Paramètre</strong></th>
-      <th><strong>Format</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>nom-de-l-organisation</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>NomDeLOrganisation</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Titre de l’organisation</td>
-    </tr>
-    <tr>
-      <td>code</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>Description de l’organisation.</td>
-    </tr>
-    <tr>
-      <td>nom du fichier</td>
-      <td>Examples/NomDeLOrganizationExample.fsh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Entête du fichier FSH :</p>
 
 <pre><code class="language-fsh">Instance: nom-de-l-organisation
 InstanceOf: Organization
@@ -826,45 +689,6 @@ Usage: #definition
 * name = "NomDeLOrganization"
 </code></pre>
 
-<h4 id="location">Location</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th><strong>Paramètre</strong></th>
-      <th><strong>Format</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>nom-du-lieu</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>NomDuLieu</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Titre du lieu</td>
-    </tr>
-    <tr>
-      <td>code</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>Description du lieu.</td>
-    </tr>
-    <tr>
-      <td>nom du fichier</td>
-      <td>Examples/NomDeLaRessourceExample.fsh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Entête du fichier FSH :</p>
-
 <pre><code class="language-fsh">Instance: nom-du-lieu
 InstanceOf: Location
 Title: "Titre du lieu"
@@ -873,45 +697,6 @@ Usage: #example
 
 * name = "NomDuLieu"
 </code></pre>
-
-<h4 id="practitionerrole">PractitionerRole</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th><strong>Paramètre</strong></th>
-      <th><strong>Format</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>nom-du-role-du-professionnel</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>NomDuRoleDuProfessionnel</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Titre du rôle du professionnel</td>
-    </tr>
-    <tr>
-      <td>code</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>Description du rôle du professionnel.</td>
-    </tr>
-    <tr>
-      <td>nom du fichier</td>
-      <td>Examples/NomDeLaRessourceExample.fsh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Entête du fichier FSH :</p>
 
 <pre><code class="language-fsh">Instance: nom-du-role-du-professionnel
 InstanceOf: PractitionerRole
@@ -1020,60 +805,6 @@ Usage: #definition
 * name = "NomDuCapabilityStatement"
 </code></pre>
 
-<h4 id="operationdefinition">OperationDefinition</h4>
-
-<table class="grid">
-  <thead>
-    <tr>
-      <th><strong>Paramètre</strong></th>
-      <th><strong>Format</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>Ressource-code</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>NomDeLOperation</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Titre de l’opération</td>
-    </tr>
-    <tr>
-      <td>code</td>
-      <td>nomDeLOperation</td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>Description de l’opération.</td>
-    </tr>
-    <tr>
-      <td>nom du fichier</td>
-      <td>Instances/NomDeLaRessourceOperationDefinition.fsh</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Entête du fichier FSH :</p>
-
-<pre><code class="language-fsh">Instance: nom-de-l-operation
-InstanceOf: OperationDefinition
-Title: "Titre de l'opération"
-Description: "Description de l'opération."
-Usage: #definition
-
-* name = "NomDeLOperation"
-* kind = #operation
-* status = #active
-* code = #nomDeLOperation
-* system = true|false
-* type = true|false
-* instance = true|false
-</code></pre>
-
 <h4 id="searchparameter">SearchParameter</h4>
 
 <table class="grid">
@@ -1167,7 +898,7 @@ Usage: #definition
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 13:45+0000">2026-01-05</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 13:58+0000">2026-01-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
