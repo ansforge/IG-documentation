@@ -86,11 +86,6 @@ Documentation :
 * [https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-CanonicalURL]
 * [https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs]
 
-### FSH / SUSHI
-
-Sushi et FSH permettent de factoriser beaucoup d'informations, et de les centraliser afin d'en faciliter l'accès et la gestion.
-Il est recommandé de faire bénéficier au maximum les projets de cette possibilité de centraliser les informations redondantes.
-
 ### Release d'un IG FHIR
 
 Le **statut** devra être placé à draft lorsque celui-ci n'est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft.
@@ -115,10 +110,9 @@ Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les 
 | final-text | active | final-text | milestone|
 | withdrawn ou deprecated | retired | resp. withdrawn ou retired | withdrawal |
 
-#### Extensions et ValueSets
+### FSH / SUSHI
 
-Il est recommandé de classer les extensions et les valueSets source (FSH) dans des sous-répertoires spécifiques, input\fsh\Extensions et input\fsh\ValueSets.
-Les structure-definitions des profils seront placés dans input\fsh.
+FSH est une grammaire permettant de créer des artéfacts FHIR et de les générer au moment de la création du guide d'implémentation.
 
 #### Gestion des alias
 
@@ -160,6 +154,10 @@ Règles d'utilisation de GitHub :
 * Une fois la Pull Request validée, c'est à l'auteur des modifications de fusionner (=merge) la pull request avec la branche principale "main".
 
 A noter qu'aucune modification doit être faite directement dans main.
+
+#### Gestion des répertoires des guides d'implémentation
+
+Une structure squelette indique sous quels dossiers placer les artéfacts fsh dans le guide d'implémentation [modèle](https://github.com/ansforge/IG-modele/tree/main/input/fsh)
 
 ### Modèle de nommage par ressource FHIR
 
