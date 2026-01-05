@@ -23,8 +23,7 @@ pages:
     doc_ps.md:
         title: Professionnels de santé
     mod_nouvel_ig.md:
-        mod_nouvel_ig.md:
-            title: Quick start IG
+        title: Quick start IG
         mod_bonnes_pratiques.md:
             title: Bonnes pratiques
         mod_erreurs.md:
@@ -32,8 +31,7 @@ pages:
         mod_github.md:
             title: Usage de GitHub
     impl_demarrer_sur_fhir.md:
-        impl_demarrer_sur_fhir.md:
-            title: Quick start FHIR
+        title: Quick start FHIR
         impl_bonnes_pratiques.md:
             title: Bonnes pratiques
         impl_instance_hapi.md:
