@@ -1,6 +1,7 @@
-# Collaborons - Documentation des guides d'implémentation de l'ANS v0.1.8
+# Collaborons - Documentation des guides d'implémentation de l'ANS v0.1.9
 
 * [**Table of Contents**](toc.md)
+* [**Autres Ressources**](autres_ressources.md)
 * **Collaborons**
 
 ## Collaborons

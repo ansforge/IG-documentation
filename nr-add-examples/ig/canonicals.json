@@ -3,7 +3,7 @@
     "id" : "ans.fr.documentation",
     "type" : "ImplementationGuide",
     "url" : "https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation",
-    "version" : "0.1.8",
+    "version" : "0.1.9",
     "name" : "Documentation"
   }
 ]

@@ -1,11 +1,12 @@
-# ans.fr.documentation#0.1.8: Documentation des guides d'implémentation de l'ANS
+# ans.fr.documentation#0.1.9: Documentation des guides d'implémentation de l'ANS
 
 ## Pages
 
 * [Accueil](index.md)
 * [Doc Implementer](doc_implementer.md)
-* [A propos de ce guide](about.md)
+* [A propos](about.md)
 * [Déployer une instance HAPI](instance_hapi.md)
+* [Professionnels de santé](doc_ps.md)
 * [Artifacts Summary](artifacts.md)
 * [Bonnes pratiques](bonnes_pratiques_modeler.md)
 * [Bonnes pratiques](bonnes_pratiques_implementer.md)

@@ -1,4 +1,4 @@
-# Les erreurs courantes - Documentation des guides d'implémentation de l'ANS v0.1.8
+# Les erreurs courantes - Documentation des guides d'implémentation de l'ANS v0.1.9
 
 * [**Table of Contents**](toc.md)
 * [**Doc Modeler**](doc_modeler.md)
@@ -12,7 +12,7 @@
 
 ### Erreur Missing Snapshot
 
-FSH nécessite d’avoir des packages avec snapshot et differential. Il est possible de générer les snapshots dans le FHIR CACHE:
+FSH nécessite d’avoir des packages avec snapshot et differential. Les packages historiques (<2024) n’avaient pas de snapshot, engendrant des erreurs de générations lorsque ceux-ci sont mis en dépendaces. Pour régler ce problème, il est possible de générer les snapshots dans le FHIR CACHE :
 
 * Installer dotnet sdk : https://dotnet.microsoft.com/en-us/download
 * Lancer la commande `dotnet tool install --global Firely.Terminal --version 3.0.0`
