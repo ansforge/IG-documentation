@@ -192,7 +192,7 @@ Description: "Description du modèle logique."
 
 ```
 
-#### Exemple
+#### Exemples
 
 | | |
 | :--- | :--- |
