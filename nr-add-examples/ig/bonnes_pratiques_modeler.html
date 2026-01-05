@@ -222,14 +222,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>  <!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#critères-de-qualité" id="markdown-toc-critères-de-qualité">Critères de qualité</a></li>
-  <li><a href="#critères-de-maturité" id="markdown-toc-critères-de-maturité">Critères de maturité</a></li>
-  <li><a href="#création-des-ressources-de-conformité" id="markdown-toc-création-des-ressources-de-conformité">Création des ressources de conformité</a></li>
+  <li><a href="#les-critères-de-qualité-et-de-maturité" id="markdown-toc-les-critères-de-qualité-et-de-maturité">Les critères de qualité et de maturité</a></li>
+  <li><a href="#bonnes-pratiques-de-création-des-ressources-de-conformité" id="markdown-toc-bonnes-pratiques-de-création-des-ressources-de-conformité">Bonnes pratiques de création des ressources de conformité</a></li>
   <li><a href="#règles-de-nommage-des-ressources-de-conformité" id="markdown-toc-règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</a></li>
-  <li><a href="#les-url-canoniques" id="markdown-toc-les-url-canoniques">Les URL canoniques</a></li>
   <li><a href="#release-dun-ig-fhir" id="markdown-toc-release-dun-ig-fhir">Release d’un IG FHIR</a></li>
-  <li><a href="#fsh--sushi" id="markdown-toc-fsh--sushi">FSH / SUSHI</a></li>
-  <li><a href="#exemples-de-guides-dimplémentation" id="markdown-toc-exemples-de-guides-dimplémentation">Exemples de guides d’implémentation</a></li>
+  <li><a href="#fsh--sushi---gestion-des-alias" id="markdown-toc-fsh--sushi---gestion-des-alias">FSH / SUSHI - gestion des alias</a></li>
   <li><a href="#le-choix-de-la-version-fhir" id="markdown-toc-le-choix-de-la-version-fhir">Le choix de la version FHIR</a></li>
   <li><a href="#règles-dutilisation-de-github" id="markdown-toc-règles-dutilisation-de-github">Règles d’utilisation de GitHub</a></li>
   <li><a href="#modèle-de-nommage-par-ressource-fhir" id="markdown-toc-modèle-de-nommage-par-ressource-fhir">Modèle de nommage par ressource FHIR</a></li>
@@ -239,7 +236,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>La mise en place de niveaux de maturité des guides d’implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. En attendant la publication de ces niveaux de maturité, il est important de respecter au maximum les critères indiqués ci-dessous.</p>
 
-<h3 id="critères-de-qualité">Critères de qualité</h3>
+<h3 id="les-critères-de-qualité-et-de-maturité">Les critères de qualité et de maturité</h3>
+
+<h4 id="critères-de-qualité">Critères de qualité</h4>
 
 <ul>
   <li>Respect des bonnes pratiques nationales tel que les règles de nommages indiquées ci-dessous</li>
@@ -250,7 +249,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Publication de l’IG sans erreurs (cf session Q/A)</li>
 </ul>
 
-<h3 id="critères-de-maturité">Critères de maturité</h3>
+<h4 id="critères-de-maturité">Critères de maturité</h4>
 
 <ul>
   <li>Respect de l’ensemble des critères de qualité mentionnés ci-dessus</li>
@@ -260,7 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Nombre de commentaires lors des phases de concertation</li>
 </ul>
 
-<h3 id="création-des-ressources-de-conformité">Création des ressources de conformité</h3>
+<h3 id="bonnes-pratiques-de-création-des-ressources-de-conformité">Bonnes pratiques de création des ressources de conformité</h3>
 
 <h4 id="la-définition-des-profils-et-des-extensions">La définition des profils et des extensions</h4>
 
@@ -293,7 +292,7 @@ TODO : rajouter lien vers la procédure de création d'un VS -->
 
 <h3 id="règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</h3>
 
-<p><a name="l528">​</a>Ces règles de nommage ont été établies en s’inspirant des ressources us-core et des bonnes pratiques indiquées <a href="[https://build.fhir.org/ig/HL7/crmi-ig/artifact-conventions.html](https://hl7.org/fhir/uv/crmi/STU1/)">ici</a>.</p>
+<p><a name="l519">​</a>Ces règles de nommage ont été établies en s’inspirant des ressources us-core et des bonnes pratiques indiquées <a href="[https://build.fhir.org/ig/HL7/crmi-ig/artifact-conventions.html](https://hl7.org/fhir/uv/crmi/STU1/)">ici</a>.</p>
 
 <table class="grid">
   <thead>
@@ -352,28 +351,28 @@ TODO : rajouter lien vers la procédure de création d'un VS -->
 
 <p>La documentation officielle se trouve sur le <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&amp;Guidelines">confluence d’HL7</a></p>
 
-<h3 id="les-url-canoniques">Les URL canoniques</h3>
+  <!-- NR - URL canoniques commentées : construites automatiquement donc pas besoin de focus particulier
 
-<p>L’URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d’identifier de manière unique chaque implementation guide (IG) et chaque profil.</p>
+### Les URL canoniques
 
-<p>L’<strong>URL canonique de l’IG</strong> permet d’accéder à sa page web, c’est à dire la spécification narrative et technique (ex : https://www.hl7.org/fhir/us/core).
-Dans le cas des IG de l’ANS, l’url canonique est https://interop.esante.gouv.fr/ig/[fhir/][code]</p>
+L'URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d'identifier de manière unique chaque implementation guide (IG) et chaque profil.
 
-<p>L’<strong>URL canonique des ressources de conformité</strong> permet d’identifier de manière unique chaque ressource de conformité. A partir de ce lien, il y a une API Rest FHIR, qui permet d’accéder aux ressources de conformité conformément à la FHIR search (https://www.hl7.org/fhir/search.html). On obtient ainsi les url canoniques de chaque profil (ex : http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient).
-L’URL canonique des profils est construite au format : [base]/[ResourceType]/[id] pour qu’elle corresponde à une requête FHIR Search</p>
+L'**URL canonique de l'IG** permet d'accéder à sa page web, c'est à dire la spécification narrative et technique (ex : https://www.hl7.org/fhir/us/core).
+Dans le cas des IG de l'ANS, l'url canonique est https://interop.esante.gouv.fr/ig/[fhir/][code]
 
-<p>L’outil HL7 IG Publisher, combiné avec sushi, gère automatiquement certaines redirections et génère automatiquement les urls des profils à partir de l’url base indiquée.</p>
+L'**URL canonique des ressources de conformité** permet d'identifier de manière unique chaque ressource de conformité. A partir de ce lien, il y a une API Rest FHIR, qui permet d'accéder aux ressources de conformité conformément à la FHIR search (https://www.hl7.org/fhir/search.html). On obtient ainsi les url canoniques de chaque profil (ex : http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient).
+L'URL canonique des profils est construite au format : [base]/[ResourceType]/[id] pour qu'elle corresponde à une requête FHIR Search
 
-<p>Ainsi, l’url canonique d’un profil permet de facilement retrouver la spécification d’où elle est issue de manière très efficace et claire.</p>
+L'outil HL7 IG Publisher, combiné avec sushi, gère automatiquement certaines redirections et génère automatiquement les urls des profils à partir de l'url base indiquée.
 
-<p>A noter le ResourceType doit respecter la même casse et le même nom que les ResourceName FHIR.</p>
+Ainsi, l'url canonique d'un profil permet de facilement retrouver la spécification d'où elle est issue de manière très efficace et claire.
 
-<p>Documentation :</p>
+A noter le ResourceType doit respecter la même casse et le même nom que les ResourceName FHIR.
 
-<ul>
-  <li>[https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-CanonicalURL]</li>
-  <li>[https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs]</li>
-</ul>
+Documentation :
+
+* [https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-CanonicalURL]
+* [https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs] -->
 
 <h3 id="release-dun-ig-fhir">Release d’un IG FHIR</h3>
 
@@ -434,11 +433,9 @@ Le label de publication doit se placer dans l’attribut “label” du fichier 
   </tbody>
 </table>
 
-<h3 id="fsh--sushi">FSH / SUSHI</h3>
+<h3 id="fsh--sushi---gestion-des-alias">FSH / SUSHI - gestion des alias</h3>
 
 <p>FSH est une grammaire permettant de créer des artéfacts FHIR et de les générer au moment de la création du guide d’implémentation.</p>
-
-<h4 id="gestion-des-alias">Gestion des alias</h4>
 
 <p>Les <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#defining-aliases">alias FSH</a> sont des variables permettant de définir un raccourci pour une URL ou un OID. Par souci de clarté, il est recommandé de rassembler tous les alias dans un fichier unique, appelé « aliases.fsh » et situé dans le répertoire racine (évite les redondances et facilite la gestion).</p>
 
@@ -452,10 +449,6 @@ Le label de publication doit se placer dans l’attribut “label” du fichier 
 
   <p>Alias: $fr-patient = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient</p>
 </blockquote>
-
-<h3 id="exemples-de-guides-dimplémentation">Exemples de guides d’implémentation</h3>
-
-<p>Pour plus d’informations, consultez la <a href="https://interop.esante.gouv.fr/ig/">liste des guides d’implémentation</a> à titre d’exemple.</p>
 
 <h3 id="le-choix-de-la-version-fhir">Le choix de la version FHIR</h3>
 
@@ -899,7 +892,7 @@ Usage: #definition
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:10+0000">2026-01-05</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:14+0000">2026-01-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

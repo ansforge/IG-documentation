@@ -1,5 +1,5 @@
 {
-  "date" : "Mon, 05 Jan, 2026 14:10:53 +0000",
+  "date" : "Mon, 05 Jan, 2026 14:14:56 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,47 +8,47 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 27,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 27,
-          "length" : 31
+          "start" : 23,
+          "length" : 37
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 28,
-          "length" : 18
+          "start" : 23,
+          "length" : 17
         },
         {
           "activity" : "generateNarratives",
-          "start" : 28,
-          "length" : 85
+          "start" : 24,
+          "length" : 82
         },
         {
           "activity" : "validate",
-          "start" : 28,
-          "length" : 9859
+          "start" : 24,
+          "length" : 6221
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 30,
+          "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 38,
-          "length" : 77
+          "start" : 30,
+          "length" : 75
         },
         {
           "activity" : "generate2",
-          "start" : 42,
-          "length" : 94
+          "start" : 33,
+          "length" : 66
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 47,
+          "start" : 39,
           "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 49,
+          "start" : 42,
           "length" : 3
         }
       ]
@@ -67,7 +67,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 33,
           "length" : 1
         }
       ]
@@ -78,7 +78,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 33,
           "length" : 1
         }
       ]
@@ -97,20 +97,22 @@
     },
     {
       "name" : "/input/pagecontent/about.md",
-      "size" : 1237
+      "size" : 1237,
+      "processes" : [
+        {
+          "activity" : "validate",
+          "start" : 30,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/tests.md",
       "size" : 5719,
       "processes" : [
         {
-          "activity" : "scan",
-          "start" : 28,
-          "length" : 1
-        },
-        {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 33,
           "length" : 1
         }
       ]
@@ -121,7 +123,14 @@
     },
     {
       "name" : "/input/pagecontent/changes.md",
-      "size" : 5706
+      "size" : 5706,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 33,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/doc_implementer.md",
@@ -133,11 +142,11 @@
     },
     {
       "name" : "/input/pagecontent/bonnes_pratiques_modeler.md",
-      "size" : 18820,
+      "size" : 18821,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 33,
           "length" : 1
         }
       ]
@@ -148,14 +157,21 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 33,
           "length" : 1
         }
       ]
     },
     {
       "name" : "/input/pagecontent/collaborons.md",
-      "size" : 3223
+      "size" : 3223,
+      "processes" : [
+        {
+          "activity" : "scan",
+          "start" : 23,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/bonnes_pratiques_implementer.md",
@@ -167,7 +183,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 33,
           "length" : 1
         }
       ]
@@ -190,7 +206,14 @@
     },
     {
       "name" : "/input/images/validate-fr-patient-ins.png",
-      "size" : 83326
+      "size" : 83326,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 33,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/images/new_issue.png",
@@ -202,7 +225,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 42,
+          "start" : 33,
           "length" : 1
         }
       ]
@@ -221,7 +244,14 @@
     },
     {
       "name" : "/temp/pages/_includes/artifacts.xml",
-      "size" : 600
+      "size" : 600,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 33,
+          "length" : 1
+        }
+      ]
     }
   ]
 }
