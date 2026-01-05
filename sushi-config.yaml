@@ -22,23 +22,23 @@ pages:
         title: Accueil
     doc_ps.md:
         title: Professionnels de santé
-    doc_modeler.md:
-        dev_nouvel_ig.md:
+    mod_nouvel_ig.md:
+        mod_nouvel_ig.md:
             title: Quick start IG
-        bonnes_pratiques_modeler.md:
+        mod_bonnes_pratiques.md:
             title: Bonnes pratiques
-        erreurs.md:
+        mod_erreurs.md:
             title: Les erreurs courantes
-        github.md:
+        mod_github.md:
             title: Usage de GitHub
-    doc_implementer.md:
-        demarrer_sur_fhir.md:
+    impl_demarrer_sur_fhir.md:
+        impl_demarrer_sur_fhir.md:
             title: Quick start FHIR
-        bonnes_pratiques_implementer.md:
+        impl_bonnes_pratiques.md:
             title: Bonnes pratiques
-        instance_hapi.md:
+        impl_instance_hapi.md:
             title: Déployer une instance HAPI
-        valider_res.md:
+        impl_valider_res.md:
             title: Valider une ressource contre un profil
     autres_ressources.md:
         title: Autres Ressources
@@ -55,15 +55,15 @@ menu:
     Accueil: index.html
     Professionnels de santé : doc_ps.html
     Documentation pour auteurs FHIR:
-        Quick start IG: dev_nouvel_ig.html
-        Bonnes pratiques: bonnes_pratiques_modeler.html
-        Les erreurs courantes: erreurs.html
-        Usage de GitHub: github.html
+        Quick start IG: mod_nouvel_ig.html
+        Bonnes pratiques: mod_bonnes_pratiques.html
+        Les erreurs courantes: mod_erreurs.html
+        Usage de GitHub: mod_github.html
     Documentation pour implémenteurs FHIR:
-        Quick start FHIR: demarrer_sur_fhir.html
-        Bonnes pratiques: bonnes_pratiques_implementer.html
-        Déployer une instance HAPI: instance_hapi.html
-        Valider une ressource contre un profil: valider_res.html
+        Quick start FHIR: impl_demarrer_sur_fhir.html
+        Bonnes pratiques: impl_bonnes_pratiques.html
+        Déployer une instance HAPI: impl_instance_hapi.html
+        Valider une ressource contre un profil: impl_valider_res.html
     Autres ressources:
         Tests: tests.html
         Collaborons: collaborons.html
