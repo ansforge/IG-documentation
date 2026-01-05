@@ -485,4 +485,3 @@ Usage: #definition
 * description = "Description du search parameter."
 * type = #number | #date | #string | #token | #reference | #composite | #quantity | #uri | #special
 ```
-

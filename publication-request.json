@@ -1,10 +1,11 @@
 {
     "package-id" : "ans.fr.documentation",
-    "version" : "0.1.8",
-    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.8",
+    "version" : "0.1.9",
+    "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.9",
     "mode" : "milestone",
     "status" : "release",
     "sequence" : "release",
+    "ci-build" : "https://ansforge.github.io/IG-documentation/main/ig",
     "first": false,
     "changes": "changes.html",
     "desc" : "Documentation des guides d'implémentation de l'ANS"
