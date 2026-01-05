@@ -1,7 +1,7 @@
 # Les erreurs courantes - Documentation des guides d'implémentation de l'ANS v0.1.9
 
 * [**Table of Contents**](toc.md)
-* [**Doc Modeler**](doc_modeler.md)
+* [**Quick start IG**](mod_nouvel_ig.md)
 * **Les erreurs courantes**
 
 ## Les erreurs courantes

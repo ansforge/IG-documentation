@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Usage de GitHub - Documentation des guides d'implémentation de l'ANS v0.1.9</title>
+    <title>Déployer une instance HAPI - Documentation des guides d'implémentation de l'ANS v0.1.9</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"3.4"}
-    h3,h4,h5,h6{--heading-prefix:"3.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"4.2"}
+    h3,h4,h5,h6{--heading-prefix:"4.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -105,16 +105,16 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="dev_nouvel_ig.html">Quick start IG</a>
+        <a href="mod_nouvel_ig.html">Quick start IG</a>
       </li>
       <li>
-        <a href="bonnes_pratiques_modeler.html">Bonnes pratiques</a>
+        <a href="mod_bonnes_pratiques.html">Bonnes pratiques</a>
       </li>
       <li>
-        <a href="erreurs.html">Les erreurs courantes</a>
+        <a href="mod_erreurs.html">Les erreurs courantes</a>
       </li>
       <li>
-        <a href="github.html">Usage de GitHub</a>
+        <a href="mod_github.html">Usage de GitHub</a>
       </li>
     </ul>
   </li>
@@ -124,16 +124,16 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="demarrer_sur_fhir.html">Quick start FHIR</a>
+        <a href="impl_demarrer_sur_fhir.html">Quick start FHIR</a>
       </li>
       <li>
-        <a href="bonnes_pratiques_implementer.html">Bonnes pratiques</a>
+        <a href="impl_bonnes_pratiques.html">Bonnes pratiques</a>
       </li>
       <li>
-        <a href="instance_hapi.html">Déployer une instance HAPI</a>
+        <a href="impl_instance_hapi.html">Déployer une instance HAPI</a>
       </li>
       <li>
-        <a href="valider_res.html">Valider une ressource contre un profil</a>
+        <a href="impl_valider_res.html">Valider une ressource contre un profil</a>
       </li>
     </ul>
   </li>
@@ -174,15 +174,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='doc_modeler.html'><b>Doc Modeler</b></a></li><li><b>Usage de GitHub</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='impl_demarrer_sur_fhir.html'><b>Quick start FHIR</b></a></li><li><b>Déployer une instance HAPI</b></li>
 
           <span style="float:right;">
 
-            <a href="erreurs.html">&lt;prev</a> | 
+            <a href="impl_bonnes_pratiques.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="doc_implementer.html">next&gt;</a>
+          | <a href="impl_valider_res.html">next&gt;</a>
 
           </span>
 
@@ -205,7 +205,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Documentation des guides d'implémentation de l'ANS - version de développement local (v0.1.9) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/documentation/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
-  <h2>Usage de GitHub</h2>
+  <h2>Déployer une instance HAPI</h2>
   
 
 
@@ -220,157 +220,40 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#premiers-pas-sur-gihub" id="markdown-toc-premiers-pas-sur-gihub">Premiers pas sur GiHub</a></li>
-  <li><a href="#création-dun-nouveau-projet" id="markdown-toc-création-dun-nouveau-projet">Création d’un nouveau projet</a></li>
-  <li><a href="#reporter-un-problème-une-issue-sur-un-des-repository-github" id="markdown-toc-reporter-un-problème-une-issue-sur-un-des-repository-github">Reporter un problème (une issue) sur un des repository GitHub</a></li>
-  <li><a href="#travailler-sur-un-repository" id="markdown-toc-travailler-sur-un-repository">Travailler sur un repository</a></li>
-  <li><a href="#mettre-en-place-un-workflow-de-validationgénérationpublication" id="markdown-toc-mettre-en-place-un-workflow-de-validationgénérationpublication">Mettre en place un workflow de validation/génération/publication</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<p>GitHub est l’équivalent d’un sharepoint, un répertoire (=repository) versionné avec un système de branche pour travailler de manière collaborative sur du contenu textuel (code, écriture, grammaire …).
-Cette page se concentre sur les bonnes pratique au sein de l’organisation GitHub <a href="https://github.com/ansforge">ansforge</a> sur les guides d’implémentation. Elle peut également servir de bonnes pratiques pour les volets externes.</p>
+<ol>
+  <li>Installer docker</li>
+</ol>
 
-<h3 id="premiers-pas-sur-gihub">Premiers pas sur GiHub</h3>
+<p>https://docs.docker.com/engine/install/</p>
 
-<p>Pour créer un compte GitHub et être enrôlé dans l’organisation <a href="https://github.com/ansforge">ansforge</a>, il suffit de suivre <a href="https://ansforge.github.io/Documentation/">cette documentation</a>.</p>
+<ol>
+  <li>Installer l’image docker HAPI</li>
+</ol>
 
-<h4 id="règles-dutilisation-de-github">Règles d’utilisation de GitHub</h4>
+<p>https://hub.docker.com/r/hapiproject/hapi</p>
 
-<ul>
-  <li>Toutes modifications d’une spécification sur GitHub doit se faire au niveau d’une branche.</li>
-  <li>Le nom de la branche doit être préfixé par les initiales de l’auteur (ex : “sb-“ pour Sébastien Brunelle) suivi de la description des travaux (ex : “sb-ajout-bonnespratiques-github)</li>
-  <li>Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l’ANS.</li>
-  <li>Une fois la Pull Request validée, c’est à l’auteur des modifications de fusionner (=merge) la pull request avec la branche principale “main”.</li>
-</ul>
+<p>Sur mac ou linux : <code class="language-plaintext highlighter-rouge">docker pull hapiproject/hapi</code></p>
 
-<p>A noter qu’aucune modification doit être faite directement dans main.</p>
+<ol>
+  <li>Lancer le docker container de hapi en appuyant sur le bouton start</li>
+</ol>
 
-<h3 id="création-dun-nouveau-projet">Création d’un nouveau projet</h3>
+<p><img width="100X" alt="image" src="https://user-images.githubusercontent.com/48218773/185607031-45268753-0fb3-4e09-9788-0739d29dea02.png" /></p>
 
-<h4 id="les-règles-de-nommage">les règles de nommage</h4>
+<ol>
+  <li>Chercher l’url d’accès à hapi</li>
+</ol>
 
-<p>Des règles ont déjà été <a href="https://ansforge.github.io/Documentation/pages/docs/creationprojet.html">définies</a> au niveau de l’organisation ANS. Celles-ci ont été sur-contraintes pour les projets liés à l’intéropérabilité</p>
+<p><img width="100X" alt="image" src="https://user-images.githubusercontent.com/48218773/185607155-189def86-cb2a-4a3f-83b4-ca945077bfa2.png" /></p>
 
-<p>Le nom du repository devra être sous forme interop-[type]-[optionnel-format]-[optionnel-projet/produit]-[nom-descriptif] avec :</p>
+<ol>
+  <li>Vous pouvez accéder à votre instance d’HAPI déployée en local!</li>
+</ol>
 
-<ul>
-  <li>[type] = ig / exemples / outil / termino…</li>
-  <li>[optionnel-format] = fhir / cda / owl / …</li>
-  <li>[optionnel-projet/produit] = drim / smt / nrc</li>
-  <li>[nom-descriptif] = nom clair et concis sans acronyme séparé avec des tirets.</li>
-</ul>
-
-<p>L’ensemble du nom devra être en minuscule.</p>
-
-<p>Exemples : interop-ig-fhir-annuaire, interop-outils-cda</p>
-
-<h4 id="les-règles-de-création-de-tags-associés-à-un-repository-github">les règles de création de tags associés à un repository GitHub</h4>
-
-<p>Les tags sont des informations complémentaires au titre du repository. Ils doivent être en minuscule sans espace, sans tiret.</p>
-
-<p>Exemples de tags qui peuvent être utilisés :</p>
-
-<ul>
-  <li>Standard (fhir, cda, hl7v2, …)</li>
-  <li>Termino (snomed, loinc, …)</li>
-  <li>ci-sis</li>
-  <li>Domaine IHE (domaine métier) / couloir ségur</li>
-  <li>[optionnel] ancien nom si changement de nom de repo</li>
-</ul>
-
-<p>Tags à éviter :</p>
-
-<ul>
-  <li>implementation-guide (trop générique et dans le titre)</li>
-  <li>HL7 (trop générique, risque d’être confondu avec hl7v2)</li>
-  <li>volet (inutile, trop générique)</li>
-  <li>Sous-ensemble du nom du répertoire</li>
-</ul>
-
-<h3 id="reporter-un-problème-une-issue-sur-un-des-repository-github">Reporter un problème (une issue) sur un des repository GitHub</h3>
-
-<p>Vous avez identifié une erreur sur un des guides ? L’onglet issue permet de signaler un problème sur un projet donné.</p>
-
-<div class="figure" style="width:100%;">
-    <img style="height: auto; width: 100%;" alt="image" src="https://user-images.githubusercontent.com/48218773/215773144-31a47623-a853-4a4e-8ba0-ad1d66b29961.png" />
-</div>
-
-<p>Un lien est également disponible sous chaque guide d’implémentation pour accéder aux issues :</p>
-<div class="figure" style="width:100%;">
-    <img style="height: auto; width: 100%;" alt="image" src="new_issue.png" />
-</div>
-
-<p>L’issue doit contenir un titre, et une description très détaillée avec une proposition de changement.</p>
-
-<p>Cf. documentation officielle : https://docs.github.com/fr/issues/tracking-your-work-with-issues/using-issues/creating-an-issue</p>
-
-<h3 id="travailler-sur-un-repository">Travailler sur un repository</h3>
-
-<p>GitHub peut s’utiliser de deux façons via l’application GitHub Desktop ou via l’invite de commande. Il est détaillé ci-dessous comment faire une modification via l’invite de commande.</p>
-
-<h4 id="git-clone-xxx">Git clone xxx</h4>
-
-<p>La commande git clone permet de copier l’intégralité d’un repository en local.
-Le xxx est à remplacer avec l’indication dans ssh :</p>
-<div class="figure">
-    <img style="height: auto; width: 50%;" alt="image" src="https://user-images.githubusercontent.com/48218773/207010144-e80b05a0-9763-4026-bf59-debd8b2a2411.png" />
-</div>
-
-<h4 id="git-checkout--b-nom_travail_en_cours">Git checkout -b nom_travail_en_cours</h4>
-
-<p>Les branches : un repository (ou répertoire) Github contient une arborescence de branche, permettant d’individualiser le travail de chacun puis de pousser son travail dans la branche de travail commune : typiquement <code class="language-plaintext highlighter-rouge">main</code>.</p>
-
-<p>Pour éviter que tout le monde travaille sur le même environnement, il est nécessaire de créer une nouvelle branche, et de l’appeler par le nom du travail prévu dans cette branche. Le nom de la branche doit être en minuscule et commencer par son acronyme (ex : nr- pour Nicolas Riss).</p>
-
-<p>Une fois la branche créée, il est possible de faire les modifications pour ensuite les reporter sur le repository GitHub distant pour revue.</p>
-
-<h4 id="git-add-fichiers_à_ajouter">Git add fichiers_à_ajouter</h4>
-
-<p>Une fois les modifications établies, il faut dire à Git quels fichiers on souhaite ajouter au répertoire distant en faisant git add et en rajoutant le chemin vers les fichiers à ajouter (la commande <code class="language-plaintext highlighter-rouge">git status</code> permet de voir quels fichiers ont été modifiés)</p>
-
-<h4 id="git-commit--m-message-sur-la-nature-des-travaux-effectués">Git commit -m “message sur la nature des travaux effectués”</h4>
-
-<p>Une fois les travaux menés (tout ou partie), il faut faire des commit : c’est à dire valider une modification fonctionnelle, cohérente. Cette étape peut être répétée plusieurs fois.</p>
-
-<h4 id="git-push">Git push</h4>
-
-<p>Cette commande pousse l’ensemble des modifications validées avec des commit sur le GitHub distant.</p>
-
-<h4 id="faire-une-demande-de-tirage-ou-pull-request-pr">Faire une demande de tirage ou Pull Request (PR)</h4>
-
-<p>Ensuite, il faut aller sur l’interface graphique, dans l’onglet, “Pull Requests”, et créer une nouvelle PR qui permet de dire : je veux intégrer les modifications que j’ai faites sur la branche x à la branche main.</p>
-
-<p>Chaque PR doit être validée par quelqu’un d’autre pour :</p>
-
-<ul>
-  <li>Etre sûr que le savoir n’est pas concentré sur une personne</li>
-  <li>Permettre une relecture pour éviter les erreurs</li>
-</ul>
-
-<p>Cf. documentation officielle : https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request</p>
-
-<h3 id="mettre-en-place-un-workflow-de-validationgénérationpublication">Mettre en place un workflow de validation/génération/publication</h3>
-
-<p>Afin de faciliter les actions au regards des IG, l’ANS  met à disposition un <a href="https://github.com/ansforge/IG-workflows">GitHub Action</a>  avec les fonctionnalités suivantes :</p>
-
-<ul>
-  <li>Lancement de sushi</li>
-  <li>Tests avec le validateur_cli</li>
-  <li>Incorporation des projets de simplifier (Methode bake)</li>
-  <li>Publication des releases sur un repo github</li>
-  <li>Génération du diagramme plantuml à partir de des données de l’IG</li>
-  <li>Génération des diagrammes de mapping plantuml</li>
-  <li>Génération des testscripts avec le projet testscript-generator</li>
-  <li>Publication sur les pages github :
-    <ul>
-      <li>Diagramme de class plantuml généré à partir des données de l’IG</li>
-      <li>Rapport de validation du validator_cli</li>
-    </ul>
-  </li>
-</ul>
+<p><img width="100X" alt="image" src="https://user-images.githubusercontent.com/48218773/185607295-45dc46e9-01c8-4090-83d8-dbd63a83ac5e.png" /></p>
 
 
 
@@ -395,7 +278,7 @@ Le xxx est à remplacer avec l’indication dans ssh :</p>
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="erreurs.html">&lt;prev</a>
+                <a href="impl_bonnes_pratiques.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -403,7 +286,7 @@ Le xxx est à remplacer avec l’indication dans ssh :</p>
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="doc_implementer.html">next&gt;</a>
+                <a href="impl_valider_res.html">next&gt;</a>
 
               </td>
             </tr>
@@ -413,7 +296,7 @@ Le xxx est à remplacer avec l’indication dans ssh :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:27+0000">2026-01-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:54+0000">2026-01-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

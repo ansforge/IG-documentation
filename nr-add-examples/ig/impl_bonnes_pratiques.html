@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Doc Implementer - Documentation des guides d'implémentation de l'ANS v0.1.9</title>
+    <title>Bonnes pratiques - Documentation des guides d'implémentation de l'ANS v0.1.9</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"4"}
-    h3,h4,h5,h6{--heading-prefix:"4.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"4.1"}
+    h3,h4,h5,h6{--heading-prefix:"4.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -105,16 +105,16 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="dev_nouvel_ig.html">Quick start IG</a>
+        <a href="mod_nouvel_ig.html">Quick start IG</a>
       </li>
       <li>
-        <a href="bonnes_pratiques_modeler.html">Bonnes pratiques</a>
+        <a href="mod_bonnes_pratiques.html">Bonnes pratiques</a>
       </li>
       <li>
-        <a href="erreurs.html">Les erreurs courantes</a>
+        <a href="mod_erreurs.html">Les erreurs courantes</a>
       </li>
       <li>
-        <a href="github.html">Usage de GitHub</a>
+        <a href="mod_github.html">Usage de GitHub</a>
       </li>
     </ul>
   </li>
@@ -124,16 +124,16 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="demarrer_sur_fhir.html">Quick start FHIR</a>
+        <a href="impl_demarrer_sur_fhir.html">Quick start FHIR</a>
       </li>
       <li>
-        <a href="bonnes_pratiques_implementer.html">Bonnes pratiques</a>
+        <a href="impl_bonnes_pratiques.html">Bonnes pratiques</a>
       </li>
       <li>
-        <a href="instance_hapi.html">Déployer une instance HAPI</a>
+        <a href="impl_instance_hapi.html">Déployer une instance HAPI</a>
       </li>
       <li>
-        <a href="valider_res.html">Valider une ressource contre un profil</a>
+        <a href="impl_valider_res.html">Valider une ressource contre un profil</a>
       </li>
     </ul>
   </li>
@@ -174,15 +174,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Doc Implementer</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='impl_demarrer_sur_fhir.html'><b>Quick start FHIR</b></a></li><li><b>Bonnes pratiques</b></li>
 
           <span style="float:right;">
 
-            <a href="github.html">&lt;prev</a> | 
+            <a href="impl_demarrer_sur_fhir.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="demarrer_sur_fhir.html">next&gt;</a>
+          | <a href="impl_instance_hapi.html">next&gt;</a>
 
           </span>
 
@@ -205,7 +205,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Documentation des guides d'implémentation de l'ANS - version de développement local (v0.1.9) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/documentation/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
-  <h2>Doc Implementer</h2>
+  <h2>Bonnes pratiques</h2>
   
 
 
@@ -223,6 +223,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
+<h3 id="gestion-des-versions">Gestion des versions</h3>
+
+<p>Il est important de prendre en compte qu’une spécification est en <strong>perpétuelle évolution</strong>. Au même titre qu’une application déployée au grand public, des bugs peuvent être découverts, ou des suggestions d’amélioration peuvent être proposées.</p>
+
+<p>C’est la raison pour laquelle, lors du développement d’une spécification, il est conseillé de :</p>
+
+<ul>
+  <li>
+    <p><strong>Toujours</strong> baser une implémentation sur une version spécifique d’un IG et donc d’un <a href="https://hl7.org/fhir/packages.html">package FHIR</a> publié dans le <a href="https://registry.fhir.org">fhir package registry</a>. Cela permet à la solution d’indiquer sa conformité à une version donnée d’une spécification. Les ressources traitées par la solution doivent ainsi être conformes aux ressources de conformité indiquées dans une version donnée de l’IG.</p>
+  </li>
+  <li>
+    <p><strong>Anticiper</strong> les futures évolutions de l’API pour les rendre moins douloureuses. Pour cela, une des possibilité est de faire un mapping entre un modèle de base de données et une API FHIR. Lorsqu’une API doit être mise à jour, il est conseillé de maintenir l’ancienne version pendant une durée précise (par ex. un an) avant de la rendre obsolète et de maintir uniquement une nouvelle version.</p>
+  </li>
+</ul>
+
+<p>Une spécification ne peut pas s’arrêter d’évoluer pour une implémentation donnée, le système de versioning permet à chaque implémentation de choisir sa feuille de route pour évoluer vers la dernière release. Un décalage entre la version courante de la spécification et une implémentation est possible, mais il est toujours préférable de le minimiser.</p>
 
 
 
@@ -247,7 +263,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="github.html">&lt;prev</a>
+                <a href="impl_demarrer_sur_fhir.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -255,7 +271,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="demarrer_sur_fhir.html">next&gt;</a>
+                <a href="impl_instance_hapi.html">next&gt;</a>
 
               </td>
             </tr>
@@ -265,7 +281,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:27+0000">2026-01-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:54+0000">2026-01-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

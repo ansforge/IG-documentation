@@ -10,7 +10,7 @@
   <name value="Documentation"/>
   <title value="Documentation des guides d'implémentation de l'ANS"/>
   <status value="active"/>
-  <date value="2026-01-05T14:27:42+00:00"/>
+  <date value="2026-01-05T14:54:23+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
@@ -490,80 +490,64 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="doc_modeler.html"/>
+          <valueUrl value="mod_nouvel_ig.html"/>
         </extension>
-        <nameUrl value="doc_modeler.html"/>
-        <title value="Doc Modeler"/>
+        <nameUrl value="mod_nouvel_ig.html"/>
+        <title value="Quick start IG"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="dev_nouvel_ig.html"/>
+            <valueUrl value="mod_bonnes_pratiques.html"/>
           </extension>
-          <nameUrl value="dev_nouvel_ig.html"/>
-          <title value="Quick start IG"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="bonnes_pratiques_modeler.html"/>
-          </extension>
-          <nameUrl value="bonnes_pratiques_modeler.html"/>
+          <nameUrl value="mod_bonnes_pratiques.html"/>
           <title value="Bonnes pratiques"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="erreurs.html"/>
+            <valueUrl value="mod_erreurs.html"/>
           </extension>
-          <nameUrl value="erreurs.html"/>
+          <nameUrl value="mod_erreurs.html"/>
           <title value="Les erreurs courantes"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="github.html"/>
+            <valueUrl value="mod_github.html"/>
           </extension>
-          <nameUrl value="github.html"/>
+          <nameUrl value="mod_github.html"/>
           <title value="Usage de GitHub"/>
           <generation value="markdown"/>
         </page>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="doc_implementer.html"/>
+          <valueUrl value="impl_demarrer_sur_fhir.html"/>
         </extension>
-        <nameUrl value="doc_implementer.html"/>
-        <title value="Doc Implementer"/>
+        <nameUrl value="impl_demarrer_sur_fhir.html"/>
+        <title value="Quick start FHIR"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="demarrer_sur_fhir.html"/>
+            <valueUrl value="impl_bonnes_pratiques.html"/>
           </extension>
-          <nameUrl value="demarrer_sur_fhir.html"/>
-          <title value="Quick start FHIR"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="bonnes_pratiques_implementer.html"/>
-          </extension>
-          <nameUrl value="bonnes_pratiques_implementer.html"/>
+          <nameUrl value="impl_bonnes_pratiques.html"/>
           <title value="Bonnes pratiques"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="instance_hapi.html"/>
+            <valueUrl value="impl_instance_hapi.html"/>
           </extension>
-          <nameUrl value="instance_hapi.html"/>
+          <nameUrl value="impl_instance_hapi.html"/>
           <title value="Déployer une instance HAPI"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="valider_res.html"/>
+            <valueUrl value="impl_valider_res.html"/>
           </extension>
-          <nameUrl value="valider_res.html"/>
+          <nameUrl value="impl_valider_res.html"/>
           <title value="Valider une ressource contre un profil"/>
           <generation value="markdown"/>
         </page>

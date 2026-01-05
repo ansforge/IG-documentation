@@ -70,7 +70,7 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2026-01-05T14:27:42+00:00",
+  "date" : "2026-01-05T14:54:23+00:00",
   "publisher" : "ANS",
   "contact" : [
     {
@@ -843,32 +843,21 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "doc_modeler.html"
+              "valueUrl" : "mod_nouvel_ig.html"
             }
           ],
-          "nameUrl" : "doc_modeler.html",
-          "title" : "Doc Modeler",
+          "nameUrl" : "mod_nouvel_ig.html",
+          "title" : "Quick start IG",
           "generation" : "markdown",
           "page" : [
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "dev_nouvel_ig.html"
+                  "valueUrl" : "mod_bonnes_pratiques.html"
                 }
               ],
-              "nameUrl" : "dev_nouvel_ig.html",
-              "title" : "Quick start IG",
-              "generation" : "markdown"
-            },
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "bonnes_pratiques_modeler.html"
-                }
-              ],
-              "nameUrl" : "bonnes_pratiques_modeler.html",
+              "nameUrl" : "mod_bonnes_pratiques.html",
               "title" : "Bonnes pratiques",
               "generation" : "markdown"
             },
@@ -876,10 +865,10 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "erreurs.html"
+                  "valueUrl" : "mod_erreurs.html"
                 }
               ],
-              "nameUrl" : "erreurs.html",
+              "nameUrl" : "mod_erreurs.html",
               "title" : "Les erreurs courantes",
               "generation" : "markdown"
             },
@@ -887,10 +876,10 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "github.html"
+                  "valueUrl" : "mod_github.html"
                 }
               ],
-              "nameUrl" : "github.html",
+              "nameUrl" : "mod_github.html",
               "title" : "Usage de GitHub",
               "generation" : "markdown"
             }
@@ -900,32 +889,21 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "doc_implementer.html"
+              "valueUrl" : "impl_demarrer_sur_fhir.html"
             }
           ],
-          "nameUrl" : "doc_implementer.html",
-          "title" : "Doc Implementer",
+          "nameUrl" : "impl_demarrer_sur_fhir.html",
+          "title" : "Quick start FHIR",
           "generation" : "markdown",
           "page" : [
             {
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "demarrer_sur_fhir.html"
+                  "valueUrl" : "impl_bonnes_pratiques.html"
                 }
               ],
-              "nameUrl" : "demarrer_sur_fhir.html",
-              "title" : "Quick start FHIR",
-              "generation" : "markdown"
-            },
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "bonnes_pratiques_implementer.html"
-                }
-              ],
-              "nameUrl" : "bonnes_pratiques_implementer.html",
+              "nameUrl" : "impl_bonnes_pratiques.html",
               "title" : "Bonnes pratiques",
               "generation" : "markdown"
             },
@@ -933,10 +911,10 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "instance_hapi.html"
+                  "valueUrl" : "impl_instance_hapi.html"
                 }
               ],
-              "nameUrl" : "instance_hapi.html",
+              "nameUrl" : "impl_instance_hapi.html",
               "title" : "Déployer une instance HAPI",
               "generation" : "markdown"
             },
@@ -944,10 +922,10 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "valider_res.html"
+                  "valueUrl" : "impl_valider_res.html"
                 }
               ],
-              "nameUrl" : "valider_res.html",
+              "nameUrl" : "impl_valider_res.html",
               "title" : "Valider une ressource contre un profil",
               "generation" : "markdown"
             }
