@@ -170,7 +170,7 @@ Context: Sur quoi s'applique l'extension
 
 ```
 
-#### StructureDefinition : logic
+#### StructureDefinition : modèle logique
 
 | | |
 | :--- | :--- |
