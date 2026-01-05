@@ -227,8 +227,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#création-des-ressources-de-conformité" id="markdown-toc-création-des-ressources-de-conformité">Création des ressources de conformité</a></li>
   <li><a href="#règles-de-nommage-des-ressources-de-conformité" id="markdown-toc-règles-de-nommage-des-ressources-de-conformité">Règles de nommage des ressources de conformité</a></li>
   <li><a href="#les-url-canoniques" id="markdown-toc-les-url-canoniques">Les URL canoniques</a></li>
-  <li><a href="#fsh--sushi" id="markdown-toc-fsh--sushi">FSH / SUSHI</a></li>
   <li><a href="#release-dun-ig-fhir" id="markdown-toc-release-dun-ig-fhir">Release d’un IG FHIR</a></li>
+  <li><a href="#fsh--sushi" id="markdown-toc-fsh--sushi">FSH / SUSHI</a></li>
   <li><a href="#exemples-de-guides-dimplémentation" id="markdown-toc-exemples-de-guides-dimplémentation">Exemples de guides d’implémentation</a></li>
   <li><a href="#le-choix-de-la-version-fhir" id="markdown-toc-le-choix-de-la-version-fhir">Le choix de la version FHIR</a></li>
   <li><a href="#règles-dutilisation-de-github" id="markdown-toc-règles-dutilisation-de-github">Règles d’utilisation de GitHub</a></li>
@@ -375,11 +375,6 @@ L’URL canonique des profils est construite au format : [base]/[ResourceType]/[
   <li>[https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs]</li>
 </ul>
 
-<h3 id="fsh--sushi">FSH / SUSHI</h3>
-
-<p>Sushi et FSH permettent de factoriser beaucoup d’informations, et de les centraliser afin d’en faciliter l’accès et la gestion.
-Il est recommandé de faire bénéficier au maximum les projets de cette possibilité de centraliser les informations redondantes.</p>
-
 <h3 id="release-dun-ig-fhir">Release d’un IG FHIR</h3>
 
 <p>Le <strong>statut</strong> devra être placé à draft lorsque celui-ci n’est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft.
@@ -439,10 +434,9 @@ Le label de publication doit se placer dans l’attribut “label” du fichier 
   </tbody>
 </table>
 
-<h4 id="extensions-et-valuesets">Extensions et ValueSets</h4>
+<h3 id="fsh--sushi">FSH / SUSHI</h3>
 
-<p>Il est recommandé de classer les extensions et les valueSets source (FSH) dans des sous-répertoires spécifiques, input\fsh\Extensions et input\fsh\ValueSets.
-Les structure-definitions des profils seront placés dans input\fsh.</p>
+<p>FSH est une grammaire permettant de créer des artéfacts FHIR et de les générer au moment de la création du guide d’implémentation.</p>
 
 <h4 id="gestion-des-alias">Gestion des alias</h4>
 
@@ -488,6 +482,10 @@ Ce choix n’est pas tranché, c’est l’écosystème qui dictera quelle versi
 </ul>
 
 <p>A noter qu’aucune modification doit être faite directement dans main.</p>
+
+<h4 id="gestion-des-répertoires-des-guides-dimplémentation">Gestion des répertoires des guides d’implémentation</h4>
+
+<p>Une structure squelette indique sous quels dossiers placer les artéfacts fsh dans le guide d’implémentation <a href="https://github.com/ansforge/IG-modele/tree/main/input/fsh">modèle</a></p>
 
 <h3 id="modèle-de-nommage-par-ressource-fhir">Modèle de nommage par ressource FHIR</h3>
 
@@ -898,7 +896,7 @@ Usage: #definition
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 13:58+0000">2026-01-05</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:05+0000">2026-01-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
