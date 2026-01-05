@@ -10,7 +10,7 @@
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2025-12-18T16:46:06+00:00",
+  "date" : "2026-01-05T13:42:36+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -646,6 +646,15 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "doc_ps.html"
+        }],
+        "nameUrl" : "doc_ps.html",
+        "title" : "Professionnels de santé",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "doc_modeler.html"
         }],
         "nameUrl" : "doc_modeler.html",
@@ -736,47 +745,47 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "tests.html"
-        }],
-        "nameUrl" : "tests.html",
-        "title" : "Tests",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "collaborons.html"
-        }],
-        "nameUrl" : "collaborons.html",
-        "title" : "Collaborons",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "autres_ressources.html"
         }],
         "nameUrl" : "autres_ressources.html",
         "title" : "Autres Ressources",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "about.html"
-        }],
-        "nameUrl" : "about.html",
-        "title" : "A propos de ce guide",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "changes.html"
-        }],
-        "nameUrl" : "changes.html",
-        "title" : "Historique des changements",
-        "generation" : "markdown"
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "changes.html"
+          }],
+          "nameUrl" : "changes.html",
+          "title" : "Historique des changements",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "tests.html"
+          }],
+          "nameUrl" : "tests.html",
+          "title" : "Tests",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "collaborons.html"
+          }],
+          "nameUrl" : "collaborons.html",
+          "title" : "Collaborons",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "about.html"
+          }],
+          "nameUrl" : "about.html",
+          "title" : "A propos",
+          "generation" : "markdown"
+        }]
       }]
     },
     "parameter" : [{

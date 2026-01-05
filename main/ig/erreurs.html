@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.3"}
-    h3,h4,h5,h6{--heading-prefix:"2.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.3"}
+    h3,h4,h5,h6{--heading-prefix:"3.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -96,8 +96,11 @@
   <li>
     <a href="index.html">Accueil</a>
   </li>
+  <li>
+    <a href="doc_ps.html">Professionnels de santé</a>
+  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des FHIR modelers
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR modelers
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -116,7 +119,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des FHIR implementers
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR implementers
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -134,30 +137,30 @@
       </li>
     </ul>
   </li>
-  <li>
-    <a href="tests.html">Tests</a>
-  </li>
-  <li>
-    <a href="collaborons.html">Collaborons</a>
-  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="tests.html">Tests</a>
+      </li>
+      <li>
+        <a href="collaborons.html">Collaborons</a>
+      </li>
+      <li>
+        <a href="changes.html">Historique</a>
+      </li>
+      <li>
         <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
       </li>
       <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
+        <a target="_blank" href="https://esante.gouv.fr">Site de l&apos;ANS </a>
       </li>
       <li>
-        <a href="about.html">A propos de ce guide</a>
+        <a href="about.html">A propos</a>
       </li>
     </ul>
-  </li>
-  <li>
-    <a href="changes.html">Historique</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -231,7 +234,7 @@ L’erreur vient du fait qu’il y a des fichiers qui ne finissent pas par .md o
 </ul>
 
 <h3 id="erreur-missing-snapshot">Erreur Missing Snapshot</h3>
-<p>FSH nécessite d’avoir des packages avec snapshot et differential. Il est possible de générer les snapshots dans le FHIR CACHE:</p>
+<p>FSH nécessite d’avoir des packages avec snapshot et differential. Les packages historiques (&lt;2024) n’avaient pas de snapshot, engendrant des erreurs de générations lorsque ceux-ci sont mis en dépendaces. Pour régler ce problème, il est possible de générer les snapshots dans le FHIR CACHE :</p>
 
 <ul>
   <li>Installer dotnet sdk : https://dotnet.microsoft.com/en-us/download</li>
@@ -239,6 +242,7 @@ L’erreur vient du fait qu’il y a des fichiers qui ne finissent pas par .md o
 </ul>
 
 <p>Exemples d’usage :</p>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fhir bake --package hl7.fhir.fr.core</code></li>
   <li><code class="language-plaintext highlighter-rouge">fhir bake --package ans.annuaire.fhir.r4</code></li>
@@ -288,7 +292,7 @@ L’erreur vient du fait qu’il y a des fichiers qui ne finissent pas par .md o
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 18, 2025 16:46+0000">2025-12-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 13:42+0000">2026-01-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

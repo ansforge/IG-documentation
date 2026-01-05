@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.1"}
-    h3,h4,h5,h6{--heading-prefix:"2.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.1"}
+    h3,h4,h5,h6{--heading-prefix:"3.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -96,8 +96,11 @@
   <li>
     <a href="index.html">Accueil</a>
   </li>
+  <li>
+    <a href="doc_ps.html">Professionnels de santé</a>
+  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des FHIR modelers
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR modelers
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -116,7 +119,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentation des FHIR implementers
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR implementers
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -134,30 +137,30 @@
       </li>
     </ul>
   </li>
-  <li>
-    <a href="tests.html">Tests</a>
-  </li>
-  <li>
-    <a href="collaborons.html">Collaborons</a>
-  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="tests.html">Tests</a>
+      </li>
+      <li>
+        <a href="collaborons.html">Collaborons</a>
+      </li>
+      <li>
+        <a href="changes.html">Historique</a>
+      </li>
+      <li>
         <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
       </li>
       <li>
-        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
+        <a target="_blank" href="https://esante.gouv.fr">Site de l&apos;ANS </a>
       </li>
       <li>
-        <a href="about.html">A propos de ce guide</a>
+        <a href="about.html">A propos</a>
       </li>
     </ul>
-  </li>
-  <li>
-    <a href="changes.html">Historique</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -219,28 +222,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#mise-en-place-du-repo-github" id="markdown-toc-mise-en-place-du-repo-github">Mise en place du repo GitHub</a></li>
-  <li><a href="#paramétrage-de-lig" id="markdown-toc-paramétrage-de-lig">Paramétrage de l’IG</a></li>
-  <li><a href="#paramétrage-du-menu-de-navigation-de-lig" id="markdown-toc-paramétrage-du-menu-de-navigation-de-lig">Paramétrage du menu de navigation de l’IG</a></li>
+  <li><a href="#création-dun-nouveau-projet" id="markdown-toc-création-dun-nouveau-projet">Création d’un nouveau projet</a></li>
   <li><a href="#développement-de-lig" id="markdown-toc-développement-de-lig">Développement de l’IG</a></li>
-  <li><a href="#installer-les-dépendances" id="markdown-toc-installer-les-dépendances">Installer les dépendances</a></li>
-  <li><a href="#windows" id="markdown-toc-windows">Windows</a></li>
-  <li><a href="#mac--linux" id="markdown-toc-mac--linux">MAC / Linux</a></li>
+  <li><a href="#générer-le-guide-dimplémentation-en-utilisant-les-workflows-ans" id="markdown-toc-générer-le-guide-dimplémentation-en-utilisant-les-workflows-ans">Générer le guide d’implémentation en utilisant les workflows ANS</a></li>
+  <li><a href="#générer-le-guide-dimplémentation-en-local" id="markdown-toc-générer-le-guide-dimplémentation-en-local">Générer le guide d’implémentation en local</a></li>
   <li><a href="#publication-dune-nouvelle-version-dun-guide-dimplémentation" id="markdown-toc-publication-dune-nouvelle-version-dun-guide-dimplémentation">Publication d’une nouvelle version d’un guide d’implémentation</a></li>
 </ul>
 
 </div>
-<h3 id="mise-en-place-du-repo-github">Mise en place du repo GitHub</h3>
+<h3 id="création-dun-nouveau-projet">Création d’un nouveau projet</h3>
 
-<p>Prérequis : suivre la <a href="https://ansforge.github.io/Documentation">documentation</a> pour créer un compte GitHub et l’associer à l’organisation ANS.</p>
+<p>Dans le cas de la création d’un nouveau projet , il faut créer un répertoire GitHub (<a href="./github.html">cf documentation</a>) en utilisant le template ansforge/IG-modele et paramétrer l’IG.</p>
 
-<p>Ce nouveau projet doit utiliser le GitHub template ansforge/IG-modele et doit respecter la convention de nommage indiquée dans la <a href="https://ansforge.github.io/Documentation/pages/docs/creationprojet.html">documentation de création des 
-répetoires GitHub</a> tout en étant préfixé par “IG-…” (Exemple : IG-fhir-partage-de-documents-de-sante). 
-En cas de doute, l’équipe interopérabilité de l’ANS se tient disponible pour avis.</p>
-
-<p>Une fois l’IG créé, il est nécessaire de le personnaliser pour le projet dédié.</p>
-
-<h3 id="paramétrage-de-lig">Paramétrage de l’IG</h3>
+<h4 id="paramétrage-de-lig">Paramétrage de l’IG</h4>
 
 <p>Lors de la création d’un IG, il y a une première phase de paramétrage à effectuer. Il faut remplir:</p>
 
@@ -263,14 +257,14 @@ En cas de doute, l’équipe interopérabilité de l’ANS se tient disponible p
 
 <p>Il faudra également mettre à jour le fichier readme.md à la racine du repository.</p>
 
-<h3 id="paramétrage-du-menu-de-navigation-de-lig">Paramétrage du menu de navigation de l’IG</h3>
+<h5 id="paramétrage-du-menu-de-navigation-de-lig">Paramétrage du menu de navigation de l’IG</h5>
 
 <p>Une des plus importantes parties de l’IG est la documentation narrative, celle-ci est écrite en <a href="https://kramdown.gettalong.org/">kramdown</a>.
 Ces pages sont à ajouter dans input/pagecontent avec l’extension .md. A noter que ces pages doivent être directement contenues dans le dossier pagecontent et ne peuvent pas avoir d’arborescence de dossiers.</p>
 
 <p>Une fois une page créée et rédigée, pour l’ajouter au menu, il faut éditer le fichier sushi-config.yaml. Celui-ci contient deux parties : la partie pages et la partie menu</p>
 
-<h4 id="la-partie-pages">La partie pages</h4>
+<h6 id="la-partie-pages">La partie pages</h6>
 
 <p>La partie pages est optionnelle, mais elle permet de donner un titre aux pages (par défaut, c’est le nom du fichier qui est utilisé). A noter, il faut utiliser l’extension .md ici.</p>
 
@@ -285,7 +279,7 @@ Ces pages sont à ajouter dans input/pagecontent avec l’extension .md. A noter
             <span class="na">title</span><span class="pi">:</span> <span class="s">Ajout d'un lot de documents</span>
 </code></pre></div></div>
 
-<h4 id="la-partie-menu">La partie menu</h4>
+<h6 id="la-partie-menu">La partie menu</h6>
 
 <p>La partie menu permet de définir le menu de navigation dans le header. A noter, il faut utiliser l’extension .html.</p>
 
@@ -300,17 +294,28 @@ Ces pages sont à ajouter dans input/pagecontent avec l’extension .md. A noter
   <span class="na">Spécifications fonctionnelles</span><span class="pi">:</span>
 </code></pre></div></div>
 
-<h3 id="développement-de-lig">Développement de l’IG</h3>
-
-<p>Le développement de l’IG se fait essentiellement dans le dossier <a href="https://build.fhir.org/ig/FHIR/ig-guidance/using-templates.html#igroot-input">input</a>.</p>
-
 <p>Lien vers quelques exemples :
 [https://github.com/HL7/US-Core/blob/master/sushi-config.yaml]
 [https://github.com/ansforge/FIG_ans-ig-PDSm/blob/main/sushi-config.yaml]</p>
 
-<h3 id="installer-les-dépendances">Installer les dépendances</h3>
+<h3 id="développement-de-lig">Développement de l’IG</h3>
 
-<h3 id="windows">Windows</h3>
+<p>Le développement de l’IG se fait essentiellement dans le dossier <a href="https://build.fhir.org/ig/FHIR/ig-guidance/using-templates.html#igroot-input">input</a>. Celui-ci contient les pages kramdown ainsi que les artéfacts FHIR (profils, exemples, terminologies, …)</p>
+
+<h3 id="générer-le-guide-dimplémentation-en-utilisant-les-workflows-ans">Générer le guide d’implémentation en utilisant les workflows ANS</h3>
+
+<p>Des workflows ont été développés, utilisant les GitHub actions pour éviter de générer en local et de devoir installer les dépendances.</p>
+
+<p>1/ Rajouter le <a href="https://github.com/ansforge/IG-modele/tree/main/.github">dossier .github</a> au répertoire GitHub.
+2/ Lancer l’action dans l’onglet <code class="language-plaintext highlighter-rouge">Actions</code>, qui va générer une branche gh-pages
+3/ Paramétrer le répertoire dans l’onglet <code class="language-plaintext highlighter-rouge">pages</code> pour lancer un déploiement sur la branche gh-pages
+4/ L’IG en version intégration continue devient accessible à l’adresse https://[ajouter_nom_org].github.io/[ajouter_nom_repo]/[ajouter_nom_de_la_branche]/ig</p>
+
+<p>Le code source du workflow est <a href="https://github.com/ansforge/IG-workflows">disponible sur GitHub</a></p>
+
+<h3 id="générer-le-guide-dimplémentation-en-local">Générer le guide d’implémentation en local</h3>
+
+<h4 id="windows--installer-les-dépendances-et-générer-un-guide-dimplémentation">Windows : installer les dépendances et générer un guide d’implémentation</h4>
 
 <p>Prérequis :</p>
 
@@ -318,7 +323,7 @@ Ces pages sont à ajouter dans input/pagecontent avec l’extension .md. A noter
   <li>Avoir les droits administrateur</li>
 </ul>
 
-<h4 id="etape-1-installer-vs-code-et-les-plugins">Etape 1. Installer VS CODE et les plugins</h4>
+<h5 id="etape-1-installer-vs-code-et-les-plugins">Etape 1. Installer VS CODE et les plugins</h5>
 
 <p>https://code.visualstudio.com/</p>
 
@@ -335,20 +340,20 @@ Ces pages sont à ajouter dans input/pagecontent avec l’extension .md. A noter
   <li>Aller dans le menu extension (les 4 carrés dont un qui se décolle à gauche), chercher et installer “FHIR Shorthand”</li>
 </ol>
 
-<h4 id="etape-2-installer-nodejs">Etape 2. Installer NodeJS</h4>
+<h5 id="etape-2-installer-nodejs">Etape 2. Installer NodeJS</h5>
 
 <p>[https://nodejs.org/en/]</p>
 
 <p>La case “Automatically install the necessary tools” peut être cochée.</p>
 
-<h4 id="etape-3-installer-sushi">Etape 3. Installer SUSHI</h4>
+<h5 id="etape-3-installer-sushi">Etape 3. Installer SUSHI</h5>
 
 <ol>
   <li>Lancer l’invite de commande (windows &gt; “invite de commande”)</li>
   <li>Ecrire et lancer la commande <code class="language-plaintext highlighter-rouge">npm install -g fsh-sushi</code></li>
 </ol>
 
-<h4 id="etape-4-installer-les-dépendances-de-lig-publisher">Etape 4. Installer les dépendances de l’IG Publisher</h4>
+<h5 id="etape-4-installer-les-dépendances-de-lig-publisher">Etape 4. Installer les dépendances de l’IG Publisher</h5>
 
 <ul>
   <li>JAVA JDK: https://www.oracle.com/fr/java/technologies/downloads/#jdk19-windows (installer, au format .exe)</li>
@@ -356,7 +361,7 @@ Ces pages sont à ajouter dans input/pagecontent avec l’extension .md. A noter
   <li>Jekyll et bundler: lancer l’invite de commande en mode administrateur et lancer la commande <code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code></li>
 </ul>
 
-<h4 id="etape-5-lancer-lig-publisher">Etape 5. Lancer l’IG Publisher</h4>
+<h5 id="etape-5-lancer-lig-publisher">Etape 5. Lancer l’IG Publisher</h5>
 
 <p>Télécharger le repository <a href="https://github.com/ansforge/FIG_ans-ig-sample">ansforge/FIG_ans-ig-sample</a> : code &gt; download zip.
 Décompresser le dossier, et le mettre dans un chemin où il n’y a pas d’espace (exemple : C:\Users\nriss\Documents).</p>
@@ -377,11 +382,11 @@ Décompresser le dossier, et le mettre dans un chemin où il n’y a pas d’esp
   <li>Documentation sur l’IG Publisher : https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-QuickStart</li>
 </ul>
 
-<h3 id="mac--linux">MAC / Linux</h3>
+<h4 id="mac--linux--installer-les-dépendances-et-générer-un-guide-dimplémentation">MAC / Linux : installer les dépendances et générer un guide d’implémentation</h4>
 
-<h4 id="prérequis--nodejs-java-ruby-et-jekyll">Prérequis : NodeJS, Java, Ruby et Jekyll</h4>
+<h5 id="prérequis--nodejs-java-ruby-et-jekyll">Prérequis : NodeJS, Java, Ruby et Jekyll</h5>
 
-<h5 id="nodejs">NodeJS</h5>
+<h6 id="nodejs">NodeJS</h6>
 
 <p>Pour installer <a href="https://nodejs.org/">NodeJS</a>, vous pouvez suivre la documentation d’installation officielle.</p>
 
@@ -392,7 +397,7 @@ Décompresser le dossier, et le mettre dans un chemin où il n’y a pas d’esp
 
 <p>Il est aussi possible de l’installer via <a href="https://github.com/nvm-sh/nvm"><code class="language-plaintext highlighter-rouge">nvm</code> (Node Version Manager)</a>, qui vous permettra de changer de version de NodeJS en fonction des requis de vos projets.</p>
 
-<h5 id="java">Java</h5>
+<h6 id="java">Java</h6>
 
 <p>Pour installer Java, vous pouvez vous tourner vers le <a href="https://www.oracle.com/fr/java/technologies/downloads/">JDK officiel sur la page d’Oracle</a>. Vous y trouverez un <code class="language-plaintext highlighter-rouge">.deb</code> ou un <code class="language-plaintext highlighter-rouge">.rpm</code> à installer facilement sur votre distribution.
 Vous pouvez aussi utiliser <a href="https://openjdk.org/"><code class="language-plaintext highlighter-rouge">openjdk</code></a> pour une implémentation open-source de la plateforme Java.</p>
@@ -400,7 +405,7 @@ Vous pouvez aussi utiliser <a href="https://openjdk.org/"><code class="language-
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>openjdk-17-jre
 </code></pre></div></div>
 
-<h5 id="ruby-et-jekyll">Ruby et Jekyll</h5>
+<h6 id="ruby-et-jekyll">Ruby et Jekyll</h6>
 
 <p>Pour installer Ruby sur une distribution Linux basée sur Debian, vous pouvez le faire via votre package-manager :</p>
 
@@ -421,7 +426,7 @@ Vous pouvez aussi utiliser <a href="https://openjdk.org/"><code class="language-
 
 <p>Des difficultés pour installer ruby et jekyll peuvent survenir sur mac M1, M2 : lancer le <a href="https://apple.stackexchange.com/questions/428768/on-apple-m1-with-rosetta-how-to-open-entire-terminal-iterm-in-x86-64-architec">terminal avec rosetta</a> et suivre <a href="https://github.com/jekyll/jekyll/issues/8576#issuecomment-798080994">cette procédure</a> permet de régler les problèmes.</p>
 
-<h4 id="installer-sushi">Installer SUSHI</h4>
+<h5 id="installer-sushi">Installer SUSHI</h5>
 
 <p>Sushi permet de convertir la <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">grammaire FSH</a> pour générer des profils, extensions (StructureDefinition) et des exemples / instances FHIR. La prise en main est relativement facile lorsque l’on connaît bien FHIR.
 Sushi est développé en JavaScript sous forme de module npm.</p>
@@ -431,7 +436,7 @@ Sushi est développé en JavaScript sous forme de module npm.</p>
 
 <p>Pour information, <a href="https://github.com/FHIR/GoFSH">GoFSH</a> permet de faire la transformation inverse : transformer une StructureDefinition au format FSH.</p>
 
-<h4 id="générer-lig">Générer l’IG</h4>
+<h5 id="générer-lig">Générer l’IG</h5>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash _updatePublisher.sh <span class="c"># Mise à jour du publisher java</span>
 bash _genonce.sh <span class="c"># Génère l'IG</span>
@@ -523,7 +528,7 @@ Ensuite, il suffit de lancer le workflow de release sur GitHub.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 18, 2025 16:46+0000">2025-12-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 13:42+0000">2026-01-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

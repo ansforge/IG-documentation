@@ -1,6 +1,7 @@
 # Historique des changements - Documentation des guides d'implémentation de l'ANS v0.1.9
 
 * [**Table of Contents**](toc.md)
+* [**Autres Ressources**](autres_ressources.md)
 * **Historique des changements**
 
 ## Historique des changements
