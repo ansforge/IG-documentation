@@ -1,7 +1,9 @@
 
 La mise en place de niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. En attendant la publication de ces niveaux de maturité, il est important de respecter au maximum les critères indiqués ci-dessous.
 
-### Critères de qualité
+### Les critères de qualité et de maturité 
+
+#### Critères de qualité
 
 * Respect des bonnes pratiques nationales tel que les règles de nommages indiquées ci-dessous
 * Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
@@ -10,7 +12,7 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 * L'ensemble des ressources de conformité doit avoir une description précise de son usage
 * Publication de l'IG sans erreurs (cf session Q/A)
 
-### Critères de maturité
+#### Critères de maturité
 
 * Respect de l'ensemble des critères de qualité mentionnés ci-dessus
 * Nombre d'implémentations obtenu par déclaration (par convergence ou par les DSI). Idéalement, publier des retours d'expérience sur l'implémentation des spécifications
@@ -18,7 +20,7 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 * Nombre d'issues et résolutions sur le repo GitHub
 * Nombre de commentaires lors des phases de concertation
 
-### Création des ressources de conformité
+### Bonnes pratiques de création des ressources de conformité
 
 #### La définition des profils et des extensions
 
@@ -65,6 +67,8 @@ Ces règles de nommage ont été établies en s'inspirant des ressources us-core
 
 La documentation officielle se trouve sur le [confluence d'HL7](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines)
 
+<!-- NR - URL canoniques commentées : construites automatiquement donc pas besoin de focus particulier
+
 ### Les URL canoniques
 
 L'URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d'identifier de manière unique chaque implementation guide (IG) et chaque profil.
@@ -85,6 +89,8 @@ Documentation :
 
 * [https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-CanonicalURL]
 * [https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs]
+
+-->
 
 ### Release d'un IG FHIR
 
@@ -110,11 +116,9 @@ Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les 
 | final-text | active | final-text | milestone|
 | withdrawn ou deprecated | retired | resp. withdrawn ou retired | withdrawal |
 
-### FSH / SUSHI
+### FSH / SUSHI - gestion des alias
 
 FSH est une grammaire permettant de créer des artéfacts FHIR et de les générer au moment de la création du guide d'implémentation.
-
-#### Gestion des alias
 
 Les [alias FSH](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#defining-aliases) sont des variables permettant de définir un raccourci pour une URL ou un OID. Par souci de clarté, il est recommandé de rassembler tous les alias dans un fichier unique, appelé « aliases.fsh » et situé dans le répertoire racine (évite les redondances et facilite la gestion).
 
@@ -126,10 +130,6 @@ Exemple:
 > Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 > 
 > Alias: $fr-patient = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient  
-
-### Exemples de guides d'implémentation
-
-Pour plus d'informations, consultez la [liste des guides d'implémentation](https://interop.esante.gouv.fr/ig/) à titre d'exemple.
 
 ### Le choix de la version FHIR
 
