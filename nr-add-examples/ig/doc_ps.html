@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Professionnels de santé - Documentation des guides d'implémentation de l'ANS v0.1.9</title>
+    <title>Professionnels de santé - Documentation des guides d&#39;implémentation de l&#39;ANS v0.1.9</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,9 +18,14 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
     <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/aphp-ig.css" rel="stylesheet"/>
+    <link href="assets/css/prism-lang-fml.min.css" rel="stylesheet"/>
+    <link href="assets/css/prism-lang-fsh.min.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -40,19 +45,25 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
+
+	  <!-- Ajouts AP-HP - couleurs FSH -->
+	  <script type="text/javascript" src="assets/js/prism-lang-fml.min.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-lang-fsh.min.js"></script>
+	  <!-- Fin ajouts AP-HP - couleurs FSH -->
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"2"}
     h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
-    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
-    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
 
   <div id="ig-search">
@@ -222,22 +233,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#linteropérabilité-en-santé" id="markdown-toc-linteropérabilité-en-santé">L’interopérabilité en santé</a></li>
-  <li><a href="#le-rôle-des-professionnels-de-santé-dans-linteropérabilité" id="markdown-toc-le-rôle-des-professionnels-de-santé-dans-linteropérabilité">Le rôle des professionnels de santé dans l’interopérabilité</a></li>
+  <li><a href="#linteropérabilité-en-santé" id="markdown-toc-linteropérabilité-en-santé">L'interopérabilité en santé</a></li>
+  <li><a href="#le-rôle-des-professionnels-de-santé-dans-linteropérabilité" id="markdown-toc-le-rôle-des-professionnels-de-santé-dans-linteropérabilité">Le rôle des professionnels de santé dans l'interopérabilité</a></li>
   <li><a href="#le-standard-fhir" id="markdown-toc-le-standard-fhir">Le standard FHIR</a></li>
-  <li><a href="#les-guides-dimplémentation" id="markdown-toc-les-guides-dimplémentation">Les guides d’implémentation</a></li>
+  <li><a href="#les-guides-dimplémentation" id="markdown-toc-les-guides-dimplémentation">Les guides d'implémentation</a></li>
   <li><a href="#les-modèles-logiques" id="markdown-toc-les-modèles-logiques">Les modèles logiques</a></li>
   <li><a href="#exemple-concret-de-la-eprescription" id="markdown-toc-exemple-concret-de-la-eprescription">Exemple concret de la ePrescription</a></li>
 </ul>
 
 </div>
-<h3 id="linteropérabilité-en-santé">L’interopérabilité en santé</h3>
+<h3 id="linteropérabilité-en-santé">L'interopérabilité en santé</h3>
 
-<p>L’interopérabilité désigne la capacité des logiciels de santé à <strong>partager et intégrer</strong> des données de santé.</p>
+<p>L'interopérabilité désigne la capacité des logiciels de santé à <strong>partager et intégrer</strong> des données de santé.</p>
 
-<p>Par exemple, les dates peuvent s’écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, … Il devient ainsi évident qu’une mauvaise interprétation des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients ou des biais conséquents lors d’études cliniques.</p>
+<p>Par exemple, les dates peuvent s'écrire dans différents formats : 22 décembre 2027, 22/12/2027, 22-12-2027, 12/22/2027 aux Etats-Unis, … Il devient ainsi évident qu'une mauvaise interprétation des données par les logiciels peut provoquer des erreurs dans la prise en charge des patients ou des biais conséquents lors d'études cliniques.</p>
 
-<p>L’objectif de l’interopérabilité est de désigner <strong>un format commun et non ambigu</strong> pour les données partagées : les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc …</p>
+<p>L'objectif de l'interopérabilité est de désigner <strong>un format commun et non ambigu</strong> pour les données partagées : les dates, les résultats de biologie, les pathologies, les symptômes, les données administratives, etc …</p>
 
 <div class="figure" style="width:100%; text-align: center">
     <img style="height: auto; width: 75%;" src="intro-iop.png" alt="Capture d'écran du webinaire d'introduction à l'interopérabilité" title="Capture d'écran du webinaire d'introduction à l'interopérabilité" />
@@ -248,20 +259,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li>Récupération automatique des données patient (élimination des doubles saisies et réduction des erreurs de transcription)</li>
-  <li>Amélioration de la coordination des soins entre confrères (partage sécurisé d’informations cliniques)</li>
-  <li>Gain de temps en consultation grâce à la disponibilité instantanée des résultats d’examens</li>
-  <li>Simplification de mise en place de projets de recherche (extraire automatiquement des informations d’intérêt)</li>
+  <li>Amélioration de la coordination des soins entre confrères (partage sécurisé d'informations cliniques)</li>
+  <li>Gain de temps en consultation grâce à la disponibilité instantanée des résultats d'examens</li>
+  <li>Simplification de mise en place de projets de recherche (extraire automatiquement des informations d'intérêt)</li>
 </ul>
 
-<p>L’interopérabilité permet de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.</p>
+<p>L'interopérabilité permet de garantir que ces données restent exploitables et compréhensibles par tous les acteurs du parcours de soins et de la recherche clinique, indépendamment des outils utilisés.</p>
 
 <p>Il est important de noter que les couches de sécurisation et de gestion des consentements patient viennent en sus.</p>
 
-<h3 id="le-rôle-des-professionnels-de-santé-dans-linteropérabilité">Le rôle des professionnels de santé dans l’interopérabilité</h3>
+<h3 id="le-rôle-des-professionnels-de-santé-dans-linteropérabilité">Le rôle des professionnels de santé dans l'interopérabilité</h3>
 
-<p>Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Sans cette expertise, les spécifications techniques risquent de ne pas répondre aux besoins réels du terrain ou d’oublier des cas d’usage importants.</p>
+<p>Les données de santé sont complexes et nécessitent une expertise métier forte pour les comprendre. Sans cette expertise, les spécifications techniques risquent de ne pas répondre aux besoins réels du terrain ou d'oublier des cas d'usage importants.</p>
 
-<p>Idéalement, une spécification d’interopérabilité doit être construite de manière rapprochée entre un expert métier (professionnel de santé) et un expert interopérabilité. Les professionnels de santé apportent leur connaissance des pratiques, des cas particuliers et des contraintes métier, tandis que les experts techniques traduisent ces besoins en spécifications standardisées.</p>
+<p>Idéalement, une spécification d'interopérabilité doit être construite de manière rapprochée entre un expert métier (professionnel de santé) et un expert interopérabilité. Les professionnels de santé apportent leur connaissance des pratiques, des cas particuliers et des contraintes métier, tandis que les experts techniques traduisent ces besoins en spécifications standardisées.</p>
 
 <div style="background-color: #f0f8ff; border-left: 4px solid #4CAF50; padding: 15px; margin: 20px 0;">
 <strong>Exemple concret : la posologie</strong><br /><br />
@@ -277,30 +288,30 @@ La structure d'une posologie est un bon exemple de la complexité des données d
 Il est indispensable qu'un prescripteur définisse précisément tous ces éléments attendus pour que les experts interopérabilité puissent concevoir des spécifications complètes et utilisables dans la pratique quotidienne.
 </div>
 
-<p>Pour faciliter cette collaboration entre professionnels de santé et experts techniques, des outils méthodologiques ont été développés. Les <strong>modèles logiques</strong>, présentés plus bas dans ce document, constituent justement le pont permettant aux PS d’exprimer leurs besoins métier dans un langage compréhensible avant leur traduction technique en standard FHIR.</p>
+<p>Pour faciliter cette collaboration entre professionnels de santé et experts techniques, des outils méthodologiques ont été développés. Les <strong>modèles logiques</strong>, présentés plus bas dans ce document, constituent justement le pont permettant aux PS d'exprimer leurs besoins métier dans un langage compréhensible avant leur traduction technique en standard FHIR.</p>
 
 <h3 id="le-standard-fhir">Le standard FHIR</h3>
 
-<p>FHIR (Fast Healthcare Interoperability Resources) est un standard international développé par l’organisation internationale Health Level 7 (HL7) pour faciliter l’échange de données de santé. Concrètement, FHIR définit des “ressources” standardisées (Patient, Consultation, Prescription, etc.) qui représentent les concepts métier que vous utilisez quotidiennement. Grâce à FHIR, les informations que vous produisez peuvent être comprises par n’importe quel système compatible, permettant ainsi une meilleure coordination des soins et réduisant les ressaisies manuelles d’informations.</p>
+<p>FHIR (Fast Healthcare Interoperability Resources) est un standard international développé par l'organisation internationale Health Level 7 (HL7) pour faciliter l'échange de données de santé. Concrètement, FHIR définit des "ressources" standardisées (Patient, Consultation, Prescription, etc.) qui représentent les concepts métier que vous utilisez quotidiennement. Grâce à FHIR, les informations que vous produisez peuvent être comprises par n'importe quel système compatible, permettant ainsi une meilleure coordination des soins et réduisant les ressaisies manuelles d'informations.</p>
 
-<p>Le standard FHIR est très générique pour former un socle commun à tous les cas d’usages et international : recherche, biologie, administratif, …</p>
+<p>Le standard FHIR est très générique pour former un socle commun à tous les cas d'usages et international : recherche, biologie, administratif, …</p>
 
 <div style="background-color: #fff3cd; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0;">
 <strong>⚠️ Point clé</strong><br /><br />
 FHIR seul est trop générique et peu contraignant pour garantir une interopérabilité efficace. C'est précisément pour cette raison que les guides d'implémentation sont indispensables : ils ajoutent les contraintes et règles nécessaires pour assurer que les systèmes puissent réellement échanger des données de manière cohérente et exploitable dans un contexte donné (pays, programme de santé, cas d'usage).
 </div>
 
-<h3 id="les-guides-dimplémentation">Les guides d’implémentation</h3>
+<h3 id="les-guides-dimplémentation">Les guides d'implémentation</h3>
 
-<p>Un guide d’implémentation (IG) est un document technique qui précise comment utiliser le standard FHIR dans un contexte spécifique, par exemple pour un programme national de santé ou un cas d’usage particulier. Il définit les règles et contraintes adaptées aux besoins métier français : quelles données sont obligatoires, quels formats utiliser, quelles nomenclatures respecter (CIM-10, CCAM, etc.). Pour vous, professionnels de santé, cela signifie que votre logiciel respecte des règles communes avec les autres systèmes, garantissant ainsi la qualité et la cohérence des échanges.</p>
+<p>Un guide d'implémentation (IG) est un document technique qui précise comment utiliser le standard FHIR dans un contexte spécifique, par exemple pour un programme national de santé ou un cas d'usage particulier. Il définit les règles et contraintes adaptées aux besoins métier français : quelles données sont obligatoires, quels formats utiliser, quelles nomenclatures respecter (CIM-10, CCAM, etc.). Pour vous, professionnels de santé, cela signifie que votre logiciel respecte des règles communes avec les autres systèmes, garantissant ainsi la qualité et la cohérence des échanges.</p>
 
 <h3 id="les-modèles-logiques">Les modèles logiques</h3>
 
-<p>Un modèle logique est une représentation structurée et simplifiée des données métier, indépendante de toute technologie. Il décrit “ce qui doit être échangé” (par exemple : les informations essentielles d’une consultation) sans entrer dans les détails techniques du “comment”. Les modèles logiques servent de pont entre votre compréhension métier des soins et la représentation technique en FHIR. Ils permettent de valider que les spécifications techniques répondent bien à vos besoins professionnels avant leur mise en œuvre dans les logiciels.</p>
+<p>Un modèle logique est une représentation structurée et simplifiée des données métier, indépendante de toute technologie. Il décrit "ce qui doit être échangé" (par exemple : les informations essentielles d'une consultation) sans entrer dans les détails techniques du "comment". Les modèles logiques servent de pont entre votre compréhension métier des soins et la représentation technique en FHIR. Ils permettent de valider que les spécifications techniques répondent bien à vos besoins professionnels avant leur mise en œuvre dans les logiciels.</p>
 
 <h3 id="exemple-concret-de-la-eprescription">Exemple concret de la ePrescription</h3>
 
-<p>La Haute Autorité de Santé (HAS) a organisé un groupe de travail autour de la <a href="https://www.has-sante.fr/jcms/p_3555137/fr/structuration-de-la-posologie-des-medicaments">structuration de la posologie</a> fournissant une description métier très précise de ce qui est attendu de la posologie. Ce document a permis aux experts interopérabilité d’InteropSanté et de l’ANS de générer un modèle logique et de créer des profils FHIR sur la structuration de la posologie <strong>(lien à rajouter lorsque l’IG sera publié)</strong>.</p>
+<p>La Haute Autorité de Santé (HAS) a organisé un groupe de travail autour de la <a href="https://www.has-sante.fr/jcms/p_3555137/fr/structuration-de-la-posologie-des-medicaments">structuration de la posologie</a> fournissant une description métier très précise de ce qui est attendu de la posologie. Ce document a permis aux experts interopérabilité d'InteropSanté et de l'ANS de générer un modèle logique et de créer des profils FHIR sur la structuration de la posologie <strong>(lien à rajouter lorsque l'IG sera publié)</strong>.</p>
 
 
 
@@ -343,12 +354,13 @@ FHIR seul est trop générique et peu contraignant pour garantir une interopéra
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:54+0000">2026-01-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 12, 2026 09:48+0000">2026-01-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
-            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
-<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions </a>
+            Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-documentation/issues">New Issue</a>
 
           </span>

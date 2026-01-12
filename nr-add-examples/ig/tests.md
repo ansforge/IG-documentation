@@ -10,44 +10,44 @@
 
 #### Espace de test
 
-L’espace de test est composé de deux outils :
+L'espace de test est composé de deux outils :
 
 * EVSClient, qui permet de vérifier la conformité : des documents CDA, des archives IHE_XDM.ZIP utilisées pour les échanges, des ressources FHIR…
-* Gazelle Test Management, qui permet de tester des scénarios complets avec plusieurs interactions d’échanges de données.
+* Gazelle Test Management, qui permet de tester des scénarios complets avec plusieurs interactions d'échanges de données.
 
 Ces outils sont accessibles en ligne sur le site [https://interop.esante.gouv.fr/](https://interop.esante.gouv.fr/) et notamment utilisés lors des Projectathons organisés par l’ANS pour les éditeurs.
 
 ### Matchbox
 
-Matchbox est un outil permettant notamment de valider des instances de ressources FHIR contre un profil. L’outil matchbox est [open source](https://github.com/ahdis/matchbox).
+Matchbox est un outil permettant notamment de valider des instances de ressources FHIR contre un profil. L'outil matchbox est [open source](https://github.com/ahdis/matchbox).
 
 #### Accès à Matchbox et à la validation
 
-L’instance matchbox de l’ANS est accessible via [cette URL](https://interop.esante.gouv.fr/matchboxv4).
+L'instance matchbox de l'ANS est accessible via [cette URL](https://interop.esante.gouv.fr/matchboxv4).
 
 Cette instance permet de faire des vérification au regard :
 
-* Des guides d’implémentation de l’ANS
-* Des guides d’implementation d’InteropSanté
+* Des guides d'implémentation de l'ANS
+* Des guides d'implementation d'InteropSanté
 * Du FHIR Terminology Service (FTS) du Serveur Multi Terminologique ([SMT](https://smt.esante.gouv.fr/)).
 
-Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le bouton “Validate ressource”
+Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le bouton "Validate ressource"
 
 #### Chargement de la ressource FHIR à valider
 
-Sur cette deuxième page, il suffira de déposer le fichier contenant la ressource FHIR à valider. Optionnellement, il est possible de sélectionner le numéro de version du guide d’implémentation ainsi que le profil à valider. A défaut, le profil à valider sera défini automatiquement à partir de l’attribut meta.profile.
+Sur cette deuxième page, il suffira de déposer le fichier contenant la ressource FHIR à valider. Optionnellement, il est possible de sélectionner le numéro de version du guide d'implémentation ainsi que le profil à valider. A défaut, le profil à valider sera défini automatiquement à partir de l'attribut meta.profile.
 
 #### Résultat de la validation
 
 Vous obtiendrez ainsi le résultat de la validation, à noter que les codes et les displays sont validés par le FHIR Terminology Service (FTS) du Serveur Multi Terminologique ([SMT](https://smt.esante.gouv.fr/)).
 
-Une fois validé, les messages d’erreurs sont accessibles en-dessous :
+Une fois validé, les messages d'erreurs sont accessibles en-dessous :
 
 Un détail par ligne est également accessible :
 
 ### Gazelle
 
-Gazelle est un outil de tests qui s’appuie sur des validateurs tel que matchbox pour FHIR pour établir des scénarios de tests complets.
+Gazelle est un outil de tests qui s'appuie sur des validateurs tel que matchbox pour FHIR pour établir des scénarios de tests complets.
 
 ### Les niveaux des scénarios gazelle
 
@@ -69,17 +69,17 @@ Les tests de niveau 3 sont des tests avec partenaire basés sur l’enchaînemen
 
 L’objectif de ces cas de test est de créer un scénario complexe faisant appel aux différents flux de la spécification technique et ainsi créer un exemple d’usage.
 
-#### Les types d’étapes de cas de tests
+#### Les types d'étapes de cas de tests
 
 Les étapes de cas de tests pourront avoir plusieurs types.
 
 | | |
 | :--- | :--- |
-| [TRANSACTION] | Ce type d’étape concerne une transaction entre un serveur et un client |
-| [PREUVE] | Ce type d’étape est une demande de preuve (screenshot, lien permanent…) à l’attention du moniteur |
-| [INFORMATION] | Message informatif à l’attention de l’editeur concernant le fonctionnement du cas de test |
-| [VALIDATION] | Ce type d’étape est une demande de validation d’une ressource sur EVSClient |
-| [INSTRUCTION] | Ce type d’étape est une action demandée à l’éditeur sans preuve exigée |
+| [TRANSACTION] | Ce type d'étape concerne une transaction entre un serveur et un client |
+| [PREUVE] | Ce type d'étape est une demande de preuve (screenshot, lien permanent…) à l'attention du moniteur |
+| [INFORMATION] | Message informatif à l'attention de l'editeur concernant le fonctionnement du cas de test |
+| [VALIDATION] | Ce type d'étape est une demande de validation d'une ressource sur EVSClient |
+| [INSTRUCTION] | Ce type d'étape est une action demandée à l'éditeur sans preuve exigée |
 
 #### Usage du proxy
 

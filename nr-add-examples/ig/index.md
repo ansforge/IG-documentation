@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation | *Version*:0.1.9 |
-| Active as of 2026-01-05 | *Computable Name*:Documentation |
+| Active as of 2026-01-12 | *Computable Name*:Documentation |
 
 > Ce guide d'implémentation est l'équivalent national de l'ig guidance (https://build.fhir.org/ig/FHIR/ig-guidance).Cette documentation explique comment créer, publier et maintenir des guides d'implémentation FHIR pour l'écosystème français de santé. Elle s'adresse aux professionnels de santé qui challengent les travaux d'interopérabilité, aux FHIR modelers qui créent et profilent les ressources, et aux FHIR implementers qui développent les APIs. L'objectif est de permettre à tout acteur de publier des spécifications versionnées et packagées, cohérentes avec le cadre national, afin de définir précisément comment échanger les données de santé et favoriser la participation de l'ensemble des parties prenantes.
 
@@ -16,41 +16,41 @@ Le guide d’implémentation est un support de publication des spécifications d
 
 ### A qui est destiné cette documentation ?
 
-Cette documentation est séparée en trois parties afin d’adapter le discours à chaque profil :
+Cette documentation est séparée en trois parties afin d'adapter le discours à chaque profil :
 
 * Aux [professionnels de santé et établissements de santé](doc_ps.md), qui ont la vision métier et ont la capacité de challenger ces travaux.
 * Aux [FHIR modelers](dev_nouvel_ig.md), qui créent ces guides et profilent des ressources
 * Aux [FHIR implementers](demarrer_sur_fhir.md), qui lisent ces guides et développent des APIs
 
-La création des guides d’implémentation n’est pas réservée aux seuls organismes de normalisation et de régulation (comme InteropSanté ou l’ANS) : tout acteur peut en publier afin de documenter un besoin métier identifier ou une interface, à condition qu’elles soient cohérentes avec l’écosystème français et compatibles avec les guides d’implémentation nationaux, notamment permis grâce au mécanisme d’héritage. L’objectif de ces guides est d’encourager la participation de l’ensemble des parties prenantes.
+La création des guides d'implémentation n’est pas réservée aux seuls organismes de normalisation et de régulation (comme InteropSanté ou l’ANS) : tout acteur peut en publier afin de documenter un besoin métier identifier ou une interface, à condition qu’elles soient cohérentes avec l’écosystème français et compatibles avec les guides d’implémentation nationaux, notamment permis grâce au mécanisme d’héritage. L’objectif de ces guides est d’encourager la participation de l’ensemble des parties prenantes.
 
-### L’intérêt des guides d’implémentation
+### L'intérêt des guides d'implémentation
 
-Le guide d’implémentation est versionné (l’ensemble des versions reste accessible) et packagé. Une spécification n’est jamais figée : elles restent ouvertes à l’évolution et peuvent être adaptées en fonction des contributions et des retours de l’ensemble des lecteurs.
+Le guide d'implémentation est versionné (l'ensemble des versions reste accessible) et packagé. Une spécification n'est jamais figée : elles restent ouvertes à l’évolution et peuvent être adaptées en fonction des contributions et des retours de l'ensemble des lecteurs.
 
-Chaque guide d’implémentation est associé à un périmètre, à un cas d’usage, à un métier, ce qui permet permet :
+Chaque guide d'implémentation est associé à un périmètre, à un cas d'usage, à un métier, ce qui permet permet :
 
 * De gérer les versions des guides de manière séparée : on peut ainsi mettre à jour chacune des specs séparément sans avoir à mettre à jour celles qui ne sont pas concernées
 * De gérer les dépendances indépendamment des autres guides : dépendances aux ressources du ci-sis, aux profils interopsanté, …
-* Les urls sont claires, on sait directement de quelle spécification est issue chaque profil, et on peut directement accéder à l’IG en connaissant l’url canonique de l’IG
-* Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d’usage, en héritant de tout ou partie, ou pour décrire une implémentation précise
-* L’IG doit obligatoirement hériter des profils FHIR réalisés par InteropSanté et/ou par l’ANS (s’ils existent) pour être conforme au cadre national.
+* Les urls sont claires, on sait directement de quelle spécification est issue chaque profil, et on peut directement accéder à l'IG en connaissant l'url canonique de l'IG
+* Les documentations génériques peuvent être surspécifiées pour réutiliser certains profils pour un autre cas d'usage, en héritant de tout ou partie, ou pour décrire une implémentation précise
+* L'IG doit obligatoirement hériter des profils FHIR réalisés par InteropSanté et/ou par l'ANS (s'ils existent) pour être conforme au cadre national.
 
-### La liste des guides d’implémentation de l’ANS
+### La liste des guides d'implémentation de l'ANS
 
-La liste des guides d’implémentation est accessible [sur le catalogue des guides de l’ANS](https://interop.esante.gouv.fr/ig/).
+La liste des guides d'implémentation est accessible [sur le catalogue des guides de l'ANS](https://interop.esante.gouv.fr/ig/).
 
-### Reporter un problème ou une suggestion d’amélioration
+### Reporter un problème ou une suggestion d'amélioration
 
 Vous avez identifié une erreur sur un des guides ? Le lien `issue` permet de signaler un problème sur un projet donné.
 
 ![](https://user-images.githubusercontent.com/48218773/215773144-31a47623-a853-4a4e-8ba0-ad1d66b29961.png)
 
-Un lien est également disponible sous chaque guide d’implémentation pour accéder aux issues :
+Un lien est également disponible sous chaque guide d'implémentation pour accéder aux issues :
 
 ![](new_issue.png)
 
-L’issue doit contenir un titre, et une description la plus détaillée possible avec idéalement une proposition de changement pour faciliter et améliorer la qualité des modifications apportées.
+L'issue doit contenir un titre, et une description la plus détaillée possible avec idéalement une proposition de changement pour faciliter et améliorer la qualité des modifications apportées.
 
 ### Documentation
 
@@ -70,7 +70,7 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2026-01-05T14:54:23+00:00",
+  "date" : "2026-01-12T09:48:41+00:00",
   "publisher" : "ANS",
   "contact" : [
     {

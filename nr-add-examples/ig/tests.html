@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Tests - Documentation des guides d'implémentation de l'ANS v0.1.9</title>
+    <title>Tests - Documentation des guides d&#39;implémentation de l&#39;ANS v0.1.9</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,9 +18,14 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
     <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/aphp-ig.css" rel="stylesheet"/>
+    <link href="assets/css/prism-lang-fml.min.css" rel="stylesheet"/>
+    <link href="assets/css/prism-lang-fsh.min.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -40,19 +45,25 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
+
+	  <!-- Ajouts AP-HP - couleurs FSH -->
+	  <script type="text/javascript" src="assets/js/prism-lang-fml.min.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-lang-fsh.min.js"></script>
+	  <!-- Fin ajouts AP-HP - couleurs FSH -->
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"5.2"}
     h3,h4,h5,h6{--heading-prefix:"5.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
-    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
-    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
 
   <div id="ig-search">
@@ -232,42 +243,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="organisation-des-tests">Organisation des tests</h3>
 
-<div style="text-align: center;"><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="521.875px" preserveAspectRatio="none" style="width:575px;height:521px;" version="1.1" viewBox="0 0 575 521" width="575px" zoomAndPan="magnify"><defs /><g><rect fill="#999999" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="66.6667" x="10.4167" y="237.3942" /><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="35.4167" x="26.0417" y="264.622">Tests</text><rect fill="#430C05" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="112.5" x="129.1667" y="104.126" /><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="81.25" x="144.7917" y="131.3538">Libre service</text><rect fill="#D46F4D" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="134.375" x="293.75" y="54.1504" /><a href="https://interop.esante.gouv.fr/" target="_top" title="https://interop.esante.gouv.fr/" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="98.9583" x="309.375" y="81.3782">Espace de test</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="408.3333" y="81.3782">&#160;</text><rect fill="#00353F" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="62.5" x="480.2083" y="20.8333" /><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CGU_espace_de_tests_v1.1.pdf" target="_top" title="https://esante.gouv.fr/sites/default/files/media_entity/documents/CGU_espace_de_tests_v1.1.pdf" xlink:actuate="onRequest" xlink:href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CGU_espace_de_tests_v1.1.pdf" xlink:show="new" xlink:title="https://esante.gouv.fr/sites/default/files/media_entity/documents/CGU_espace_de_tests_v1.1.pdf" xlink:type="simple"><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="27.0833" x="495.8333" y="48.0611">CGU</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="522.9167" y="48.0611">&#160;</text><path d="M428.125,77.0508 L438.5417,77.0508 C454.1667,77.0508 454.1667,43.7337 469.7917,43.7337 L480.2083,43.7337 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#00353F" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="82.2917" x="480.2083" y="87.4674" /><a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/manuel_gazelle_evs%20V0.3_1.pdf" target="_top" title="https://industriels.esante.gouv.fr/sites/default/files/media/document/manuel_gazelle_evs%20V0.3_1.pdf" xlink:actuate="onRequest" xlink:href="https://industriels.esante.gouv.fr/sites/default/files/media/document/manuel_gazelle_evs%20V0.3_1.pdf" xlink:show="new" xlink:title="https://industriels.esante.gouv.fr/sites/default/files/media/document/manuel_gazelle_evs%20V0.3_1.pdf" xlink:type="simple"><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="46.875" x="495.8333" y="114.6952">Manuel</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="542.7083" y="114.6952">&#160;</text><path d="M428.125,77.0508 L438.5417,77.0508 C454.1667,77.0508 454.1667,110.3678 469.7917,110.3678 L480.2083,110.3678 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><path d="M241.6667,127.0264 L252.0833,127.0264 C267.7083,127.0264 267.7083,77.0508 283.3333,77.0508 L293.75,77.0508 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#D46F4D" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="97.9167" x="293.75" y="120.7845" /><a href="https://interop.esante.gouv.fr/matchboxv4/#/validate" target="_top" title="https://interop.esante.gouv.fr/matchboxv4/#/validate" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/matchboxv4/#/validate" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/matchboxv4/#/validate" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="62.5" x="309.375" y="148.0123">MatchBox</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="371.875" y="148.0123">&#160;</text><path d="M241.6667,127.0264 L252.0833,127.0264 C267.7083,127.0264 267.7083,143.6849 283.3333,143.6849 L293.75,143.6849 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#D46F4D" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="96.875" x="293.75" y="187.4186" /><a href="https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil" target="_top" title="https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil" xlink:actuate="onRequest" xlink:href="https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil" xlink:show="new" xlink:title="https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="61.4583" x="309.375" y="214.6464">HAPI FHIR</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="370.8333" y="214.6464">&#160;</text><path d="M241.6667,127.0264 L252.0833,127.0264 C267.7083,127.0264 267.7083,210.319 283.3333,210.319 L293.75,210.319 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><path d="M77.0833,260.2946 L87.5,260.2946 C103.125,260.2946 103.125,127.0264 118.75,127.0264 L129.1667,127.0264 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#430C05" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="115.625" x="129.1667" y="287.3698" /><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="84.375" x="144.7917" y="314.5976">Projectathon</text><rect fill="#FFBF66" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="119.7917" x="296.875" y="254.0527" /><a href="https://industriels.esante.gouv.fr/produits-et-services/ci-sis-cadre-d-interoperabilite-des-systemes-d-information-de-sante/projectathon-interoperabilite" target="_top" title="https://industriels.esante.gouv.fr/produits-et-services/ci-sis-cadre-d-interoperabilite-des-systemes-d-information-de-sante/projectathon-interoperabilite" xlink:actuate="onRequest" xlink:href="https://industriels.esante.gouv.fr/produits-et-services/ci-sis-cadre-d-interoperabilite-des-systemes-d-information-de-sante/projectathon-interoperabilite" xlink:show="new" xlink:title="https://industriels.esante.gouv.fr/produits-et-services/ci-sis-cadre-d-interoperabilite-des-systemes-d-information-de-sante/projectathon-interoperabilite" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="84.375" x="312.5" y="281.2805">Pr&#233;sentation</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="396.875" y="281.2805">&#160;</text><path d="M244.7917,310.2702 L255.2083,310.2702 C270.8333,310.2702 270.8333,276.9531 286.4583,276.9531 L296.875,276.9531 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#FFBF66" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="160.4167" x="296.875" y="320.6868" /><a href="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&amp;testStatus=1" target="_top" title="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&amp;testStatus=1" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&amp;testStatus=1" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&amp;testStatus=1" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="125" x="312.5" y="347.9146">Consulter les Tests</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="437.5" y="347.9146">&#160;</text><path d="M244.7917,310.2702 L255.2083,310.2702 C270.8333,310.2702 270.8333,343.5872 286.4583,343.5872 L296.875,343.5872 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><path d="M77.0833,260.2946 L87.5,260.2946 C103.125,260.2946 103.125,310.2702 118.75,310.2702 L129.1667,310.2702 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#430C05" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="198.9583" x="129.1667" y="420.638" /><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="167.7083" x="144.7917" y="447.8658">Verification de conformit&#233;</text><rect fill="#08C5D1" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="160.4167" x="380.2083" y="387.321" /><a href="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=5&amp;testStatus=1" target="_top" title="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=5&amp;testStatus=1" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=5&amp;testStatus=1" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=5&amp;testStatus=1" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="125" x="395.8333" y="414.5487">Consulter les Tests</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="520.8333" y="414.5487">&#160;</text><path d="M328.125,443.5384 L338.5417,443.5384 C354.1667,443.5384 354.1667,410.2214 369.7917,410.2214 L380.2083,410.2214 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#08C5D1" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0416666666666667;" width="153.125" x="380.2083" y="453.9551" /><a href="https://industriels.esante.gouv.fr/segur-du-numerique-en-sante/toutes-les-ressources-du-segur" target="_top" title="https://industriels.esante.gouv.fr/segur-du-numerique-en-sante/toutes-les-ressources-du-segur" xlink:actuate="onRequest" xlink:href="https://industriels.esante.gouv.fr/segur-du-numerique-en-sante/toutes-les-ressources-du-segur" xlink:show="new" xlink:title="https://industriels.esante.gouv.fr/segur-du-numerique-en-sante/toutes-les-ressources-du-segur" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="117.7083" x="395.8333" y="481.1829">Programme S&#233;gur</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="4.1667" x="513.5417" y="481.1829">&#160;</text><path d="M328.125,443.5384 L338.5417,443.5384 C354.1667,443.5384 354.1667,476.8555 369.7917,476.8555 L380.2083,476.8555 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><path d="M77.0833,260.2946 L87.5,260.2946 C103.125,260.2946 103.125,443.5384 118.75,443.5384 L129.1667,443.5384 " fill="none" style="stroke:#446E9B;stroke-width:3.125;" /></g></svg></div>
+<div style="text-align: center;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="MINDMAP" height="521.875px" preserveAspectRatio="none" style="width:562px;height:521px;" version="1.1" viewBox="0 0 562 521" width="562.5px" zoomAndPan="magnify"><defs /><g><rect fill="#999999" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="64.502" x="10.4167" y="237.3942" /><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="33.252" x="26.0417" y="264.622">Tests</text><rect fill="#430C05" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="111.2" x="127.002" y="104.126" /><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="79.95" x="142.627" y="131.3538">Libre service</text><rect fill="#D46F4D" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="127.3682" x="290.2852" y="54.1504" /><a href="https://interop.esante.gouv.fr/" target="_top" title="https://interop.esante.gouv.fr/" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="92.1448" x="305.9102" y="81.3782">Espace de test</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="3.9734" x="398.055" y="81.3782">&#160;</text><rect fill="#00353F" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="62.7869" x="469.7367" y="20.8333" /><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CGU_espace_de_tests_v1.1.pdf" target="_top" title="https://esante.gouv.fr/sites/default/files/media_entity/documents/CGU_espace_de_tests_v1.1.pdf" xlink:actuate="onRequest" xlink:href="https://esante.gouv.fr/sites/default/files/media_entity/documents/CGU_espace_de_tests_v1.1.pdf" xlink:show="new" xlink:title="https://esante.gouv.fr/sites/default/files/media_entity/documents/CGU_espace_de_tests_v1.1.pdf" xlink:type="simple"><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="27.5635" x="485.3617" y="48.0611">CGU</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="3.9734" x="512.9252" y="48.0611">&#160;</text><path d="M417.6534,77.0508 L428.0701,77.0508 C443.6951,77.0508 443.6951,43.7337 459.3201,43.7337 L469.7367,43.7337" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#00353F" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="80.6763" x="469.7367" y="87.4674" /><a href="https://industriels.esante.gouv.fr/sites/default/files/media/document/manuel_gazelle_evs%20V0.3_1.pdf" target="_top" title="https://industriels.esante.gouv.fr/sites/default/files/media/document/manuel_gazelle_evs%20V0.3_1.pdf" xlink:actuate="onRequest" xlink:href="https://industriels.esante.gouv.fr/sites/default/files/media/document/manuel_gazelle_evs%20V0.3_1.pdf" xlink:show="new" xlink:title="https://industriels.esante.gouv.fr/sites/default/files/media/document/manuel_gazelle_evs%20V0.3_1.pdf" xlink:type="simple"><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="45.4529" x="485.3617" y="114.6952">Manuel</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="3.9734" x="530.8146" y="114.6952">&#160;</text><path d="M417.6534,77.0508 L428.0701,77.0508 C443.6951,77.0508 443.6951,110.3678 459.3201,110.3678 L469.7367,110.3678" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><path d="M238.2019,127.0264 L248.6186,127.0264 C264.2436,127.0264 264.2436,77.0508 279.8686,77.0508 L290.2852,77.0508" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#D46F4D" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="96.9849" x="290.2852" y="120.7845" /><a href="https://interop.esante.gouv.fr/matchboxv4/#/validate" target="_top" title="https://interop.esante.gouv.fr/matchboxv4/#/validate" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/matchboxv4/#/validate" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/matchboxv4/#/validate" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="61.7615" x="305.9102" y="148.0123">MatchBox</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="3.9734" x="367.6717" y="148.0123">&#160;</text><path d="M238.2019,127.0264 L248.6186,127.0264 C264.2436,127.0264 264.2436,143.6849 279.8686,143.6849 L290.2852,143.6849" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#D46F4D" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="97.3328" x="290.2852" y="187.4186" /><a href="https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil" target="_top" title="https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil" xlink:actuate="onRequest" xlink:href="https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil" xlink:show="new" xlink:title="https://github.com/ansforge/FIG_ans-ig-sample/wiki/Valider-une-ressource-contre-un-profil" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="62.1094" x="305.9102" y="214.6464">HAPI FHIR</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="3.9734" x="368.0196" y="214.6464">&#160;</text><path d="M238.2019,127.0264 L248.6186,127.0264 C264.2436,127.0264 264.2436,210.319 279.8686,210.319 L290.2852,210.319" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><path d="M74.9186,260.2946 L85.3353,260.2946 C100.9603,260.2946 100.9603,127.0264 116.5853,127.0264 L127.002,127.0264" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#430C05" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="110.5652" x="127.002" y="287.3698" /><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="79.3152" x="142.627" y="314.5976">Projectathon</text><rect fill="#FFBF66" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="114.2212" x="289.6505" y="254.0527" /><a href="https://industriels.esante.gouv.fr/produits-et-services/ci-sis-cadre-d-interoperabilite-des-systemes-d-information-de-sante/projectathon-interoperabilite" target="_top" title="https://industriels.esante.gouv.fr/produits-et-services/ci-sis-cadre-d-interoperabilite-des-systemes-d-information-de-sante/projectathon-interoperabilite" xlink:actuate="onRequest" xlink:href="https://industriels.esante.gouv.fr/produits-et-services/ci-sis-cadre-d-interoperabilite-des-systemes-d-information-de-sante/projectathon-interoperabilite" xlink:show="new" xlink:title="https://industriels.esante.gouv.fr/produits-et-services/ci-sis-cadre-d-interoperabilite-des-systemes-d-information-de-sante/projectathon-interoperabilite" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="78.9978" x="305.2755" y="281.2805">Pr&#233;sentation</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="3.9734" x="384.2733" y="281.2805">&#160;</text><path d="M237.5671,310.2702 L247.9838,310.2702 C263.6088,310.2702 263.6088,276.9531 279.2338,276.9531 L289.6505,276.9531" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#FFBF66" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="154.0344" x="289.6505" y="320.6868" /><a href="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&amp;testStatus=1" target="_top" title="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&amp;testStatus=1" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&amp;testStatus=1" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=2&amp;testStatus=1" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="118.811" x="305.2755" y="347.9146">Consulter les Tests</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="3.9734" x="424.0865" y="347.9146">&#160;</text><path d="M237.5671,310.2702 L247.9838,310.2702 C263.6088,310.2702 263.6088,343.5872 279.2338,343.5872 L289.6505,343.5872" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><path d="M74.9186,260.2946 L85.3353,260.2946 C100.9603,260.2946 100.9603,310.2702 116.5853,310.2702 L127.002,310.2702" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#430C05" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="193.8965" x="127.002" y="420.638" /><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="162.6465" x="142.627" y="447.8658">Verification de conformit&#233;</text><rect fill="#08C5D1" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="154.0344" x="372.9818" y="387.321" /><a href="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=5&amp;testStatus=1" target="_top" title="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=5&amp;testStatus=1" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=5&amp;testStatus=1" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/gazelle/testing/testsDefinition/testsList.seam?testType=5&amp;testStatus=1" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="118.811" x="388.6068" y="414.5487">Consulter les Tests</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="3.9734" x="507.4178" y="414.5487">&#160;</text><path d="M320.8984,443.5384 L331.3151,443.5384 C346.9401,443.5384 346.9401,410.2214 362.5651,410.2214 L372.9818,410.2214" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><rect fill="#08C5D1" height="45.8008" rx="4.1667" ry="4.1667" style="stroke:#EEEEEE;stroke-width:1.0417;" width="148.9197" x="372.9818" y="453.9551" /><a href="https://industriels.esante.gouv.fr/segur-du-numerique-en-sante/toutes-les-ressources-du-segur" target="_top" title="https://industriels.esante.gouv.fr/segur-du-numerique-en-sante/toutes-les-ressources-du-segur" xlink:actuate="onRequest" xlink:href="https://industriels.esante.gouv.fr/segur-du-numerique-en-sante/toutes-les-ressources-du-segur" xlink:show="new" xlink:title="https://industriels.esante.gouv.fr/segur-du-numerique-en-sante/toutes-les-ressources-du-segur" xlink:type="simple"><text fill="#000000" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" text-decoration="underline" textLength="113.6963" x="388.6068" y="481.1829">Programme S&#233;gur</text></a><text fill="#EEEEEE" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="3.9734" x="502.3031" y="481.1829">&#160;</text><path d="M320.8984,443.5384 L331.3151,443.5384 C346.9401,443.5384 346.9401,476.8555 362.5651,476.8555 L372.9818,476.8555" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /><path d="M74.9186,260.2946 L85.3353,260.2946 C100.9603,260.2946 100.9603,443.5384 116.5853,443.5384 L127.002,443.5384" fill="none" style="stroke:#446E9B;stroke-width:3.125;" /></g></svg></div>
 
 <h4 id="espace-de-test">Espace de test</h4>
 
-<p>L’espace de test est composé de deux outils :</p>
+<p>L'espace de test est composé de deux outils :</p>
 
 <ul>
   <li>EVSClient, qui permet de vérifier la conformité : des documents CDA, des archives IHE_XDM.ZIP utilisées pour les échanges, des ressources FHIR…</li>
-  <li>Gazelle Test Management, qui permet de tester des scénarios complets avec plusieurs interactions d’échanges de données.</li>
+  <li>Gazelle Test Management, qui permet de tester des scénarios complets avec plusieurs interactions d'échanges de données.</li>
 </ul>
 
 <p>Ces outils sont accessibles en ligne sur le site <a href="https://interop.esante.gouv.fr/">https://interop.esante.gouv.fr/</a> et notamment utilisés lors des Projectathons organisés par l’ANS pour les éditeurs.</p>
 
 <h3 id="matchbox">Matchbox</h3>
 
-<p>Matchbox est un outil permettant notamment de valider des instances de ressources FHIR contre un profil. L’outil matchbox est <a href="https://github.com/ahdis/matchbox">open source</a>.</p>
+<p>Matchbox est un outil permettant notamment de valider des instances de ressources FHIR contre un profil. L'outil matchbox est <a href="https://github.com/ahdis/matchbox">open source</a>.</p>
 
 <h4 id="accès-à-matchbox-et-à--la-validation">Accès à Matchbox et à  la validation</h4>
 
-<p>L’instance matchbox de l’ANS est accessible via <a href="https://interop.esante.gouv.fr/matchboxv4">cette URL</a>.</p>
+<p>L'instance matchbox de l'ANS est accessible via <a href="https://interop.esante.gouv.fr/matchboxv4">cette URL</a>.</p>
 
 <p>Cette instance permet de faire des vérification au regard :</p>
 
 <ul>
-  <li>Des guides d’implémentation de l’ANS</li>
-  <li>Des guides d’implementation d’InteropSanté</li>
+  <li>Des guides d'implémentation de l'ANS</li>
+  <li>Des guides d'implementation d'InteropSanté</li>
   <li>Du FHIR Terminology Service (FTS) du Serveur Multi Terminologique (<a href="https://smt.esante.gouv.fr/">SMT</a>).</li>
 </ul>
 
-<p>Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le bouton “Validate ressource”</p>
+<p>Pour valider une ressource FHIR contre un profil, il suffit de cliquer sur le bouton "Validate ressource"</p>
 
 <div style="text-align: center;"><img width="80%" alt="image" src="homepage-matchbox.png" /></div>
 
 <h4 id="chargement-de-la-ressource-fhir-à-valider">Chargement de la ressource FHIR à valider</h4>
 
-<p>Sur cette deuxième page, il suffira de déposer le fichier contenant la ressource FHIR à valider. Optionnellement, il est possible de sélectionner le numéro de version du guide d’implémentation ainsi que le profil à valider. A défaut, le profil à valider sera défini automatiquement à partir de l’attribut meta.profile.</p>
+<p>Sur cette deuxième page, il suffira de déposer le fichier contenant la ressource FHIR à valider. Optionnellement, il est possible de sélectionner le numéro de version du guide d'implémentation ainsi que le profil à valider. A défaut, le profil à valider sera défini automatiquement à partir de l'attribut meta.profile.</p>
 
 <div style="text-align: center;"><img width="80%" alt="image" src="validate-fr-patient-ins.png" /></div>
 
@@ -275,7 +286,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Vous obtiendrez ainsi le résultat de la validation, à noter que les codes et les displays sont validés par le FHIR Terminology Service (FTS) du Serveur Multi Terminologique (<a href="https://smt.esante.gouv.fr/">SMT</a>).</p>
 
-<p>Une fois validé, les messages d’erreurs sont accessibles en-dessous :</p>
+<p>Une fois validé, les messages d'erreurs sont accessibles en-dessous :</p>
 
 <div style="text-align: center;"><img width="80%" alt="image" src="resultat-validation.png" /></div>
 
@@ -285,7 +296,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="gazelle">Gazelle</h3>
 
-<p>Gazelle est un outil de tests qui s’appuie sur des validateurs tel que matchbox pour FHIR pour établir des scénarios de tests complets.</p>
+<p>Gazelle est un outil de tests qui s'appuie sur des validateurs tel que matchbox pour FHIR pour établir des scénarios de tests complets.</p>
 
 <h3 id="les-niveaux-des-scénarios-gazelle">Les niveaux des scénarios gazelle</h3>
 
@@ -311,37 +322,37 @@ L’objectif de ces cas de test est de valider la ressource ou la requête const
 
 <p>L’objectif de ces cas de test est de créer un scénario complexe faisant appel aux différents flux de la spécification technique et ainsi créer un exemple d’usage.</p>
 
-<h4 id="les-types-détapes-de-cas-de-tests">Les types d’étapes de cas de tests</h4>
+<h4 id="les-types-détapes-de-cas-de-tests">Les types d'étapes de cas de tests</h4>
 
 <p>Les étapes de cas de tests pourront avoir plusieurs types.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Type d’étapes</th>
+      <th>Type d'étapes</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>[TRANSACTION]</td>
-      <td>Ce type d’étape concerne une transaction entre un serveur et un client</td>
+      <td>Ce type d'étape concerne une transaction entre un serveur et un client</td>
     </tr>
     <tr>
       <td>[PREUVE]</td>
-      <td>Ce type d’étape est une demande de preuve (screenshot, lien permanent…) à l’attention du moniteur</td>
+      <td>Ce type d'étape est une demande de preuve (screenshot, lien permanent…) à l'attention du moniteur</td>
     </tr>
     <tr>
       <td>[INFORMATION]</td>
-      <td>Message informatif à l’attention de l’editeur concernant le fonctionnement du cas de test</td>
+      <td>Message informatif à l'attention de l'editeur concernant le fonctionnement du cas de test</td>
     </tr>
     <tr>
       <td>[VALIDATION]</td>
-      <td>Ce type d’étape est une demande de validation d’une ressource sur EVSClient</td>
+      <td>Ce type d'étape est une demande de validation d'une ressource sur EVSClient</td>
     </tr>
     <tr>
       <td>[INSTRUCTION]</td>
-      <td>Ce type d’étape est une action demandée à l’éditeur sans preuve exigée</td>
+      <td>Ce type d'étape est une action demandée à l'éditeur sans preuve exigée</td>
     </tr>
   </tbody>
 </table>
@@ -395,12 +406,13 @@ L’objectif de ces cas de test est de valider la ressource ou la requête const
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:54+0000">2026-01-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 12, 2026 09:48+0000">2026-01-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
-            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
-<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions </a>
+            Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-documentation/issues">New Issue</a>
 
           </span>

@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Les erreurs courantes - Documentation des guides d'implémentation de l'ANS v0.1.9</title>
+    <title>Les erreurs courantes - Documentation des guides d&#39;implémentation de l&#39;ANS v0.1.9</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,9 +18,14 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
     <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/aphp-ig.css" rel="stylesheet"/>
+    <link href="assets/css/prism-lang-fml.min.css" rel="stylesheet"/>
+    <link href="assets/css/prism-lang-fsh.min.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -40,19 +45,25 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
+
+	  <!-- Ajouts AP-HP - couleurs FSH -->
+	  <script type="text/javascript" src="assets/js/prism-lang-fml.min.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-lang-fsh.min.js"></script>
+	  <!-- Fin ajouts AP-HP - couleurs FSH -->
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"3.2"}
     h3,h4,h5,h6{--heading-prefix:"3.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
-    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
-    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
 
   <div id="ig-search">
@@ -229,19 +240,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="erreur-nullpointerexception">Erreur NullPointerException</h3>
 <ul>
-  <li>java.lang.NullPointerException: Cannot invoke “org.hl7.fhir.r5.model.DataType.isPrimitive()” because “type” is null
-L’erreur vient du fait qu’il y a des fichiers qui ne finissent pas par .md ou par .xml dans pagecontent</li>
+  <li>java.lang.NullPointerException: Cannot invoke "org.hl7.fhir.r5.model.DataType.isPrimitive()" because "type" is null
+L'erreur vient du fait qu'il y a des fichiers qui ne finissent pas par .md ou par .xml dans pagecontent</li>
 </ul>
 
 <h3 id="erreur-missing-snapshot">Erreur Missing Snapshot</h3>
-<p>FSH nécessite d’avoir des packages avec snapshot et differential. Les packages historiques (&lt;2024) n’avaient pas de snapshot, engendrant des erreurs de générations lorsque ceux-ci sont mis en dépendaces. Pour régler ce problème, il est possible de générer les snapshots dans le FHIR CACHE :</p>
+<p>FSH nécessite d'avoir des packages avec snapshot et differential. Les packages historiques (&lt;2024) n'avaient pas de snapshot, engendrant des erreurs de générations lorsque ceux-ci sont mis en dépendaces. Pour régler ce problème, il est possible de générer les snapshots dans le FHIR CACHE :</p>
 
 <ul>
   <li>Installer dotnet sdk : https://dotnet.microsoft.com/en-us/download</li>
   <li>Lancer la commande <code class="language-plaintext highlighter-rouge">dotnet tool install --global Firely.Terminal --version 3.0.0</code></li>
 </ul>
 
-<p>Exemples d’usage :</p>
+<p>Exemples d'usage :</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">fhir bake --package hl7.fhir.fr.core</code></li>
@@ -292,12 +303,13 @@ L’erreur vient du fait qu’il y a des fichiers qui ne finissent pas par .md o
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:54+0000">2026-01-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 12, 2026 09:48+0000">2026-01-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
-            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
-<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions </a>
+            Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-documentation/issues">New Issue</a>
 
           </span>

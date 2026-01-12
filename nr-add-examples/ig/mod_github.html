@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Usage de GitHub - Documentation des guides d'implémentation de l'ANS v0.1.9</title>
+    <title>Usage de GitHub - Documentation des guides d&#39;implémentation de l&#39;ANS v0.1.9</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,9 +18,14 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
     <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/aphp-ig.css" rel="stylesheet"/>
+    <link href="assets/css/prism-lang-fml.min.css" rel="stylesheet"/>
+    <link href="assets/css/prism-lang-fsh.min.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -40,19 +45,25 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
+
+	  <!-- Ajouts AP-HP - couleurs FSH -->
+	  <script type="text/javascript" src="assets/js/prism-lang-fml.min.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-lang-fsh.min.js"></script>
+	  <!-- Fin ajouts AP-HP - couleurs FSH -->
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"3.3"}
     h3,h4,h5,h6{--heading-prefix:"3.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
-    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
-    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
 
   <div id="ig-search">
@@ -223,36 +234,36 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#premiers-pas-sur-gihub" id="markdown-toc-premiers-pas-sur-gihub">Premiers pas sur GiHub</a></li>
-  <li><a href="#création-dun-nouveau-projet" id="markdown-toc-création-dun-nouveau-projet">Création d’un nouveau projet</a></li>
+  <li><a href="#création-dun-nouveau-projet" id="markdown-toc-création-dun-nouveau-projet">Création d'un nouveau projet</a></li>
   <li><a href="#reporter-un-problème-une-issue-sur-un-des-repository-github" id="markdown-toc-reporter-un-problème-une-issue-sur-un-des-repository-github">Reporter un problème (une issue) sur un des repository GitHub</a></li>
   <li><a href="#travailler-sur-un-repository" id="markdown-toc-travailler-sur-un-repository">Travailler sur un repository</a></li>
   <li><a href="#mettre-en-place-un-workflow-de-validationgénérationpublication" id="markdown-toc-mettre-en-place-un-workflow-de-validationgénérationpublication">Mettre en place un workflow de validation/génération/publication</a></li>
 </ul>
 
 </div>
-<p>GitHub est l’équivalent d’un sharepoint, un répertoire (=repository) versionné avec un système de branche pour travailler de manière collaborative sur du contenu textuel (code, écriture, grammaire …).
-Cette page se concentre sur les bonnes pratique au sein de l’organisation GitHub <a href="https://github.com/ansforge">ansforge</a> sur les guides d’implémentation. Elle peut également servir de bonnes pratiques pour les volets externes.</p>
+<p>GitHub est l'équivalent d'un sharepoint, un répertoire (=repository) versionné avec un système de branche pour travailler de manière collaborative sur du contenu textuel (code, écriture, grammaire …).
+Cette page se concentre sur les bonnes pratique au sein de l'organisation GitHub <a href="https://github.com/ansforge">ansforge</a> sur les guides d'implémentation. Elle peut également servir de bonnes pratiques pour les volets externes.</p>
 
 <h3 id="premiers-pas-sur-gihub">Premiers pas sur GiHub</h3>
 
-<p>Pour créer un compte GitHub et être enrôlé dans l’organisation <a href="https://github.com/ansforge">ansforge</a>, il suffit de suivre <a href="https://ansforge.github.io/Documentation/">cette documentation</a>.</p>
+<p>Pour créer un compte GitHub et être enrôlé dans l'organisation <a href="https://github.com/ansforge">ansforge</a>, il suffit de suivre <a href="https://ansforge.github.io/Documentation/">cette documentation</a>.</p>
 
-<h4 id="règles-dutilisation-de-github">Règles d’utilisation de GitHub</h4>
+<h4 id="règles-dutilisation-de-github">Règles d'utilisation de GitHub</h4>
 
 <ul>
-  <li>Toutes modifications d’une spécification sur GitHub doit se faire au niveau d’une branche.</li>
-  <li>Le nom de la branche doit être préfixé par les initiales de l’auteur (ex : “sb-“ pour Sébastien Brunelle) suivi de la description des travaux (ex : “sb-ajout-bonnespratiques-github)</li>
-  <li>Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l’ANS.</li>
-  <li>Une fois la Pull Request validée, c’est à l’auteur des modifications de fusionner (=merge) la pull request avec la branche principale “main”.</li>
+  <li>Toutes modifications d'une spécification sur GitHub doit se faire au niveau d'une branche.</li>
+  <li>Le nom de la branche doit être préfixé par les initiales de l'auteur (ex : "sb-" pour Sébastien Brunelle) suivi de la description des travaux (ex : "sb-ajout-bonnespratiques-github)</li>
+  <li>Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l'ANS.</li>
+  <li>Une fois la Pull Request validée, c'est à l'auteur des modifications de fusionner (=merge) la pull request avec la branche principale "main".</li>
 </ul>
 
-<p>A noter qu’aucune modification doit être faite directement dans main.</p>
+<p>A noter qu'aucune modification doit être faite directement dans main.</p>
 
-<h3 id="création-dun-nouveau-projet">Création d’un nouveau projet</h3>
+<h3 id="création-dun-nouveau-projet">Création d'un nouveau projet</h3>
 
 <h4 id="les-règles-de-nommage">les règles de nommage</h4>
 
-<p>Des règles ont déjà été <a href="https://ansforge.github.io/Documentation/pages/docs/creationprojet.html">définies</a> au niveau de l’organisation ANS. Celles-ci ont été sur-contraintes pour les projets liés à l’intéropérabilité</p>
+<p>Des règles ont déjà été <a href="https://ansforge.github.io/Documentation/pages/docs/creationprojet.html">définies</a> au niveau de l'organisation ANS. Celles-ci ont été sur-contraintes pour les projets liés à l'intéropérabilité</p>
 
 <p>Le nom du repository devra être sous forme interop-[type]-[optionnel-format]-[optionnel-projet/produit]-[nom-descriptif] avec :</p>
 
@@ -263,7 +274,7 @@ Cette page se concentre sur les bonnes pratique au sein de l’organisation GitH
   <li>[nom-descriptif] = nom clair et concis sans acronyme séparé avec des tirets.</li>
 </ul>
 
-<p>L’ensemble du nom devra être en minuscule.</p>
+<p>L'ensemble du nom devra être en minuscule.</p>
 
 <p>Exemples : interop-ig-fhir-annuaire, interop-outils-cda</p>
 
@@ -285,45 +296,45 @@ Cette page se concentre sur les bonnes pratique au sein de l’organisation GitH
 
 <ul>
   <li>implementation-guide (trop générique et dans le titre)</li>
-  <li>HL7 (trop générique, risque d’être confondu avec hl7v2)</li>
+  <li>HL7 (trop générique, risque d'être confondu avec hl7v2)</li>
   <li>volet (inutile, trop générique)</li>
   <li>Sous-ensemble du nom du répertoire</li>
 </ul>
 
 <h3 id="reporter-un-problème-une-issue-sur-un-des-repository-github">Reporter un problème (une issue) sur un des repository GitHub</h3>
 
-<p>Vous avez identifié une erreur sur un des guides ? L’onglet issue permet de signaler un problème sur un projet donné.</p>
+<p>Vous avez identifié une erreur sur un des guides ? L'onglet issue permet de signaler un problème sur un projet donné.</p>
 
 <div class="figure" style="width:100%;">
     <img style="height: auto; width: 100%;" alt="image" src="https://user-images.githubusercontent.com/48218773/215773144-31a47623-a853-4a4e-8ba0-ad1d66b29961.png" />
 </div>
 
-<p>Un lien est également disponible sous chaque guide d’implémentation pour accéder aux issues :</p>
+<p>Un lien est également disponible sous chaque guide d'implémentation pour accéder aux issues :</p>
 <div class="figure" style="width:100%;">
     <img style="height: auto; width: 100%;" alt="image" src="new_issue.png" />
 </div>
 
-<p>L’issue doit contenir un titre, et une description très détaillée avec une proposition de changement.</p>
+<p>L'issue doit contenir un titre, et une description très détaillée avec une proposition de changement.</p>
 
 <p>Cf. documentation officielle : https://docs.github.com/fr/issues/tracking-your-work-with-issues/using-issues/creating-an-issue</p>
 
 <h3 id="travailler-sur-un-repository">Travailler sur un repository</h3>
 
-<p>GitHub peut s’utiliser de deux façons via l’application GitHub Desktop ou via l’invite de commande. Il est détaillé ci-dessous comment faire une modification via l’invite de commande.</p>
+<p>GitHub peut s'utiliser de deux façons via l'application GitHub Desktop ou via l'invite de commande. Il est détaillé ci-dessous comment faire une modification via l'invite de commande.</p>
 
 <h4 id="git-clone-xxx">Git clone xxx</h4>
 
-<p>La commande git clone permet de copier l’intégralité d’un repository en local.
-Le xxx est à remplacer avec l’indication dans ssh :</p>
+<p>La commande git clone permet de copier l'intégralité d'un repository en local.
+Le xxx est à remplacer avec l'indication dans ssh :</p>
 <div class="figure">
     <img style="height: auto; width: 50%;" alt="image" src="https://user-images.githubusercontent.com/48218773/207010144-e80b05a0-9763-4026-bf59-debd8b2a2411.png" />
 </div>
 
 <h4 id="git-checkout--b-nom_travail_en_cours">Git checkout -b nom_travail_en_cours</h4>
 
-<p>Les branches : un repository (ou répertoire) Github contient une arborescence de branche, permettant d’individualiser le travail de chacun puis de pousser son travail dans la branche de travail commune : typiquement <code class="language-plaintext highlighter-rouge">main</code>.</p>
+<p>Les branches : un repository (ou répertoire) Github contient une arborescence de branche, permettant d'individualiser le travail de chacun puis de pousser son travail dans la branche de travail commune : typiquement <code class="language-plaintext highlighter-rouge">main</code>.</p>
 
-<p>Pour éviter que tout le monde travaille sur le même environnement, il est nécessaire de créer une nouvelle branche, et de l’appeler par le nom du travail prévu dans cette branche. Le nom de la branche doit être en minuscule et commencer par son acronyme (ex : nr- pour Nicolas Riss).</p>
+<p>Pour éviter que tout le monde travaille sur le même environnement, il est nécessaire de créer une nouvelle branche, et de l'appeler par le nom du travail prévu dans cette branche. Le nom de la branche doit être en minuscule et commencer par son acronyme (ex : nr- pour Nicolas Riss).</p>
 
 <p>Une fois la branche créée, il est possible de faire les modifications pour ensuite les reporter sur le repository GitHub distant pour revue.</p>
 
@@ -331,22 +342,22 @@ Le xxx est à remplacer avec l’indication dans ssh :</p>
 
 <p>Une fois les modifications établies, il faut dire à Git quels fichiers on souhaite ajouter au répertoire distant en faisant git add et en rajoutant le chemin vers les fichiers à ajouter (la commande <code class="language-plaintext highlighter-rouge">git status</code> permet de voir quels fichiers ont été modifiés)</p>
 
-<h4 id="git-commit--m-message-sur-la-nature-des-travaux-effectués">Git commit -m “message sur la nature des travaux effectués”</h4>
+<h4 id="git-commit--m-message-sur-la-nature-des-travaux-effectués">Git commit -m "message sur la nature des travaux effectués"</h4>
 
-<p>Une fois les travaux menés (tout ou partie), il faut faire des commit : c’est à dire valider une modification fonctionnelle, cohérente. Cette étape peut être répétée plusieurs fois.</p>
+<p>Une fois les travaux menés (tout ou partie), il faut faire des commit : c'est à dire valider une modification fonctionnelle, cohérente. Cette étape peut être répétée plusieurs fois.</p>
 
 <h4 id="git-push">Git push</h4>
 
-<p>Cette commande pousse l’ensemble des modifications validées avec des commit sur le GitHub distant.</p>
+<p>Cette commande pousse l'ensemble des modifications validées avec des commit sur le GitHub distant.</p>
 
 <h4 id="faire-une-demande-de-tirage-ou-pull-request-pr">Faire une demande de tirage ou Pull Request (PR)</h4>
 
-<p>Ensuite, il faut aller sur l’interface graphique, dans l’onglet, “Pull Requests”, et créer une nouvelle PR qui permet de dire : je veux intégrer les modifications que j’ai faites sur la branche x à la branche main.</p>
+<p>Ensuite, il faut aller sur l'interface graphique, dans l'onglet, "Pull Requests", et créer une nouvelle PR qui permet de dire : je veux intégrer les modifications que j'ai faites sur la branche x à la branche main.</p>
 
-<p>Chaque PR doit être validée par quelqu’un d’autre pour :</p>
+<p>Chaque PR doit être validée par quelqu'un d'autre pour :</p>
 
 <ul>
-  <li>Etre sûr que le savoir n’est pas concentré sur une personne</li>
+  <li>Etre sûr que le savoir n'est pas concentré sur une personne</li>
   <li>Permettre une relecture pour éviter les erreurs</li>
 </ul>
 
@@ -354,19 +365,19 @@ Le xxx est à remplacer avec l’indication dans ssh :</p>
 
 <h3 id="mettre-en-place-un-workflow-de-validationgénérationpublication">Mettre en place un workflow de validation/génération/publication</h3>
 
-<p>Afin de faciliter les actions au regards des IG, l’ANS  met à disposition un <a href="https://github.com/ansforge/IG-workflows">GitHub Action</a>  avec les fonctionnalités suivantes :</p>
+<p>Afin de faciliter les actions au regards des IG, l'ANS  met à disposition un <a href="https://github.com/ansforge/IG-workflows">GitHub Action</a>  avec les fonctionnalités suivantes :</p>
 
 <ul>
   <li>Lancement de sushi</li>
   <li>Tests avec le validateur_cli</li>
   <li>Incorporation des projets de simplifier (Methode bake)</li>
   <li>Publication des releases sur un repo github</li>
-  <li>Génération du diagramme plantuml à partir de des données de l’IG</li>
+  <li>Génération du diagramme plantuml à partir de des données de l'IG</li>
   <li>Génération des diagrammes de mapping plantuml</li>
   <li>Génération des testscripts avec le projet testscript-generator</li>
   <li>Publication sur les pages github :
     <ul>
-      <li>Diagramme de class plantuml généré à partir des données de l’IG</li>
+      <li>Diagramme de class plantuml généré à partir des données de l'IG</li>
       <li>Rapport de validation du validator_cli</li>
     </ul>
   </li>
@@ -413,12 +424,13 @@ Le xxx est à remplacer avec l’indication dans ssh :</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:54+0000">2026-01-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 12, 2026 09:48+0000">2026-01-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
-            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
-<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions </a>
+            Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-documentation/issues">New Issue</a>
 
           </span>

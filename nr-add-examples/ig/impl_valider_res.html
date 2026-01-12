@@ -18,9 +18,14 @@
     <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
     <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
   	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
       <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/aphp-ig.css"/>
+    <link rel="stylesheet" href="assets/css/prism-lang-fml.min.css"/>
+    <link rel="stylesheet" href="assets/css/prism-lang-fsh.min.css"/>
+
 
     <script src="fhir-table-scripts.js" type="text/javascript"> </script>
 
@@ -40,19 +45,25 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
+
+	    <!-- Ajouts AP-HP - couleurs FSH -->
+	  <script src="assets/js/prism-lang-fml.min.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-lang-fsh.min.js" type="text/javascript"></script>
+	    <!-- Fin ajouts AP-HP - couleurs FSH -->
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"4.3"}
     h3,h4,h5,h6{--heading-prefix:"4.3"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
+
           <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-    <a no-external="true" id="hl7-search-lnk" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+    <a id="hl7-search-lnk" href="http://hl7.org/fhir" data-no-external="true"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
   </div>
   <div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
-    <a no-external="true" id="hl7-logo" href="https://esante.gouv.fr/"><img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/></a>
-    <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+    <a id="hl7-logo" href="https://esante.gouv.fr/" data-no-external="true"><img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/></a>
+    <a id="hl7-search-lnk" href="searchform.html" data-no-external="true"><img src="assets/images/search.png" alt="Search FHIR"/></a>
   </div>
 
   <div id="ig-search">
@@ -224,11 +235,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#validation-via-gazelle" id="markdown-toc-validation-via-gazelle">Validation via Gazelle</a></li>
   <li><a href="#validation-avec-une-interface-graphique" id="markdown-toc-validation-avec-une-interface-graphique">Validation avec une interface graphique</a></li>
-  <li><a href="#validation-avec-hapi-fhir-et-lopération-validate" id="markdown-toc-validation-avec-hapi-fhir-et-lopération-validate">Validation avec HAPI FHIR et l’opération $Validate</a></li>
+  <li><a href="#validation-avec-hapi-fhir-et-lopération-validate" id="markdown-toc-validation-avec-hapi-fhir-et-lopération-validate">Validation avec HAPI FHIR et l'opération $Validate</a></li>
 </ul>
 
 </div>
-<p>Cette page a pour but d’expliquer comment valider qu’une instance de ressource est conforme à un profil. Elle est particulièrement utile lors de la phase de modélisation de nouveaux profils, ou lors de la création d’exemples.</p>
+<p>Cette page a pour but d'expliquer comment valider qu'une instance de ressource est conforme à un profil. Elle est particulièrement utile lors de la phase de modélisation de nouveaux profils, ou lors de la création d'exemples.</p>
 
 <p>Cette documentation est destinée aux:</p>
 
@@ -245,59 +256,59 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="validation-avec-une-interface-graphique">Validation avec une interface graphique</h3>
 
-<p>Plusieurs projets open-source permettent de valider des ressources FHIR via l’interface graphique d’un site web :</p>
+<p>Plusieurs projets open-source permettent de valider des ressources FHIR via l'interface graphique d'un site web :</p>
 
 <ul>
   <li><a href="https://validator.fhir.org">FHIR Validator</a></li>
-  <li><a name="l440">​</a><a href="[https://test.ahdis.ch/matchbox](https://test.ahdis.ch/matchbox/#/)">Matchbox</a></li>
+  <li><a name="l456">​</a><a href="[https://test.ahdis.ch/matchbox](https://test.ahdis.ch/matchbox/#/)">Matchbox</a></li>
 </ul>
 
-<h3 id="validation-avec-hapi-fhir-et-lopération-validate">Validation avec HAPI FHIR et l’opération $Validate</h3>
+<h3 id="validation-avec-hapi-fhir-et-lopération-validate">Validation avec HAPI FHIR et l'opération $Validate</h3>
 
-<p>Le serveur HAPI utilise le validateur FHIR. Il est ainsi possible d’utiliser HAPI et l’opération $validate. Les urls définies ci-dessous pointent vers le serveur public d’HAPI, mais cette documentation reste valide sur tous les serveurs HAPI déployés en ligne ou en local.</p>
+<p>Le serveur HAPI utilise le validateur FHIR. Il est ainsi possible d'utiliser HAPI et l'opération $validate. Les urls définies ci-dessous pointent vers le serveur public d'HAPI, mais cette documentation reste valide sur tous les serveurs HAPI déployés en ligne ou en local.</p>
 
 <h4 id="etape-1--poster-les-structuredefinition-sur-hapi-fhir">Etape 1 : poster les StructureDefinition sur HAPI FHIR</h4>
 
 <p>Les StructureDefinition peuvent être accessibles sous deux formes:</p>
 
 <ul>
-  <li>Sous forme d’un package pour un cas d’usage particulier, c’est sous cette forme qu’ils sont définis dans le <a href="https://registry.fhir.org/">FHIR REGISTRY</a> (dans les ImplementationGuide, un package est systématiquement généré à l’adresse [url]/package.tgz, ex : [https://www.hl7.org/fhir/us/core/package.tgz])</li>
-  <li>Le / les profils ne sont pas issus d’un contexte particulier et se présentent sous forme d’un ficher xml ou json (pratique à déconseiller)</li>
+  <li>Sous forme d'un package pour un cas d'usage particulier, c'est sous cette forme qu'ils sont définis dans le <a href="https://registry.fhir.org/">FHIR REGISTRY</a> (dans les ImplementationGuide, un package est systématiquement généré à l'adresse [url]/package.tgz, ex : [https://www.hl7.org/fhir/us/core/package.tgz])</li>
+  <li>Le / les profils ne sont pas issus d'un contexte particulier et se présentent sous forme d'un ficher xml ou json (pratique à déconseiller)</li>
 </ul>
 
-<h5 id="cas-a--à-partir-dun-package">Cas a : à partir d’un package</h5>
+<h5 id="cas-a--à-partir-dun-package">Cas a : à partir d'un package</h5>
 
-<p>Les packages sont très intéressants pour valider les ressources, car ils contiennent l’intégralité des ressources d’un Implementation Guide, et plus particulièrement l’ensemble des StructureDefinition des extensions et des profils.
-Le package permet donc de s’assurer que tout ait bien été importé sur HAPI et que toutes les StructureDefinition de conformité soient bien à disposition pour valider les instances.</p>
+<p>Les packages sont très intéressants pour valider les ressources, car ils contiennent l'intégralité des ressources d'un Implementation Guide, et plus particulièrement l'ensemble des StructureDefinition des extensions et des profils.
+Le package permet donc de s'assurer que tout ait bien été importé sur HAPI et que toutes les StructureDefinition de conformité soient bien à disposition pour valider les instances.</p>
 
-<p>Pour importer un package issu d’un Implementation Guide, il suffit d’utiliser ce script python:
+<p>Pour importer un package issu d'un Implementation Guide, il suffit d'utiliser ce script python:
 [https://github.com/nmdp-bioinformatics/igloader]</p>
 
-<h5 id="cas-b--à-partir-dun-json">Cas b : à partir d’un json</h5>
+<h5 id="cas-b--à-partir-dun-json">Cas b : à partir d'un json</h5>
 
 <p>Prérequis : une StructureDefinition au format JSON ou XML avec le snapshot populé (dans forge, il y a une option persistante permettant de générer en permanence le snapshot).</p>
 
-<p>Attention : Si vous utilisez ce cas b, assurez-vous que l’ensemble des StructureDefinition soient bien fournies, c’est à dire celles des extensions, des datatypes profilés, etc…</p>
+<p>Attention : Si vous utilisez ce cas b, assurez-vous que l'ensemble des StructureDefinition soient bien fournies, c'est à dire celles des extensions, des datatypes profilés, etc…</p>
 
 <p>Pour exporter une StructureDefinition vers HAPI, il y a deux possibilités:</p>
 
 <ul>
   <li>via une requête HTTP POST vers <code class="language-plaintext highlighter-rouge">https://hapi.fhir.org/baseR4/StructureDefinition</code> en mettant la StructureDefinition dans le body de la requête.</li>
-  <li>via l’interface graphique de HAPI <code class="language-plaintext highlighter-rouge">https://hapi.fhir.org/resource?serverId=home_r4&amp;pretty=false&amp;_summary=&amp;resource=StructureDefinition</code> &gt; CRUD Operations &gt; Create (Note : limité à 10.000 caractères)</li>
+  <li>via l'interface graphique de HAPI <code class="language-plaintext highlighter-rouge">https://hapi.fhir.org/resource?serverId=home_r4&amp;pretty=false&amp;_summary=&amp;resource=StructureDefinition</code> &gt; CRUD Operations &gt; Create (Note : limité à 10.000 caractères)</li>
 </ul>
 
 <h4 id="etape-2--valider-une-instance-contre-un-profil">Etape 2 : valider une instance contre un profil</h4>
 
-<p>Prérequis : disposer d’une instance de ressource, l’url du profil doit être définie dans Resource.meta.profile</p>
+<p>Prérequis : disposer d'une instance de ressource, l'url du profil doit être définie dans Resource.meta.profile</p>
 
-<p>Lorsque l’ensemble des StructureDefinition (snapshot) nécessaires à la validation d’un profil (profils, extensions…) est importé dans HAPI, il devient possible de valider une instance contre un profil.
-Pour cela, il faudra utiliser l’opération <a href="https://www.hl7.org/fhir/resource-operation-validate.html">$validate</a> définie par la spec FHIR.</p>
+<p>Lorsque l'ensemble des StructureDefinition (snapshot) nécessaires à la validation d'un profil (profils, extensions…) est importé dans HAPI, il devient possible de valider une instance contre un profil.
+Pour cela, il faudra utiliser l'opération <a href="https://www.hl7.org/fhir/resource-operation-validate.html">$validate</a> définie par la spec FHIR.</p>
 
-<p>Cette opération peut s’utiliser de deux façons:</p>
+<p>Cette opération peut s'utiliser de deux façons:</p>
 
 <ul>
-  <li>Via une requête HTTP POST vers <code class="language-plaintext highlighter-rouge">https://hapi.fhir.org/baseR4/[ResourceType]/$validate?_format=json&amp;_pretty=true</code> en remplaçant ResourceType par le nom de la ressource à tester et en mettant l’instance dans le bundle</li>
-  <li>Via l’interface graphique de HAPI <code class="language-plaintext highlighter-rouge">https://hapi.fhir.org/resource?serverId=home_r4&amp;pretty=false&amp;_summary=&amp;resource=[ResourceType]</code> &gt; CRUD Operations &gt; validate</li>
+  <li>Via une requête HTTP POST vers <code class="language-plaintext highlighter-rouge">https://hapi.fhir.org/baseR4/[ResourceType]/$validate?_format=json&amp;_pretty=true</code> en remplaçant ResourceType par le nom de la ressource à tester et en mettant l'instance dans le bundle</li>
+  <li>Via l'interface graphique de HAPI <code class="language-plaintext highlighter-rouge">https://hapi.fhir.org/resource?serverId=home_r4&amp;pretty=false&amp;_summary=&amp;resource=[ResourceType]</code> &gt; CRUD Operations &gt; validate</li>
 </ul>
 
 <h4 id="ressources-supplémentaires">Ressources supplémentaires</h4>
@@ -348,12 +359,13 @@ Pour cela, il faudra utiliser l’opération <a href="https://www.hl7.org/fhir/r
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:54+0000">2026-01-05</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 12, 2026 09:48+0000">2026-01-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
-            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
-<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-<a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/documentation/history.html" target="_blank">Historique des versions </a>
+            Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/documentation/history.html" target="_blank">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/documentation" target="_blank">Documentation</a>
  | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/IG-documentation/issues" target="_blank">New Issue</a>
 
           
