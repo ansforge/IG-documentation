@@ -226,6 +226,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#matchbox" id="markdown-toc-matchbox">Matchbox</a></li>
   <li><a href="#gazelle" id="markdown-toc-gazelle">Gazelle</a></li>
   <li><a href="#les-niveaux-des-scénarios-gazelle" id="markdown-toc-les-niveaux-des-scénarios-gazelle">Les niveaux des scénarios gazelle</a></li>
+  <li><a href="#les-types-détapes-de-cas-de-tests" id="markdown-toc-les-types-détapes-de-cas-de-tests">Les types d’étapes de cas de tests</a></li>
+  <li><a href="#usage-du-proxy" id="markdown-toc-usage-du-proxy">Usage du proxy</a></li>
   <li><a href="#hapi-fhir" id="markdown-toc-hapi-fhir">HAPI FHIR</a></li>
 </ul>
 
@@ -293,25 +295,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Le niveau le plus bas permettra aux éditeurs de tester la conformité des messages unitaires qu’ils produisent. Le niveau intermédiaire permettra aux éditeurs de tester face à un autre système la conformité et l’interopérabilité des messages unitaires. Le niveau le plus élevé correspond aux scénarios proposés jusqu’à maintenant dans le cadre des projectathons et permettra aux éditeurs de tester des scénarios complexes face à un autre système.</p>
 
-<h5 id="niveau-1-n1">Niveau 1 (N1)</h5>
+<h4 id="niveau-1-n1">Niveau 1 (N1)</h4>
 
 <p>Les tests de niveau 1 sont des tests unitaires sans partenaire.
 Chaque cas de test de niveau 1 correspond à un flux de la spécification technique.
 L’objectif de ces cas de tests est de valider la ressource ou la requête produite par le système avec un validateur EVSClient indiqué dans le cas de test.</p>
 
-<h5 id="niveau-2-n2">Niveau 2 (N2)</h5>
+<h4 id="niveau-2-n2">Niveau 2 (N2)</h4>
 
 <p>Les tests de niveau 2 sont des tests unitaires avec partenaire.
 Pour être exécutés, il faut qu’au préalable les cas de test de niveau 1 indiqués en prérequis aient été exécutés par les 2 mêmes systèmes.
 L’objectif de ces cas de test est de valider la ressource ou la requête construite ainsi que la capacité des systèmes à créer / intégrer ou requêter / envoyer des ressources. Les cas de tests de type N2 correspondent généralement à un flux spécifique.</p>
 
-<h5 id="niveau-3-n3">Niveau 3 (N3)</h5>
+<h4 id="niveau-3-n3">Niveau 3 (N3)</h4>
 
 <p>Les tests de niveau 3 sont des tests avec partenaire basés sur l’enchaînement de différents tests unitaires avec partenaire (N2) en suivant un scénario complexe. Pour être exécutés, il faut qu’au préalable les cas de test de niveaux 1 et 2 indiqués en prérequis aient été exécutés entre les 2 mêmes systèmes.</p>
 
 <p>L’objectif de ces cas de test est de créer un scénario complexe faisant appel aux différents flux de la spécification technique et ainsi créer un exemple d’usage.</p>
 
-<h4 id="les-types-détapes-de-cas-de-tests">Les types d’étapes de cas de tests</h4>
+<h3 id="les-types-détapes-de-cas-de-tests">Les types d’étapes de cas de tests</h3>
 
 <p>Les étapes de cas de tests pourront avoir plusieurs types.</p>
 
@@ -346,7 +348,7 @@ L’objectif de ces cas de test est de valider la ressource ou la requête const
   </tbody>
 </table>
 
-<h4 id="usage-du-proxy">Usage du proxy</h4>
+<h3 id="usage-du-proxy">Usage du proxy</h3>
 
 <p>Le proxy sert à intercepter les messages entre le client et le serveur, pour validation par le moniteur. Celui-ci devra être utilisé pour les cas de tests de niveaux N2 et N3.</p>
 
@@ -395,7 +397,7 @@ L’objectif de ces cas de test est de valider la ressource ou la requête const
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 5, 2026 14:40+0000">2026-01-05</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 27, 2026 15:52+0000">2026-01-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

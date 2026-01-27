@@ -150,7 +150,7 @@ sudo apt install nodejs
 
 ```
 
-Il est aussi possible de l’installer via [`nvm`(Node Version Manager)](https://github.com/nvm-sh/nvm), qui vous permettra de changer de version de NodeJS en fonction des requis de vos projets.
+Il est aussi possible de l’installer via [`nvm` (Node Version Manager)](https://github.com/nvm-sh/nvm), qui vous permettra de changer de version de NodeJS en fonction des requis de vos projets.
 
 ###### Java
 
