@@ -1,0 +1,229 @@
+{
+  "date" : "Wed, 28 Jan, 2026 09:28:18 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-ans.fr.documentation.json",
+      "size" : 3865,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 24,
+          "length" : 36
+        },
+        {
+          "activity" : "load",
+          "start" : 24,
+          "length" : 1
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 25,
+          "length" : 18
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 25,
+          "length" : 89
+        },
+        {
+          "activity" : "validate",
+          "start" : 25,
+          "length" : 9775
+        },
+        {
+          "activity" : "generate1",
+          "start" : 35,
+          "length" : 71
+        },
+        {
+          "activity" : "generate2",
+          "start" : 38,
+          "length" : 69
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 66,
+          "length" : 2
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 84,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "/fsh-generated/includes/menu.xml",
+      "size" : 2816
+    },
+    {
+      "name" : "/input/data/features.yml",
+      "size" : 159
+    },
+    {
+      "name" : "/input/pagecontent/github.md",
+      "size" : 6948
+    },
+    {
+      "name" : "/input/pagecontent/dev_nouvel_ig.md",
+      "size" : 11866,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 39,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/demarrer_sur_fhir.md",
+      "size" : 3175
+    },
+    {
+      "name" : "/input/pagecontent/instance_hapi.md",
+      "size" : 792
+    },
+    {
+      "name" : "/input/pagecontent/doc_modeler.md",
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 39,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/about.md",
+      "size" : 1237
+    },
+    {
+      "name" : "/input/pagecontent/tests.md",
+      "size" : 5739
+    },
+    {
+      "name" : "/input/pagecontent/valider_res.md",
+      "size" : 4754,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 39,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/changes.md",
+      "size" : 5706
+    },
+    {
+      "name" : "/input/pagecontent/doc_implementer.md",
+      "size" : 0
+    },
+    {
+      "name" : "/input/pagecontent/erreurs.md",
+      "size" : 985
+    },
+    {
+      "name" : "/input/pagecontent/bonnes_pratiques_modeler.md",
+      "size" : 13137,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 39,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/doc_ps.md",
+      "size" : 7353
+    },
+    {
+      "name" : "/input/pagecontent/collaborons.md",
+      "size" : 3223,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 39,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/bonnes_pratiques_implementer.md",
+      "size" : 1608
+    },
+    {
+      "name" : "/input/pagecontent/index.md",
+      "size" : 4280
+    },
+    {
+      "name" : "/input/pagecontent/autres_ressources.md",
+      "size" : 0
+    },
+    {
+      "name" : "/template/config",
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 39,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/template/config/_config.yml",
+      "size" : 31
+    },
+    {
+      "name" : "/input/images",
+      "size" : 0
+    },
+    {
+      "name" : "/input/images/validate-fr-patient-ins.png",
+      "size" : 83326
+    },
+    {
+      "name" : "/input/images/new_issue.png",
+      "size" : 22747
+    },
+    {
+      "name" : "/input/images/intro-iop.png",
+      "size" : 686067,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 39,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/resultat-validation.png",
+      "size" : 121565
+    },
+    {
+      "name" : "/input/images/homepage-matchbox.png",
+      "size" : 36272,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 39,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/images/erreurs-lignes.png",
+      "size" : 306173
+    },
+    {
+      "name" : "/temp/pages/_includes/artifacts.xml",
+      "size" : 600
+    }
+  ]
+}
