@@ -61,7 +61,7 @@ Les tests de niveau 1 sont des tests unitaires sans partenaire. Chaque cas de te
 
 #### Niveau 2 (N2)
 
-Les tests de niveau 2 sont des tests unitaires avec partenaire. Pour être exécutés, il faut qu’au préalable les cas de test de niveau 1 indiqués en prérequis aient été exécutés par les 2 mêmes systèmes. L’objectif de ces cas de test est de valider la ressource ou la requête construite ainsi que la capacité des systèmes à créer / intégrer ou requêter / envoyer des ressources. Les cas de tests de type N2 correspondent généralement à un flux spécifique.
+Les tests de niveau 2 sont des tests unitaires avec partenaire (éditeur ou simulateur). Pour être exécutés, il faut qu’au préalable les cas de test de niveau 1 indiqués en prérequis aient été exécutés par les 2 mêmes systèmes. L’objectif de ces cas de test est de valider la ressource ou la requête construite ainsi que la capacité des systèmes à créer / intégrer ou requêter / envoyer des ressources. Les cas de tests de type N2 correspondent généralement à un flux spécifique.
 
 #### Niveau 3 (N3)
 
