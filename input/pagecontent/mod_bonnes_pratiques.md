@@ -176,7 +176,7 @@ Chaque fiche présente les propriétés obligatoires de l'objet, avec le nom de 
 | title | Titre du profil |
 | code | - |
 | description | description du profil |
-| nom du fichier | Profiles/NomDuProfilProfile.fsh |
+| nom du fichier | Profile-resource/NomDuProfilProfile.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -250,24 +250,14 @@ Description: "Description du modèle logique."
 Exemples d'entête de fichiers FSH :
 
 ```fsh
-Instance: uuid
-InstanceOf: Resource
-Title: "Titre de l'exemple"
-Description: "Description de l'exemple."
-Usage: #example
-```
-
-
-```fsh
 Instance: nom-de-l-organisation
 InstanceOf: Organization
 Title: "Titre de l'organisation"
 Description: "Description de l'organisation."
-Usage: #definition
+Usage: #inline
 
 * name = "NomDeLOrganization"
 ```
-
 
 ```fsh
 Instance: nom-du-lieu
@@ -301,7 +291,7 @@ Se référer au FHIR Terminology Service (FTS) du Serveur Multi Terminologies (S
 | title | Titre de la StructureMap |
 | code | - |
 | description | Description de la StructureMap. |
-| nom du fichier | Instances/StructureMap-NomStructureMap.fml |
+| nom du fichier | StructureMaps/StructureMap-NomStructureMap.fml |
 {: .grid }
 
 Nom du fichier FML : StructureMap-NomStructureMap.fml
@@ -325,7 +315,7 @@ Entête du fichier FML :
 | title | Titre du capability statement |
 | code | - |
 | description | Description du capability statement. |
-| nom du fichier | Instances/NomDeLaRessourceInstance.fsh |
+| nom du fichier | CapabilityStatements/NomDeLaRessourceInstance.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -349,7 +339,7 @@ Usage: #definition
 | title | Titre du search parameter |
 | code | nomDuSearchParameter |
 | description | Description du search parameter. |
-| nom du fichier | Instances/NomDeLaRessourceSearchParameter.fsh |
+| nom du fichier | SearchParameters/NomDeLaRessourceSearchParameter.fsh |
 {: .grid }
 
 Entête du fichier FSH :
@@ -367,3 +357,7 @@ Usage: #definition
 * description = "Description du search parameter."
 * type = #number | #date | #string | #token | #reference | #composite | #quantity | #uri | #special
 ```
+
+### Modèle de nommage des pages markdown
+
+Les noms des pages markdown devront idéalement être préfixées par "spec-technique-[...].md", "spec-fonctionnelle-[...].md", "annexe-[...].md" et ensuite contenir un nom lisible pour que le nom de la page soit clair dans l'url finale. Exemple : spec-technique-flux-alimentation.md
