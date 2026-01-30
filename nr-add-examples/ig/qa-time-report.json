@@ -1,5 +1,5 @@
 {
-  "date" : "Fri, 30 Jan, 2026 15:21:44 +0000",
+  "date" : "Fri, 30 Jan, 2026 16:31:06 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,51 +8,64 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 30,
-          "length" : 39
+          "start" : 26,
+          "length" : 35
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 30,
-          "length" : 21
+          "start" : 27,
+          "length" : 16
         },
         {
           "activity" : "generateNarratives",
-          "start" : 30,
-          "length" : 84
+          "start" : 27,
+          "length" : 103
         },
         {
           "activity" : "validate",
-          "start" : 30,
-          "length" : 9985
+          "start" : 27,
+          "length" : 9135
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 36,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 36,
+          "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 41,
-          "length" : 86
+          "start" : 36,
+          "length" : 96
         },
         {
           "activity" : "generate2",
-          "start" : 44,
-          "length" : 81
+          "start" : 40,
+          "length" : 72
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 49,
-          "length" : 3
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 48,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 48,
+          "length" : 1
         }
       ]
     },
     {
       "name" : "/fsh-generated/includes/menu.xml",
-      "size" : 2867,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 44,
-          "length" : 1
-        }
-      ]
+      "size" : 2867
     },
     {
       "name" : "/input/data/features.yml",
@@ -72,7 +85,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 44,
+          "start" : 40,
           "length" : 1
         }
       ]
@@ -83,7 +96,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 44,
+          "start" : 40,
           "length" : 1
         }
       ]
@@ -98,12 +111,12 @@
     },
     {
       "name" : "/input/pagecontent/mod_bonnes_pratiques.md",
-      "size" : 18832,
+      "size" : 19051,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 44,
-          "length" : 2
+          "start" : 40,
+          "length" : 1
         }
       ]
     },
@@ -117,18 +130,18 @@
     },
     {
       "name" : "/input/pagecontent/impl_valider_res.md",
-      "size" : 4754
-    },
-    {
-      "name" : "/input/pagecontent/doc_ps.md",
-      "size" : 7353,
+      "size" : 4754,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 44,
+          "start" : 40,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/doc_ps.md",
+      "size" : 7353
     },
     {
       "name" : "/input/pagecontent/collaborons.md",
@@ -136,25 +149,25 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 44,
+          "start" : 40,
           "length" : 1
         }
       ]
     },
     {
       "name" : "/input/pagecontent/mod_nouvel_ig.md",
-      "size" : 11866
-    },
-    {
-      "name" : "/input/pagecontent/index.md",
-      "size" : 4454,
+      "size" : 11866,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 44,
+          "start" : 40,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/index.md",
+      "size" : 4454
     },
     {
       "name" : "/input/pagecontent/autres_ressources.md",
@@ -174,7 +187,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 44,
+          "start" : 40,
           "length" : 1
         }
       ]
@@ -193,7 +206,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 44,
+          "start" : 40,
           "length" : 1
         }
       ]
@@ -216,7 +229,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 44,
+          "start" : 40,
           "length" : 1
         }
       ]
