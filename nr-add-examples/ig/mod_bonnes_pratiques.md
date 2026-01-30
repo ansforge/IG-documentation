@@ -6,7 +6,7 @@
 
 ## Bonnes pratiques
 
-La mise en place de niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. En attendant la publication de ces niveaux de maturité, il est important de respecter au maximum les critères indiqués ci-dessous.
+La mise en place de niveaux de maturité des guides d’implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. En attendant la publication de ces niveaux de maturité, il est important de respecter au maximum les critères indiqués ci-dessous.
 
 ### Les critères de qualité et de maturité
 
@@ -16,24 +16,24 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 * Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 * Respecter le stratégie nationale des choix de version FHIR
 * Chaque ressource de conformité doit avoir une description
-* L'ensemble des ressources de conformité doit avoir une description précise de son usage
-* Publication de l'IG sans erreurs (cf session Q/A)
+* L’ensemble des ressources de conformité doit avoir une description précise de son usage
+* Publication de l’IG sans erreurs (cf session Q/A)
 
 #### Critères de maturité
 
-* Respect de l'ensemble des critères de qualité mentionnés ci-dessus
-* Nombre d'implémentations obtenu par déclaration (par convergence ou par les DSI). Idéalement, publier des retours d'expérience sur l'implémentation des spécifications
+* Respect de l’ensemble des critères de qualité mentionnés ci-dessus
+* Nombre d’implémentations obtenu par déclaration (par convergence ou par les DSI). Idéalement, publier des retours d’expérience sur l’implémentation des spécifications
 * Nombre de passage en projectathons, nombre de tests réalisés lors de projectathon, et nombre de partenaires
-* Nombre d'issues et résolutions sur le repo GitHub
+* Nombre d’issues et résolutions sur le repo GitHub
 * Nombre de commentaires lors des phases de concertation
 
 ### Bonnes pratiques de création des ressources de conformité
 
 #### La définition des profils et des extensions
 
-Pour être intéropérable, il faut tout d'abord éviter la multiplication des profils qui conduit à créer des profils qui existent déjà. Pour cela, il est primordial de se raccrocher à l'écosystème national. Le package doit toujours dépendre de fr-core, de l'annuaire santé et/ou des projets de l'ANS pour assurer une cohérence globale à l'échelle française.
+Pour être intéropérable, il faut tout d’abord éviter la multiplication des profils qui conduit à créer des profils qui existent déjà. Pour cela, il est primordial de se raccrocher à l’écosystème national. Le package doit toujours dépendre de fr-core, de l’annuaire santé et/ou des projets de l’ANS pour assurer une cohérence globale à l’échelle française.
 
-De plus, il est également nécessaire d'hériter des profils internationaux pour profiter de l'intelligence collective des groupes de travail internationaux et harmoniser au maximum les travaux. De la même manière, l'usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d'hériter de rechercher des extensions déjà créées dans l'écosystème FHIR.
+De plus, il est également nécessaire d’hériter des profils internationaux pour profiter de l’intelligence collective des groupes de travail internationaux et harmoniser au maximum les travaux. De la même manière, l’usage des extensions est à éviter au maximum. Si leur usage est nécessaire, il est préférable d’hériter de rechercher des extensions déjà créées dans l’écosystème FHIR.
 
 Où chercher les profils-extensions déjà créés ?
 
@@ -47,31 +47,31 @@ Ce paragraphe sera complété lorsque le FHIR Terminology Service sera en servic
 
 ### Règles de nommage des ressources de conformité
 
-Ces règles de nommage ont été établies en s'inspirant des ressources us-core et des bonnes pratiques indiquées [ici]([https://build.fhir.org/ig/HL7/crmi-ig/artifact-conventions.md](https://hl7.org/fhir/uv/crmi/STU1/)).
+Ces règles de nommage ont été établies en s’inspirant des ressources us-core et des bonnes pratiques indiquées [ici]([https://build.fhir.org/ig/HL7/crmi-ig/artifact-conventions.md](https://hl7.org/fhir/uv/crmi/STU1/)).
 
 | | | | |
 | :--- | :--- | :--- | :--- |
-| id | ressources de conformité  | utiliser le format kebab-case, ex : fr-core-patient. (/!\ sur Forge, l'id n'est pas obligatoire, il est important de le rajouter !). Lors de la création d'un IG pour un projet en particulier, il est possible de préfixer l'ensemble des ressources de conformité par le trigramme du projet (ex : "ror-…") | us-core-patient |
+| id | ressources de conformité  | utiliser le format kebab-case, ex : fr-core-patient. (/!\ sur Forge, l’id n’est pas obligatoire, il est important de le rajouter !). Lors de la création d’un IG pour un projet en particulier, il est possible de préfixer l’ensemble des ressources de conformité par le trigramme du projet (ex : “ror-…”) | us-core-patient |
 | title | ressources de conformité  | similaire au nom, avec espaces. Ex : Fr Core Patient | US Core Patient Profile |
 | name | ressources de conformité  | Utiliser le format PascalCase sans espace. Ex : FrCorePatient | USCorePatientProfile |
 | url | ressources de conformité  | [base]/[ResourceType]/[id] (généré automatiquement par sushi). A noter que [ResourceType] doit respecter le nom et la casse des ressources définies dans FHIR core (ex: StructureDefinition). | http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient |
-| code | SearchParameter | toujours en minuscule, mots séparés par des tirets "-" si besoin | - |
-| name | slice | utiliser l'id de l'extension s'il s'agit d'une extension sinon utiliser le format lowerCamelCase | us-core-genderIdentity |
+| code | SearchParameter | toujours en minuscule, mots séparés par des tirets “-“ si besoin | - |
+| name | slice | utiliser l’id de l’extension s’il s’agit d’une extension sinon utiliser le format lowerCamelCase | us-core-genderIdentity |
 | id | package | utiliser des minuscules | hl7.fhir.us.core[lien vers la documentation](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) |
 
-La documentation officielle se trouve sur le [confluence d'HL7](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines)
+La documentation officielle se trouve sur le [confluence d’HL7](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines)
 
-### Release d'un IG FHIR
+### Release d’un IG FHIR
 
-Le **statut** devra être placé à draft lorsque celui-ci n'est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft. Le statut doit se placer dans l'attribut "status" du fichier sushi-config
+Le **statut** devra être placé à draft lorsque celui-ci n’est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft. Le statut doit se placer dans l’attribut “status” du fichier sushi-config
 
-Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/). Le statut doit se placer dans l'attribut "version" du fichier sushi-config et dans l'attribut "version du fichier publication-request
+Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/). Le statut doit se placer dans l’attribut “version” du fichier sushi-config et dans l’attribut “version du fichier publication-request
 
-Le **label de publication** doit contenir "ci-build", "ballot", "trial-use" ou "final-text" en fonction des cas qui seront détaillés dans le cycle de vie des spécifications bientôt publiés. Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise <blockquote class="stu-note"><blockquote>. Le label de publication doit se placer dans l'attribut "label" du fichier "publication-request" et dans l'attribut releaseLabel du fichier sushi-config
+Le **label de publication** doit contenir “ci-build”, “ballot”, “trial-use” ou “final-text” en fonction des cas qui seront détaillés dans le cycle de vie des spécifications bientôt publiés. Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise <blockquote class="stu-note"><blockquote>. Le label de publication doit se placer dans l’attribut “label” du fichier “publication-request” et dans l’attribut releaseLabel du fichier sushi-config
 
-Le **mode de publication** permet de paramétrer la release. Celui-ci doit être indiqué dans l'attribut "mode" du fichier publication-request.
+Le **mode de publication** permet de paramétrer la release. Celui-ci doit être indiqué dans l’attribut “mode” du fichier publication-request.
 
-Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les guides d'implémentation, voici la correspondance entre les statuts pressentis et les paramètres de publication :
+Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les guides d’implémentation, voici la correspondance entre les statuts pressentis et les paramètres de publication :
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -83,7 +83,7 @@ Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les 
 
 ### FSH / SUSHI - gestion des alias
 
-FSH est une grammaire permettant de créer des artéfacts FHIR et de les générer au moment de la création du guide d'implémentation.
+FSH est une grammaire permettant de créer des artéfacts FHIR et de les générer au moment de la création du guide d’implémentation.
 
 Les [alias FSH](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#defining-aliases) sont des variables permettant de définir un raccourci pour une URL ou un OID. Par souci de clarté, il est recommandé de rassembler tous les alias dans un fichier unique, appelé « aliases.fsh » et situé dans le répertoire racine (évite les redondances et facilite la gestion).
 
@@ -93,36 +93,36 @@ Exemple:
 
 ### Le choix de la version FHIR
 
-Pour garantir la cohérence de l'écosystème, il faudra privilégier l'usage de R4. Si l'usage d'une autre version de FHIR est néanmoins nécessaire (cas d'usage international, évolution des ressources, …), une étude de normes et standards devra être fournie pour justifier ce choix.
+Pour garantir la cohérence de l’écosystème, il faudra privilégier l’usage de R4. Si l’usage d’une autre version de FHIR est néanmoins nécessaire (cas d’usage international, évolution des ressources, …), une étude de normes et standards devra être fournie pour justifier ce choix.
 
-Avant de commencer à développer un guide d'implémentation, il faut choisir la version FHIR sur laquelle se baser : R4, R4B, R5 ? L'objectif étant d'avoir un écosystème uniforme et simple qui hérite systématiquement de fr-core pour avoir des modélisations les plus cohérentes possibles.
+Avant de commencer à développer un guide d’implémentation, il faut choisir la version FHIR sur laquelle se baser : R4, R4B, R5 ? L’objectif étant d’avoir un écosystème uniforme et simple qui hérite systématiquement de fr-core pour avoir des modélisations les plus cohérentes possibles.
 
-A l'heure actuelle, les spécifications des projets nationaux utilisent la R4 (fr-core, IG ANS, Annuaire, ROR…). Or travailler sur R4 et R5 parallèlement engendre beaucoup de questions : travaux de maintenance doublés, nécessité de maintenir des mappings/connecteurs entre versions (R4 <-> R5, R4 <-> R6, R5 <-> R6, …), augmentation de la complexité de l'écosystème avec certains acteurs en R4, d'autres en R5… Les ressources étant limitées, il est préférable de se concentrer sur l'amélioration de nos profils nationaux en R4 et de faire monter l'écosystème en compétences.
+A l’heure actuelle, les spécifications des projets nationaux utilisent la R4 (fr-core, IG ANS, Annuaire, ROR…). Or travailler sur R4 et R5 parallèlement engendre beaucoup de questions : travaux de maintenance doublés, nécessité de maintenir des mappings/connecteurs entre versions (R4 <-> R5, R4 <-> R6, R5 <-> R6, …), augmentation de la complexité de l’écosystème avec certains acteurs en R4, d’autres en R5… Les ressources étant limitées, il est préférable de se concentrer sur l’amélioration de nos profils nationaux en R4 et de faire monter l’écosystème en compétences.
 
-La release R5 reste cependant intéressante, notamment pour l'amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct…). Ce choix n'est pas tranché, c'est l'écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d'utiliser R5 (notamment pour des cas d'usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5. A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l'objectif de transition.
+La release R5 reste cependant intéressante, notamment pour l’amélioration de sa documentation et de certaines ressources (Documentation FHIR Search, Ressources MedicinalProduct…). Ce choix n’est pas tranché, c’est l’écosystème qui dictera quelle version utiliser. Si vous ressentez un besoin d’utiliser R5 (notamment pour des cas d’usages internationaux ou profiter de ressources non matures en R4), nous vous invitons à nous le signaler pour réévaluer le bénéfice/risque de travailler sur FHIR R5. A noter que FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l’objectif de transition.
 
-La conclusion actuelle (octobre 2023) est de privilégier R4 pour ne pas être "hors système" et être cohérent avec fr-core et les IGs de l'ANS tant qu'il n'y a pas de socle commun à l'utilisation de R5. Utiliser R5 uniquement si l'écosystème l'exige (ex : héritage d'un IG international en R5, héritage de ressources retravaillées en R5…) et partager ce besoin en issue GitHub.
+La conclusion actuelle (octobre 2023) est de privilégier R4 pour ne pas être “hors système” et être cohérent avec fr-core et les IGs de l’ANS tant qu’il n’y a pas de socle commun à l’utilisation de R5. Utiliser R5 uniquement si l’écosystème l’exige (ex : héritage d’un IG international en R5, héritage de ressources retravaillées en R5…) et partager ce besoin en issue GitHub.
 
-FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l'objectif de transition.
+FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l’objectif de transition.
 
-### Règles d'utilisation de GitHub
+### Règles d’utilisation de GitHub
 
-Règles d'utilisation de GitHub :
+Règles d’utilisation de GitHub :
 
-* Toutes modifications d'une spécification sur GitHub doit se faire au niveau d'une branche.
-* Le nom de la branche doit être préfixé par les initiales de l'auteur (ex : "sb-" pour Sébastien Brunelle) suivi de la description des travaux (ex : "sb-ajout-bonnespratiques-github)
-* Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l'ANS.
-* Une fois la Pull Request validée, c'est à l'auteur des modifications de fusionner (=merge) la pull request avec la branche principale "main".
+* Toutes modifications d’une spécification sur GitHub doit se faire au niveau d’une branche.
+* Le nom de la branche doit être préfixé par les initiales de l’auteur (ex : “sb-“ pour Sébastien Brunelle) suivi de la description des travaux (ex : “sb-ajout-bonnespratiques-github)
+* Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l’ANS.
+* Une fois la Pull Request validée, c’est à l’auteur des modifications de fusionner (=merge) la pull request avec la branche principale “main”.
 
-A noter qu'aucune modification doit être faite directement dans main.
+A noter qu’aucune modification doit être faite directement dans main.
 
-#### Gestion des répertoires des guides d'implémentation
+#### Gestion des répertoires des guides d’implémentation
 
-Une structure squelette indique sous quels dossiers placer les artéfacts fsh dans le guide d'implémentation [modèle](https://github.com/ansforge/IG-modele/tree/main/input/fsh)
+Une structure squelette indique sous quels dossiers placer les artéfacts fsh dans le guide d’implémentation [modèle](https://github.com/ansforge/IG-modele/tree/main/input/fsh)
 
 ### Modèle de nommage par ressource FHIR
 
-Ci-dessous figurent les règles spécifiques à chaque type de ressource FHIR issus des [travaux de David Ouagne (AP-HP)](https://interop.aphp.fr/ig/fhir/core/best-practice.html) sous la forme de fiche. Chaque fiche présente les propriétés obligatoires de l'objet, avec le nom de la propriété puis sa valeur en respectant le format. Puis la règle de nommage du fichier contenant la ressource. Et enfin l'entête obligatoire du contenu du fichier de la ressource.
+Ci-dessous figurent les règles spécifiques à chaque type de ressource FHIR issus des [travaux de David Ouagne (AP-HP)](https://interop.aphp.fr/ig/fhir/core/best-practice.html) sous la forme de fiche. Chaque fiche présente les propriétés obligatoires de l’objet, avec le nom de la propriété puis sa valeur en respectant le format. Puis la règle de nommage du fichier contenant la ressource. Et enfin l’entête obligatoire du contenu du fichier de la ressource.
 
 #### StructureDefinition : profil
 
@@ -148,15 +148,15 @@ Description: "Description du profil."
 
 #### StructureDefinition : extension
 
-Attention, l'usage d'extension doit être réfléchi et documenté (il faut documenter les recherches d'extensions internationales n'ayant pas abouti).
+Attention, l’usage d’extension doit être réfléchi et documenté (il faut documenter les recherches d’extensions internationales n’ayant pas abouti).
 
 | | |
 | :--- | :--- |
 | id | nom-de-l-extension |
 | name | NomDeLExtension |
-| title | Titre de l'extension |
+| title | Titre de l’extension |
 | code | - |
-| description | Description de l'extension. |
+| description | Description de l’extension. |
 | nom du fichier | Extensions/NomDeLExtensionExtension.fsh |
 
 Entête du fichier FSH :
@@ -198,12 +198,12 @@ Description: "Description du modèle logique."
 | :--- | :--- |
 | id | uuid |
 | name | NomDeLExemple |
-| title | Titre de l'exemple |
+| title | Titre de l’exemple |
 | code | - |
-| description | Description de l'exemple. |
+| description | Description de l’exemple. |
 | nom du fichier | Examples/NomDeLExampleExample.fsh |
 
-Exemples d'entête de fichiers FSH :
+Exemples d’entête de fichiers FSH :
 
 ```
 Instance: uuid

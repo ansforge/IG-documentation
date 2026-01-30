@@ -1,5 +1,5 @@
 {
-  "date" : "Mon, 12 Jan, 2026 09:48:41 +0000",
+  "date" : "Fri, 30 Jan, 2026 15:21:44 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,60 +8,55 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 20,
-          "length" : 38
+          "start" : 30,
+          "length" : 39
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 21,
-          "length" : 16
+          "start" : 30,
+          "length" : 21
         },
         {
           "activity" : "generateNarratives",
-          "start" : 21,
-          "length" : 89
+          "start" : 30,
+          "length" : 84
         },
         {
           "activity" : "validate",
-          "start" : 21,
-          "length" : 6675
+          "start" : 30,
+          "length" : 9985
         },
         {
           "activity" : "generate1",
-          "start" : 28,
-          "length" : 73
+          "start" : 41,
+          "length" : 86
         },
         {
           "activity" : "generate2",
-          "start" : 31,
-          "length" : 71
+          "start" : 44,
+          "length" : 81
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 35,
-          "length" : 2
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 37,
-          "length" : 2
+          "start" : 49,
+          "length" : 3
         }
       ]
     },
     {
       "name" : "/fsh-generated/includes/menu.xml",
-      "size" : 2867
-    },
-    {
-      "name" : "/input/data/features.yml",
-      "size" : 159,
+      "size" : 2867,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 31,
+          "start" : 44,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/data/features.yml",
+      "size" : 159
     },
     {
       "name" : "/input/pagecontent/impl_demarrer_sur_fhir.md",
@@ -77,25 +72,25 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 31,
+          "start" : 44,
           "length" : 1
         }
       ]
     },
     {
       "name" : "/input/pagecontent/mod_github.md",
-      "size" : 6948
-    },
-    {
-      "name" : "/input/pagecontent/impl_bonnes_pratiques.md",
-      "size" : 1608,
+      "size" : 6948,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 31,
+          "start" : 44,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/impl_bonnes_pratiques.md",
+      "size" : 1608
     },
     {
       "name" : "/input/pagecontent/impl_instance_hapi.md",
@@ -107,8 +102,8 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 31,
-          "length" : 1
+          "start" : 44,
+          "length" : 2
         }
       ]
     },
@@ -130,7 +125,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 31,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -141,7 +136,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 31,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -156,7 +151,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 31,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -171,18 +166,18 @@
     },
     {
       "name" : "/template/config/_config.yml",
-      "size" : 140,
-      "processes" : [
-        {
-          "activity" : "validate",
-          "start" : 28,
-          "length" : 1
-        }
-      ]
+      "size" : 31
     },
     {
       "name" : "/input/images",
-      "size" : 0
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 44,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/images/validate-fr-patient-ins.png",
@@ -198,7 +193,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 31,
+          "start" : 44,
           "length" : 1
         }
       ]
@@ -221,7 +216,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 31,
+          "start" : 44,
           "length" : 1
         }
       ]

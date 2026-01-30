@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Historique des changements - Documentation des guides d&#39;implémentation de l&#39;ANS v0.1.9</title>
+    <title>Historique des changements - Documentation des guides d'implémentation de l'ANS v0.1.9</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,14 +18,9 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
-  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
     <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/aphp-ig.css" rel="stylesheet"/>
-    <link href="assets/css/prism-lang-fml.min.css" rel="stylesheet"/>
-    <link href="assets/css/prism-lang-fsh.min.css" rel="stylesheet"/>
-
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -45,25 +40,19 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-	  <!-- Ajouts AP-HP - couleurs FSH -->
-	  <script type="text/javascript" src="assets/js/prism-lang-fml.min.js"></script>
-	  <script type="text/javascript" src="assets/js/prism-lang-fsh.min.js"></script>
-	  <!-- Fin ajouts AP-HP - couleurs FSH -->
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"5.1"}
     h3,h4,h5,h6{--heading-prefix:"5.1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
-
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
-    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
   </div>
   <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
-    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
-    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+    <a id="hl7-logo" no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
   </div>
 
   <div id="ig-search">
@@ -233,29 +222,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#release-019-de-lig-documentation" id="markdown-toc-release-019-de-lig-documentation">Release 0.1.9 de l'IG Documentation</a></li>
-  <li><a href="#release-018-de-lig-documentation" id="markdown-toc-release-018-de-lig-documentation">Release 0.1.8 de l'IG Documentation</a></li>
-  <li><a href="#release-017-de-lig-documentation" id="markdown-toc-release-017-de-lig-documentation">Release 0.1.7 de l'IG Documentation</a></li>
-  <li><a href="#release-016-de-lig-documentation" id="markdown-toc-release-016-de-lig-documentation">Release 0.1.6 de l'IG Documentation</a></li>
-  <li><a href="#release-015-de-lig-documentation" id="markdown-toc-release-015-de-lig-documentation">Release 0.1.5 de l'IG Documentation</a></li>
-  <li><a href="#release-014-de-lig-documentation" id="markdown-toc-release-014-de-lig-documentation">Release 0.1.4 de l'IG Documentation</a></li>
-  <li><a href="#release-013-de-lig-documentation" id="markdown-toc-release-013-de-lig-documentation">Release 0.1.3 de l'IG Documentation</a></li>
-  <li><a href="#release-012-de-lig-documentation" id="markdown-toc-release-012-de-lig-documentation">Release 0.1.2 de l'IG Documentation</a></li>
-  <li><a href="#release-011-de-lig-documentation" id="markdown-toc-release-011-de-lig-documentation">Release 0.1.1 de l'IG Documentation</a></li>
-  <li><a href="#release-010-de-lig-documentation" id="markdown-toc-release-010-de-lig-documentation">Release 0.1.0 de l'IG Documentation</a></li>
+  <li><a href="#release-019-de-lig-documentation" id="markdown-toc-release-019-de-lig-documentation">Release 0.1.9 de l’IG Documentation</a></li>
+  <li><a href="#release-018-de-lig-documentation" id="markdown-toc-release-018-de-lig-documentation">Release 0.1.8 de l’IG Documentation</a></li>
+  <li><a href="#release-017-de-lig-documentation" id="markdown-toc-release-017-de-lig-documentation">Release 0.1.7 de l’IG Documentation</a></li>
+  <li><a href="#release-016-de-lig-documentation" id="markdown-toc-release-016-de-lig-documentation">Release 0.1.6 de l’IG Documentation</a></li>
+  <li><a href="#release-015-de-lig-documentation" id="markdown-toc-release-015-de-lig-documentation">Release 0.1.5 de l’IG Documentation</a></li>
+  <li><a href="#release-014-de-lig-documentation" id="markdown-toc-release-014-de-lig-documentation">Release 0.1.4 de l’IG Documentation</a></li>
+  <li><a href="#release-013-de-lig-documentation" id="markdown-toc-release-013-de-lig-documentation">Release 0.1.3 de l’IG Documentation</a></li>
+  <li><a href="#release-012-de-lig-documentation" id="markdown-toc-release-012-de-lig-documentation">Release 0.1.2 de l’IG Documentation</a></li>
+  <li><a href="#release-011-de-lig-documentation" id="markdown-toc-release-011-de-lig-documentation">Release 0.1.1 de l’IG Documentation</a></li>
+  <li><a href="#release-010-de-lig-documentation" id="markdown-toc-release-010-de-lig-documentation">Release 0.1.0 de l’IG Documentation</a></li>
 </ul>
 
 </div>
-<h3 id="release-019-de-lig-documentation">Release 0.1.9 de l'IG Documentation</h3>
+<h3 id="release-019-de-lig-documentation">Release 0.1.9 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/12?closed=1">0.1.9</a> :</p>
 
 <ul>
-  <li>Mise à jour de la documentation de publication d'un nouvel IG <a href="https://github.com/ansforge/IG-documentation/pull/72">#72</a></li>
-  <li>Mise à jour de la page index - intérêt des IGs pour l'écosystème <a href="https://github.com/ansforge/IG-documentation/pull/70">#70</a></li>
+  <li>Mise à jour de la documentation de publication d’un nouvel IG <a href="https://github.com/ansforge/IG-documentation/pull/72">#72</a></li>
+  <li>Mise à jour de la page index - intérêt des IGs pour l’écosystème <a href="https://github.com/ansforge/IG-documentation/pull/70">#70</a></li>
 </ul>
 
-<h3 id="release-018-de-lig-documentation">Release 0.1.8 de l'IG Documentation</h3>
+<h3 id="release-018-de-lig-documentation">Release 0.1.8 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/11?closed=1">0.1.8</a> :</p>
 
@@ -268,7 +257,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Mise à jour de la documentation pour rajouter une information succinte sur le $expand et une documentation sur la publication des IGs <a href="https://github.com/ansforge/IG-documentation/pull/68">#68</a></li>
 </ul>
 
-<h3 id="release-017-de-lig-documentation">Release 0.1.7 de l'IG Documentation</h3>
+<h3 id="release-017-de-lig-documentation">Release 0.1.7 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/10?closed=1">0.1.7</a> :</p>
 
@@ -280,39 +269,39 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Mise à jour du style des images dans github.md <a href="https://github.com/ansforge/IG-documentation/pull/54">#54</a></li>
 </ul>
 
-<h3 id="release-016-de-lig-documentation">Release 0.1.6 de l'IG Documentation</h3>
+<h3 id="release-016-de-lig-documentation">Release 0.1.6 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/8?closed=1">0.1.6</a> :</p>
 
 <ul>
-  <li>Mise à jour de la page "validate-resource" avec FHIR validator et matchbox <a href="https://github.com/ansforge/IG-documentation/pull/44">#44</a></li>
-  <li>Ajout d'un paragraphe "choix de la version FHIR" <a href="https://github.com/ansforge/IG-documentation/pull/47">#47</a></li>
+  <li>Mise à jour de la page “validate-resource” avec FHIR validator et matchbox <a href="https://github.com/ansforge/IG-documentation/pull/44">#44</a></li>
+  <li>Ajout d’un paragraphe “choix de la version FHIR” <a href="https://github.com/ansforge/IG-documentation/pull/47">#47</a></li>
   <li>Mise à jour des critères de qualité et de maturité <a href="https://github.com/ansforge/IG-documentation/pull/49">#49</a></li>
   <li>Ajout des workflows de publication <a href="https://github.com/ansforge/IG-documentation/pull/51">#51</a></li>
-  <li>Release 0.1.6 - mise à jour de l'history <a href="https://github.com/ansforge/IG-documentation/pull/52">#52</a></li>
+  <li>Release 0.1.6 - mise à jour de l’history <a href="https://github.com/ansforge/IG-documentation/pull/52">#52</a></li>
 </ul>
 
-<h3 id="release-015-de-lig-documentation">Release 0.1.5 de l'IG Documentation</h3>
+<h3 id="release-015-de-lig-documentation">Release 0.1.5 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/9?closed=1">0.1.5</a> :</p>
 
 <ul>
-  <li>Mise à jour du gitignore, refacto des pages, amélioration de la page "collaborons" <a href="https://github.com/ansforge/IG-documentation/pull/37">#37</a></li>
+  <li>Mise à jour du gitignore, refacto des pages, amélioration de la page “collaborons” <a href="https://github.com/ansforge/IG-documentation/pull/37">#37</a></li>
   <li>Ajout de la juridiction <a href="https://github.com/ansforge/IG-documentation/pull/38">#38</a></li>
   <li>Ajout des conseils de versioning <a href="https://github.com/ansforge/IG-documentation/pull/39">#39</a></li>
 </ul>
 
-<h3 id="release-014-de-lig-documentation">Release 0.1.4 de l'IG Documentation</h3>
+<h3 id="release-014-de-lig-documentation">Release 0.1.4 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/3?closed=1">0.1.4</a> :</p>
 
 <ul>
   <li>Ajout quick start implémenteurs FHIR <a href="https://github.com/ansforge/IG-documentation/pull/33">#33</a></li>
-  <li>Ajout du type "instruction" aux cas de tests FHIR <a href="https://github.com/ansforge/IG-documentation/pull/31">#31</a></li>
+  <li>Ajout du type “instruction” aux cas de tests FHIR <a href="https://github.com/ansforge/IG-documentation/pull/31">#31</a></li>
   <li>Mise à jour des pages about et tests <a href="https://github.com/ansforge/IG-documentation/pull/29">#29</a></li>
 </ul>
 
-<h3 id="release-013-de-lig-documentation">Release 0.1.3 de l'IG Documentation</h3>
+<h3 id="release-013-de-lig-documentation">Release 0.1.3 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/7?closed=1">0.1.3</a> :</p>
 
@@ -320,7 +309,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Ajout de la documentation sur les niveaux des cas de tests (release 0.1.3) <a href="https://github.com/ansforge/IG-documentation/pull/26">#26</a></li>
 </ul>
 
-<h3 id="release-012-de-lig-documentation">Release 0.1.2 de l'IG Documentation</h3>
+<h3 id="release-012-de-lig-documentation">Release 0.1.2 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/6?closed=1">0.1.2</a> :</p>
 
@@ -328,25 +317,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Usage FHIR R4/R5, bonnes pratiques de création de profils, ajout codfsh dans les dépendances <a href="https://github.com/ansforge/IG-documentation/pull/21">#21</a></li>
 </ul>
 
-<h3 id="release-011-de-lig-documentation">Release 0.1.1 de l'IG Documentation</h3>
+<h3 id="release-011-de-lig-documentation">Release 0.1.1 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/4?closed=1">0.1.1</a> :</p>
 
 <ul>
-  <li>Réparation des liens de la page d'accueil : <a href="https://github.com/ansforge/IG-documentation/pull/5">repare links #5</a></li>
+  <li>Réparation des liens de la page d’accueil : <a href="https://github.com/ansforge/IG-documentation/pull/5">repare links #5</a></li>
   <li>Passage de ci-build à release : <a href="https://github.com/ansforge/IG-documentation/pull/3">Update README.md and change release label to release #3</a></li>
   <li>Ajout du lien vers la liste des IG de lANS et Ajout dune page bonnes pratiques pour les implementer <a href="https://github.com/ansforge/IG-documentation/pull/8">add bonne pratique implementer #8</a></li>
   <li>Ajout doc installation linux <a href="https://github.com/ansforge/IG-documentation/pull/9">Feature/improve deps install linux #9</a></li>
-  <li>Ajout d'une page "comment collaborer ?" <a href="https://github.com/ansforge/IG-documentation/pull/12">Add first version of collaborons page #12</a></li>
+  <li>Ajout d’une page “comment collaborer ?” <a href="https://github.com/ansforge/IG-documentation/pull/12">Add first version of collaborons page #12</a></li>
   <li>Suppression des ressources de conformité</li>
 </ul>
 
-<h3 id="release-010-de-lig-documentation">Release 0.1.0 de l'IG Documentation</h3>
+<h3 id="release-010-de-lig-documentation">Release 0.1.0 de l’IG Documentation</h3>
 
 <p>Modifications apportées dans la release <a href="https://github.com/ansforge/IG-documentation/milestone/5?closed=1">0.1.0</a> :</p>
 
 <ul>
-  <li>Première version de l'IG Documentation <a href="https://github.com/ansforge/IG-documentation/pull/1">Première version #1</a></li>
+  <li>Première version de l’IG Documentation <a href="https://github.com/ansforge/IG-documentation/pull/1">Première version #1</a></li>
 </ul>
 
 
@@ -389,13 +378,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 12, 2026 09:48+0000">2026-01-12</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 30, 2026 15:21+0000">2026-01-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
-            Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
-<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a> |
-<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions</a>
-<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
+            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/history.html">Historique des versions </a>
  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-documentation/issues">New Issue</a>
 
           </span>
