@@ -1,5 +1,5 @@
 {
-  "date" : "Fri, 30 Jan, 2026 16:31:06 +0000",
+  "date" : "Wed, 04 Feb, 2026 15:54:10 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,58 +8,43 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 26,
-          "length" : 35
+          "start" : 29,
+          "length" : 30
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 27,
+          "start" : 30,
           "length" : 16
         },
         {
           "activity" : "generateNarratives",
-          "start" : 27,
-          "length" : 103
+          "start" : 30,
+          "length" : 79
         },
         {
           "activity" : "validate",
-          "start" : 27,
-          "length" : 9135
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 36,
-          "length" : 1
-        },
-        {
-          "activity" : "validate",
-          "start" : 36,
-          "length" : 1
+          "start" : 30,
+          "length" : 7200
         },
         {
           "activity" : "generate1",
-          "start" : 36,
-          "length" : 96
+          "start" : 37,
+          "length" : 115
         },
         {
           "activity" : "generate2",
           "start" : 40,
-          "length" : 72
+          "length" : 70
         },
         {
           "activity" : "generateValidationPack",
           "start" : 45,
-          "length" : 4
-        },
-        {
-          "activity" : "scanProfilesForR5",
-          "start" : 48,
-          "length" : 1
+          "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 48,
-          "length" : 1
+          "start" : 47,
+          "length" : 2
         }
       ]
     },
@@ -77,18 +62,18 @@
     },
     {
       "name" : "/input/pagecontent/about.md",
-      "size" : 1237
-    },
-    {
-      "name" : "/input/pagecontent/tests.md",
-      "size" : 5719,
+      "size" : 1237,
       "processes" : [
         {
-          "activity" : "generate2",
-          "start" : 40,
+          "activity" : "scan",
+          "start" : 30,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/tests.md",
+      "size" : 5719
     },
     {
       "name" : "/input/pagecontent/mod_github.md",
@@ -111,7 +96,7 @@
     },
     {
       "name" : "/input/pagecontent/mod_bonnes_pratiques.md",
-      "size" : 19051,
+      "size" : 19222,
       "processes" : [
         {
           "activity" : "generate2",
@@ -156,7 +141,11 @@
     },
     {
       "name" : "/input/pagecontent/mod_nouvel_ig.md",
-      "size" : 11866,
+      "size" : 11866
+    },
+    {
+      "name" : "/input/pagecontent/index.md",
+      "size" : 4454,
       "processes" : [
         {
           "activity" : "generate2",
@@ -164,10 +153,6 @@
           "length" : 1
         }
       ]
-    },
-    {
-      "name" : "/input/pagecontent/index.md",
-      "size" : 4454
     },
     {
       "name" : "/input/pagecontent/autres_ressources.md",
@@ -183,14 +168,7 @@
     },
     {
       "name" : "/input/images",
-      "size" : 0,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 40,
-          "length" : 1
-        }
-      ]
+      "size" : 0
     },
     {
       "name" : "/input/images/validate-fr-patient-ins.png",
@@ -204,6 +182,11 @@
       "name" : "/input/images/intro-iop.png",
       "size" : 686067,
       "processes" : [
+        {
+          "activity" : "generateNarratives",
+          "start" : 30,
+          "length" : 1
+        },
         {
           "activity" : "generate2",
           "start" : 40,
@@ -221,11 +204,7 @@
     },
     {
       "name" : "/input/images/erreurs-lignes.png",
-      "size" : 306173
-    },
-    {
-      "name" : "/temp/pages/_includes/artifacts.xml",
-      "size" : 600,
+      "size" : 306173,
       "processes" : [
         {
           "activity" : "generate2",
@@ -233,6 +212,10 @@
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/temp/pages/_includes/artifacts.xml",
+      "size" : 600
     }
   ]
 }

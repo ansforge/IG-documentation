@@ -204,7 +204,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Documentation des guides d'implémentation de l'ANS - version de développement local (v0.1.9) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le <a href="https://interop.esante.gouv.fr/ig/documentation/history.html">répertoire des versions publiées</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">Documentation des guides d'implémentation de l'ANS - version de développement local (intégration continue v0.1.9) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le <a href="https://interop.esante.gouv.fr/ig/documentation/history.html">répertoire des versions publiées</a></p>  <!-- EndReleaseHeader -->
   <h2>Bonnes pratiques</h2>
   
 
@@ -472,8 +472,9 @@ Ce choix n’est pas tranché, c’est l’écosystème qui dictera quelle versi
 <p>Règles d’utilisation de GitHub :</p>
 
 <ul>
-  <li>Toutes modifications d’une spécification sur GitHub doit se faire au niveau d’une branche.</li>
-  <li>Le nom de la branche doit être préfixé par les initiales de l’auteur (ex : “sb-“ pour Sébastien Brunelle) suivi de la description des travaux (ex : “sb-ajout-bonnespratiques-github)</li>
+  <li>Toutes modifications d’une spécification sur GitHub doit se faire au niveau d’une branche.
+  <!-- * Le nom de la branche doit être préfixé par les initiales de l'auteur (ex : "sb-" pour Sébastien Brunelle) suivi de la description des travaux (ex : "sb-ajout-bonnespratiques-github) --></li>
+  <li>Il vaut mieux diviser les travaux en petites tâches et en plusieurs branches pour faciliter la review et valider / merger les petites parties indépendamment</li>
   <li>Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l’ANS.</li>
   <li>Une fois la Pull Request validée, c’est à l’auteur des modifications de fusionner (=merge) la pull request avec la branche principale “main”.</li>
 </ul>
@@ -890,7 +891,7 @@ Usage: #definition
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 30, 2026 16:31+0000">2026-01-30</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 4, 2026 15:54+0000">2026-02-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
