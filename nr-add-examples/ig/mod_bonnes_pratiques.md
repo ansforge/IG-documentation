@@ -238,7 +238,7 @@ Usage: #example
 
 #### Ressources terminologiques : CodeSystem, ValueSet et ConceptMap
 
-Se référer au FHIR Terminology Service (FTS) du Serveur Multi Terminologies (SMT).
+Se référer aux bonnes pratiques de gestion des terminologies [de l’ANS](https://interop.esante.gouv.fr/terminologies/convention.html) et d’[HL7 International](https://build.fhir.org/ig/FHIR/ig-guidance/terminology.html).
 
 #### StructureMap
 
