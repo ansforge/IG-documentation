@@ -90,7 +90,7 @@ Configuration : le statut doit se placer dans l’attribut “status” du fichi
 
 Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/).
 
-Configuration : le statut doit se placer dans l’attribut “version” du fichier sushi-config et dans l’attribut “version du fichier publication-request
+Configuration : le statut doit se placer dans l’attribut “version” du fichier sushi-config et dans l’attribut “version” du fichier publication-request
 
 Le **label de publication** doit contenir “ci-build”, “ballot”, “trial-use” ou “final-text” en fonction des cas qui seront détaillés dans le cycle de vie des spécifications bientôt publiés. Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise <blockquote class="stu-note"><blockquote>.
 
