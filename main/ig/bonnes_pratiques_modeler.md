@@ -84,15 +84,23 @@ Sushi et FSH permettent de factoriser beaucoup d’informations, et de les centr
 
 ### Release d’un IG FHIR
 
-Le **statut** devra être placé à draft lorsque celui-ci n’est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft. Le statut doit se placer dans l’attribut “status” du fichier sushi-config
+Le **statut** devra être placé à draft lorsque celui-ci n’est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft.
 
-Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/). Le statut doit se placer dans l’attribut “version” du fichier sushi-config et dans l’attribut “version du fichier publication-request
+Configuration : le statut doit se placer dans l’attribut “status” du fichier sushi-config.
 
-Le **label de publication** doit contenir “ci-build”, “ballot”, “trial-use” ou “final-text” en fonction des cas qui seront détaillés dans le cycle de vie des spécifications bientôt publiés. Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise <blockquote class="stu-note"><blockquote>. Le label de publication doit se placer dans l’attribut “label” du fichier “publication-request” et dans l’attribut releaseLabel du fichier sushi-config
+Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/).
 
-Le **mode de publication** permet de paramétrer la release. Celui-ci doit être indiqué dans l’attribut “mode” du fichier publication-request.
+Configuration : le statut doit se placer dans l’attribut “version” du fichier sushi-config et dans l’attribut “version” du fichier publication-request
 
-Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les guides d’implémentation, voici la correspondance entre les statuts pressentis et les paramètres de publication :
+Le **label de publication** doit contenir “ci-build”, “ballot”, “trial-use” ou “final-text” en fonction des cas qui seront détaillés dans le cycle de vie des spécifications bientôt publiés. Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise <blockquote class="stu-note"><blockquote>.
+
+Configuration : le label de publication doit se placer dans l’attribut “label” du fichier “publication-request” et dans l’attribut releaseLabel du fichier sushi-config.
+
+Le **mode de publication** permet de paramétrer la release.
+
+Configuration : le mode de publication doit être indiqué dans l’attribut “mode” du fichier publication-request.
+
+Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les guides d’implémentation, voici la correspondance entre les statuts CI-SIS et les paramètres de publication :
 
 | | | | |
 | :--- | :--- | :--- | :--- |

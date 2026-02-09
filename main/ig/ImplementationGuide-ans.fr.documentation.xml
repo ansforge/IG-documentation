@@ -3,14 +3,14 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ans.fr.documentation"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide ans.fr.documentation</b></p><a name="ans.fr.documentation"> </a><a name="hcans.fr.documentation"> </a><h2>Documentation</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide ans.fr.documentation</b></p><a name="ans.fr.documentation"> </a><a name="hcans.fr.documentation"> </a><h2>Documentation</h2><p>L'URL officielle pour ce guide d'implémentation est : </p><pre>https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation"/>
   <version value="0.1.9"/>
   <name value="Documentation"/>
   <title value="Documentation des guides d'implémentation de l'ANS"/>
   <status value="active"/>
-  <date value="2026-01-28T10:11:04+00:00"/>
+  <date value="2026-02-09T09:30:29+00:00"/>
   <publisher value="ANS"/>
   <contact>
     <name value="ANS"/>
