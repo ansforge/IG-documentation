@@ -46,8 +46,3 @@ Un lien est également disponible sous chaque guide d'implémentation pour accé
 <img width="100%" alt="image" src="new_issue.png">
 
 L'issue doit contenir un titre, et une description la plus détaillée possible avec idéalement une proposition de changement pour faciliter et améliorer la qualité des modifications apportées.
-
-### Documentation
-
-* [ImplementationGuide](https://www.hl7.org/fhir/implementationguide.html)
-* [Packages](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification)
