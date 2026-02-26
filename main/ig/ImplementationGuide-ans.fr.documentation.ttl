@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "Documentation"] ; # 
   fhir:title [ fhir:v "Documentation des guides d'implémentation de l'ANS"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-02-09T09:30:29+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-26T13:29:55+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -1404,16 +1404,16 @@
            ] ;
            fhir:value [
              a fhir:Url ;
-             fhir:v "doc_modeler.html"^^xsd:anyURI ;
-             fhir:l fhir:doc_modeler.html
+             fhir:v "mod_nouvel_ig.html"^^xsd:anyURI ;
+             fhir:l fhir:mod_nouvel_ig.html
            ]
          ] ) ;
          fhir:name [
            a fhir:Url ;
-           fhir:v "doc_modeler.html"^^xsd:anyURI ;
-           fhir:l fhir:doc_modeler.html
+           fhir:v "mod_nouvel_ig.html"^^xsd:anyURI ;
+           fhir:l fhir:mod_nouvel_ig.html
          ] ;
-         fhir:title [ fhir:v "Doc Modeler" ] ;
+         fhir:title [ fhir:v "Quick start IG" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
            fhir:extension ( [
@@ -1423,33 +1423,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "dev_nouvel_ig.html"^^xsd:anyURI ;
-               fhir:l fhir:dev_nouvel_ig.html
+               fhir:v "mod_bonnes_pratiques.html"^^xsd:anyURI ;
+               fhir:l fhir:mod_bonnes_pratiques.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "dev_nouvel_ig.html"^^xsd:anyURI ;
-             fhir:l fhir:dev_nouvel_ig.html
-           ] ;
-           fhir:title [ fhir:v "Quick start IG" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:extension ( [
-             fhir:url [
-               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
-               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
-             ] ;
-             fhir:value [
-               a fhir:Url ;
-               fhir:v "bonnes_pratiques_modeler.html"^^xsd:anyURI ;
-               fhir:l fhir:bonnes_pratiques_modeler.html
-             ]
-           ] ) ;
-           fhir:name [
-             a fhir:Url ;
-             fhir:v "bonnes_pratiques_modeler.html"^^xsd:anyURI ;
-             fhir:l fhir:bonnes_pratiques_modeler.html
+             fhir:v "mod_bonnes_pratiques.html"^^xsd:anyURI ;
+             fhir:l fhir:mod_bonnes_pratiques.html
            ] ;
            fhir:title [ fhir:v "Bonnes pratiques" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1461,14 +1442,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "erreurs.html"^^xsd:anyURI ;
-               fhir:l fhir:erreurs.html
+               fhir:v "mod_erreurs.html"^^xsd:anyURI ;
+               fhir:l fhir:mod_erreurs.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "erreurs.html"^^xsd:anyURI ;
-             fhir:l fhir:erreurs.html
+             fhir:v "mod_erreurs.html"^^xsd:anyURI ;
+             fhir:l fhir:mod_erreurs.html
            ] ;
            fhir:title [ fhir:v "Les erreurs courantes" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1480,14 +1461,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "github.html"^^xsd:anyURI ;
-               fhir:l fhir:github.html
+               fhir:v "mod_github.html"^^xsd:anyURI ;
+               fhir:l fhir:mod_github.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "github.html"^^xsd:anyURI ;
-             fhir:l fhir:github.html
+             fhir:v "mod_github.html"^^xsd:anyURI ;
+             fhir:l fhir:mod_github.html
            ] ;
            fhir:title [ fhir:v "Usage de GitHub" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1500,16 +1481,16 @@
            ] ;
            fhir:value [
              a fhir:Url ;
-             fhir:v "doc_implementer.html"^^xsd:anyURI ;
-             fhir:l fhir:doc_implementer.html
+             fhir:v "impl_demarrer_sur_fhir.html"^^xsd:anyURI ;
+             fhir:l fhir:impl_demarrer_sur_fhir.html
            ]
          ] ) ;
          fhir:name [
            a fhir:Url ;
-           fhir:v "doc_implementer.html"^^xsd:anyURI ;
-           fhir:l fhir:doc_implementer.html
+           fhir:v "impl_demarrer_sur_fhir.html"^^xsd:anyURI ;
+           fhir:l fhir:impl_demarrer_sur_fhir.html
          ] ;
-         fhir:title [ fhir:v "Doc Implementer" ] ;
+         fhir:title [ fhir:v "Quick start FHIR" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
            fhir:extension ( [
@@ -1519,33 +1500,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "demarrer_sur_fhir.html"^^xsd:anyURI ;
-               fhir:l fhir:demarrer_sur_fhir.html
+               fhir:v "impl_bonnes_pratiques.html"^^xsd:anyURI ;
+               fhir:l fhir:impl_bonnes_pratiques.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "demarrer_sur_fhir.html"^^xsd:anyURI ;
-             fhir:l fhir:demarrer_sur_fhir.html
-           ] ;
-           fhir:title [ fhir:v "Quick start FHIR" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:extension ( [
-             fhir:url [
-               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
-               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
-             ] ;
-             fhir:value [
-               a fhir:Url ;
-               fhir:v "bonnes_pratiques_implementer.html"^^xsd:anyURI ;
-               fhir:l fhir:bonnes_pratiques_implementer.html
-             ]
-           ] ) ;
-           fhir:name [
-             a fhir:Url ;
-             fhir:v "bonnes_pratiques_implementer.html"^^xsd:anyURI ;
-             fhir:l fhir:bonnes_pratiques_implementer.html
+             fhir:v "impl_bonnes_pratiques.html"^^xsd:anyURI ;
+             fhir:l fhir:impl_bonnes_pratiques.html
            ] ;
            fhir:title [ fhir:v "Bonnes pratiques" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1557,14 +1519,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "instance_hapi.html"^^xsd:anyURI ;
-               fhir:l fhir:instance_hapi.html
+               fhir:v "impl_instance_hapi.html"^^xsd:anyURI ;
+               fhir:l fhir:impl_instance_hapi.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "instance_hapi.html"^^xsd:anyURI ;
-             fhir:l fhir:instance_hapi.html
+             fhir:v "impl_instance_hapi.html"^^xsd:anyURI ;
+             fhir:l fhir:impl_instance_hapi.html
            ] ;
            fhir:title [ fhir:v "Déployer une instance HAPI" ] ;
            fhir:generation [ fhir:v "markdown" ]
@@ -1576,14 +1538,14 @@
              ] ;
              fhir:value [
                a fhir:Url ;
-               fhir:v "valider_res.html"^^xsd:anyURI ;
-               fhir:l fhir:valider_res.html
+               fhir:v "impl_valider_res.html"^^xsd:anyURI ;
+               fhir:l fhir:impl_valider_res.html
              ]
            ] ) ;
            fhir:name [
              a fhir:Url ;
-             fhir:v "valider_res.html"^^xsd:anyURI ;
-             fhir:l fhir:valider_res.html
+             fhir:v "impl_valider_res.html"^^xsd:anyURI ;
+             fhir:l fhir:impl_valider_res.html
            ] ;
            fhir:title [ fhir:v "Valider une ressource contre un profil" ] ;
            fhir:generation [ fhir:v "markdown" ]
