@@ -1,7 +1,9 @@
 
 La mise en place de niveaux de maturité des guides d'implémentation se basant sur le FMM (FHIR Maturity Model) est en cours de réflexion. En attendant la publication de ces niveaux de maturité, il est important de respecter au maximum les critères indiqués ci-dessous.
 
-### Critères de qualité
+### Les critères de qualité et de maturité 
+
+#### Critères de qualité
 
 * Respect des bonnes pratiques nationales tel que les règles de nommages indiquées ci-dessous
 * Respect des [bonnes pratiques internationales](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
@@ -10,7 +12,7 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 * L'ensemble des ressources de conformité doit avoir une description précise de son usage
 * Publication de l'IG sans erreurs (cf session Q/A)
 
-### Critères de maturité
+#### Critères de maturité
 
 * Respect de l'ensemble des critères de qualité mentionnés ci-dessus
 * Nombre d'implémentations obtenu par déclaration (par convergence ou par les DSI). Idéalement, publier des retours d'expérience sur l'implémentation des spécifications
@@ -18,7 +20,7 @@ La mise en place de niveaux de maturité des guides d'implémentation se basant 
 * Nombre d'issues et résolutions sur le repo GitHub
 * Nombre de commentaires lors des phases de concertation
 
-### Création des ressources de conformité
+### Bonnes pratiques de création des ressources de conformité
 
 #### La définition des profils et des extensions
 
@@ -65,6 +67,8 @@ Ces règles de nommage ont été établies en s'inspirant des ressources us-core
 
 La documentation officielle se trouve sur le [confluence d'HL7](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-NamingRules&Guidelines)
 
+<!-- NR - URL canoniques commentées : construites automatiquement donc pas besoin de focus particulier
+
 ### Les URL canoniques
 
 L'URL canonique est un outil très puissant dans le standard HL7 FHIR, il permet d'identifier de manière unique chaque implementation guide (IG) et chaque profil.
@@ -86,10 +90,7 @@ Documentation :
 * [https://confluence.hl7.org/pages/viewpage.action?pageId=35718627#IGPublisherDocumentation-CanonicalURL]
 * [https://confluence.hl7.org/pages/viewpage.action?pageId=81027536#MaintainingaFHIRIGPublication-CanonicalURLs]
 
-### FSH / SUSHI
-
-Sushi et FSH permettent de factoriser beaucoup d'informations, et de les centraliser afin d'en faciliter l'accès et la gestion.
-Il est recommandé de faire bénéficier au maximum les projets de cette possibilité de centraliser les informations redondantes.
+-->
 
 ### Release d'un IG FHIR
 
@@ -120,25 +121,20 @@ Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les 
 | final-text | active | final-text | milestone|
 | withdrawn ou deprecated | retired | resp. withdrawn ou retired | withdrawal |
 
-#### Extensions et ValueSets
+### FSH / SUSHI - gestion des alias
 
-Il est recommandé de classer les extensions et les valueSets source (FSH) dans des sous-répertoires spécifiques, input\fsh\Extensions et input\fsh\ValueSets.
-Les structure-definitions des profils seront placés dans input\fsh.
-
-#### Gestion des alias
+FSH est une grammaire permettant de créer des artéfacts FHIR et de les générer au moment de la création du guide d'implémentation.
 
 Les [alias FSH](https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#defining-aliases) sont des variables permettant de définir un raccourci pour une URL ou un OID. Par souci de clarté, il est recommandé de rassembler tous les alias dans un fichier unique, appelé « aliases.fsh » et situé dans le répertoire racine (évite les redondances et facilite la gestion).
 
 Exemple:
 > Alias: $PhdDevice = http://hl7.org/fhir/uv/phd/StructureDefinition/PhdDevice
+> 
 > Alias: $UCUM = http://unitsofmeasure.org
+> 
 > Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
-> Alias: $FrObservationBp = http://interopsante.org/fhir/StructureDefinition/FrObservationBp  
-> Alias: $fr-patient = http://interopsante.org/fhir/StructureDefinition/FrPatient  
-
-### Exemples de guides d'implémentation
-
-Pour plus d'informations, consultez la [liste des guides d'implémentation](https://interop.esante.gouv.fr/ig/fhir/) à titre d'exemple.
+> 
+> Alias: $fr-patient = https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient  
 
 ### Le choix de la version FHIR
 
@@ -155,3 +151,220 @@ Ce choix n'est pas tranché, c'est l'écosystème qui dictera quelle version uti
 La conclusion actuelle (octobre 2023) est de privilégier R4 pour ne pas être "hors système" et être cohérent avec fr-core et les IGs de l'ANS tant qu'il n'y a pas de socle commun à l'utilisation de R5. Utiliser R5 uniquement si l'écosystème l'exige (ex : héritage d'un IG international en R5, héritage de ressources retravaillées en R5...) et partager ce besoin en issue GitHub.
 
 FHIR R6, dont la première concertation est prévue mi-2024, apportera beaucoup de contenu normatif, et sera peut-être l'objectif de transition.
+
+### Règles d'utilisation de GitHub
+
+Règles d'utilisation de GitHub :
+
+* Toutes modifications d'une spécification sur GitHub doit se faire au niveau d'une branche.
+<!-- * Le nom de la branche doit être préfixé par les initiales de l'auteur (ex : "sb-" pour Sébastien Brunelle) suivi de la description des travaux (ex : "sb-ajout-bonnespratiques-github)
+ -->
+* Il vaut mieux diviser les travaux en petites tâches et en plusieurs branches pour faciliter la review et valider / merger les petites parties indépendamment
+* Lorsque les travaux de modifications sont effectués, il est nécessaire de créer une Pull Request (PR) qui doit être validée par au moins un autre membre de l'ANS.
+* Une fois la Pull Request validée, c'est à l'auteur des modifications de fusionner (=merge) la pull request avec la branche principale "main".
+
+A noter qu'aucune modification doit être faite directement dans main.
+
+#### Gestion des répertoires des guides d'implémentation
+
+Une structure squelette indique sous quels dossiers placer les artéfacts fsh dans le guide d'implémentation [modèle](https://github.com/ansforge/IG-modele/tree/main/input/fsh)
+
+### Modèle de nommage par ressource FHIR
+
+Ci-dessous figurent les règles spécifiques à chaque type de ressource FHIR issus des [travaux de David Ouagne (AP-HP)](https://interop.aphp.fr/ig/fhir/core/best-practice.html) sous la forme de fiche.
+Chaque fiche présente les propriétés obligatoires de l'objet, avec le nom de la propriété puis sa valeur en respectant le format. Puis la règle de nommage du fichier contenant la ressource. Et enfin l'entête obligatoire du contenu du fichier de la ressource.
+
+#### StructureDefinition : profil
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-profil |
+| name | NomDuProfil |
+| title | Titre du profil |
+| code | - |
+| description | description du profil |
+| nom du fichier | Profile-resource/NomDuProfilProfile.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Profile: NomDuProfil
+Parent: ResourceType
+Id: nom-du-profil
+Title: "Titre du profil"
+Description: "Description du profil."
+```
+
+#### StructureDefinition : extension
+
+Attention, l'usage d'extension doit être réfléchi et documenté (il faut documenter les recherches d'extensions internationales n'ayant pas abouti).
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-de-l-extension |
+| name | NomDeLExtension |
+| title | Titre de l'extension |
+| code | - |
+| description | Description de l'extension. |
+| nom du fichier | Extensions/NomDeLExtensionExtension.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Extension: NomDeLExtension
+Id: nom-de-l-extension
+Title: "Titre de l'extension"
+Description: "Description de l'extension."
+Context: Sur quoi s'applique l'extension
+```
+
+#### StructureDefinition : modèle logique
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-modele-logique |
+| name | NomDuModeleLogique |
+| title | Titre du modèle logique |
+| code | - |
+| description | Description du modèle logique. |
+| nom du fichier | Logicals/NomDuModeleLogiqueLogical.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Logical: NomDuModeleLogique
+Parent: Base
+Characteristics: #can-be-target, #can-bind, #has-target
+Title: "Titre du modèle logique"
+Description: "Description du modèle logique."
+```
+
+#### Exemples
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | uuid |
+| name | NomDeLExemple |
+| title | Titre de l'exemple |
+| code | - |
+| description | Description de l'exemple. |
+| nom du fichier | Examples/NomDeLExampleExample.fsh |
+{: .grid }
+
+Exemples d'entête de fichiers FSH :
+
+```fsh
+Instance: nom-de-l-organisation
+InstanceOf: Organization
+Title: "Titre de l'organisation"
+Description: "Description de l'organisation."
+Usage: #inline
+
+* name = "NomDeLOrganization"
+```
+
+```fsh
+Instance: nom-du-lieu
+InstanceOf: Location
+Title: "Titre du lieu"
+Description: "Description du lieu."
+Usage: #example
+
+* name = "NomDuLieu"
+```
+
+
+```fsh
+Instance: nom-du-role-du-professionnel
+InstanceOf: PractitionerRole
+Title: "Titre du rôle du professionnel"
+Description: "Description du rôle du professionnel."
+Usage: #example
+```
+
+#### Ressources terminologiques : CodeSystem, ValueSet et ConceptMap
+
+Se référer aux bonnes pratiques de gestion des terminologies [de l'ANS](https://interop.esante.gouv.fr/terminologies/convention.html) et d'[HL7 International](https://build.fhir.org/ig/FHIR/ig-guidance/terminology.html).
+
+#### StructureMap
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | - |
+| name | NomStructureMap |
+| title | Titre de la StructureMap |
+| code | - |
+| description | Description de la StructureMap. |
+| nom du fichier | StructureMaps/StructureMap-NomStructureMap.fml |
+{: .grid }
+
+Nom du fichier FML : StructureMap-NomStructureMap.fml
+
+Entête du fichier FML :
+
+```fml
+/// url = 'ROOT_IG/StructureMap/NomStructureMap'
+/// name = 'NomStructureMap'
+/// title = 'Titre de la StructureMap'
+/// description = "Description de la StructureMap."
+/// status = 'active'
+```
+
+#### CapabilityStatement
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | nom-du-capability-statement |
+| name | NomDuCapabilityStatement |
+| title | Titre du capability statement |
+| code | - |
+| description | Description du capability statement. |
+| nom du fichier | CapabilityStatements/NomDeLaRessourceInstance.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: nom-du-capability-statement
+InstanceOf: CapabilityStatement
+Title: "Nom du capability statement"
+Description: "Description du capability statement."
+Usage: #definition
+
+* name = "NomDuCapabilityStatement"
+```
+
+#### SearchParameter
+
+| **Paramètre** | **Format** |
+| --- | --- |
+| id | Ressource-code |
+| name | NomDuSearchParameter |
+| title | Titre du search parameter |
+| code | nomDuSearchParameter |
+| description | Description du search parameter. |
+| nom du fichier | SearchParameters/NomDeLaRessourceSearchParameter.fsh |
+{: .grid }
+
+Entête du fichier FSH :
+
+```fsh
+Instance: Ressource-nomDuSearchParameter
+InstanceOf: SearchParameter
+Title: "Titre du search parameter"
+Description: "Description du search parameter."
+Usage: #definition
+
+* name = "NomDuSearchParameter"
+* code = #nomDuSearchParameter
+* status = #active
+* description = "Description du search parameter."
+* type = #number | #date | #string | #token | #reference | #composite | #quantity | #uri | #special
+```
+
+### Modèle de nommage des pages markdown
+
+Les noms des pages markdown devront idéalement être préfixées par "spec-technique-[...].md", "spec-fonctionnelle-[...].md", "annexe-[...].md" et ensuite contenir un nom lisible pour que le nom de la page soit clair dans l'url finale. Exemple : spec-technique-flux-alimentation.md
