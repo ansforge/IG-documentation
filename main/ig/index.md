@@ -1,4 +1,4 @@
-# Accueil - Documentation des guides d'implémentation de l'ANS v0.1.9
+# Accueil - Documentation des guides d'implémentation de l'ANS v0.1.10
 
 * [**Table of Contents**](toc.md)
 * **Accueil**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation | *Version*:0.1.9 |
-| Active as of 2026-02-26 | *Computable Name*:Documentation |
+| *Official URL*:https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation | *Version*:0.1.10 |
+| Active as of 2026-03-05 | *Computable Name*:Documentation |
 
 >  Ce guide d'implémentation est l'équivalent national de l'ig guidance (https://build.fhir.org/ig/FHIR/ig-guidance).  Cette documentation explique comment créer, publier et maintenir des guides d'implémentation FHIR pour l'écosystème français de santé. Elle s'adresse aux professionnels de santé qui challengent les travaux d'interopérabilité, aux FHIR modelers qui créent et profilent les ressources, et aux FHIR implementers qui développent les APIs. L'objectif est de permettre à tout acteur de publier des spécifications versionnées et packagées, cohérentes avec le cadre national, afin de définir précisément comment échanger les données de santé et favoriser la participation de l'ensemble des parties prenantes. 
 
@@ -61,11 +61,11 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
   "resourceType" : "ImplementationGuide",
   "id" : "ans.fr.documentation",
   "url" : "https://interop.esante.gouv.fr/ig/documentation/ImplementationGuide/ans.fr.documentation",
-  "version" : "0.1.9",
+  "version" : "0.1.10",
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2026-02-26T13:29:55+00:00",
+  "date" : "2026-03-05T09:32:21+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",

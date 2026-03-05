@@ -1,10 +1,19 @@
-# Historique des changements - Documentation des guides d'implémentation de l'ANS v0.1.9
+# Historique des changements - Documentation des guides d'implémentation de l'ANS v0.1.10
 
 * [**Table of Contents**](toc.md)
 * [**Autres Ressources**](autres_ressources.md)
 * **Historique des changements**
 
 ## Historique des changements
+
+### Release 0.1.10 de l’IG Documentation
+
+Modifications apportées dans la release [0.1.10](https://github.com/ansforge/IG-documentation/milestone/13?closed=1) :
+
+* Ajout d’exemples pour chaque type de ressources illustrant les bonnes pratiques de nommage [#73](https://github.com/ansforge/IG-documentation/pull/73)
+* Ajout de documentation à destination des professionnels de santé [#74](https://github.com/ansforge/IG-documentation/pull/74)
+* Mise à jour de la description des tests de niveau 2 [#75](https://github.com/ansforge/IG-documentation/pull/75)
+* Amélioration du guide de publication avec des détails de configuration [#77](https://github.com/ansforge/IG-documentation/pull/77)
 
 ### Release 0.1.9 de l’IG Documentation
 
