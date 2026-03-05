@@ -1,58 +1,58 @@
 {
-  "date" : "Thu, 05 Mar, 2026 09:32:21 +0000",
+  "date" : "Thu, 05 Mar, 2026 09:32:34 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [{
     "name" : "/fsh-generated/resources/ImplementationGuide-ans.fr.documentation.json",
     "size" : 3568,
     "processes" : [{
       "activity" : "load",
-      "start" : 21,
-      "length" : 34
+      "start" : 20,
+      "length" : 24
     },
     {
       "activity" : "checkR4R4B",
       "start" : 21,
-      "length" : 18
+      "length" : 17
     },
     {
       "activity" : "generateNarratives",
       "start" : 21,
-      "length" : 77
+      "length" : 78
     },
     {
       "activity" : "validate",
       "start" : 21,
-      "length" : 5047
-    },
-    {
-      "activity" : "scanForUsageStats",
-      "start" : 26,
-      "length" : 1
+      "length" : 4839
     },
     {
       "activity" : "generate1",
-      "start" : 27,
-      "length" : 60
+      "start" : 26,
+      "length" : 62
     },
     {
       "activity" : "generate2",
-      "start" : 29,
-      "length" : 84
+      "start" : 28,
+      "length" : 71
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 34,
+      "start" : 33,
       "length" : 3
     },
     {
       "activity" : "scanExamplesForR5",
-      "start" : 36,
+      "start" : 35,
       "length" : 3
     }]
   },
   {
     "name" : "/fsh-generated/includes/menu.xml",
-    "size" : 2867
+    "size" : 2867,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 28,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/data/features.yml",
@@ -67,20 +67,25 @@
     "size" : 6948,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 29,
+      "start" : 28,
       "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/changes.md",
-    "size" : 6402
+    "size" : 6402,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 28,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/doc_ps.md",
     "size" : 7353,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 29,
+      "start" : 28,
       "length" : 1
     }]
   },
@@ -89,7 +94,7 @@
     "size" : 19441,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 29,
+      "start" : 28,
       "length" : 1
     }]
   },
@@ -103,12 +108,7 @@
   },
   {
     "name" : "/input/pagecontent/index.md",
-    "size" : 4280,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 29,
-      "length" : 1
-    }]
+    "size" : 4280
   },
   {
     "name" : "/input/pagecontent/collaborons.md",
@@ -120,16 +120,16 @@
   },
   {
     "name" : "/input/pagecontent/impl_demarrer_sur_fhir.md",
-    "size" : 3175
+    "size" : 3175,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 28,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/mod_nouvel_ig.md",
-    "size" : 11866,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 29,
-      "length" : 1
-    }]
+    "size" : 11866
   },
   {
     "name" : "/input/pagecontent/mod_erreurs.md",
@@ -149,12 +149,7 @@
   },
   {
     "name" : "/template/config/_config.yml",
-    "size" : 31,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 29,
-      "length" : 1
-    }]
+    "size" : 31
   },
   {
     "name" : "/input/images",
@@ -162,16 +157,16 @@
   },
   {
     "name" : "/input/images/validate-fr-patient-ins.png",
-    "size" : 83326
+    "size" : 83326,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 28,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/images/intro-iop.png",
-    "size" : 686067,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 29,
-      "length" : 1
-    }]
+    "size" : 686067
   },
   {
     "name" : "/input/images/resultat-validation.png",
@@ -194,7 +189,7 @@
     "size" : 600,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 29,
+      "start" : 28,
       "length" : 1
     }]
   }]
