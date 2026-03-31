@@ -246,7 +246,7 @@ Description: "Description du modèle logique."
 
 | **Paramètre** | **Format** |
 | --- | --- |
-| id | uuid |
+| id | id-de-lexemple (indiqué dans Instance: "...") |
 | name | NomDeLExemple |
 | title | Titre de l'exemple |
 | code | - |
