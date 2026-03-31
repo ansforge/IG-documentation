@@ -1,11 +1,11 @@
 Documentation : Validation Results
 =========================================
 
-err = 1, warn = 4, info = 1
+err = 2, warn = 4, info = 0
 $--
 Generated $--. FHIR version $-- for ans.fr.documentation#$-- (canonical = https://interop.esante.gouv.fr/ig/documentation)
  Build Errors : 6 / 4 / 0
- /home/runner/work/IG-documentation/IG-documentation/igSource/fsh-generated/resources/ImplementationGuide-ans.fr.documentation : 1 / 0 / 2
+ /home/runner/work/IG-documentation/IG-documentation/igSource/fsh-generated/resources/ImplementationGuide-ans.fr.documentation : 2 / 0 / 1
 </table>
 == n/a ==
 ERROR: collaborons.html#/html/body/div/div/div/div/div/ul/li/a at Line 266, column 12: The link 'bonnes_pratiques_modeler.html' for "bonnes pratiques" cannot be resolved
@@ -19,5 +19,5 @@ WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-v
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/ImplementationGuide-ans.fr.documentation.json ==
-INFORMATION: ImplementationGuide/ans.fr.documentation: ImplementationGuide.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ImplementationGuide/ans.fr.documentation: ImplementationGuide.jurisdiction[0].coding[0].display: Wrong Display Name 'FRANCE' for urn:iso:std:iso:3166#FR. Valid display is 'France (la)' (fr) (for the language(s) 'fr-FR')
 ERROR: ImplementationGuide/ans.fr.documentation: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
