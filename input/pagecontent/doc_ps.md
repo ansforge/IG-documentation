@@ -57,7 +57,19 @@ FHIR seul est trop générique et peu contraignant pour garantir une interopéra
 
 ### Les guides d'implémentation
 
-Un guide d'implémentation (IG) est un document technique qui précise comment utiliser le standard FHIR dans un contexte spécifique, par exemple pour un programme national de santé ou un cas d'usage particulier. Il définit les règles et contraintes adaptées aux besoins métier français : quelles données sont obligatoires, quels formats utiliser, quelles nomenclatures respecter (CIM-10, CCAM, etc.). Pour vous, professionnels de santé, cela signifie que votre logiciel respecte des règles communes avec les autres systèmes, garantissant ainsi la qualité et la cohérence des échanges.
+Un guide d'implémentation (IG) précise comment utiliser le standard FHIR dans un contexte spécifique : un programme national de santé, un cas d'usage particulier (prescription électronique, compte rendu d'imagerie, etc.). Il définit les règles adaptées aux besoins français : quelles données sont obligatoires, quels formats utiliser, quelles nomenclatures respecter (CIM-10, CCAM, etc.). Pour vous, professionnels de santé, cela signifie que votre logiciel respecte des règles communes avec les autres systèmes, garantissant la qualité et la cohérence des échanges.
+
+**Un guide d'implémentation, c'est un site web — pas un document.** Contrairement aux documents Word ou PDF auxquels vous êtes habitués, un guide d'implémentation se présente sous la forme d'un site web structuré, librement accessible en ligne. Ce format a été choisi pour plusieurs raisons :
+
+* **Versionnement** : chaque version du guide reste accessible en ligne, ce qui permet de consulter les spécifications en vigueur à une date donnée.
+* **Navigation** : le format web permet de lier les pages entre elles et de naviguer facilement entre les concepts, contrairement à un long document linéaire.
+* **Mise à jour continue** : le guide peut évoluer au fil des contributions et des retours, sans nécessiter la redistribution d'un nouveau fichier.
+* **Lisibilité métier et technique** : le guide combine des pages narratives (accessibles à tous) et des spécifications formelles (pour les développeurs), au sein du même espace.
+
+<div style="background-color: #fff9e6; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0;">
+<strong>Pour les professionnels de santé</strong><br/><br/>
+Vous n'avez pas besoin de lire l'intégralité d'un guide d'implémentation. Votre rôle est de lire et valider les pages narratives (cas d'usage, modèles logiques) pour vérifier que les spécifications techniques reflètent bien la réalité du terrain. Les pages de spécifications formelles (profils, ressources FHIR) sont destinées aux développeurs.
+</div>
 
 ### Les modèles logiques
 
