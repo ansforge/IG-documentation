@@ -377,24 +377,25 @@ Documentation :
 
 <h3 id="release-dun-ig-fhir">Release d’un IG FHIR</h3>
 
-<p>Le <strong>statut</strong> devra être placé à draft lorsque celui-ci n’est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft.</p>
+<p>Quatre paramètres configurent la publication d’un IG. Le tableau en fin de section synthétise les valeurs à utiliser selon le statut CI-SIS.</p>
 
-<p>Configuration : le statut doit se placer dans l’attribut “status” du fichier sushi-config.</p>
+<p><strong>Statut</strong> — <code class="language-plaintext highlighter-rouge">sushi-config</code> &gt; <code class="language-plaintext highlighter-rouge">status</code></p>
 
-<p>Le numéro de <strong>version</strong> doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la <a href="https://semver.org/lang/fr/">documentation semver</a>.</p>
+<p><code class="language-plaintext highlighter-rouge">draft</code> tant que l’IG n’est pas officiellement publié, <code class="language-plaintext highlighter-rouge">active</code> dès la première publication. Il est possible de définir un statut différent par profil si certaines parties de la spécification restent en cours de rédaction.</p>
 
-<p>Configuration : le statut doit se placer dans l’attribut “version” du fichier sushi-config et dans l’attribut “version” du fichier publication-request</p>
+<p><strong>Version</strong> — <code class="language-plaintext highlighter-rouge">sushi-config</code> &gt; <code class="language-plaintext highlighter-rouge">version</code> et <code class="language-plaintext highlighter-rouge">publication-request</code> &gt; <code class="language-plaintext highlighter-rouge">version</code></p>
 
-<p>Le <strong>label de publication</strong> doit contenir “ci-build”, “ballot”, “trial-use” ou “final-text” en fonction des cas qui seront détaillés dans le cycle de vie des spécifications bientôt publiés.
-Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise &lt;blockquote class="stu-note"&gt;&lt;blockquote&gt;.</p>
+<p>Suit la convention <a href="https://semver.org/lang/fr/">semver</a> au format <code class="language-plaintext highlighter-rouge">majeur.mineur.patch</code>.</p>
 
-<p>Configuration : le label de publication doit se placer dans l’attribut <code class="language-plaintext highlighter-rouge">releaseLabel</code> du fichier <code class="language-plaintext highlighter-rouge">sushi-config</code> et dans l’attribut <code class="language-plaintext highlighter-rouge">status</code> du fichier <code class="language-plaintext highlighter-rouge">publication-request</code>.</p>
+<p><strong>Label de publication</strong> — <code class="language-plaintext highlighter-rouge">sushi-config</code> &gt; <code class="language-plaintext highlighter-rouge">releaseLabel</code> et <code class="language-plaintext highlighter-rouge">publication-request</code> &gt; <code class="language-plaintext highlighter-rouge">status</code></p>
 
-<p>Le <strong>mode de publication</strong> permet de paramétrer la release.</p>
+<p>Indique le stade de publication : <code class="language-plaintext highlighter-rouge">ci-build</code>, <code class="language-plaintext highlighter-rouge">ballot</code>, <code class="language-plaintext highlighter-rouge">trial-use</code> ou <code class="language-plaintext highlighter-rouge">final-text</code>. Il est possible de préciser la maturité en début de page index avec la balise &lt;blockquote class="stu-note"&gt;.</p>
 
-<p>Configuration : le mode de publication doit être indiqué dans l’attribut <code class="language-plaintext highlighter-rouge">mode</code> du fichier <code class="language-plaintext highlighter-rouge">publication-request</code>.</p>
+<p><strong>Mode de publication</strong> — <code class="language-plaintext highlighter-rouge">publication-request</code> &gt; <code class="language-plaintext highlighter-rouge">mode</code></p>
 
-<p>Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les guides d’implémentation, voici la correspondance entre les statuts CI-SIS et les paramètres de publication :</p>
+<p>Paramètre le type de release. Voir le tableau ci-dessous pour les valeurs selon le statut CI-SIS.</p>
+
+<p>Correspondance entre les statuts CI-SIS et les paramètres de publication :</p>
 
 <table>
   <thead>
@@ -902,7 +903,7 @@ Usage: #definition
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 12, 2026 14:16+0000">2026-06-12</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 12, 2026 14:23+0000">2026-06-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

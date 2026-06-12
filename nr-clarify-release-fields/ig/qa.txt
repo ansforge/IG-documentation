@@ -3,7 +3,7 @@ Documentation : Validation Results
 
 err = 2, warn = 4, info = 0
 IG Publisher Version: 2.2.8
-Generated Fri Jun 12 14:17:29 UTC 2026. FHIR version 4.0.1 for ans.fr.documentation#0.1.10 (canonical = https://interop.esante.gouv.fr/ig/documentation)
+Generated Fri Jun 12 14:24:20 UTC 2026. FHIR version 4.0.1 for ans.fr.documentation#0.1.10 (canonical = https://interop.esante.gouv.fr/ig/documentation)
  Build Errors : 6 / 4 / 0
  /home/runner/work/IG-documentation/IG-documentation/igSource/fsh-generated/resources/ImplementationGuide-ans.fr.documentation : 2 / 0 / 1
 </table>
