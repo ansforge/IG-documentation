@@ -105,21 +105,21 @@ Configuration : le statut doit se placer dans l'attribut "version" du fichier su
 Le **label de publication** doit contenir "ci-build", "ballot", "trial-use" ou "final-text" en fonction des cas qui seront détaillés dans le cycle de vie des spécifications bientôt publiés.
 Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise \<blockquote class=\"stu-note\"\>\<blockquote\>.
 
-Configuration : le label de publication doit se placer dans l'attribut "label" du fichier "publication-request" et dans l'attribut releaseLabel du fichier sushi-config.
+Configuration : le label de publication doit se placer dans l'attribut `releaseLabel` du fichier `sushi-config` et dans l'attribut `status` du fichier `publication-request`.
 
 Le **mode de publication** permet de paramétrer la release. 
 
-Configuration : le mode de publication doit être indiqué dans l'attribut "mode" du fichier publication-request.
+Configuration : le mode de publication doit être indiqué dans l'attribut `mode` du fichier `publication-request`.
 
 Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les guides d'implémentation, voici la correspondance entre les statuts CI-SIS et les paramètres de publication :
 
-| Statut de maturité CI-SIS | Statut IG | label de publication | Mode de publication |
-| --- | --- | --- | --- |
-| draft | draft | ci-build | N/A |
-| public-comment | draft | ballot | working |
-| for implementation | active | trial-use | milestone |
-| final-text | active | final-text | milestone|
-| withdrawn ou deprecated | retired | resp. withdrawn ou retired | withdrawal |
+| Statut CI-SIS | `sushi-config` : `status` | `sushi-config` : `releaseLabel` | `publication-request` : `status` | `publication-request` : `mode` |
+| --- | --- | --- | --- | --- |
+| draft | `draft` | `ci-build` | `ci-build` | N/A |
+| public-comment | `draft` | `ballot` | `ballot` | `working` |
+| for implementation | `active` | `trial-use` | `trial-use` | `milestone` |
+| final-text | `active` | `final-text` | `final-text` | `milestone` |
+| withdrawn ou deprecated | `retired` | N/A | `withdrawn` ou `retired` | `withdrawal` |
 
 ### FSH / SUSHI - gestion des alias
 
