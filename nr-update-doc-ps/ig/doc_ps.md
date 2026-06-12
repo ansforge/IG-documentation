@@ -60,7 +60,7 @@ FHIR seul est trop générique et peu contraignant pour garantir une interopéra
 
 Un guide d’implémentation (IG) précise comment utiliser le standard FHIR dans un contexte spécifique : un programme national de santé, un cas d’usage particulier (prescription électronique, compte rendu d’imagerie, etc.). Il définit les règles adaptées aux besoins français : quelles données sont obligatoires, quels formats utiliser, quelles nomenclatures respecter (CIM-10, CCAM, etc.). Pour vous, professionnels de santé, cela signifie que votre logiciel respecte des règles communes avec les autres systèmes, garantissant la qualité et la cohérence des échanges.
 
-**Un guide d’implémentation, c’est un site web — pas un document.** Contrairement aux documents Word ou PDF auxquels vous êtes habitués, un guide d’implémentation se présente sous la forme d’un site web structuré, librement accessible en ligne. Ce format a été choisi pour plusieurs raisons :
+**Un guide d’implémentation, c’est un site web — pas un document.** Un guide d’implémentation se présente sous la forme d’un site web structuré, librement accessible en ligne. Ce format a été choisi pour plusieurs raisons :
 
 * **Versionnement** : chaque version du guide reste accessible en ligne, ce qui permet de consulter les spécifications en vigueur à une date donnée.
 * **Navigation** : le format web permet de lier les pages entre elles et de naviguer facilement entre les concepts, contrairement à un long document linéaire.

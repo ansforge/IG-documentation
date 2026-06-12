@@ -1,52 +1,52 @@
 {
-  "date" : "Tue, 28 Apr, 2026 08:25:54 +0000",
+  "date" : "Fri, 12 Jun, 2026 14:16:08 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [{
     "name" : "/fsh-generated/resources/ImplementationGuide-ans.fr.documentation.json",
     "size" : 3568,
     "processes" : [{
       "activity" : "load",
-      "start" : 24,
+      "start" : 23,
       "length" : 19
     },
     {
-      "activity" : "scan",
-      "start" : 25,
-      "length" : 1
-    },
-    {
       "activity" : "checkR4R4B",
-      "start" : 25,
-      "length" : 17
+      "start" : 24,
+      "length" : 18
     },
     {
       "activity" : "generateNarratives",
-      "start" : 25,
-      "length" : 69
+      "start" : 24,
+      "length" : 63
     },
     {
       "activity" : "validate",
-      "start" : 25,
-      "length" : 4900
+      "start" : 24,
+      "length" : 13295
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 37,
+      "length" : 1
     },
     {
       "activity" : "generate1",
-      "start" : 30,
-      "length" : 68
+      "start" : 38,
+      "length" : 69
     },
     {
       "activity" : "generate2",
-      "start" : 33,
-      "length" : 58
+      "start" : 40,
+      "length" : 64
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 40,
+      "start" : 45,
       "length" : 3
     },
     {
       "activity" : "scanExamplesForR5",
-      "start" : 41,
+      "start" : 49,
       "length" : 3
     }]
   },
@@ -59,24 +59,24 @@
     "size" : 159,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 33,
+      "start" : 41,
       "length" : 1
     }]
   },
   {
+    "name" : "/input/pagecontent/about.md",
+    "size" : 1237
+  },
+  {
+    "name" : "/input/pagecontent/doc_ps.md",
+    "size" : 8750
+  },
+  {
     "name" : "/input/pagecontent/impl_bonnes_pratiques.md",
-    "size" : 1608
-  },
-  {
-    "name" : "/input/pagecontent/mod_nouvel_ig.md",
-    "size" : 11866
-  },
-  {
-    "name" : "/input/pagecontent/changes.md",
-    "size" : 6402,
+    "size" : 1608,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 33,
+      "start" : 41,
       "length" : 1
     }]
   },
@@ -85,36 +85,36 @@
     "size" : 0
   },
   {
-    "name" : "/input/pagecontent/impl_instance_hapi.md",
-    "size" : 792
-  },
-  {
-    "name" : "/input/pagecontent/about.md",
-    "size" : 1237
-  },
-  {
-    "name" : "/input/pagecontent/mod_bonnes_pratiques.md",
-    "size" : 19483,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 33,
-      "length" : 2
-    }]
-  },
-  {
-    "name" : "/input/pagecontent/impl_demarrer_sur_fhir.md",
-    "size" : 3175
-  },
-  {
-    "name" : "/input/pagecontent/doc_ps.md",
-    "size" : 8821
+    "name" : "/input/pagecontent/tests.md",
+    "size" : 5739
   },
   {
     "name" : "/input/pagecontent/collaborons.md",
-    "size" : 3223,
+    "size" : 3223
+  },
+  {
+    "name" : "/input/pagecontent/impl_instance_hapi.md",
+    "size" : 792,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 33,
+      "start" : 41,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/mod_nouvel_ig.md",
+    "size" : 11866
+  },
+  {
+    "name" : "/input/pagecontent/changes.md",
+    "size" : 6402
+  },
+  {
+    "name" : "/input/pagecontent/impl_valider_res.md",
+    "size" : 4754,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 41,
       "length" : 1
     }]
   },
@@ -123,28 +123,28 @@
     "size" : 6948
   },
   {
-    "name" : "/input/pagecontent/index.md",
-    "size" : 4280,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 33,
-      "length" : 1
-    }]
-  },
-  {
     "name" : "/input/pagecontent/mod_erreurs.md",
     "size" : 985
   },
   {
-    "name" : "/input/pagecontent/impl_valider_res.md",
-    "size" : 4754
-  },
-  {
-    "name" : "/input/pagecontent/tests.md",
-    "size" : 5739,
+    "name" : "/input/pagecontent/index.md",
+    "size" : 4280,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 33,
+      "start" : 41,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/mod_bonnes_pratiques.md",
+    "size" : 19483
+  },
+  {
+    "name" : "/input/pagecontent/impl_demarrer_sur_fhir.md",
+    "size" : 3175,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 41,
       "length" : 1
     }]
   },
@@ -161,38 +161,33 @@
     "size" : 0
   },
   {
-    "name" : "/input/images/resultat-validation.png",
-    "size" : 121565
+    "name" : "/input/images/intro-iop.png",
+    "size" : 686067
   },
   {
     "name" : "/input/images/homepage-matchbox.png",
     "size" : 36272,
     "processes" : [{
       "activity" : "generate2",
-      "start" : 33,
+      "start" : 41,
       "length" : 1
     }]
-  },
-  {
-    "name" : "/input/images/validate-fr-patient-ins.png",
-    "size" : 83326
-  },
-  {
-    "name" : "/input/images/new_issue.png",
-    "size" : 22747
   },
   {
     "name" : "/input/images/erreurs-lignes.png",
     "size" : 306173
   },
   {
-    "name" : "/input/images/intro-iop.png",
-    "size" : 686067,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 33,
-      "length" : 1
-    }]
+    "name" : "/input/images/validate-fr-patient-ins.png",
+    "size" : 83326
+  },
+  {
+    "name" : "/input/images/resultat-validation.png",
+    "size" : 121565
+  },
+  {
+    "name" : "/input/images/new_issue.png",
+    "size" : 22747
   },
   {
     "name" : "/temp/pages/_includes/artifacts.xml",
