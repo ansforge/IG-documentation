@@ -65,7 +65,7 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2026-06-12T14:23:40+00:00",
+  "date" : "2026-06-12T14:25:07+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
