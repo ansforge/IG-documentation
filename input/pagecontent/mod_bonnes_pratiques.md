@@ -94,32 +94,33 @@ Documentation :
 
 ### Release d'un IG FHIR
 
-Le **statut** devra être placé à draft lorsque celui-ci n'est pas officiellement publié. Il devra être placé à active lors de la première publication. Il est également possible de définir un status par profil si certaines parties de la spécification sont en mode draft.
+Quatre paramètres configurent la publication d'un IG. Le tableau en fin de section synthétise les valeurs à utiliser selon le statut CI-SIS.
 
-Configuration : le statut doit se placer dans l'attribut "status" du fichier sushi-config.
+**Statut** — `sushi-config` > `status`
 
-Le numéro de **version** doit respecter le processus semver, soit majeur.mineur.patch. Son usage est précisément défini dans la [documentation semver](https://semver.org/lang/fr/).
+`draft` tant que l'IG n'est pas officiellement publié, `active` dès la première publication. Il est possible de définir un statut différent par profil si certaines parties de la spécification restent en cours de rédaction.
 
-Configuration : le statut doit se placer dans l'attribut "version" du fichier sushi-config et dans l'attribut "version" du fichier publication-request
+**Version** — `sushi-config` > `version` et `publication-request` > `version`
 
-Le **label de publication** doit contenir "ci-build", "ballot", "trial-use" ou "final-text" en fonction des cas qui seront détaillés dans le cycle de vie des spécifications bientôt publiés.
-Il est possible de préciser la maturité sous forme de release notes en début de page index en utilisant la balise \<blockquote class=\"stu-note\"\>\<blockquote\>.
+Suit la convention [semver](https://semver.org/lang/fr/) au format `majeur.mineur.patch`.
 
-Configuration : le label de publication doit se placer dans l'attribut "label" du fichier "publication-request" et dans l'attribut releaseLabel du fichier sushi-config.
+**Label de publication** — `sushi-config` > `releaseLabel` et `publication-request` > `status`
 
-Le **mode de publication** permet de paramétrer la release. 
+Indique le stade de publication : `ci-build`, `ballot`, `trial-use` ou `final-text`. Il est possible de préciser la maturité en début de page index avec la balise \<blockquote class=\"stu-note\"\>.
 
-Configuration : le mode de publication doit être indiqué dans l'attribut "mode" du fichier publication-request.
+**Mode de publication** — `publication-request` > `mode`
 
-Les travaux de mise à jour actuelle vont définir de nouveaux statuts pour les guides d'implémentation, voici la correspondance entre les statuts CI-SIS et les paramètres de publication :
+Paramètre le type de release. Voir le tableau ci-dessous pour les valeurs selon le statut CI-SIS.
 
-| Statut de maturité CI-SIS | Statut IG | label de publication | Mode de publication |
-| --- | --- | --- | --- |
-| draft | draft | ci-build | N/A |
-| public-comment | draft | ballot | working |
-| for implementation | active | trial-use | milestone |
-| final-text | active | final-text | milestone|
-| withdrawn ou deprecated | retired | resp. withdrawn ou retired | withdrawal |
+Correspondance entre les statuts CI-SIS et les paramètres de publication :
+
+| Statut CI-SIS | `sushi-config` : `status` | `sushi-config` : `releaseLabel` | `publication-request` : `status` | `publication-request` : `mode` |
+| --- | --- | --- | --- | --- |
+| draft | `draft` | `ci-build` | `ci-build` | N/A |
+| public-comment | `draft` | `ballot` | `ballot` | `working` |
+| for implementation | `active` | `trial-use` | `trial-use` | `milestone` |
+| final-text | `active` | `final-text` | `final-text` | `milestone` |
+| withdrawn ou deprecated | `retired` | N/A | `withdrawn` ou `retired` | `withdrawal` |
 
 ### FSH / SUSHI - gestion des alias
 

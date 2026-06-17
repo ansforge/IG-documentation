@@ -1,3 +1,8 @@
+### Prochaine release de l'IG Documentation
+
+* Clarification de la section "Release d'un IG FHIR" : tableau de correspondance avec les champs exacts par fichier, amélioration de la lisibilité [#80](https://github.com/ansforge/IG-documentation/pull/80)
+* Mise à jour du PR template pour aligner avec ig-modele (ajout Type de changement + Checklist) [#80](https://github.com/ansforge/IG-documentation/pull/80)
+
 ### Release 0.1.10 de l'IG Documentation
 
 Modifications apportées dans la release [0.1.10](https://github.com/ansforge/IG-documentation/milestone/13?closed=1) :
