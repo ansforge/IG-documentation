@@ -1,53 +1,43 @@
 {
-  "date" : "Thu, 18 Jun, 2026 07:26:14 +0000",
+  "date" : "Thu, 18 Jun, 2026 07:26:42 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [{
     "name" : "/fsh-generated/resources/ImplementationGuide-ans.fr.documentation.json",
     "size" : 3740,
     "processes" : [{
       "activity" : "load",
-      "start" : 22,
-      "length" : 18
+      "start" : 23,
+      "length" : 20
     },
     {
       "activity" : "checkR4R4B",
-      "start" : 23,
-      "length" : 17
+      "start" : 24,
+      "length" : 22
     },
     {
       "activity" : "generateNarratives",
-      "start" : 23,
-      "length" : 61
+      "start" : 24,
+      "length" : 77
     },
     {
       "activity" : "validate",
-      "start" : 23,
-      "length" : 6484
-    },
-    {
-      "activity" : "scanForUsageStats",
-      "start" : 30,
-      "length" : 1
+      "start" : 24,
+      "length" : 5732
     },
     {
       "activity" : "generate1",
       "start" : 30,
-      "length" : 62
+      "length" : 71
     },
     {
       "activity" : "generate2",
-      "start" : 33,
-      "length" : 49
+      "start" : 32,
+      "length" : 57
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 39,
-      "length" : 2
-    },
-    {
-      "activity" : "scanProfilesForR5",
-      "start" : 48,
-      "length" : 1
+      "start" : 38,
+      "length" : 3
     },
     {
       "activity" : "scanExamplesForR5",
@@ -91,12 +81,7 @@
   },
   {
     "name" : "/input/pagecontent/tests.md",
-    "size" : 5739,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 33,
-      "length" : 1
-    }]
+    "size" : 5739
   },
   {
     "name" : "/input/pagecontent/collaborons.md",
@@ -156,21 +141,16 @@
     "processes" : [{
       "activity" : "generate2",
       "start" : 33,
-      "length" : 2
-    }]
-  },
-  {
-    "name" : "/input/pagecontent/impl_demarrer_sur_fhir.md",
-    "size" : 3175,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 33,
       "length" : 1
     }]
   },
   {
+    "name" : "/input/pagecontent/impl_demarrer_sur_fhir.md",
+    "size" : 3175
+  },
+  {
     "name" : "/input/pagecontent/mod_publier_ig_externe.md",
-    "size" : 5151
+    "size" : 5157
   },
   {
     "name" : "/template/config",

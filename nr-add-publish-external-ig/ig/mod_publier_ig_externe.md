@@ -38,7 +38,7 @@ jobs:
 L’IG compilé est publié sur la branche `gh-pages` du dépôt, sous une sous-arborescence portant le nom de la branche source. La preview est accessible à l’adresse :
 
 ```
-https://ansforge.github.io/{nom-du-repo}/{nom-de-la-branche}/ig
+https://{organisation}.github.io/{nom-du-repo}/{nom-de-la-branche}/ig
 
 ```
 
