@@ -390,9 +390,13 @@ Documentation :
 
 <p>Suit la convention <a href="https://semver.org/lang/fr/">semver</a> au format <code class="language-plaintext highlighter-rouge">majeur.mineur.patch</code>.</p>
 
-<p><strong>Label de publication</strong> — <code class="language-plaintext highlighter-rouge">sushi-config</code> &gt; <code class="language-plaintext highlighter-rouge">releaseLabel</code> et <code class="language-plaintext highlighter-rouge">publication-request</code> &gt; <code class="language-plaintext highlighter-rouge">status</code></p>
+<p><strong>Label de publication</strong> — <code class="language-plaintext highlighter-rouge">sushi-config</code> &gt; <code class="language-plaintext highlighter-rouge">releaseLabel</code></p>
 
 <p>Indique le stade de publication : <code class="language-plaintext highlighter-rouge">ci-build</code>, <code class="language-plaintext highlighter-rouge">ballot</code>, <code class="language-plaintext highlighter-rouge">trial-use</code> ou <code class="language-plaintext highlighter-rouge">final-text</code>. Il est possible de préciser la maturité en début de page index avec la balise &lt;blockquote class="stu-note"&gt;.</p>
+
+<p><strong>Statut de publication</strong> — <code class="language-plaintext highlighter-rouge">publication-request</code> &gt; <code class="language-plaintext highlighter-rouge">status</code></p>
+
+<p>Valeurs autorisées : <code class="language-plaintext highlighter-rouge">draft</code>, <code class="language-plaintext highlighter-rouge">ballot</code>, <code class="language-plaintext highlighter-rouge">trial-use</code>, <code class="language-plaintext highlighter-rouge">update</code>, <code class="language-plaintext highlighter-rouge">preview</code>, <code class="language-plaintext highlighter-rouge">normative</code>, <code class="language-plaintext highlighter-rouge">normative+trial-use</code>, <code class="language-plaintext highlighter-rouge">informative</code>, <code class="language-plaintext highlighter-rouge">release</code>. Voir la <a href="https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation">documentation officielle</a> pour la signification de chaque valeur.</p>
 
 <p><strong>Mode de publication</strong> — <code class="language-plaintext highlighter-rouge">publication-request</code> &gt; <code class="language-plaintext highlighter-rouge">mode</code></p>
 
@@ -436,7 +440,7 @@ Documentation :
       <td>final-text</td>
       <td><code class="language-plaintext highlighter-rouge">active</code></td>
       <td><code class="language-plaintext highlighter-rouge">final-text</code></td>
-      <td><code class="language-plaintext highlighter-rouge">final-text</code></td>
+      <td><code class="language-plaintext highlighter-rouge">release</code></td>
       <td><code class="language-plaintext highlighter-rouge">milestone</code></td>
     </tr>
     <tr>
@@ -906,7 +910,7 @@ Usage: #definition
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.11 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 09:54+0000">2026-06-18</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.11 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 11:22+0000">2026-06-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
