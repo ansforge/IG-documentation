@@ -104,9 +104,13 @@ Quatre paramètres configurent la publication d'un IG. Le tableau en fin de sect
 
 Suit la convention [semver](https://semver.org/lang/fr/) au format `majeur.mineur.patch`.
 
-**Label de publication** — `sushi-config` > `releaseLabel` et `publication-request` > `status`
+**Label de publication** — `sushi-config` > `releaseLabel`
 
 Indique le stade de publication : `ci-build`, `ballot`, `trial-use` ou `final-text`. Il est possible de préciser la maturité en début de page index avec la balise \<blockquote class=\"stu-note\"\>.
+
+**Statut de publication** — `publication-request` > `status`
+
+Valeurs autorisées : `draft`, `ballot`, `trial-use`, `update`, `preview`, `normative`, `normative+trial-use`, `informative`, `release`. Voir la [documentation officielle](https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation) pour la signification de chaque valeur.
 
 **Mode de publication** — `publication-request` > `mode`
 
@@ -119,7 +123,7 @@ Correspondance entre les statuts CI-SIS et les paramètres de publication :
 | draft | `draft` | `ci-build` | `ci-build` | N/A |
 | public-comment | `draft` | `ballot` | `ballot` | `working` |
 | for implementation | `active` | `trial-use` | `trial-use` | `milestone` |
-| final-text | `active` | `final-text` | `final-text` | `milestone` |
+| final-text | `active` | `final-text` | `release` | `milestone` |
 | withdrawn ou deprecated | `retired` | N/A | `withdrawn` ou `retired` | `withdrawal` |
 
 ### FSH / SUSHI - gestion des alias
