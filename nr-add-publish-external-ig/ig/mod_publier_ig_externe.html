@@ -246,6 +246,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="https://github.com/ansforge/IG-workflows">ansforge/IG-workflows</a> — GitHub Action réutilisable qui orchestre le pipeline de build et de publication (Sushi, IG Publisher, validator_cli, GitHub Pages, release). Détaillée dans les sections suivantes.</li>
 </ul>
 
+<p>Pour une organisation externe souhaitant mettre en place la même infrastructure, voici ce qui doit être forké ou adapté :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dépôt à forker</th>
+      <th>Quoi adapter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/ansforge/IG-modele">ansforge/IG-modele</a></td>
+      <td>Point de départ pour chaque nouvel IG. Adapter le <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>, le <code class="language-plaintext highlighter-rouge">README</code> et les workflows selon vos besoins.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ansforge/IG-template">ansforge/IG-template</a></td>
+      <td>Remplacer le logo et les couleurs ANS par la charte de votre organisation. Mettre à jour la référence <code class="language-plaintext highlighter-rouge">template</code> dans <code class="language-plaintext highlighter-rouge">ig.ini</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ansforge/IG-website-release">ansforge/IG-website-release</a></td>
+      <td>Adapter <code class="language-plaintext highlighter-rouge">publish.ini</code> (URL de votre site), les fichiers <code class="language-plaintext highlighter-rouge">templates/</code> (logo, navigation), et initialiser les sous-modules. Voir la section <a href="#créer-son-propre-dépôt-de-publication">Créer son propre dépôt de publication</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">IG-workflows</code> en revanche n’a pas besoin d’être forké : la GitHub Action est utilisable telle quelle depuis <code class="language-plaintext highlighter-rouge">ansforge/IG-workflows@main</code>.</p>
+
 <h3 id="mise-en-place-du-workflow-de-ci">Mise en place du workflow de CI</h3>
 
 <p>Dans le répertoire <code class="language-plaintext highlighter-rouge">.github/workflows/</code> du dépôt de l’IG, créer un fichier <code class="language-plaintext highlighter-rouge">fhir-workflows.yml</code> :</p>
@@ -523,7 +550,7 @@ git submodule add https://github.com/HL7/fhir-ig-history-template fhir-ig-histor
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:33+0000">2026-06-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:39+0000">2026-06-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
