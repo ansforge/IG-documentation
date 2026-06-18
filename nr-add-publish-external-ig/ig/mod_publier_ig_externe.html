@@ -227,9 +227,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#mise-en-place-du-workflow-de-ci" id="markdown-toc-mise-en-place-du-workflow-de-ci">Mise en place du workflow de CI</a></li>
   <li><a href="#paramètres-disponibles" id="markdown-toc-paramètres-disponibles">Paramètres disponibles</a></li>
-  <li><a href="#activer-les-dépendances-simplifier-bake" id="markdown-toc-activer-les-dépendances-simplifier-bake">Activer les dépendances Simplifier (bake)</a></li>
   <li><a href="#publier-une-release" id="markdown-toc-publier-une-release">Publier une release</a></li>
-  <li><a href="#nettoyer-les-branches-obsolètes-dans-gh-pages" id="markdown-toc-nettoyer-les-branches-obsolètes-dans-gh-pages">Nettoyer les branches obsolètes dans gh-pages</a></li>
+  <li><a href="#créer-son-propre-dépôt-de-publication" id="markdown-toc-créer-son-propre-dépôt-de-publication">Créer son propre dépôt de publication</a></li>
 </ul>
 
 </div>
@@ -353,18 +352,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<h3 id="activer-les-dépendances-simplifier-bake">Activer les dépendances Simplifier (bake)</h3>
-
-<p>Le paramètre <code class="language-plaintext highlighter-rouge">bake: "true"</code> est nécessaire pour les IGs qui dépendent de <strong>FrCore</strong> (<code class="language-plaintext highlighter-rouge">hl7.fhir.fr.core</code>) ou de l’<strong>Annuaire</strong> (<code class="language-plaintext highlighter-rouge">ans.annuaire.fhir.r4</code>), qui ne sont pas disponibles sur le serveur de packages HL7 standard.</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">ansforge/IG-workflows@main</span>
-  <span class="na">with</span><span class="pi">:</span>
-    <span class="na">repo_ig</span><span class="pi">:</span> <span class="s2">"</span><span class="s">./igSource"</span>
-    <span class="na">github_page</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
-    <span class="na">github_page_token</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
-    <span class="na">bake</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
-</code></pre></div></div>
-
 <h3 id="publier-une-release">Publier une release</h3>
 
 <p>La publication d’une release nécessite un accès au dépôt <a href="https://github.com/ansforge/IG-website-release">ansforge/IG-website-release</a>, qui héberge le registre et l’historique des IGs publiés sur <a href="https://interop.esante.gouv.fr">interop.esante.gouv.fr</a>. Le token <code class="language-plaintext highlighter-rouge">ANS_IG_API_TOKEN</code> doit être configuré dans les secrets du dépôt.</p>
@@ -406,30 +393,83 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Les informations de release (version, chemin canonique) sont lues depuis <code class="language-plaintext highlighter-rouge">publication-request.json</code> à la racine de l’IG.</p>
 
-<h3 id="nettoyer-les-branches-obsolètes-dans-gh-pages">Nettoyer les branches obsolètes dans gh-pages</h3>
+<h3 id="créer-son-propre-dépôt-de-publication">Créer son propre dépôt de publication</h3>
 
-<p>Au fil du temps, la branche <code class="language-plaintext highlighter-rouge">gh-pages</code> accumule des sous-répertoires correspondant à d’anciennes branches supprimées. Un workflow dédié permet de nettoyer automatiquement ces entrées :</p>
+<p>Pour publier un IG en dehors de l’infrastructure ANS, il faut créer un dépôt de publication analogue à <code class="language-plaintext highlighter-rouge">IG-website-release</code>. Le publisher IG utilise ce dépôt pour générer les pages versionnées et mettre à jour le registre.</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Suppression des anciennes branches dans gh-pages</span>
+<h4 id="structure-du-dépôt">Structure du dépôt</h4>
 
-<span class="na">on</span><span class="pi">:</span>
-  <span class="na">workflow_dispatch</span><span class="pi">:</span>
-
-<span class="na">jobs</span><span class="pi">:</span>
-  <span class="na">cleanup</span><span class="pi">:</span>
-    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
-    <span class="na">steps</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Supprimer les branches obsolètes</span>
-        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
-          <span class="s">branches=()</span>
-          <span class="s">for branch in $(git for-each-ref --format='%(refname)' refs/heads/); do</span>
-            <span class="s">branches+="${branch#"refs/heads/"}"</span>
-          <span class="s">done</span>
-          <span class="s">git checkout gh-pages</span>
-          <span class="s">for dossier in ig; do</span>
-            <span class="s">[[ ! " $branches " =~ " ${dossier%/} " ]] &amp;&amp; rm -r "$dossier"</span>
-          <span class="s">done</span>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mon-ig-website/
+├── ig-registry/                  # sous-module git → FHIR/ig-registry
+├── fhir-ig-history-template/     # sous-module git → HL7/fhir-ig-history-template
+├── templates/
+│   ├── header.template
+│   ├── preamble.template
+│   └── postamble.template
+├── www/
+│   └── ig/                       # répertoire cible des IGs publiés
+└── publish.ini
 </code></pre></div></div>
+
+<p>Initialiser le dépôt avec les sous-modules :</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init mon-ig-website <span class="o">&amp;&amp;</span> <span class="nb">cd </span>mon-ig-website
+git submodule add https://github.com/FHIR/ig-registry ig-registry
+git submodule add https://github.com/HL7/fhir-ig-history-template fhir-ig-history-template
+<span class="nb">mkdir</span> <span class="nt">-p</span> www/ig templates
+</code></pre></div></div>
+
+<h4 id="configurer-publishini">Configurer publish.ini</h4>
+
+<p><code class="language-plaintext highlighter-rouge">publish.ini</code> définit l’URL racine du site de publication. Cette URL doit correspondre au champ <code class="language-plaintext highlighter-rouge">path</code> déclaré dans le <code class="language-plaintext highlighter-rouge">publication-request.json</code> de chaque IG publié.</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[website]</span>
+<span class="py">style</span><span class="p">=</span><span class="s">fhir.layout</span>
+<span class="py">server</span><span class="p">=</span><span class="s">apache</span>
+<span class="py">url</span><span class="p">=</span><span class="s">https://{organisation}.github.io/{nom-du-repo-website}/ig</span>
+<span class="py">org</span><span class="p">=</span><span class="s">Mon organisation</span>
+
+<span class="nn">[feeds]</span>
+<span class="py">package</span><span class="p">=</span><span class="s">www/package-feed.xml</span>
+<span class="py">publication</span><span class="p">=</span><span class="s">www/publication-feed.xml</span>
+</code></pre></div></div>
+
+<h4 id="créer-les-templates">Créer les templates</h4>
+
+<p>Les trois fichiers de <code class="language-plaintext highlighter-rouge">templates/</code> contrôlent l’entête HTML, le pied de page et le bandeau de navigation du site de publication. Copier les fichiers depuis <a href="https://github.com/ansforge/IG-website-release/tree/main/templates">ansforge/IG-website-release/templates</a> comme point de départ, puis adapter le logo et les liens de l’ANS à votre organisation.</p>
+
+<h4 id="déclarer-lig-dans-le-registre">Déclarer l’IG dans le registre</h4>
+
+<p>Ajouter une entrée dans <code class="language-plaintext highlighter-rouge">ig-registry/fhir-ig-list.json</code> pour chaque IG à publier :</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"package-id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mon.org.mon-ig"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mon Guide d'Implémentation"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://{organisation}.github.io/{nom-du-repo-website}/ig/mon-ig"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"introduction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Description courte de l'IG."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"editions"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>La valeur <code class="language-plaintext highlighter-rouge">canonical</code> doit correspondre exactement au champ <code class="language-plaintext highlighter-rouge">canonical</code> du <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> de l’IG.</p>
+
+<h4 id="adapter-le-workflow-de-release">Adapter le workflow de release</h4>
+
+<p>Modifier le workflow de publication pour pointer vers votre propre dépôt et chemin :</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">ansforge/IG-workflows@main</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">repo_ig</span><span class="pi">:</span> <span class="s2">"</span><span class="s">./igSource"</span>
+    <span class="na">github_page</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+    <span class="na">github_page_token</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
+    <span class="na">publish_repo</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{organisation}/mon-ig-website"</span>
+    <span class="na">publish_repo_token</span><span class="pi">:</span> <span class="s">${{ secrets.MON_TOKEN }}</span>
+    <span class="na">publish_path_outpout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">./mon-ig-website/www/ig"</span>
+</code></pre></div></div>
+
+<p>Le token <code class="language-plaintext highlighter-rouge">MON_TOKEN</code> doit avoir les droits <code class="language-plaintext highlighter-rouge">contents: write</code> sur le dépôt de publication. Le configurer dans <em>Settings → Secrets and variables → Actions</em> du dépôt de l’IG.</p>
 
 
 
@@ -472,7 +512,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:26+0000">2026-06-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:31+0000">2026-06-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

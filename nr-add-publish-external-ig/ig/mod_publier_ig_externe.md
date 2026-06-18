@@ -59,20 +59,6 @@ https://{organisation}.github.io/{nom-du-repo}/{nom-de-la-branche}/ig
 | `publish_repo_token` | string | `""` | Token avec droits d’écriture sur`publish_repo` |
 | `publish_path_outpout` | string | `""` | Chemin cible dans le dépôt de publication (ex.`./IG-website-release/www/ig`) |
 
-### Activer les dépendances Simplifier (bake)
-
-Le paramètre `bake: "true"` est nécessaire pour les IGs qui dépendent de **FrCore** (`hl7.fhir.fr.core`) ou de l’**Annuaire** (`ans.annuaire.fhir.r4`), qui ne sont pas disponibles sur le serveur de packages HL7 standard.
-
-```
-- uses: ansforge/IG-workflows@main
-  with:
-    repo_ig: "./igSource"
-    github_page: "true"
-    github_page_token: ${{ secrets.GITHUB_TOKEN }}
-    bake: "true"
-
-```
-
 ### Publier une release
 
 La publication d’une release nécessite un accès au dépôt [ansforge/IG-website-release](https://github.com/ansforge/IG-website-release), qui héberge le registre et l’historique des IGs publiés sur [interop.esante.gouv.fr](https://interop.esante.gouv.fr). Le token `ANS_IG_API_TOKEN` doit être configuré dans les secrets du dépôt.
@@ -114,30 +100,91 @@ Ce workflow :
 
 Les informations de release (version, chemin canonique) sont lues depuis `publication-request.json` à la racine de l’IG.
 
-### Nettoyer les branches obsolètes dans gh-pages
+### Créer son propre dépôt de publication
 
-Au fil du temps, la branche `gh-pages` accumule des sous-répertoires correspondant à d’anciennes branches supprimées. Un workflow dédié permet de nettoyer automatiquement ces entrées :
+Pour publier un IG en dehors de l’infrastructure ANS, il faut créer un dépôt de publication analogue à `IG-website-release`. Le publisher IG utilise ce dépôt pour générer les pages versionnées et mettre à jour le registre.
 
-```
-name: Suppression des anciennes branches dans gh-pages
-
-on:
-  workflow_dispatch:
-
-jobs:
-  cleanup:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Supprimer les branches obsolètes
-        run: |
-          branches=()
-          for branch in $(git for-each-ref --format='%(refname)' refs/heads/); do
-            branches+="${branch#"refs/heads/"}"
-          done
-          git checkout gh-pages
-          for dossier in ig; do
-            [[ ! " $branches " =~ " ${dossier%/} " ]] && rm -r "$dossier"
-          done
+#### Structure du dépôt
 
 ```
+mon-ig-website/
+├── ig-registry/                  # sous-module git → FHIR/ig-registry
+├── fhir-ig-history-template/     # sous-module git → HL7/fhir-ig-history-template
+├── templates/
+│   ├── header.template
+│   ├── preamble.template
+│   └── postamble.template
+├── www/
+│   └── ig/                       # répertoire cible des IGs publiés
+└── publish.ini
+
+```
+
+Initialiser le dépôt avec les sous-modules :
+
+```
+git init mon-ig-website && cd mon-ig-website
+git submodule add https://github.com/FHIR/ig-registry ig-registry
+git submodule add https://github.com/HL7/fhir-ig-history-template fhir-ig-history-template
+mkdir -p www/ig templates
+
+```
+
+#### Configurer publish.ini
+
+`publish.ini` définit l’URL racine du site de publication. Cette URL doit correspondre au champ `path` déclaré dans le `publication-request.json` de chaque IG publié.
+
+```
+[website]
+style=fhir.layout
+server=apache
+url=https://{organisation}.github.io/{nom-du-repo-website}/ig
+org=Mon organisation
+
+[feeds]
+package=www/package-feed.xml
+publication=www/publication-feed.xml
+
+```
+
+#### Créer les templates
+
+Les trois fichiers de `templates/` contrôlent l’entête HTML, le pied de page et le bandeau de navigation du site de publication. Copier les fichiers depuis [ansforge/IG-website-release/templates](https://github.com/ansforge/IG-website-release/tree/main/templates) comme point de départ, puis adapter le logo et les liens de l’ANS à votre organisation.
+
+#### Déclarer l’IG dans le registre
+
+Ajouter une entrée dans `ig-registry/fhir-ig-list.json` pour chaque IG à publier :
+
+```
+{
+  "package-id": "mon.org.mon-ig",
+  "title": "Mon Guide d'Implémentation",
+  "canonical": "https://{organisation}.github.io/{nom-du-repo-website}/ig/mon-ig",
+  "introduction": "Description courte de l'IG.",
+  "category": "...",
+  "language": "fr",
+  "editions": []
+}
+
+```
+
+La valeur `canonical` doit correspondre exactement au champ `canonical` du `sushi-config.yaml` de l’IG.
+
+#### Adapter le workflow de release
+
+Modifier le workflow de publication pour pointer vers votre propre dépôt et chemin :
+
+```
+- uses: ansforge/IG-workflows@main
+  with:
+    repo_ig: "./igSource"
+    github_page: "true"
+    github_page_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_repo: "{organisation}/mon-ig-website"
+    publish_repo_token: ${{ secrets.MON_TOKEN }}
+    publish_path_outpout: "./mon-ig-website/www/ig"
+
+```
+
+Le token `MON_TOKEN` doit avoir les droits `contents: write` sur le dépôt de publication. Le configurer dans **Settings → Secrets and variables → Actions** du dépôt de l’IG.
 
