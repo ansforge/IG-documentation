@@ -53,20 +53,7 @@ https://{organisation}.github.io/{nom-du-repo}/{nom-de-la-branche}/ig
 
 ### Paramètres disponibles
 
-| Paramètre | Type | Défaut | Description |
-| --- | --- | --- | --- |
-| `repo_ig` | string | — | **Requis.** Chemin vers le répertoire source de l'IG |
-| `ig-publisher-version` | string | `latest` | Version de l'IG Publisher (`latest` ou `x.y.z`) |
-| `github_page` | boolean | `false` | Active la publication sur GitHub Pages |
-| `github_page_token` | string | — | Token GitHub pour écrire sur la branche `gh-pages` |
-| `bake` | boolean | `false` | Installe FrCore et Annuaire depuis Simplifier (via Firely Terminal) |
-| `validator_cli` | boolean | `false` | Lance les tests avec le validator_cli HL7 |
-| `generate_plantuml` | boolean | `false` | Génère un diagramme de classes PlantUML depuis le `package.db` |
-| `generate_mapping_plantuml` | boolean | `false` | Génère les diagrammes de mapping PlantUML |
-| `generate_testscript` | boolean | `false` | Génère des TestScript depuis le package de l'IG |
-| `publish_repo` | string | `""` | Dépôt de publication pour les releases (ex. `ansforge/IG-website-release`) |
-| `publish_repo_token` | string | `""` | Token avec droits d'écriture sur `publish_repo` |
-| `publish_path_outpout` | string | `""` | Chemin cible dans le dépôt de publication (ex. `./IG-website-release/www/ig`) |
+La liste complète et à jour des paramètres est maintenue dans le [README de ansforge/IG-workflows](https://github.com/ansforge/IG-workflows#inputs).
 
 ### Publier une release
 
