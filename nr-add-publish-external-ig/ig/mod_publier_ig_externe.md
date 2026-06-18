@@ -6,6 +6,11 @@
 
 ## Publier un IG externe
 
+**Avant de publier un IG**
+
+La publication d'un IG nécessite de respecter les
+[bonnes pratiques de modélisation](mod_bonnes_pratiques.md). En particulier, tout IG destiné à l'écosystème français doit hériter des profils nationaux existants (FrCore, Annuaire…) plutôt que de remodéliser des concepts déjà standardisés. Publier un IG qui ignore les profils nationaux nuit à l'interopérabilité de l'ensemble de l'écosystème.
+
 La GitHub Action [ansforge/IG-workflows](https://github.com/ansforge/IG-workflows) fournit un pipeline clé en main pour compiler, tester et publier un guide d’implémentation FHIR via GitHub Actions. Elle encapsule les outils du cycle de vie d’un IG : Sushi, IG Publisher, validator_cli, génération PlantUML et publication sur GitHub Pages ou sur un site de publication dédié.
 
 ### Dépôts de référence ANS
