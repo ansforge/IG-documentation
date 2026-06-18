@@ -1,4 +1,9 @@
 
+<div style="background-color: #fff9e6; border-left: 4px solid #ff9800; padding: 15px; margin: 20px 0;">
+<strong>Avant de publier un IG</strong><br/><br/>
+La publication d'un IG nécessite de respecter les <a href="mod_bonnes_pratiques.html">bonnes pratiques de modélisation</a>. En particulier, tout IG destiné à l'écosystème français doit hériter des profils nationaux existants (FrCore, Annuaire…) plutôt que de remodéliser des concepts déjà standardisés. Publier un IG qui ignore les profils nationaux nuit à l'interopérabilité de l'ensemble de l'écosystème.
+</div>
+
 La GitHub Action [ansforge/IG-workflows](https://github.com/ansforge/IG-workflows) fournit un pipeline clé en main pour compiler, tester et publier un guide d'implémentation FHIR via GitHub Actions. Elle encapsule les outils du cycle de vie d'un IG : Sushi, IG Publisher, validator_cli, génération PlantUML et publication sur GitHub Pages ou sur un site de publication dédié.
 
 ### Dépôts de référence ANS
@@ -11,7 +16,7 @@ Trois dépôts forment l'outillage de base pour créer et publier un IG dans l'�
 
 Pour une organisation externe souhaitant mettre en place la même infrastructure, voici ce qui doit être forké ou adapté :
 
-| Dépôt à forker | Quoi adapter |
+| Dépôt à forker | Ce qu'il faut adapter |
 | --- | --- |
 | [ansforge/IG-modele](https://github.com/ansforge/IG-modele) | Point de départ pour chaque nouvel IG. Adapter le `sushi-config.yaml`, le `README` et les workflows selon vos besoins. |
 | [ansforge/IG-template](https://github.com/ansforge/IG-template) | Remplacer le logo et les couleurs ANS par la charte de votre organisation. Mettre à jour la référence `template` dans `ig.ini`. |
