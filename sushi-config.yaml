@@ -30,6 +30,8 @@ pages:
             title: Les erreurs courantes
         mod_github.md:
             title: Usage de GitHub
+        mod_publier_ig_externe.md:
+            title: Publier un IG externe
     impl_demarrer_sur_fhir.md:
         title: Quick start FHIR
         impl_bonnes_pratiques.md:
@@ -57,6 +59,7 @@ menu:
         Bonnes pratiques: mod_bonnes_pratiques.html
         Les erreurs courantes: mod_erreurs.html
         Usage de GitHub: mod_github.html
+        Publier un IG externe: mod_publier_ig_externe.html
     Documentation pour implémenteurs FHIR:
         Quick start FHIR: impl_demarrer_sur_fhir.html
         Bonnes pratiques: impl_bonnes_pratiques.html
