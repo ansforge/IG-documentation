@@ -6,6 +6,7 @@
 * [Les erreurs courantes](mod_erreurs.md)
 * [Bonnes pratiques](impl_bonnes_pratiques.md)
 * [Collaborons](collaborons.md)
+* [Publier un IG externe](mod_publier_ig_externe.md)
 * [Autres Ressources](autres_ressources.md)
 * [Valider une ressource contre un profil](impl_valider_res.md)
 * [Artifacts Summary](artifacts.md)

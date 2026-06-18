@@ -10,7 +10,7 @@
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2026-06-18T07:37:06+00:00",
+  "date" : "2026-06-18T09:34:50+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -685,6 +685,15 @@
           }],
           "nameUrl" : "mod_github.html",
           "title" : "Usage de GitHub",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "mod_publier_ig_externe.html"
+          }],
+          "nameUrl" : "mod_publier_ig_externe.html",
+          "title" : "Publier un IG externe",
           "generation" : "markdown"
         }]
       },
