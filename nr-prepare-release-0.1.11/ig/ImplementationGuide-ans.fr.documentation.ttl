@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "Documentation"] ; # 
   fhir:title [ fhir:v "Documentation des guides d'implémentation de l'ANS"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-06-18T09:43:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-18T09:43:32+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "ANS"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "ANS" ] ;
@@ -95,7 +95,7 @@
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "trial-use"
+           fhir:v "final-text"
          ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
@@ -491,7 +491,7 @@
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "trial-use"
+           fhir:v "final-text"
          ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]

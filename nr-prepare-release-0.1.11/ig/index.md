@@ -65,7 +65,7 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
   "name" : "Documentation",
   "title" : "Documentation des guides d'implémentation de l'ANS",
   "status" : "active",
-  "date" : "2026-06-18T09:43:01+00:00",
+  "date" : "2026-06-18T09:43:32+00:00",
   "publisher" : "ANS",
   "contact" : [{
     "name" : "ANS",
@@ -123,7 +123,7 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
       },
       {
         "url" : "value",
-        "valueString" : "trial-use"
+        "valueString" : "final-text"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -413,7 +413,7 @@ L’issue doit contenir un titre, et une description la plus détaillée possibl
       },
       {
         "url" : "value",
-        "valueString" : "trial-use"
+        "valueString" : "final-text"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
