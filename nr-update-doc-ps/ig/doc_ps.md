@@ -58,9 +58,9 @@ FHIR seul est trop générique et peu contraignant pour garantir une interopéra
 
 ### Les guides d’implémentation
 
-Un guide d’implémentation (IG) précise comment utiliser le standard FHIR dans un contexte spécifique : un programme national de santé, un cas d’usage particulier (prescription électronique, compte rendu d’imagerie, etc.). Il définit les règles adaptées aux besoins français : quelles données sont obligatoires, quels formats utiliser, quelles nomenclatures respecter (CIM-10, CCAM, etc.). Pour vous, professionnels de santé, cela signifie que votre logiciel respecte des règles communes avec les autres systèmes, garantissant la qualité et la cohérence des échanges.
+Un guide d’implémentation (IG) précise comment utiliser le standard FHIR dans un contexte spécifique : un programme national de santé, un cas d’usage particulier (prescription électronique, compte rendu d’imagerie, etc.). Il définit les règles adaptées aux besoins français : quelles données sont obligatoires, quels formats utiliser, quelles nomenclatures respecter (CIM-10, CCAM, etc.).
 
-**Un guide d’implémentation, c’est un site web — pas un document.** Un guide d’implémentation se présente sous la forme d’un site web structuré, librement accessible en ligne. Ce format a été choisi pour plusieurs raisons :
+Un guide d’implémentation se présente sous la forme d’un site web structuré, librement accessible en ligne. Ce format a été choisi pour plusieurs raisons :
 
 * **Versionnement** : chaque version du guide reste accessible en ligne, ce qui permet de consulter les spécifications en vigueur à une date donnée.
 * **Navigation** : le format web permet de lier les pages entre elles et de naviguer facilement entre les concepts, contrairement à un long document linéaire.
@@ -69,7 +69,7 @@ Un guide d’implémentation (IG) précise comment utiliser le standard FHIR dan
 
 **Pour les professionnels de santé**
 
-Vous n'avez pas besoin de lire l'intégralité d'un guide d'implémentation. Votre rôle est de lire et valider les pages narratives (cas d'usage, modèles logiques) pour vérifier que les spécifications techniques reflètent bien la réalité du terrain. Les pages de spécifications formelles (profils, ressources FHIR) sont destinées aux développeurs.
+Vous n'avez pas besoin de lire l'intégralité d'un guide d'implémentation. Votre rôle est de lire et valider les pages narratives (cas d'usage, modèles logiques) pour vérifier que les spécifications reflètent bien la réalité du terrain. Les pages de spécifications formelles (profils, ressources FHIR) sont destinées aux développeurs.
 
 ### Les modèles logiques
 
