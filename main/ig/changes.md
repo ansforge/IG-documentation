@@ -1,4 +1,4 @@
-# Historique des changements - Documentation des guides d'implémentation de l'ANS v0.1.10
+# Historique des changements - Documentation des guides d'implémentation de l'ANS v0.1.11
 
 * [**Table of Contents**](toc.md)
 * [**Autres Ressources**](autres_ressources.md)
@@ -6,10 +6,14 @@
 
 ## Historique des changements
 
-### Prochaine release de l’IG Documentation
+### Release 0.1.11 de l’IG Documentation
 
+Modifications apportées dans la release [0.1.11](https://github.com/ansforge/IG-documentation/milestone/14?closed=1) :
+
+* Ajout de la page “Publier un IG externe” : documentation de IG-workflows, IG-modele, IG-template, IG-website-release [#81](https://github.com/ansforge/IG-documentation/pull/81)
 * Clarification de la section “Release d’un IG FHIR” : tableau de correspondance avec les champs exacts par fichier, amélioration de la lisibilité [#80](https://github.com/ansforge/IG-documentation/pull/80)
 * Mise à jour du PR template pour aligner avec ig-modele (ajout Type de changement + Checklist) [#80](https://github.com/ansforge/IG-documentation/pull/80)
+* Clarification de la page professionnels de santé : reformulation de la section sur les guides d’implémentation [#79](https://github.com/ansforge/IG-documentation/pull/79)
 
 ### Release 0.1.10 de l’IG Documentation
 

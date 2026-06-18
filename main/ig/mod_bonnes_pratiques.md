@@ -1,4 +1,4 @@
-# Bonnes pratiques - Documentation des guides d'implémentation de l'ANS v0.1.10
+# Bonnes pratiques - Documentation des guides d'implémentation de l'ANS v0.1.11
 
 * [**Table of Contents**](toc.md)
 * [**Quick start IG**](mod_nouvel_ig.md)
