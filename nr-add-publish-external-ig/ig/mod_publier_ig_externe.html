@@ -225,6 +225,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#dépôts-de-référence-ans" id="markdown-toc-dépôts-de-référence-ans">Dépôts de référence ANS</a></li>
   <li><a href="#mise-en-place-du-workflow-de-ci" id="markdown-toc-mise-en-place-du-workflow-de-ci">Mise en place du workflow de CI</a></li>
   <li><a href="#paramètres-disponibles" id="markdown-toc-paramètres-disponibles">Paramètres disponibles</a></li>
   <li><a href="#publier-une-release" id="markdown-toc-publier-une-release">Publier une release</a></li>
@@ -234,6 +235,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 <p>La GitHub Action <a href="https://github.com/ansforge/IG-workflows">ansforge/IG-workflows</a> fournit un pipeline clé en main pour compiler, tester et publier un guide d’implémentation FHIR via GitHub Actions. Elle encapsule les outils du cycle de vie d’un IG : Sushi, IG Publisher, validator_cli, génération PlantUML et publication sur GitHub Pages ou sur le site de publication ANS.</p>
+
+<h3 id="dépôts-de-référence-ans">Dépôts de référence ANS</h3>
+
+<p>Trois dépôts forment l’outillage de base pour créer et publier un IG dans l’écosystème ANS :</p>
+
+<ul>
+  <li><a href="https://github.com/ansforge/IG-modele">ansforge/IG-modele</a> — dépôt de démarrage à forker pour créer un nouvel IG. Il fournit la structure de répertoires, un <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> vierge, et les workflows GitHub Actions préconfigurés.</li>
+  <li><a href="https://github.com/ansforge/IG-template">ansforge/IG-template</a> — charte graphique ANS appliquée lors de la compilation par l’IG Publisher (basée sur <a href="https://github.com/HL7/ig-template-base">HL7/ig-template-base</a>). Référencé dans <code class="language-plaintext highlighter-rouge">ig.ini</code> via <code class="language-plaintext highlighter-rouge">template</code>. Ne pas modifier directement ; utiliser comme point de départ pour une charte personnalisée.</li>
+  <li><a href="https://github.com/ansforge/IG-workflows">ansforge/IG-workflows</a> — GitHub Action réutilisable qui orchestre le pipeline de build et de publication (Sushi, IG Publisher, validator_cli, GitHub Pages, release). Détaillée dans les sections suivantes.</li>
+</ul>
 
 <h3 id="mise-en-place-du-workflow-de-ci">Mise en place du workflow de CI</h3>
 
@@ -512,7 +523,7 @@ git submodule add https://github.com/HL7/fhir-ig-history-template fhir-ig-histor
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:31+0000">2026-06-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:33+0000">2026-06-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

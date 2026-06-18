@@ -8,6 +8,14 @@
 
 La GitHub Action [ansforge/IG-workflows](https://github.com/ansforge/IG-workflows) fournit un pipeline clé en main pour compiler, tester et publier un guide d’implémentation FHIR via GitHub Actions. Elle encapsule les outils du cycle de vie d’un IG : Sushi, IG Publisher, validator_cli, génération PlantUML et publication sur GitHub Pages ou sur le site de publication ANS.
 
+### Dépôts de référence ANS
+
+Trois dépôts forment l’outillage de base pour créer et publier un IG dans l’écosystème ANS :
+
+* [ansforge/IG-modele](https://github.com/ansforge/IG-modele) — dépôt de démarrage à forker pour créer un nouvel IG. Il fournit la structure de répertoires, un `sushi-config.yaml` vierge, et les workflows GitHub Actions préconfigurés.
+* [ansforge/IG-template](https://github.com/ansforge/IG-template) — charte graphique ANS appliquée lors de la compilation par l’IG Publisher (basée sur [HL7/ig-template-base](https://github.com/HL7/ig-template-base)). Référencé dans `ig.ini` via `template`. Ne pas modifier directement ; utiliser comme point de départ pour une charte personnalisée.
+* [ansforge/IG-workflows](https://github.com/ansforge/IG-workflows) — GitHub Action réutilisable qui orchestre le pipeline de build et de publication (Sushi, IG Publisher, validator_cli, GitHub Pages, release). Détaillée dans les sections suivantes.
+
 ### Mise en place du workflow de CI
 
 Dans le répertoire `.github/workflows/` du dépôt de l’IG, créer un fichier `fhir-workflows.yml` :

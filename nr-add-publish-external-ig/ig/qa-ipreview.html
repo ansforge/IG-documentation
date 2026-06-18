@@ -166,7 +166,7 @@ L’éditeur de profils FSH (Grammaire de définition de profils) :           <a
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>
 .  Package ans.fr.documentation#0.1.10 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Jun 18, 2026 07:31+0000">2026-06-18</span>
+. Generated           <span title="Thu, Jun 18, 2026 07:33+0000">2026-06-18</span>
 
                     <br/>
 
@@ -196,7 +196,7 @@ L’éditeur de profils FSH (Grammaire de définition de profils) :           <a
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>
 .  Package ans.fr.documentation#0.1.10 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Jun 18, 2026 07:31+0000">2026-06-18</span>
+. Generated           <span title="Thu, Jun 18, 2026 07:33+0000">2026-06-18</span>
 
                     <br/>
 
@@ -1427,6 +1427,61 @@ Pour rappel, les bonnes pratiques imposent de respecter les modélisations faite
         <td>
 La GitHub Action           <a href="https://github.com/ansforge/IG-workflows">ansforge/IG-workflows</a>
  fournit un pipeline clé en main pour compiler, tester et publier un guide d’implémentation FHIR via GitHub Actions. Elle encapsule les outils du cycle de vie d’un IG : Sushi, IG Publisher, validator_cli, génération PlantUML et publication sur GitHub Pages ou sur le site de publication ANS.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="mod_publier_ig_externe.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/IG-modele">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/IG-modele">ansforge/IG-modele</a>
+ — dépôt de démarrage à forker pour créer un nouvel IG. Il fournit la structure de répertoires, un           <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>
+ vierge, et les workflows GitHub Actions préconfigurés.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="mod_publier_ig_externe.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/IG-template">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/IG-template">ansforge/IG-template</a>
+ — charte graphique ANS appliquée lors de la compilation par l’IG Publisher (basée sur           <a href="https://github.com/HL7/ig-template-base">HL7/ig-template-base</a>
+). Référencé dans           <code class="language-plaintext highlighter-rouge">ig.ini</code>
+ via           <code class="language-plaintext highlighter-rouge">template</code>
+. Ne pas modifier directement ; utiliser comme point de départ pour une charte personnalisée.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="mod_publier_ig_externe.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/HL7/ig-template-base">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/IG-template">ansforge/IG-template</a>
+ — charte graphique ANS appliquée lors de la compilation par l’IG Publisher (basée sur           <a href="https://github.com/HL7/ig-template-base">HL7/ig-template-base</a>
+). Référencé dans           <code class="language-plaintext highlighter-rouge">ig.ini</code>
+ via           <code class="language-plaintext highlighter-rouge">template</code>
+. Ne pas modifier directement ; utiliser comme point de départ pour une charte personnalisée.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="mod_publier_ig_externe.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/IG-workflows">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/ansforge/IG-workflows">ansforge/IG-workflows</a>
+ — GitHub Action réutilisable qui orchestre le pipeline de build et de publication (Sushi, IG Publisher, validator_cli, GitHub Pages, release). Détaillée dans les sections suivantes.
         </td>
       </tr>
       <tr>
