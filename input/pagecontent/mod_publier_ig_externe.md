@@ -9,6 +9,16 @@ Trois dépôts forment l'outillage de base pour créer et publier un IG dans l'�
 - [ansforge/IG-template](https://github.com/ansforge/IG-template) — charte graphique ANS appliquée lors de la compilation par l'IG Publisher (basée sur [HL7/ig-template-base](https://github.com/HL7/ig-template-base)). Référencé dans `ig.ini` via `template`. Ne pas modifier directement ; utiliser comme point de départ pour une charte personnalisée.
 - [ansforge/IG-workflows](https://github.com/ansforge/IG-workflows) — GitHub Action réutilisable qui orchestre le pipeline de build et de publication (Sushi, IG Publisher, validator_cli, GitHub Pages, release). Détaillée dans les sections suivantes.
 
+Pour une organisation externe souhaitant mettre en place la même infrastructure, voici ce qui doit être forké ou adapté :
+
+| Dépôt à forker | Quoi adapter |
+| --- | --- |
+| [ansforge/IG-modele](https://github.com/ansforge/IG-modele) | Point de départ pour chaque nouvel IG. Adapter le `sushi-config.yaml`, le `README` et les workflows selon vos besoins. |
+| [ansforge/IG-template](https://github.com/ansforge/IG-template) | Remplacer le logo et les couleurs ANS par la charte de votre organisation. Mettre à jour la référence `template` dans `ig.ini`. |
+| [ansforge/IG-website-release](https://github.com/ansforge/IG-website-release) | Adapter `publish.ini` (URL de votre site), les fichiers `templates/` (logo, navigation), et initialiser les sous-modules. Voir la section [Créer son propre dépôt de publication](#créer-son-propre-dépôt-de-publication). |
+
+`IG-workflows` en revanche n'a pas besoin d'être forké : la GitHub Action est utilisable telle quelle depuis `ansforge/IG-workflows@main`.
+
 ### Mise en place du workflow de CI
 
 Dans le répertoire `.github/workflows/` du dépôt de l'IG, créer un fichier `fhir-workflows.yml` :
