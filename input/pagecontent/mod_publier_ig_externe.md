@@ -1,5 +1,5 @@
 
-La GitHub Action [ansforge/IG-workflows](https://github.com/ansforge/IG-workflows) fournit un pipeline clé en main pour compiler, tester et publier un guide d'implémentation FHIR via GitHub Actions. Elle encapsule les outils du cycle de vie d'un IG : Sushi, IG Publisher, validator_cli, génération PlantUML et publication sur GitHub Pages ou sur le site de publication ANS.
+La GitHub Action [ansforge/IG-workflows](https://github.com/ansforge/IG-workflows) fournit un pipeline clé en main pour compiler, tester et publier un guide d'implémentation FHIR via GitHub Actions. Elle encapsule les outils du cycle de vie d'un IG : Sushi, IG Publisher, validator_cli, génération PlantUML et publication sur GitHub Pages ou sur un site de publication dédié.
 
 ### Dépôts de référence ANS
 
@@ -55,49 +55,9 @@ https://{organisation}.github.io/{nom-du-repo}/{nom-de-la-branche}/ig
 
 La liste complète et à jour des paramètres est maintenue dans le [README de ansforge/IG-workflows](https://github.com/ansforge/IG-workflows#inputs).
 
-### Publier une release
-
-La publication d'une release nécessite un accès au dépôt [ansforge/IG-website-release](https://github.com/ansforge/IG-website-release), qui héberge le registre et l'historique des IGs publiés sur [interop.esante.gouv.fr](https://interop.esante.gouv.fr). Le token `ANS_IG_API_TOKEN` doit être configuré dans les secrets du dépôt.
-
-Créer un fichier `.github/workflows/a_release.yml` déclenché manuellement :
-
-```yaml
-name: Publication release
-
-on:
-  workflow_dispatch:
-
-jobs:
-  run-release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          path: igSource
-
-      - uses: ansforge/IG-workflows@main
-        with:
-          repo_ig: "./igSource"
-          github_page: "true"
-          github_page_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
-          bake: "false"
-          validator_cli: "false"
-          publish_repo: "ansforge/IG-website-release"
-          publish_repo_token: {% raw %}${{ secrets.ANS_IG_API_TOKEN }}{% endraw %}
-          publish_path_outpout: "./IG-website-release/www/ig"
-```
-
-Ce workflow :
-
-1. Compile l'IG avec le publisher en mode `go-publish`
-2. Pousse le résultat dans `IG-website-release` et crée un commit de release
-3. Crée une GitHub Release avec `full-ig.zip` et `package.tgz` en pièces jointes
-
-Les informations de release (version, chemin canonique) sont lues depuis `publication-request.json` à la racine de l'IG.
-
 ### Créer son propre dépôt de publication
 
-Pour publier un IG en dehors de l'infrastructure ANS, il faut créer un dépôt de publication analogue à `IG-website-release`. Le publisher IG utilise ce dépôt pour générer les pages versionnées et mettre à jour le registre.
+Pour publier des releases versionnées, il faut d'abord créer un dépôt de publication analogue à `IG-website-release`. Le publisher IG utilise ce dépôt pour générer les pages versionnées et mettre à jour le registre.
 
 #### Structure du dépôt
 
@@ -177,3 +137,39 @@ Modifier le workflow de publication pour pointer vers votre propre dépôt et ch
 ```
 
 Le token `MON_TOKEN` doit avoir les droits `contents: write` sur le dépôt de publication. Le configurer dans *Settings → Secrets and variables → Actions* du dépôt de l'IG.
+
+### Publier une release
+
+Une fois le dépôt de publication créé (voir section précédente), créer un fichier `.github/workflows/release.yml` déclenché manuellement :
+
+```yaml
+name: Publication release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          path: igSource
+
+      - uses: ansforge/IG-workflows@main
+        with:
+          repo_ig: "./igSource"
+          github_page: "true"
+          github_page_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+          publish_repo: "{organisation}/mon-ig-website"
+          publish_repo_token: {% raw %}${{ secrets.MON_TOKEN }}{% endraw %}
+          publish_path_outpout: "./mon-ig-website/www/ig"
+```
+
+Ce workflow :
+
+1. Compile l'IG avec le publisher en mode `go-publish`
+2. Pousse le résultat dans le dépôt de publication et crée un commit de release
+3. Crée une GitHub Release avec `full-ig.zip` et `package.tgz` en pièces jointes
+
+Les informations de release (version, chemin canonique) sont lues depuis `publication-request.json` à la racine de l'IG.
