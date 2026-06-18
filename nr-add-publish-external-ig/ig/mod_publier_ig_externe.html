@@ -305,90 +305,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="paramètres-disponibles">Paramètres disponibles</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Paramètre</th>
-      <th>Type</th>
-      <th>Défaut</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">repo_ig</code></td>
-      <td>string</td>
-      <td>—</td>
-      <td><strong>Requis.</strong> Chemin vers le répertoire source de l’IG</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">ig-publisher-version</code></td>
-      <td>string</td>
-      <td><code class="language-plaintext highlighter-rouge">latest</code></td>
-      <td>Version de l’IG Publisher (<code class="language-plaintext highlighter-rouge">latest</code> ou <code class="language-plaintext highlighter-rouge">x.y.z</code>)</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">github_page</code></td>
-      <td>boolean</td>
-      <td><code class="language-plaintext highlighter-rouge">false</code></td>
-      <td>Active la publication sur GitHub Pages</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">github_page_token</code></td>
-      <td>string</td>
-      <td>—</td>
-      <td>Token GitHub pour écrire sur la branche <code class="language-plaintext highlighter-rouge">gh-pages</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">bake</code></td>
-      <td>boolean</td>
-      <td><code class="language-plaintext highlighter-rouge">false</code></td>
-      <td>Installe FrCore et Annuaire depuis Simplifier (via Firely Terminal)</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">validator_cli</code></td>
-      <td>boolean</td>
-      <td><code class="language-plaintext highlighter-rouge">false</code></td>
-      <td>Lance les tests avec le validator_cli HL7</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">generate_plantuml</code></td>
-      <td>boolean</td>
-      <td><code class="language-plaintext highlighter-rouge">false</code></td>
-      <td>Génère un diagramme de classes PlantUML depuis le <code class="language-plaintext highlighter-rouge">package.db</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">generate_mapping_plantuml</code></td>
-      <td>boolean</td>
-      <td><code class="language-plaintext highlighter-rouge">false</code></td>
-      <td>Génère les diagrammes de mapping PlantUML</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">generate_testscript</code></td>
-      <td>boolean</td>
-      <td><code class="language-plaintext highlighter-rouge">false</code></td>
-      <td>Génère des TestScript depuis le package de l’IG</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">publish_repo</code></td>
-      <td>string</td>
-      <td><code class="language-plaintext highlighter-rouge">""</code></td>
-      <td>Dépôt de publication pour les releases (ex. <code class="language-plaintext highlighter-rouge">ansforge/IG-website-release</code>)</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">publish_repo_token</code></td>
-      <td>string</td>
-      <td><code class="language-plaintext highlighter-rouge">""</code></td>
-      <td>Token avec droits d’écriture sur <code class="language-plaintext highlighter-rouge">publish_repo</code></td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">publish_path_outpout</code></td>
-      <td>string</td>
-      <td><code class="language-plaintext highlighter-rouge">""</code></td>
-      <td>Chemin cible dans le dépôt de publication (ex. <code class="language-plaintext highlighter-rouge">./IG-website-release/www/ig</code>)</td>
-    </tr>
-  </tbody>
-</table>
+<p>La liste complète et à jour des paramètres est maintenue dans le <a href="https://github.com/ansforge/IG-workflows#inputs">README de ansforge/IG-workflows</a>.</p>
 
 <h3 id="publier-une-release">Publier une release</h3>
 
@@ -550,7 +467,7 @@ git submodule add https://github.com/HL7/fhir-ig-history-template fhir-ig-histor
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:39+0000">2026-06-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:40+0000">2026-06-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
