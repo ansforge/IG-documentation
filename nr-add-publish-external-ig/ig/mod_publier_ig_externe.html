@@ -275,28 +275,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="mise-en-place-du-workflow-de-ci">Mise en place du workflow de CI</h3>
 
-<p>Dans le répertoire <code class="language-plaintext highlighter-rouge">.github/workflows/</code> du dépôt de l’IG, créer un fichier <code class="language-plaintext highlighter-rouge">fhir-workflows.yml</code> :</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Build et publication GitHub Pages</span>
-
-<span class="na">on</span><span class="pi">:</span>
-  <span class="na">push</span><span class="pi">:</span>
-  <span class="na">workflow_dispatch</span><span class="pi">:</span>
-
-<span class="na">jobs</span><span class="pi">:</span>
-  <span class="na">build</span><span class="pi">:</span>
-    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
-    <span class="na">steps</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
-        <span class="na">with</span><span class="pi">:</span>
-          <span class="na">path</span><span class="pi">:</span> <span class="s">igSource</span>
-
-      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">ansforge/IG-workflows@main</span>
-        <span class="na">with</span><span class="pi">:</span>
-          <span class="na">repo_ig</span><span class="pi">:</span> <span class="s2">"</span><span class="s">./igSource"</span>
-          <span class="na">github_page</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
-          <span class="na">github_page_token</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
-</code></pre></div></div>
+<p>S’assurer que le dépôt de l’IG contient bien <code class="language-plaintext highlighter-rouge">.github/workflows/fhir-workflows.yml</code> (présent par défaut dans un fork de <code class="language-plaintext highlighter-rouge">IG-modele</code>). Ce workflow déclenche le build sur chaque push et publie l’IG sur la branche <code class="language-plaintext highlighter-rouge">gh-pages</code>.</p>
 
 <p>L’IG compilé est publié sur la branche <code class="language-plaintext highlighter-rouge">gh-pages</code> du dépôt, sous une sous-arborescence portant le nom de la branche source. La preview est accessible à l’adresse :</p>
 
@@ -387,27 +366,9 @@ git submodule add https://github.com/HL7/fhir-ig-history-template fhir-ig-histor
 
 <h3 id="publier-une-release">Publier une release</h3>
 
-<p>Une fois le dépôt de publication créé (voir section précédente), créer un fichier <code class="language-plaintext highlighter-rouge">.github/workflows/release.yml</code> déclenché manuellement :</p>
+<p>S’assurer que le dépôt de l’IG contient bien <code class="language-plaintext highlighter-rouge">.github/workflows/fhir-release.yml</code> (présent par défaut dans un fork de <code class="language-plaintext highlighter-rouge">IG-modele</code>), puis adapter les trois paramètres suivants pour pointer vers votre propre dépôt de publication :</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Publication release</span>
-
-<span class="na">on</span><span class="pi">:</span>
-  <span class="na">workflow_dispatch</span><span class="pi">:</span>
-
-<span class="na">jobs</span><span class="pi">:</span>
-  <span class="na">run-release</span><span class="pi">:</span>
-    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
-    <span class="na">steps</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v3</span>
-        <span class="na">with</span><span class="pi">:</span>
-          <span class="na">path</span><span class="pi">:</span> <span class="s">igSource</span>
-
-      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">ansforge/IG-workflows@main</span>
-        <span class="na">with</span><span class="pi">:</span>
-          <span class="na">repo_ig</span><span class="pi">:</span> <span class="s2">"</span><span class="s">./igSource"</span>
-          <span class="na">github_page</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
-          <span class="na">github_page_token</span><span class="pi">:</span> <span class="s">${{ secrets.GITHUB_TOKEN }}</span>
-          <span class="na">publish_repo</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{organisation}/mon-ig-website"</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          <span class="na">publish_repo</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{organisation}/mon-ig-website"</span>
           <span class="na">publish_repo_token</span><span class="pi">:</span> <span class="s">${{ secrets.MON_TOKEN }}</span>
           <span class="na">publish_path_outpout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">./mon-ig-website/www/ig"</span>
 </code></pre></div></div>
@@ -463,7 +424,7 @@ git submodule add https://github.com/HL7/fhir-ig-history-template fhir-ig-histor
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:44+0000">2026-06-18</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jun 18, 2026 07:49+0000">2026-06-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |

@@ -28,30 +28,7 @@ Pour une organisation externe souhaitant mettre en place la même infrastructure
 
 ### Mise en place du workflow de CI
 
-Dans le répertoire `.github/workflows/` du dépôt de l’IG, créer un fichier `fhir-workflows.yml` :
-
-```
-name: Build et publication GitHub Pages
-
-on:
-  push:
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          path: igSource
-
-      - uses: ansforge/IG-workflows@main
-        with:
-          repo_ig: "./igSource"
-          github_page: "true"
-          github_page_token: ${{ secrets.GITHUB_TOKEN }}
-
-```
+S’assurer que le dépôt de l’IG contient bien `.github/workflows/fhir-workflows.yml` (présent par défaut dans un fork de `IG-modele`). Ce workflow déclenche le build sur chaque push et publie l’IG sur la branche `gh-pages`.
 
 L’IG compilé est publié sur la branche `gh-pages` du dépôt, sous une sous-arborescence portant le nom de la branche source. La preview est accessible à l’adresse :
 
@@ -154,27 +131,9 @@ Le token `MON_TOKEN` doit avoir les droits `contents: write` sur le dépôt de p
 
 ### Publier une release
 
-Une fois le dépôt de publication créé (voir section précédente), créer un fichier `.github/workflows/release.yml` déclenché manuellement :
+S’assurer que le dépôt de l’IG contient bien `.github/workflows/fhir-release.yml` (présent par défaut dans un fork de `IG-modele`), puis adapter les trois paramètres suivants pour pointer vers votre propre dépôt de publication :
 
 ```
-name: Publication release
-
-on:
-  workflow_dispatch:
-
-jobs:
-  run-release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          path: igSource
-
-      - uses: ansforge/IG-workflows@main
-        with:
-          repo_ig: "./igSource"
-          github_page: "true"
-          github_page_token: ${{ secrets.GITHUB_TOKEN }}
           publish_repo: "{organisation}/mon-ig-website"
           publish_repo_token: ${{ secrets.MON_TOKEN }}
           publish_path_outpout: "./mon-ig-website/www/ig"
