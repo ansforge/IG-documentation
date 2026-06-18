@@ -3,7 +3,7 @@
     "version" : "0.1.11",
     "path" : "https://interop.esante.gouv.fr/ig/documentation/0.1.11",
     "mode" : "milestone",
-    "status" : "release",
+    "status" : "final-text",
     "sequence" : "release",
     "ci-build" : "https://ansforge.github.io/IG-documentation/main/ig",
     "first": false,
