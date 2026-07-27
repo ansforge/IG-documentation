@@ -3,22 +3,22 @@
 ## Pages
 
 * [Accueil](index.md)
-* [Les erreurs courantes](mod_erreurs.md)
-* [Bonnes pratiques](impl_bonnes_pratiques.md)
-* [Collaborons](collaborons.md)
-* [Publier un IG externe](mod_publier_ig_externe.md)
 * [Autres Ressources](autres_ressources.md)
-* [Valider une ressource contre un profil](impl_valider_res.md)
-* [Artifacts Summary](artifacts.md)
-* [Quick start IG](mod_nouvel_ig.md)
-* [A propos](about.md)
 * [Tests](tests.md)
-* [Déployer une instance HAPI](impl_instance_hapi.md)
-* [Professionnels de santé](doc_ps.md)
+* [Publier un IG externe](mod_publier_ig_externe.md)
+* [A propos](about.md)
 * [Historique des changements](changes.md)
+* [Professionnels de santé](doc_ps.md)
+* [Déployer une instance HAPI](impl_instance_hapi.md)
+* [Artifacts Summary](artifacts.md)
+* [Les erreurs courantes](mod_erreurs.md)
+* [Valider une ressource contre un profil](impl_valider_res.md)
 * [Usage de GitHub](mod_github.md)
-* [Quick start FHIR](impl_demarrer_sur_fhir.md)
 * [Bonnes pratiques](mod_bonnes_pratiques.md)
+* [Quick start IG](mod_nouvel_ig.md)
+* [Quick start FHIR](impl_demarrer_sur_fhir.md)
+* [Collaborons](collaborons.md)
+* [Bonnes pratiques](impl_bonnes_pratiques.md)
 
 ## Resources
 

@@ -615,7 +615,7 @@ Context: Sur quoi s'applique l'extension
   <tbody>
     <tr>
       <td>id</td>
-      <td>nom-du-modele-logique</td>
+      <td>NomDuModeleLogique</td>
     </tr>
     <tr>
       <td>name</td>
@@ -644,10 +644,23 @@ Context: Sur quoi s'applique l'extension
 
 <pre><code class="language-fsh">Logical: NomDuModeleLogique
 Parent: Base
+Id: NomDuModeleLogique
 Characteristics: #can-be-target, #can-bind, #has-target
 Title: "Titre du modèle logique"
 Description: "Description du modèle logique."
 </code></pre>
+
+<div class="bg-gray">
+  <p>Contrairement aux Profiles et Extensions, l’<code class="language-plaintext highlighter-rouge">id</code> d’un modèle logique ne doit <strong>pas</strong> être en kebab-case (avec des tirets). En effet, pour un <code class="language-plaintext highlighter-rouge">Logical:</code>, SUSHI dérive le <code class="language-plaintext highlighter-rouge">StructureDefinition.type</code> à partir de cet <code class="language-plaintext highlighter-rouge">id</code>, et cette valeur devient directement le <code class="language-plaintext highlighter-rouge">path</code> de l’élément racine du modèle logique — alors que pour un Profile/Extension, le <code class="language-plaintext highlighter-rouge">type</code> est hérité du parent et n’est jamais affecté par l’<code class="language-plaintext highlighter-rouge">id</code>.</p>
+
+  <p>Or l’invariant <code class="language-plaintext highlighter-rouge">eld-20</code> de <code class="language-plaintext highlighter-rouge">ElementDefinition</code> impose que <code class="language-plaintext highlighter-rouge">path</code> reste alphanumérique simple :</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters,
+or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\.[a-z][A-Za-z0-9]*(\[x])?)*'))'
+</code></pre></div>  </div>
+
+  <p>Un <code class="language-plaintext highlighter-rouge">id</code> avec des tirets (ex. <code class="language-plaintext highlighter-rouge">nom-du-modele-logique</code>) viole donc systématiquement cet invariant sur l’élément racine. D’où la nécessité d’utiliser un <code class="language-plaintext highlighter-rouge">id</code> sans tiret, identique au <code class="language-plaintext highlighter-rouge">name</code> (ex. <code class="language-plaintext highlighter-rouge">NomDuModeleLogique</code>).</p>
+</div>
 
 <h4 id="exemples">Exemples</h4>
 
@@ -910,7 +923,7 @@ Usage: #definition
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.11 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 8, 2026 16:05+0000">2026-07-08</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">ANS</a>.  Package ans.fr.documentation#0.1.11 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 27, 2026 15:02+0000">2026-07-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
