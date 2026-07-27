@@ -229,7 +229,7 @@ Context: Sur quoi s'applique l'extension
 
 | **Paramètre** | **Format** |
 | --- | --- |
-| id | nom-du-modele-logique |
+| id | NomDuModeleLogique |
 | name | NomDuModeleLogique |
 | title | Titre du modèle logique |
 | code | - |
@@ -242,10 +242,24 @@ Entête du fichier FSH :
 ```fsh
 Logical: NomDuModeleLogique
 Parent: Base
+Id: NomDuModeleLogique
 Characteristics: #can-be-target, #can-bind, #has-target
 Title: "Titre du modèle logique"
 Description: "Description du modèle logique."
 ```
+
+<div markdown="1" class="bg-gray">
+Contrairement aux Profiles et Extensions, l'`id` d'un modèle logique ne doit **pas** être en kebab-case (avec des tirets). En effet, pour un `Logical:`, SUSHI dérive le `StructureDefinition.type` à partir de cet `id`, et cette valeur devient directement le `path` de l'élément racine du modèle logique — alors que pour un Profile/Extension, le `type` est hérité du parent et n'est jamais affecté par l'`id`.
+
+Or l'invariant `eld-20` de `ElementDefinition` impose que `path` reste alphanumérique simple :
+
+```
+Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters,
+or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\.[a-z][A-Za-z0-9]*(\[x])?)*'))'
+```
+
+Un `id` avec des tirets (ex. `nom-du-modele-logique`) viole donc systématiquement cet invariant sur l'élément racine. D'où la nécessité d'utiliser un `id` sans tiret, identique au `name` (ex. `NomDuModeleLogique`).
+</div>
 
 #### Exemples
 
